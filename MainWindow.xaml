@@ -23,7 +23,7 @@
 
 		</Border>
 
-		<Image Source="E:\Obrazy\Projektowe\Calc2.png" HorizontalAlignment="Center" Margin="-200,0,0,0"  Width="54" Grid.Column="2"/>
+		<Image Source="\Calc2.png" HorizontalAlignment="Center" Margin="-200,0,0,0"  Width="54" Grid.Column="2"/>
 		<TextBlock Text="Abituria" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.ColumnSpan="5"/>
 
 		<TextBlock Grid.Row="1" Text="Witaj w programie ABITURIA, twoim matematycznym korepetytorze." FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
