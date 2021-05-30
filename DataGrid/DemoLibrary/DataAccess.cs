@@ -10,13 +10,13 @@ namespace DemoLibrary
     public class DataAccess
     {
         Random rnd = new Random();
-        string[] streetAddresses = new string[] { "101 State Street", "425 Oak Avenue", "7 Wallace Way", "928 Edwards Court", "29 Main Avenue" };
-        string[] cities = new string[] { "Springfield", "Wilshire", "Alexandria", "Franklin", "Clinton", "Fairview", "Madison" };
+        string[] streetAddresses = new string[] { "Dworcowa 18", "Polna 5", "Rynek 10", "Leśna 1", "Szkolna 15" };
+        string[] cities = new string[] { "Poznań", "Piła", "Międzychód", "Warszawa", "Kraków", "Gdańsk", "Białystok" };
         string[] states = new string[] { "WI", "GA", "PA", "TX", "CA", "IL", "WA", "VA", "FL", "OK", "AZ" };
-        string[] zipCodes = new string[] { "14121", "08904", "84732", "23410", "60095", "60618", "10456", "00926", "08701", "90280", "92335", "79936" };
+        string[] zipCodes = new string[] { "64710", "62940", "84732", "23410", "60095", "60618", "10456", "00926", "08701", "90280", "92335", "79936" };
 
-        string[] firstNames = new string[] { "Bob", "Sue", "Carla", "Frank", "Monique", "Carlton", "Miguel", "Daniel", "Santiago", "John", "Robert" };
-        string[] lastNames = new string[] { "Smith", "Jones", "Garcia", "Miller", "Thomas", "Lee", "Taylor", "Wilson", "Martinez", "Davis", "Hernandez" };
+        string[] firstNames = new string[] { "Adam", "Aleksandra", "Filip", "Dominik", "Mateusz", "Michał", "Łukasz", "Borys", "Daniel", "Radek", "Fifąż" };
+        string[] lastNames = new string[] { "Kubiś", "Stołowska", "Dura", "Prokop", "Kordyś", "Mikołajczuk", "Wolny", "Jamrosiński", "Jackson", "Drzastwa", "Nawigacja" };
         bool[] aliveStatuses = new bool[] { true, false };
         DateTime lowEndDate = new DateTime(1943, 1, 1);
         int daysFromLowDate;
