@@ -15,3 +15,11 @@ C:\Users\Filippo\source\repos\Projekt_Inzynierski_Ich_Troje\Projekt_Inzynierski_
 C:\Users\Filippo\source\repos\Projekt_Inzynierski_Ich_Troje\Projekt_Inzynierski_Ich_Troje\obj\Debug\Projekt_Inzynierski_Ich_Troje.pdb
 C:\Users\Filippo\source\repos\Projekt_Inzynierski_Ich_Troje\Projekt_Inzynierski_Ich_Troje\obj\Debug\WyborDzialu.g.cs
 C:\Users\Filippo\source\repos\Projekt_Inzynierski_Ich_Troje\Projekt_Inzynierski_Ich_Troje\obj\Debug\WyborDzialu.baml
+C:\Users\Adam\source\repos\Projekt_Inzynierski_Ich_Troje\Projekt_Inzynierski_Ich_Troje\obj\Debug\Projekt_Inzynierski_Ich_Troje.csprojAssemblyReference.cache
+C:\Users\Adam\source\repos\Projekt_Inzynierski_Ich_Troje\Projekt_Inzynierski_Ich_Troje\obj\Debug\MainWindow.g.cs
+C:\Users\Adam\source\repos\Projekt_Inzynierski_Ich_Troje\Projekt_Inzynierski_Ich_Troje\obj\Debug\WyborDzialu.g.cs
+C:\Users\Adam\source\repos\Projekt_Inzynierski_Ich_Troje\Projekt_Inzynierski_Ich_Troje\obj\Debug\App.g.cs
+C:\Users\Adam\source\repos\Projekt_Inzynierski_Ich_Troje\Projekt_Inzynierski_Ich_Troje\obj\Debug\Projekt_Inzynierski_Ich_Troje_MarkupCompile.cache
+C:\Users\Adam\source\repos\Projekt_Inzynierski_Ich_Troje\Projekt_Inzynierski_Ich_Troje\obj\Debug\Projekt_Inzynierski_Ich_Troje_MarkupCompile.lref
+C:\Users\Adam\source\repos\Projekt_Inzynierski_Ich_Troje\Projekt_Inzynierski_Ich_Troje\obj\Debug\Projekt_Inzynierski_Ich_Troje.exe
+C:\Users\Adam\source\repos\Projekt_Inzynierski_Ich_Troje\Projekt_Inzynierski_Ich_Troje\obj\Debug\Projekt_Inzynierski_Ich_Troje.pdb
