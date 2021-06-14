@@ -15,6 +15,8 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
                 
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -24,27 +26,33 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Button x:Name="Button1" Click="Button_Click" Grid.Row="0" Grid.Column="0" Height="50" Content="1" FontFamily="Cavolini" FontSize="20"/>
-            <Button x:Name="Button2" Click="Button_Click" Grid.Row="0" Grid.Column="1" Height="50" Content="2" FontFamily="Cavolini" FontSize="20"/>
-            <Button x:Name="Button3" Click="Button_Click" Grid.Row="0" Grid.Column="2" Height="50" Content="3" FontFamily="Cavolini" FontSize="20"/>
-            <Button x:Name="Button4" Click="Button_Click" Grid.Row="1" Grid.Column="0" Height="50" Content="4" FontFamily="Cavolini" FontSize="20"/>
-            <Button x:Name="Button5" Click="Button_Click" Grid.Row="1" Grid.Column="1" Height="50" Content="5" FontFamily="Cavolini" FontSize="20"/>
-            <Button x:Name="Button6" Click="Button_Click" Grid.Row="1" Grid.Column="2" Height="50" Content="6" FontFamily="Cavolini" FontSize="20"/>
-            <Button x:Name="Button7" Click="Button_Click" Grid.Row="2" Grid.Column="0" Height="50" Content="7" FontFamily="Cavolini" FontSize="20"/>
-            <Button x:Name="Button8" Click="Button_Click" Grid.Row="2" Grid.Column="1" Height="50" Content="8" FontFamily="Cavolini" FontSize="20"/>
-            <Button x:Name="Button9" Click="Button_Click" Grid.Row="2" Grid.Column="2" Height="50" Content="9" FontFamily="Cavolini" FontSize="20"/>
-            
+            <Button x:Name="Button1" Click="Button_Click" Grid.Row="0" Grid.Column="0" Height="72" Content="1" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="Button2" Click="Button_Click" Grid.Row="0" Grid.Column="1" Height="72" Content="2" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="Button3" Click="Button_Click" Grid.Row="0" Grid.Column="2" Height="72" Content="3" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="Button4" Click="Button_Click" Grid.Row="1" Grid.Column="0" Height="72" Content="4" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="Button5" Click="Button_Click" Grid.Row="1" Grid.Column="1" Height="72" Content="5" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="Button6" Click="Button_Click" Grid.Row="1" Grid.Column="2" Height="72" Content="6" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="Button7" Click="Button_Click" Grid.Row="2" Grid.Column="0" Height="72" Content="7" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="Button8" Click="Button_Click" Grid.Row="2" Grid.Column="1" Height="72" Content="8" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="Button9" Click="Button_Click" Grid.Row="2" Grid.Column="2" Height="72" Content="9" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="ButtonDodawanie" Click="Button_ClickDodawanie" Grid.Row="0" Grid.Column="3" Height="72" Content="+" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="ButtonOdejmowanie" Click="Button_ClickOdejmowanie" Grid.Row="0" Grid.Column="4" Height="72" Content="-" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="ButtonMnozenie" Click="Button_ClickMnozenie" Grid.Row="1" Grid.Column="3" Height="72" Content="*" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="ButtonDzielenie" Click="Button_ClickDzielenie" Grid.Row="1" Grid.Column="4" Height="72" Content=":" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="ButtonWynik" Click="Button_ClickWynik" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Height="72" Content="=" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="Button0" Click="Button_Click" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Height="72" Content="0" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="White" Foreground="black" BorderThickness="0,0,0,4" BorderBrush="black"/>
+            <Button x:Name="ButtonPierwiastek" Click="Button_ClickPierwiastek" Grid.Row="3" Grid.Column="2" Height="72" Content="√" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="ButtonPotega" Click="Button_ClickPotega" Grid.Row="3" Grid.Column="3" Height="72" Content="x²" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="ButtonUlamek" Click="Button_ClickUlamek" Grid.Row="3" Grid.Column="4" Height="72" Content="1/x" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
         </Grid>
+
         
-        <Button x:Name="Button0" Click="Button_Click" Grid.Row="3" Grid.Column="1" Height="50" Content="0" FontFamily="Cavolini" FontSize="20"/>
         
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <!--<Button x:Name="Button0" Click="Button_Click" Width = "140" Content="0" FontFamily="Cavolini" FontSize="20"/>-->
-            <Button x:Name="ButtonDodawanie" Click="Button_ClickDodawanie" Width = "160" Height="50" Content="+" FontFamily="Cavolini" FontSize="20"/>
-            <Button x:Name="ButtonOdejmowanie" Click="Button_ClickOdejmowanie" Width = "160" Height="50" Content="-" FontFamily="Cavolini" FontSize="20"/>
-            <Button x:Name="ButtonMnozenie" Click="Button_ClickMnozenie" Width = "160" Height="50" Content="*" FontFamily="Cavolini" FontSize="20"/>
-            <Button x:Name="ButtonDzielenie" Click="Button_ClickDzielenie" Width = "160" Height="50" Content=":" FontFamily="Cavolini" FontSize="20"/>
-            <Button x:Name="ButtonWynik" Click="Button_ClickWynik" Width = "160" Height="50" Content="=" FontFamily="Cavolini" FontSize="20"/>
+            
+            
+            
         </StackPanel>
 
     </StackPanel>

@@ -1,23 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Prototyp
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -26,22 +17,20 @@ namespace Prototyp
             ResultText.Text = string.Empty;
             CurrentOperationText.Text = string.Empty;
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ResultText.Text = string.Empty;
 
             var button = sender as Button;
 
-            var currentNumber = button.Name[button.Name.Length-1];
+            var currentNumber = button.Name[button.Name.Length - 1];
 
             CurrentOperationText.Text += currentNumber;
         }
-
         private void Button_ClickDodawanie(object sender, RoutedEventArgs e)
         {
             var operation = CurrentOperationText.Text;
-            
+
             if (ContainsOperation(operation))
             {
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
@@ -49,7 +38,6 @@ namespace Prototyp
 
             CurrentOperationText.Text += "+";
         }
-
         private void Button_ClickOdejmowanie(object sender, RoutedEventArgs e)
         {
             var operation = CurrentOperationText.Text;
@@ -61,7 +49,6 @@ namespace Prototyp
 
             CurrentOperationText.Text += "-";
         }
-
         private void Button_ClickMnozenie(object sender, RoutedEventArgs e)
         {
             var operation = CurrentOperationText.Text;
@@ -73,7 +60,6 @@ namespace Prototyp
 
             CurrentOperationText.Text += "*";
         }
-
         private void Button_ClickDzielenie(object sender, RoutedEventArgs e)
         {
             var operation = CurrentOperationText.Text;
@@ -85,7 +71,38 @@ namespace Prototyp
 
             CurrentOperationText.Text += ":";
         }
+        private void Button_ClickPierwiastek(object sender, RoutedEventArgs e)
+        {
+            var operation = CurrentOperationText.Text;
 
+            if (ContainsOperation(operation))
+            {
+                CurrentOperationText.Text = CalculateResult(operation).ToString();
+            }
+
+            CurrentOperationText.Text += "√";
+        }
+        private void Button_ClickPotega(object sender, RoutedEventArgs e)
+        {
+            var operation = CurrentOperationText.Text;
+
+            if (ContainsOperation(operation))
+            {
+                CurrentOperationText.Text = CalculateResult(operation).ToString();
+            }
+
+            CurrentOperationText.Text += "²";
+        }
+        private void Button_ClickUlamek(object sender, RoutedEventArgs e)
+        {
+            CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
+            var operation = CurrentOperationText.Text;
+
+            if (ContainsOperation(operation))
+            {
+                CurrentOperationText.Text = CalculateResult(operation).ToString();
+            }
+        }
         private void Button_ClickWynik(object sender, RoutedEventArgs e)
         {
             var operation = CurrentOperationText.Text;
@@ -98,37 +115,74 @@ namespace Prototyp
         private bool ContainsOperation(string operation)
             => operation.Contains('+') || operation.Contains('-') || operation.Contains('*') || operation.Contains(':');
 
-        private long CalculateResult(string operation)
+        private double CalculateResult(string operation)
         {
             if (operation.Contains('+'))
             {
                 var elements = operation.Split('+');
 
-                return long.Parse(elements[0]) + long.Parse(elements[1]);
+                return double.Parse(elements[0]) + double.Parse(elements[1]);
             }
 
             if (operation.Contains('-'))
             {
                 var elements = operation.Split('-');
 
-                return long.Parse(elements[0]) - long.Parse(elements[1]);
+                return double.Parse(elements[0]) - double.Parse(elements[1]);
             }
 
             if (operation.Contains('*'))
             {
                 var elements = operation.Split('*');
 
-                return long.Parse(elements[0]) * long.Parse(elements[1]);
+                return double.Parse(elements[0]) * double.Parse(elements[1]);
             }
 
             if (operation.Contains(':'))
             {
                 var elements = operation.Split(':');
 
-                return long.Parse(elements[0]) / long.Parse(elements[1]);
+                return double.Parse(elements[0]) / double.Parse(elements[1]);
+            }
+
+            if (operation.Contains('/'))
+            {
+                var elements = operation.Split('/');
+
+                return double.Parse(elements[0]) / double.Parse(elements[1]);
+            }
+
+            if (operation.Contains('√'))
+            {
+                var elements = operation.Split('√');
+
+
+                if (String.IsNullOrEmpty(elements[0]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                {
+                    return Math.Sqrt(double.Parse(elements[1]));
+                }
+                else
+                {
+                    return double.Parse(elements[0]) * Math.Sqrt(double.Parse(elements[1]));
+                }
+            }
+
+            if (operation.Contains('²'))
+            {
+                var elements = operation.Split('²');
+
+                return Math.Pow(double.Parse(elements[0]),2);
+            }
+
+            if (operation.Contains('²'))
+            {
+                var elements = operation.Split('²');
+
+                return Math.Pow(double.Parse(elements[0]), 2);
             }
 
             return default;
         }
+
     }
 }
