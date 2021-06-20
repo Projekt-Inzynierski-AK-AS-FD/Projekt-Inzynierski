@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Abituria_szkielet
+namespace Abituria
 {
     /// <summary>
     /// Logika interakcji dla klasy App.xaml

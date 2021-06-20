@@ -28,7 +28,7 @@ namespace Abituria
         private void ButtonCalculator(object sender, RoutedEventArgs e)
         {
             //Kod na wyświetlenie osobnego okna z kalkulatorem po kliknięciu buttona
-            var calculator = new Calculator();
+            var calculator = new Abituria();
             calculator.Show();
         }
 
