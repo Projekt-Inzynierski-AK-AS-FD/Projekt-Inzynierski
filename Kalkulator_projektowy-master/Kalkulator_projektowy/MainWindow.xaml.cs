@@ -14,11 +14,7 @@ namespace Prototyp
         public MainWindow()
         {
             InitializeComponent();
-<<<<<<< HEAD
-            ResultText.Text = string.Empty;
-=======
             ResultText.Text = "0";
->>>>>>> 102cca4f73c7a151dfa2213697f5bb7984b88721
             CurrentOperationText.Text = string.Empty;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -40,9 +36,6 @@ namespace Prototyp
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
             }
 
-<<<<<<< HEAD
-            CurrentOperationText.Text += "+";
-=======
             if(string.IsNullOrEmpty(CurrentOperationText.Text))
             {
                 CurrentOperationText.Text = ResultText.Text + "+";
@@ -52,7 +45,6 @@ namespace Prototyp
                 CurrentOperationText.Text += "+";
             }
             
->>>>>>> 102cca4f73c7a151dfa2213697f5bb7984b88721
         }
         private void Button_ClickOdejmowanie(object sender, RoutedEventArgs e)
         {
@@ -63,9 +55,6 @@ namespace Prototyp
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
             }
 
-<<<<<<< HEAD
-            CurrentOperationText.Text += "-";
-=======
             if (string.IsNullOrEmpty(CurrentOperationText.Text))
             {
                 CurrentOperationText.Text = ResultText.Text + "-";
@@ -74,7 +63,6 @@ namespace Prototyp
             {
                 CurrentOperationText.Text += "-";
             }
->>>>>>> 102cca4f73c7a151dfa2213697f5bb7984b88721
         }
         private void Button_ClickMnozenie(object sender, RoutedEventArgs e)
         {
@@ -85,9 +73,6 @@ namespace Prototyp
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
             }
 
-<<<<<<< HEAD
-            CurrentOperationText.Text += "*";
-=======
             if (string.IsNullOrEmpty(CurrentOperationText.Text))
             {
                 CurrentOperationText.Text = ResultText.Text + "*";
@@ -96,7 +81,6 @@ namespace Prototyp
             {
                 CurrentOperationText.Text += "*";
             }
->>>>>>> 102cca4f73c7a151dfa2213697f5bb7984b88721
         }
         private void Button_ClickDzielenie(object sender, RoutedEventArgs e)
         {
@@ -107,9 +91,6 @@ namespace Prototyp
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
             }
 
-<<<<<<< HEAD
-            CurrentOperationText.Text += ":";
-=======
             if (string.IsNullOrEmpty(CurrentOperationText.Text))
             {
                 CurrentOperationText.Text = ResultText.Text + ":";
@@ -118,7 +99,6 @@ namespace Prototyp
             {
                 CurrentOperationText.Text += ":";
             }
->>>>>>> 102cca4f73c7a151dfa2213697f5bb7984b88721
         }
         private void Button_ClickPierwiastek(object sender, RoutedEventArgs e)
         {
@@ -164,8 +144,6 @@ namespace Prototyp
         private bool ContainsOperation(string operation)
             => operation.Contains('+') || operation.Contains('-') || operation.Contains('*') || operation.Contains(':');
 
-<<<<<<< HEAD
-=======
         private double OperationAfterOperation(string operation)
         {
             if (operation.Contains('+'))
@@ -178,21 +156,17 @@ namespace Prototyp
             return default;
         }
 
->>>>>>> 102cca4f73c7a151dfa2213697f5bb7984b88721
         private double CalculateResult(string operation)
         {
             if (operation.Contains('+'))
             {
                 var elements = operation.Split('+');
 
-<<<<<<< HEAD
-=======
                 if (String.IsNullOrEmpty(elements[1]))
                 {
                     elements[1] = elements[0];
                 }
 
->>>>>>> 102cca4f73c7a151dfa2213697f5bb7984b88721
                 return double.Parse(elements[0]) + double.Parse(elements[1]);
             }
 
@@ -200,14 +174,11 @@ namespace Prototyp
             {
                 var elements = operation.Split('-');
 
-<<<<<<< HEAD
-=======
                 if (String.IsNullOrEmpty(elements[1]))
                 {
                     elements[1] = elements[0];
                 }
 
->>>>>>> 102cca4f73c7a151dfa2213697f5bb7984b88721
                 return double.Parse(elements[0]) - double.Parse(elements[1]);
             }
 
@@ -215,14 +186,11 @@ namespace Prototyp
             {
                 var elements = operation.Split('*');
 
-<<<<<<< HEAD
-=======
                 if (String.IsNullOrEmpty(elements[1]))
                 {
                     elements[1] = elements[0];
                 }
 
->>>>>>> 102cca4f73c7a151dfa2213697f5bb7984b88721
                 return double.Parse(elements[0]) * double.Parse(elements[1]);
             }
 
@@ -230,14 +198,11 @@ namespace Prototyp
             {
                 var elements = operation.Split(':');
 
-<<<<<<< HEAD
-=======
                 if (String.IsNullOrEmpty(elements[1]))
                 {
                     elements[1] = elements[0];
                 }
 
->>>>>>> 102cca4f73c7a151dfa2213697f5bb7984b88721
                 return double.Parse(elements[0]) / double.Parse(elements[1]);
             }
 
@@ -245,14 +210,11 @@ namespace Prototyp
             {
                 var elements = operation.Split('/');
 
-<<<<<<< HEAD
-=======
                 if (String.IsNullOrEmpty(elements[1]))
                 {
                     elements[1] = elements[0];
                 }
 
->>>>>>> 102cca4f73c7a151dfa2213697f5bb7984b88721
                 return double.Parse(elements[0]) / double.Parse(elements[1]);
             }
 

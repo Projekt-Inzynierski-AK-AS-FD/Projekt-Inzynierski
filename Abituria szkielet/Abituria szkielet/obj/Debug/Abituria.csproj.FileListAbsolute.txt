@@ -23,3 +23,28 @@ C:\Users\admin\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\Abitur
 C:\Users\admin\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria szkielet.exe
 C:\Users\admin\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria szkielet.pdb
 C:\Users\admin\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Calculator.g.cs
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\MainWindow.g.cs
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\PageWideo.g.cs
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\PageZadania.g.cs
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\PageDzialy.g.cs
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\PageMatura.g.cs
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\App.g.cs
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria szkielet_MarkupCompile.cache
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria szkielet_MarkupCompile.lref
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria szkielet.exe
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria szkielet.pdb
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\bin\Debug\Abituria szkielet.exe.config
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\bin\Debug\Abituria szkielet.exe
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\bin\Debug\Abituria szkielet.pdb
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Calculator.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\MainWindow.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\PageWideo.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\PageZadania.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\PageDzialy.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\PageMatura.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria szkielet.g.resources
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria_szkielet.Properties.Resources.resources
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria.csproj.CoreCompileInputs.cache
