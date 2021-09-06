@@ -52,7 +52,7 @@ namespace Abituria {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Abituria szkielet;component/pagezadania.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Abituria;component/pagezadania.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\PageZadania.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
