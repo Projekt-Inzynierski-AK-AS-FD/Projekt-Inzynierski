@@ -1,0 +1,12 @@
+C:\Users\Adam\Desktop\WPFComboBox\WPFControlsDemo_EndComboBox\DemoLibrary\bin\Debug\DemoLibrary.dll
+C:\Users\Adam\Desktop\WPFComboBox\WPFControlsDemo_EndComboBox\DemoLibrary\bin\Debug\DemoLibrary.pdb
+C:\Users\Adam\Desktop\WPFComboBox\WPFControlsDemo_EndComboBox\DemoLibrary\obj\Debug\DemoLibrary.csprojAssemblyReference.cache
+C:\Users\Adam\Desktop\WPFComboBox\WPFControlsDemo_EndComboBox\DemoLibrary\obj\Debug\DemoLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Adam\Desktop\WPFComboBox\WPFControlsDemo_EndComboBox\DemoLibrary\obj\Debug\DemoLibrary.dll
+C:\Users\Adam\Desktop\WPFComboBox\WPFControlsDemo_EndComboBox\DemoLibrary\obj\Debug\DemoLibrary.pdb
+C:\Users\Adam\source\repos\ChoosingChapter\DemoLibrary\obj\Debug\DemoLibrary.csprojAssemblyReference.cache
+C:\Users\Adam\source\repos\ChoosingChapter\DemoLibrary\obj\Debug\DemoLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Adam\source\repos\ChoosingChapter\DemoLibrary\obj\Debug\DemoLibrary.dll
+C:\Users\Adam\source\repos\ChoosingChapter\DemoLibrary\obj\Debug\DemoLibrary.pdb
+C:\Users\Adam\source\repos\ChoosingChapter\DemoLibrary\bin\Debug\DemoLibrary.dll
+C:\Users\Adam\source\repos\ChoosingChapter\DemoLibrary\bin\Debug\DemoLibrary.pdb
