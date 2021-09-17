@@ -18,9 +18,9 @@ namespace Abituria
     /// <summary>
     /// Logika interakcji dla klasy PageMatura.xaml
     /// </summary>
-    public partial class PageMatura2021 : Page
+    public partial class PageMaturaPoprawkowa2021 : Page
     {
-        public PageMatura2021()
+        public PageMaturaPoprawkowa2021()
         {
             InitializeComponent();
         }
@@ -69,10 +69,12 @@ namespace Abituria
             PageWideo pageWideo = new PageWideo();
             NavigationService.Navigate(pageWideo);
         }
+
+
         private void Button2021(object sender, RoutedEventArgs e)
         {
-            PageMaturaPoprawkowa2021 pageMaturaPoprawkowa2021 = new PageMaturaPoprawkowa2021();
-            NavigationService.Navigate(pageMaturaPoprawkowa2021);
+            PageMatura2021 pageMatura2021 = new PageMatura2021();
+            NavigationService.Navigate(pageMatura2021);
         }
         private void Button2020(object sender, RoutedEventArgs e)
         {

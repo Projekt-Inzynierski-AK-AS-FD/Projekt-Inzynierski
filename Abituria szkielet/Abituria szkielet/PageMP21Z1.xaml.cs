@@ -18,9 +18,9 @@ namespace Abituria
     /// <summary>
     /// Logika interakcji dla klasy PageMatura.xaml
     /// </summary>
-    public partial class PageMatura2021 : Page
+    public partial class PageMP21Z1 : Page
     {
-        public PageMatura2021()
+        public PageMP21Z1()
         {
             InitializeComponent();
         }
