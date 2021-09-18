@@ -18,6 +18,7 @@ namespace Abituria
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
+    /// koty to mlemlinki
     public partial class MainWindow : Window
     {
         public MainWindow()

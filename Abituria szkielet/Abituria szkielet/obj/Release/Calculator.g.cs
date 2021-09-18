@@ -212,7 +212,7 @@ namespace Abituria {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Abituria szkielet;component/calculator.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Abituria;component/calculator.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\Calculator.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
