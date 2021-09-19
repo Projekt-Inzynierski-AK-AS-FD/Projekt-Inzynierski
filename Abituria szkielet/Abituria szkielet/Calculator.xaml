@@ -17,7 +17,7 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
-
+                
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -35,24 +35,25 @@
             <Button x:Name="Button7" Click="Button_Click" Grid.Row="2" Grid.Column="0" Height="72" Content="7" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="Button8" Click="Button_Click" Grid.Row="2" Grid.Column="1" Height="72" Content="8" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="Button9" Click="Button_Click" Grid.Row="2" Grid.Column="2" Height="72" Content="9" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="ButtonPrzecinek" Click="Button_Click" Grid.Row="2" Grid.Column="3" Height="72" Content="," FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonDodawanie" Click="Button_ClickDodawanie" Grid.Row="0" Grid.Column="3" Height="72" Content="+" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonOdejmowanie" Click="Button_ClickOdejmowanie" Grid.Row="0" Grid.Column="4" Height="72" Content="-" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonMnozenie" Click="Button_ClickMnozenie" Grid.Row="1" Grid.Column="3" Height="72" Content="*" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonDzielenie" Click="Button_ClickDzielenie" Grid.Row="1" Grid.Column="4" Height="72" Content=":" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
-            <Button x:Name="ButtonWynik" Click="Button_ClickWynik" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Height="72" Content="=" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="ButtonWynik" Click="Button_ClickWynik" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Height="72" Content="=" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="Button0" Click="Button_Click" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Height="72" Content="0" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="White" Foreground="black" BorderThickness="0,0,0,4" BorderBrush="black"/>
             <Button x:Name="ButtonPierwiastek" Click="Button_ClickPierwiastek" Grid.Row="3" Grid.Column="2" Height="72" Content="√" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonPotega" Click="Button_ClickPotega" Grid.Row="3" Grid.Column="3" Height="72" Content="x²" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonUlamek" Click="Button_ClickUlamek" Grid.Row="3" Grid.Column="4" Height="72" Content="1/x" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
         </Grid>
 
-
-
+        
+        
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <!--<Button x:Name="Button0" Click="Button_Click" Width = "140" Content="0" FontFamily="Cavolini" FontSize="20"/>-->
-
-
-
+            
+            
+            
         </StackPanel>
 
     </StackPanel>
