@@ -23,9 +23,35 @@ namespace Abituria
 
             var button = sender as Button;
 
-            var currentNumber = button.Name[button.Name.Length - 1];
+            var currentNumber = button.Content;
 
-            CurrentOperationText.Text += currentNumber;
+            if (string.IsNullOrEmpty(CurrentOperationText.Text))// i jeśli zawiera "znak,znak" w całym ciągu znaków to nie wypisuj... i to w rozszerzonym kalkulatorze, NIE tu!!!
+            {
+                if (currentNumber.ToString() == ",")
+                {
+                    CurrentOperationText.Text = "0" + currentNumber;
+                }
+                else
+                {
+                    CurrentOperationText.Text += currentNumber;
+                }
+            }
+            else
+            {
+                CurrentOperationText.Text += currentNumber;
+            }
+            //else
+            //{
+            //    if (CurrentOperationText.Text.Contains(","))
+            //    {
+            //        CurrentOperationText.Text += currentNumber.;                   //continue
+            //    }
+            //    else
+            //    {
+            //          CurrentOperationText.Text += currentNumber;
+            //    }
+
+                //}
         }
         private void Button_ClickDodawanie(object sender, RoutedEventArgs e)
         {
@@ -82,16 +108,48 @@ namespace Abituria
                 CurrentOperationText.Text += "*";
             }
         }
+        //private void Button_ClickDzielenie(object sender, RoutedEventArgs e)
+        //{
+        //    var operation = CurrentOperationText.Text;
+
+        //    if (ContainsOperation(operation))
+        //    {
+        //        CurrentOperationText.Text = CalculateResult(operation).ToString();
+        //    }
+
+        //    if (string.IsNullOrEmpty(CurrentOperationText.Text))
+        //    {
+        //        CurrentOperationText.Text = ResultText.Text + ":";
+        //    }
+        //    else
+        //    {
+        //        CurrentOperationText.Text += ":";
+        //    }
+        //}
+
         private void Button_ClickDzielenie(object sender, RoutedEventArgs e)
         {
             var operation = CurrentOperationText.Text;
-
+            
             if (ContainsOperation(operation))
             {
-                CurrentOperationText.Text = CalculateResult(operation).ToString();
+
+                if (Dziel_Zero(operation) == true)
+                {
+                    ResultText.Text = "Nie można dzielić przez ZERO!!!";
+                    CurrentOperationText.Text = string.Empty;
+                }
+                else
+                {
+                    CurrentOperationText.Text = CalculateResult(operation).ToString();
+                }
             }
 
-            if (string.IsNullOrEmpty(CurrentOperationText.Text))
+            if (string.IsNullOrEmpty(CurrentOperationText.Text) && ResultText.Text == "Nie można dzielić przez ZERO!!!")
+            {
+                CurrentOperationText.Text = string.Empty;
+            }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text))
             {
                 CurrentOperationText.Text = ResultText.Text + ":";
             }
@@ -136,9 +194,24 @@ namespace Abituria
         {
             var operation = CurrentOperationText.Text;
 
-            ResultText.Text = CalculateResult(operation).ToString();
-
-            CurrentOperationText.Text = string.Empty;
+            if (operation.Contains(':'))
+            {
+                if (Dziel_Zero(operation) == true)
+                {
+                    ResultText.Text = "Nie można dzielić przez ZERO!!!";
+                    CurrentOperationText.Text = string.Empty;
+                }
+                else
+                {
+                    ResultText.Text = CalculateResult(operation).ToString();
+                    CurrentOperationText.Text = string.Empty;
+                }
+            }
+            else
+            {
+                ResultText.Text = CalculateResult(operation).ToString();
+                CurrentOperationText.Text = string.Empty;
+            }
         }
 
         private bool ContainsOperation(string operation)
@@ -203,14 +276,14 @@ namespace Abituria
                     elements[1] = elements[0];
                 }
 
-                if (elements[1] == "0")
-                {
-                    return 0;
-                }
-                else
-                {
-                    return double.Parse(elements[0]) / double.Parse(elements[1]);
-                }
+                //if (elements[1] == "0")
+                //{
+                //    return 0;
+                //}
+                //else
+                //{
+                return double.Parse(elements[0]) / double.Parse(elements[1]);
+                //}
             }
 
             if (operation.Contains('/'))
@@ -256,6 +329,19 @@ namespace Abituria
 
             return default;
         }
+        private bool Dziel_Zero(string operation)
+        {
+            operation = CurrentOperationText.Text;
+            var elements = operation.Split(':');
 
+            if (elements[1] == "0")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
