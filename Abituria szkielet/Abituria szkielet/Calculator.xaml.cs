@@ -36,22 +36,42 @@ namespace Abituria
                     CurrentOperationText.Text += currentNumber;
                 }
             }
+            else if (CurrentOperationText.Text.Contains("+") || CurrentOperationText.Text.Contains('-') || CurrentOperationText.Text.Contains('*') || CurrentOperationText.Text.Contains(':'))
+            {
+                var elements = CurrentOperationText.Text.Split('+');
+
+                if (elements[1].Contains(","))
+                {
+                    if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                    else
+                    {
+                        CurrentOperationText.Text += currentNumber;
+                    }
+                }  
+                else
+                {
+                    CurrentOperationText.Text += currentNumber;
+                }
+            }
             else
             {
-                CurrentOperationText.Text += currentNumber;
+                if (CurrentOperationText.Text.Contains(","))
+                {
+                    if (currentNumber.ToString() == ",")
+                    {
+                        //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                    }
+                    else
+                    {
+                        CurrentOperationText.Text += currentNumber;
+                    }
+                }
+                else
+                {
+                    CurrentOperationText.Text += currentNumber;
+                }
             }
-            //else
-            //{
-            //    if (CurrentOperationText.Text.Contains(","))
-            //    {
-            //        CurrentOperationText.Text += currentNumber.;                   //continue
-            //    }
-            //    else
-            //    {
-            //          CurrentOperationText.Text += currentNumber;
-            //    }
-
-                //}
+            
         }
         private void Button_ClickDodawanie(object sender, RoutedEventArgs e)
         {
