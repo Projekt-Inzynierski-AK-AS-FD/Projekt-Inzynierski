@@ -36,7 +36,18 @@ namespace Abituria
                     CurrentOperationText.Text += currentNumber;
                 }
             }
-            else if (CurrentOperationText.Text.Contains("+") || CurrentOperationText.Text.Contains('-') || CurrentOperationText.Text.Contains('*') || CurrentOperationText.Text.Contains(':'))
+            else if (CurrentOperationText.Text.EndsWith("+")|| CurrentOperationText.Text.EndsWith("-")|| CurrentOperationText.Text.EndsWith("*")|| CurrentOperationText.Text.EndsWith(":"))
+            {
+                if (currentNumber.ToString() == ",")
+                {
+                    CurrentOperationText.Text += "0" + currentNumber;
+                }
+                else
+                {
+                    CurrentOperationText.Text += currentNumber;
+                }
+            }
+            else if (CurrentOperationText.Text.Contains("+"))
             {
                 var elements = CurrentOperationText.Text.Split('+');
 
@@ -48,6 +59,57 @@ namespace Abituria
                         CurrentOperationText.Text += currentNumber;
                     }
                 }  
+                else
+                {
+                    CurrentOperationText.Text += currentNumber;
+                }
+            }
+            else if (CurrentOperationText.Text.Contains("-"))
+            {
+                var elements = CurrentOperationText.Text.Split('-');
+
+                if (elements[1].Contains(","))
+                {
+                    if (currentNumber.ToString() == ",") { }
+                    else
+                    {
+                        CurrentOperationText.Text += currentNumber;
+                    }
+                }
+                else
+                {
+                    CurrentOperationText.Text += currentNumber;
+                }
+            }
+            else if (CurrentOperationText.Text.Contains(":"))
+            {
+                var elements = CurrentOperationText.Text.Split(':');
+
+                if (elements[1].Contains(","))
+                {
+                    if (currentNumber.ToString() == ",") { }
+                    else
+                    {
+                        CurrentOperationText.Text += currentNumber;
+                    }
+                }
+                else
+                {
+                    CurrentOperationText.Text += currentNumber;
+                }
+            }
+            else if (CurrentOperationText.Text.Contains("*"))
+            {
+                var elements = CurrentOperationText.Text.Split('*');
+
+                if (elements[1].Contains(","))
+                {
+                    if (currentNumber.ToString() == ",") { }
+                    else
+                    {
+                        CurrentOperationText.Text += currentNumber;
+                    }
+                }
                 else
                 {
                     CurrentOperationText.Text += currentNumber;
@@ -198,7 +260,14 @@ namespace Abituria
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
             }
 
-            CurrentOperationText.Text += "²";
+            if (string.IsNullOrEmpty(CurrentOperationText.Text))
+            {
+                CurrentOperationText.Text = ResultText.Text + "²";
+            }
+            else
+            {
+                CurrentOperationText.Text += "²";
+            }
         }
         private void Button_ClickUlamek(object sender, RoutedEventArgs e)
         {
