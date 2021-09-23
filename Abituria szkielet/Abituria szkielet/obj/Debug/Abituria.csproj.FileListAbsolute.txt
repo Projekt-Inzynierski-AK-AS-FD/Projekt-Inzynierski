@@ -33,8 +33,6 @@ C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageMat
 C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageMatura2021.g.cs
 C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageWideo.g.cs
 C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageZadania.g.cs
-C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageDzialy.g.cs
-C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageMatura.g.cs
 C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\App.g.cs
 C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria_MarkupCompile.cache
 C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria_MarkupCompile.lref
@@ -45,8 +43,6 @@ C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageMat
 C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageMatura2021.baml
 C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageWideo.baml
 C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageZadania.baml
-C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageDzialy.baml
-C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageMatura.baml
 C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria.g.resources
 C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria.Properties.Resources.resources
 C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria.csproj.GenerateResource.cache
@@ -179,3 +175,17 @@ C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abi
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria.csproj.CoreCompileInputs.cache
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria.exe
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria szkielet\Abituria szkielet\obj\Debug\Abituria.pdb
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageDzial1.g.cs
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageDzial2.g.cs
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageDzial3.g.cs
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageDzialyWybor.g.cs
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageMaturaLata.g.cs
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageMaturaPoprawkowa2021.g.cs
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageMP21Z1.g.cs
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageDzial1.baml
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageDzial2.baml
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageDzial3.baml
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageDzialyWybor.baml
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageMaturaLata.baml
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageMaturaPoprawkowa2021.baml
+C:\Users\Adam\source\repos\Abituria szkielet\Abituria szkielet\obj\Debug\PageMP21Z1.baml

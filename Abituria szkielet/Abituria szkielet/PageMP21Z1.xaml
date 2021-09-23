@@ -78,7 +78,7 @@
                                 </TextBlock.LayoutTransform>
                             </TextBlock>
                     <TextBlock Text="{Binding Path=Version, StringFormat={} v{0}}"/>
-                        ⋅ 3<Run Typography.Variants="Superscript">19</Run> 
+                        ⋅ 3
                         <TextBlock Text="19">
                             <TextBlock.LayoutTransform>
                                 <!-- Typography.Variants="Superscript" didn't work -->
