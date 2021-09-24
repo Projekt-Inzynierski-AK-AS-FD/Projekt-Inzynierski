@@ -41,7 +41,7 @@ namespace Abituria {
     public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 10 "..\..\MainWindow.xaml"
+        #line 17 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Frame MainFrame;
         
@@ -79,43 +79,51 @@ namespace Abituria {
             switch (connectionId)
             {
             case 1:
-            this.MainFrame = ((System.Windows.Controls.Frame)(target));
-            return;
-            case 2:
             
-            #line 30 "..\..\MainWindow.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonCalculator);
+            #line 9 "..\..\MainWindow.xaml"
+            ((Abituria.MainWindow)(target)).Closed += new System.EventHandler(this.Window_Closed);
             
             #line default
             #line hidden
             return;
+            case 2:
+            this.MainFrame = ((System.Windows.Controls.Frame)(target));
+            return;
             case 3:
             
-            #line 31 "..\..\MainWindow.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonMatura);
+            #line 37 "..\..\MainWindow.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonCalculator);
             
             #line default
             #line hidden
             return;
             case 4:
             
-            #line 32 "..\..\MainWindow.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonDzialy);
+            #line 38 "..\..\MainWindow.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonMatura);
             
             #line default
             #line hidden
             return;
             case 5:
             
-            #line 33 "..\..\MainWindow.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonZadania);
+            #line 39 "..\..\MainWindow.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonDzialy);
             
             #line default
             #line hidden
             return;
             case 6:
             
-            #line 34 "..\..\MainWindow.xaml"
+            #line 40 "..\..\MainWindow.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonZadania);
+            
+            #line default
+            #line hidden
+            return;
+            case 7:
+            
+            #line 41 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonWideo);
             
             #line default

@@ -32,7 +32,7 @@ using System.Windows.Shapes;
 using System.Windows.Shell;
 
 
-namespace Abituria_szkielet {
+namespace Abituria {
     
     
     /// <summary>
@@ -61,7 +61,7 @@ namespace Abituria_szkielet {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
-            Abituria_szkielet.App app = new Abituria_szkielet.App();
+            Abituria.App app = new Abituria.App();
             app.InitializeComponent();
             app.Run();
         }
