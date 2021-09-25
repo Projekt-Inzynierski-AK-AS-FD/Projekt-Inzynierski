@@ -432,10 +432,14 @@ namespace Abituria
                 return false;
             }
         }
-        //Po naciśnięciu na textbox ResultText jego zawartość zostaje skopiowana do schowka
+        //Funkcja: po naciśnięciu na textbox ResultText prawym przyciskiem myszy jego zawartość zostaje skopiowana do schowka, używa eventu MouseLeftButtonUp
         private void ResultText_Kopiuj(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("mlem");
+            //używa metody obiektu schowka
+            Clipboard.SetText(ResultText.Text);
+
+            //to pozwoli na późniejsze wklejenie ZE schowka DO pola tekstowego, np. z kalku do zadania, ale trzeba określić konkretne miejsce wklejenia
+            //ResultText.Text = Clipboard.GetText();
         }
         }
 }
