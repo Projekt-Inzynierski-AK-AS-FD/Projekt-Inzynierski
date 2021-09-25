@@ -8,7 +8,7 @@
         ResizeMode="NoResize"
         Title="Kalkulator" Height="450" Width="800">
     <StackPanel>
-        <TextBlock x:Name="ResultText" FontFamily="Cavolini" FontSize="20"/>
+        <TextBlock x:Name="ResultText" FontFamily="Cavolini" FontSize="20" MouseLeftButtonUp="ResultText_Kopiuj"/>
         <TextBlock x:Name="CurrentOperationText" FontFamily="Cavolini" FontSize="20"/>
         <Grid>
             <Grid.ColumnDefinitions>

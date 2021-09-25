@@ -139,12 +139,24 @@ namespace Abituria
         {
             var operation = CurrentOperationText.Text;
 
-            if (ContainsOperation(operation))
+            if (CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":"))
+            {
+                CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
+                CurrentOperationText.Text += "+";
+            }
+            else if (CurrentOperationText.Text.EndsWith(",")){}////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
+            else if (CurrentOperationText.Text.EndsWith(":0"))
+            {
+                ResultText.Text = "Nie można dzielić przez ZERO!!!";
+                CurrentOperationText.Text = string.Empty;
+            }
+            else if (ContainsOperation(operation) && !(CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")))
             {
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
+                CurrentOperationText.Text += "+";
             }
-
-            if(string.IsNullOrEmpty(CurrentOperationText.Text))
+            else if (ResultText.Text == "Nie można dzielić przez ZERO!!!") { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == "Nie można dzielić przez ZERO!!!"))
             {
                 CurrentOperationText.Text = ResultText.Text + "+";
             }
@@ -152,18 +164,29 @@ namespace Abituria
             {
                 CurrentOperationText.Text += "+";
             }
-            
         }
         private void Button_ClickOdejmowanie(object sender, RoutedEventArgs e)
         {
             var operation = CurrentOperationText.Text;
 
-            if (ContainsOperation(operation))
+            if (CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":"))
+            {
+                CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
+                CurrentOperationText.Text += "-";
+            }
+            else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
+            else if (CurrentOperationText.Text.EndsWith(":0"))
+            {
+                ResultText.Text = "Nie można dzielić przez ZERO!!!";
+                CurrentOperationText.Text = string.Empty;
+            }
+            else if (ContainsOperation(operation) && !(CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")))
             {
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
+                CurrentOperationText.Text += "-";
             }
-
-            if (string.IsNullOrEmpty(CurrentOperationText.Text))
+            else if (ResultText.Text == "Nie można dzielić przez ZERO!!!") { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == "Nie można dzielić przez ZERO!!!"))
             {
                 CurrentOperationText.Text = ResultText.Text + "-";
             }
@@ -176,12 +199,24 @@ namespace Abituria
         {
             var operation = CurrentOperationText.Text;
 
-            if (ContainsOperation(operation))
+            if (CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":"))
+            {
+                CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
+                CurrentOperationText.Text += "*";
+            }
+            else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
+            else if (CurrentOperationText.Text.EndsWith(":0"))
+            {
+                ResultText.Text = "Nie można dzielić przez ZERO!!!";
+                CurrentOperationText.Text = string.Empty;
+            }
+            else if (ContainsOperation(operation) && !(CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")))
             {
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
+                CurrentOperationText.Text += "*";
             }
-
-            if (string.IsNullOrEmpty(CurrentOperationText.Text))
+            else if (ResultText.Text == "Nie można dzielić przez ZERO!!!") { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == "Nie można dzielić przez ZERO!!!"))
             {
                 CurrentOperationText.Text = ResultText.Text + "*";
             }
@@ -190,33 +225,19 @@ namespace Abituria
                 CurrentOperationText.Text += "*";
             }
         }
-        //private void Button_ClickDzielenie(object sender, RoutedEventArgs e)
-        //{
-        //    var operation = CurrentOperationText.Text;
-
-        //    if (ContainsOperation(operation))
-        //    {
-        //        CurrentOperationText.Text = CalculateResult(operation).ToString();
-        //    }
-
-        //    if (string.IsNullOrEmpty(CurrentOperationText.Text))
-        //    {
-        //        CurrentOperationText.Text = ResultText.Text + ":";
-        //    }
-        //    else
-        //    {
-        //        CurrentOperationText.Text += ":";
-        //    }
-        //}
-
         private void Button_ClickDzielenie(object sender, RoutedEventArgs e)
         {
             var operation = CurrentOperationText.Text;
-            
-            if (ContainsOperation(operation))
-            {
 
-                if (Dziel_Zero(operation) == true)
+            if (CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":"))
+            {
+                CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
+                CurrentOperationText.Text += ":";
+            }
+            else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
+            else if (ContainsOperation(operation) && !(CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")))
+            {
+                if (CurrentOperationText.Text.EndsWith(":0"))
                 {
                     ResultText.Text = "Nie można dzielić przez ZERO!!!";
                     CurrentOperationText.Text = string.Empty;
@@ -224,14 +245,11 @@ namespace Abituria
                 else
                 {
                     CurrentOperationText.Text = CalculateResult(operation).ToString();
+                    CurrentOperationText.Text += ":";
                 }
             }
-
-            if (string.IsNullOrEmpty(CurrentOperationText.Text) && ResultText.Text == "Nie można dzielić przez ZERO!!!")
-            {
-                CurrentOperationText.Text = string.Empty;
-            }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text))
+            else if (ResultText.Text == "Nie można dzielić przez ZERO!!!") { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == "Nie można dzielić przez ZERO!!!"))
             {
                 CurrentOperationText.Text = ResultText.Text + ":";
             }
@@ -285,7 +303,7 @@ namespace Abituria
 
             if (operation.Contains(':'))
             {
-                if (Dziel_Zero(operation) == true)
+                if (CurrentOperationText.Text.EndsWith("0"))
                 {
                     ResultText.Text = "Nie można dzielić przez ZERO!!!";
                     CurrentOperationText.Text = string.Empty;
@@ -305,19 +323,7 @@ namespace Abituria
 
         private bool ContainsOperation(string operation)
             => operation.Contains('+') || operation.Contains('-') || operation.Contains('*') || operation.Contains(':');
-
-        private double OperationAfterOperation(string operation)
-        {
-            if (operation.Contains('+'))
-            {
-                var elements = operation.Split('+');
-
-                return double.Parse(elements[0]) + double.Parse(elements[1]);
-            }
-
-            return default;
-        }
-
+            
         private double CalculateResult(string operation)
         {
             if (operation.Contains('+'))
@@ -364,15 +370,8 @@ namespace Abituria
                 {
                     elements[1] = elements[0];
                 }
-
-                //if (elements[1] == "0")
-                //{
-                //    return 0;
-                //}
-                //else
-                //{
+                
                 return double.Parse(elements[0]) / double.Parse(elements[1]);
-                //}
             }
 
             if (operation.Contains('/'))
@@ -418,19 +417,14 @@ namespace Abituria
 
             return default;
         }
-        private bool Dziel_Zero(string operation)
+        //Funkcja: po naciśnięciu na textbox ResultText prawym przyciskiem myszy jego zawartość zostaje skopiowana do schowka, używa eventu MouseLeftButtonUp
+        private void ResultText_Kopiuj(object sender, RoutedEventArgs e)
         {
-            operation = CurrentOperationText.Text;
-            var elements = operation.Split(':');
+            //używa metody obiektu schowka
+            Clipboard.SetText(ResultText.Text);
 
-            if (elements[1] == "0")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            //to pozwoli na późniejsze wklejenie ZE schowka DO pola tekstowego, np. z kalku do zadania, ale trzeba określić konkretne miejsce wklejenia
+            //ResultText.Text = Clipboard.GetText();
         }
-    }
+        }
 }
