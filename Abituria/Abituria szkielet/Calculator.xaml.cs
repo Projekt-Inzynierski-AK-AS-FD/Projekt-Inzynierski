@@ -432,5 +432,10 @@ namespace Abituria
                 return false;
             }
         }
-    }
+        //Po naciśnięciu na textbox ResultText jego zawartość zostaje skopiowana do schowka
+        private void ResultText_Kopiuj(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("mlem");
+        }
+        }
 }
