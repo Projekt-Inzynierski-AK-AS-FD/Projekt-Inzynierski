@@ -51,86 +51,103 @@ namespace Abituria
             {
                 var elements = CurrentOperationText.Text.Split('+');
 
-                if (elements[1].Contains(","))
+                if (elements[1].Length >= 15){}
+                else
                 {
-                    if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                    if (elements[1].Contains(","))
+                    {
+                        if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                        else
+                        {
+                            CurrentOperationText.Text += currentNumber;
+                        }
+                    }
                     else
                     {
                         CurrentOperationText.Text += currentNumber;
                     }
-                }  
-                else
-                {
-                    CurrentOperationText.Text += currentNumber;
                 }
             }
             else if (CurrentOperationText.Text.Contains("-"))
             {
                 var elements = CurrentOperationText.Text.Split('-');
 
-                if (elements[1].Contains(","))
+                if (elements[1].Length >= 15){}
+                else
                 {
-                    if (currentNumber.ToString() == ",") { }
+                    if (elements[1].Contains(","))
+                    {
+                        if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                        else
+                        {
+                            CurrentOperationText.Text += currentNumber;
+                        }
+                    }
                     else
                     {
                         CurrentOperationText.Text += currentNumber;
                     }
-                }
-                else
-                {
-                    CurrentOperationText.Text += currentNumber;
                 }
             }
             else if (CurrentOperationText.Text.Contains(":"))
             {
                 var elements = CurrentOperationText.Text.Split(':');
 
-                if (elements[1].Contains(","))
+                if (elements[1].Length >= 15){}
+                else
                 {
-                    if (currentNumber.ToString() == ",") { }
+                    if (elements[1].Contains(","))
+                    {
+                        if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                        else
+                        {
+                            CurrentOperationText.Text += currentNumber;
+                        }
+                    }
                     else
                     {
                         CurrentOperationText.Text += currentNumber;
                     }
-                }
-                else
-                {
-                    CurrentOperationText.Text += currentNumber;
                 }
             }
             else if (CurrentOperationText.Text.Contains("*"))
             {
                 var elements = CurrentOperationText.Text.Split('*');
 
-                if (elements[1].Contains(","))
+                if (elements[1].Length >= 15){}
+                else
                 {
-                    if (currentNumber.ToString() == ",") { }
+                    if (elements[1].Contains(","))
+                    {
+                        if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                        else
+                        {
+                            CurrentOperationText.Text += currentNumber;
+                        }
+                    }
                     else
                     {
                         CurrentOperationText.Text += currentNumber;
                     }
-                }
-                else
-                {
-                    CurrentOperationText.Text += currentNumber;
                 }
             }
             else
             {
-                if (CurrentOperationText.Text.Contains(","))
+                if (CurrentOperationText.Text.Length >= 15) { }
+                else
                 {
-                    if (currentNumber.ToString() == ",")
+                    if (CurrentOperationText.Text.Contains(","))
                     {
-                        //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                        if (currentNumber.ToString() == ",") { } //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                        else
+                        {
+                            CurrentOperationText.Text += currentNumber;
+                        }
                     }
                     else
                     {
                         CurrentOperationText.Text += currentNumber;
                     }
-                }
-                else
-                {
-                    CurrentOperationText.Text += currentNumber;
                 }
             }
             
