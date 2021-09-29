@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -11,6 +12,8 @@ namespace Abituria
 
     public partial class Calculator : Window
     {
+        private const string ZeroNIE = "Nie można dzielić przez ZERO!!!";
+        
         public Calculator()
         {
             InitializeComponent();
@@ -36,7 +39,7 @@ namespace Abituria
                     CurrentOperationText.Text += currentNumber;
                 }
             }
-            else if (CurrentOperationText.Text.EndsWith("+")|| CurrentOperationText.Text.EndsWith("-")|| CurrentOperationText.Text.EndsWith("*")|| CurrentOperationText.Text.EndsWith(":"))
+            else if (CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":"))
             {
                 if (currentNumber.ToString() == ",")
                 {
@@ -47,106 +50,214 @@ namespace Abituria
                     CurrentOperationText.Text += currentNumber;
                 }
             }
-            else if (CurrentOperationText.Text.Contains("+"))
+            else if (CurrentOperationText.Text.Contains('E'))
             {
-                var elements = CurrentOperationText.Text.Split('+');
-
-                if (elements[1].Length >= 15){}
-                else
+                if (Regex.Matches(CurrentOperationText.Text, "[+]").Count == 2)
                 {
-                    if (elements[1].Contains(","))
+                    var elements = CurrentOperationText.Text.Split('+');
+                    if (elements[2].Length >= 15) { }
+                    else
                     {
-                        if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                        if (elements[2].Contains(","))
+                        {
+                            if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                            else
+                            {
+                                CurrentOperationText.Text += currentNumber;
+                            }
+                        }
                         else
                         {
                             CurrentOperationText.Text += currentNumber;
                         }
                     }
+                }
+                else if (CurrentOperationText.Text.Contains("-"))
+                {
+                    var elements = CurrentOperationText.Text.Split('-');
+
+                    if (elements[1].Length >= 15) { }
                     else
                     {
-                        CurrentOperationText.Text += currentNumber;
+                        if (elements[1].Contains(","))
+                        {
+                            if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                            else
+                            {
+                                CurrentOperationText.Text += currentNumber;
+                            }
+                        }
+                        else
+                        {
+                            CurrentOperationText.Text += currentNumber;
+                        }
+                    }
+                }
+                else if (CurrentOperationText.Text.Contains(":"))
+                {
+                    var elements = CurrentOperationText.Text.Split(':');
+
+                    if (elements[1].Length >= 15) { }
+                    else
+                    {
+                        if (elements[1].Contains(","))
+                        {
+                            if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                            else
+                            {
+                                CurrentOperationText.Text += currentNumber;
+                            }
+                        }
+                        else
+                        {
+                            CurrentOperationText.Text += currentNumber;
+                        }
+                    }
+                }
+                else if (CurrentOperationText.Text.Contains("*"))
+                {
+                    var elements = CurrentOperationText.Text.Split('*');
+
+                    if (elements[1].Length >= 15) { }
+                    else
+                    {
+                        if (elements[1].Contains(","))
+                        {
+                            if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                            else
+                            {
+                                CurrentOperationText.Text += currentNumber;
+                            }
+                        }
+                        else
+                        {
+                            CurrentOperationText.Text += currentNumber;
+                        }
+                    }
+                }
+                else
+                {
+                    if (CurrentOperationText.Text.Length >= 15) { }
+                    else
+                    {
+                        if (CurrentOperationText.Text.Contains(","))
+                        {
+                            if (currentNumber.ToString() == ",") { } //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                            else
+                            {
+                                CurrentOperationText.Text += currentNumber;
+                            }
+                        }
+                        else
+                        {
+                            CurrentOperationText.Text += currentNumber;
+                        }
                     }
                 }
             }
-            else if (CurrentOperationText.Text.Contains("-"))
+            else if (!CurrentOperationText.Text.Contains('E'))
             {
-                var elements = CurrentOperationText.Text.Split('-');
-
-                if (elements[1].Length >= 15){}
-                else
+                if (CurrentOperationText.Text.Contains("+"))
                 {
-                    if (elements[1].Contains(","))
+                    var elements = CurrentOperationText.Text.Split('+');
+
+                    if (elements[1].Length >= 15) { }
+                    else
                     {
-                        if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                        if (elements[1].Contains(","))
+                        {
+                            if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                            else
+                            {
+                                CurrentOperationText.Text += currentNumber;
+                            }
+                        }
                         else
                         {
                             CurrentOperationText.Text += currentNumber;
                         }
-                    }
-                    else
-                    {
-                        CurrentOperationText.Text += currentNumber;
                     }
                 }
-            }
-            else if (CurrentOperationText.Text.Contains(":"))
-            {
-                var elements = CurrentOperationText.Text.Split(':');
-
-                if (elements[1].Length >= 15){}
-                else
+                else if (CurrentOperationText.Text.Contains("-"))
                 {
-                    if (elements[1].Contains(","))
+                    var elements = CurrentOperationText.Text.Split('-');
+
+                    if (elements[1].Length >= 15) { }
+                    else
                     {
-                        if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                        if (elements[1].Contains(","))
+                        {
+                            if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                            else
+                            {
+                                CurrentOperationText.Text += currentNumber;
+                            }
+                        }
                         else
                         {
                             CurrentOperationText.Text += currentNumber;
                         }
-                    }
-                    else
-                    {
-                        CurrentOperationText.Text += currentNumber;
                     }
                 }
-            }
-            else if (CurrentOperationText.Text.Contains("*"))
-            {
-                var elements = CurrentOperationText.Text.Split('*');
-
-                if (elements[1].Length >= 15){}
-                else
+                else if (CurrentOperationText.Text.Contains(":"))
                 {
-                    if (elements[1].Contains(","))
+                    var elements = CurrentOperationText.Text.Split(':');
+
+                    if (elements[1].Length >= 15) { }
+                    else
                     {
-                        if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                        if (elements[1].Contains(","))
+                        {
+                            if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                            else
+                            {
+                                CurrentOperationText.Text += currentNumber;
+                            }
+                        }
                         else
                         {
                             CurrentOperationText.Text += currentNumber;
                         }
-                    }
-                    else
-                    {
-                        CurrentOperationText.Text += currentNumber;
                     }
                 }
-            }
-            else
-            {
-                if (CurrentOperationText.Text.Length >= 15) { }
-                else
+                else if (CurrentOperationText.Text.Contains("*"))
                 {
-                    if (CurrentOperationText.Text.Contains(","))
+                    var elements = CurrentOperationText.Text.Split('*');
+
+                    if (elements[1].Length >= 15) { }
+                    else
                     {
-                        if (currentNumber.ToString() == ",") { } //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                        if (elements[1].Contains(","))
+                        {
+                            if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                            else
+                            {
+                                CurrentOperationText.Text += currentNumber;
+                            }
+                        }
                         else
                         {
                             CurrentOperationText.Text += currentNumber;
                         }
                     }
+                }
+                else
+                {
+                    if (CurrentOperationText.Text.Length >= 15) { }
                     else
                     {
-                        CurrentOperationText.Text += currentNumber;
+                        if (CurrentOperationText.Text.Contains(","))
+                        {
+                            if (currentNumber.ToString() == ",") { } //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                            else
+                            {
+                                CurrentOperationText.Text += currentNumber;
+                            }
+                        }
+                        else
+                        {
+                            CurrentOperationText.Text += currentNumber;
+                        }
                     }
                 }
             }
@@ -164,7 +275,7 @@ namespace Abituria
             else if (CurrentOperationText.Text.EndsWith(",")){}////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
             else if (CurrentOperationText.Text.EndsWith(":0"))
             {
-                ResultText.Text = "Nie można dzielić przez ZERO!!!";
+                ResultText.Text = ZeroNIE;
                 CurrentOperationText.Text = string.Empty;
             }
             else if (ContainsOperation(operation) && !(CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")))
@@ -172,8 +283,8 @@ namespace Abituria
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
                 CurrentOperationText.Text += "+";
             }
-            else if (ResultText.Text == "Nie można dzielić przez ZERO!!!") { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == "Nie można dzielić przez ZERO!!!"))
+            else if (ResultText.Text == ZeroNIE) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE))
             {
                 CurrentOperationText.Text = ResultText.Text + "+";
             }
@@ -194,7 +305,7 @@ namespace Abituria
             else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
             else if (CurrentOperationText.Text.EndsWith(":0"))
             {
-                ResultText.Text = "Nie można dzielić przez ZERO!!!";
+                ResultText.Text = ZeroNIE;
                 CurrentOperationText.Text = string.Empty;
             }
             else if (ContainsOperation(operation) && !(CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")))
@@ -202,8 +313,8 @@ namespace Abituria
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
                 CurrentOperationText.Text += "-";
             }
-            else if (ResultText.Text == "Nie można dzielić przez ZERO!!!") { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == "Nie można dzielić przez ZERO!!!"))
+            else if (ResultText.Text == ZeroNIE) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE))
             {
                 CurrentOperationText.Text = ResultText.Text + "-";
             }
@@ -214,7 +325,7 @@ namespace Abituria
         }
         private void Button_ClickMnozenie(object sender, RoutedEventArgs e)
         {
-            var operation = CurrentOperationText.Text;
+            string operation = CurrentOperationText.Text;//było var...
 
             if (CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":"))
             {
@@ -224,7 +335,7 @@ namespace Abituria
             else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
             else if (CurrentOperationText.Text.EndsWith(":0"))
             {
-                ResultText.Text = "Nie można dzielić przez ZERO!!!";
+                ResultText.Text = ZeroNIE;
                 CurrentOperationText.Text = string.Empty;
             }
             else if (ContainsOperation(operation) && !(CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")))
@@ -232,8 +343,8 @@ namespace Abituria
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
                 CurrentOperationText.Text += "*";
             }
-            else if (ResultText.Text == "Nie można dzielić przez ZERO!!!") { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == "Nie można dzielić przez ZERO!!!"))
+            else if (ResultText.Text == ZeroNIE) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE))
             {
                 CurrentOperationText.Text = ResultText.Text + "*";
             }
@@ -256,7 +367,7 @@ namespace Abituria
             {
                 if (CurrentOperationText.Text.EndsWith(":0"))
                 {
-                    ResultText.Text = "Nie można dzielić przez ZERO!!!";
+                    ResultText.Text = ZeroNIE;
                     CurrentOperationText.Text = string.Empty;
                 }
                 else
@@ -265,8 +376,8 @@ namespace Abituria
                     CurrentOperationText.Text += ":";
                 }
             }
-            else if (ResultText.Text == "Nie można dzielić przez ZERO!!!") { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == "Nie można dzielić przez ZERO!!!"))
+            else if (ResultText.Text == ZeroNIE) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE))
             {
                 CurrentOperationText.Text = ResultText.Text + ":";
             }
@@ -320,9 +431,11 @@ namespace Abituria
 
             if (operation.Contains(':'))
             {
-                if (CurrentOperationText.Text.EndsWith("0"))
+                var elements = CurrentOperationText.Text.Split(':');
+
+                if (elements[1] == "0")
                 {
-                    ResultText.Text = "Nie można dzielić przez ZERO!!!";
+                    ResultText.Text = ZeroNIE;
                     CurrentOperationText.Text = string.Empty;
                 }
                 else
@@ -343,93 +456,174 @@ namespace Abituria
             
         private double CalculateResult(string operation)
         {
-            if (operation.Contains('+'))
+            if (operation.Contains('E'))
             {
-                var elements = operation.Split('+');
-
-                if (String.IsNullOrEmpty(elements[1]))
+                if (Regex.Matches(operation, "[+]").Count == 2)
                 {
-                    elements[1] = elements[0];
+                    var elements = operation.Split('+');
+
+                    //if (String.IsNullOrEmpty(elements[1]))
+                    //{
+                    //    elements[2] = operation.Concat(elements[0] + elements[1]);
+                    //}
+
+                    return Convert.ToDouble(elements[0] + elements[1]) + Convert.ToDouble(elements[2]);
+                }
+                else if (operation.Contains('-'))
+                {
+                    var elements = operation.Split('-');
+
+                    if (String.IsNullOrEmpty(elements[1]))
+                    {
+                        elements[1] = elements[0];
+                    }
+
+                    return Convert.ToDouble(elements[0]) - Convert.ToDouble(elements[1]);
                 }
 
-                return double.Parse(elements[0]) + double.Parse(elements[1]);
-            }
-
-            if (operation.Contains('-'))
-            {
-                var elements = operation.Split('-');
-
-                if (String.IsNullOrEmpty(elements[1]))
+                else if (operation.Contains('*'))
                 {
-                    elements[1] = elements[0];
+                    var elements = operation.Split('*');
+
+                    if (String.IsNullOrEmpty(elements[1]))
+                    {
+                        elements[1] = elements[0];
+                    }
+
+                    return Convert.ToDouble(elements[0]) * Convert.ToDouble(elements[1]);
                 }
 
-                return double.Parse(elements[0]) - double.Parse(elements[1]);
-            }
-
-            if (operation.Contains('*'))
-            {
-                var elements = operation.Split('*');
-
-                if (String.IsNullOrEmpty(elements[1]))
+                else if (operation.Contains(':'))
                 {
-                    elements[1] = elements[0];
+                    var elements = operation.Split(':');
+
+                    if (String.IsNullOrEmpty(elements[1]))
+                    {
+                        elements[1] = elements[0];
+                    }
+
+                    return Convert.ToDouble(elements[0]) / Convert.ToDouble(elements[1]);
                 }
 
-                return double.Parse(elements[0]) * double.Parse(elements[1]);
-            }
-
-            if (operation.Contains(':'))
-            {
-                var elements = operation.Split(':');
-
-                if (String.IsNullOrEmpty(elements[1]))
+                else if (operation.Contains('/'))
                 {
-                    elements[1] = elements[0];
-                }
-                
-                return double.Parse(elements[0]) / double.Parse(elements[1]);
-            }
+                    var elements = operation.Split('/');
 
-            if (operation.Contains('/'))
-            {
-                var elements = operation.Split('/');
+                    if (String.IsNullOrEmpty(elements[1]))
+                    {
+                        elements[1] = elements[0];
+                    }
 
-                if (String.IsNullOrEmpty(elements[1]))
-                {
-                    elements[1] = elements[0];
+                    return Convert.ToDouble(elements[0]) / Convert.ToDouble(elements[1]);
+
                 }
 
-                return double.Parse(elements[0]) / double.Parse(elements[1]);
-            }
-
-            if (operation.Contains('√'))
-            {
-                var elements = operation.Split('√');
-
-
-                if (String.IsNullOrEmpty(elements[0]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                else if (operation.Contains('√'))
                 {
-                    return Math.Sqrt(double.Parse(elements[1]));
+                    var elements = operation.Split('√');
+
+
+                    if (String.IsNullOrEmpty(elements[0]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                    {
+                        return Math.Sqrt(Convert.ToDouble(elements[1]));
+                    }
+                    else
+                    {
+                        return Convert.ToDouble(elements[0]) * Math.Sqrt(Convert.ToDouble(elements[1]));
+                    }
                 }
-                else
+
+                else if (operation.Contains('²'))
                 {
-                    return double.Parse(elements[0]) * Math.Sqrt(double.Parse(elements[1]));
+                    var elements = operation.Split('²');
+
+                    return Math.Pow(Convert.ToDouble(elements[0]), 2);
                 }
             }
-
-            if (operation.Contains('²'))
+            else
             {
-                var elements = operation.Split('²');
+                if (operation.Contains('+'))
+                {
+                    var elements = operation.Split('+');
 
-                return Math.Pow(double.Parse(elements[0]),2);
-            }
+                    if (String.IsNullOrEmpty(elements[1]))
+                    {
+                        elements[1] = elements[0];
+                    }
 
-            if (operation.Contains('²'))
-            {
-                var elements = operation.Split('²');
+                    return Convert.ToDouble(elements[0]) + Convert.ToDouble(elements[1]);
+                }
 
-                return Math.Pow(double.Parse(elements[0]), 2);
+                if (operation.Contains('-'))
+                {
+                    var elements = operation.Split('-');
+
+                    if (String.IsNullOrEmpty(elements[1]))
+                    {
+                        elements[1] = elements[0];
+                    }
+
+                    return Convert.ToDouble(elements[0]) - Convert.ToDouble(elements[1]);
+                }
+
+                if (operation.Contains('*'))
+                {
+                    var elements = operation.Split('*');
+
+                    if (String.IsNullOrEmpty(elements[1]))
+                    {
+                        elements[1] = elements[0];
+                    }
+
+                    return Convert.ToDouble(elements[0]) * Convert.ToDouble(elements[1]);
+                }
+
+                if (operation.Contains(':'))
+                {
+                    var elements = operation.Split(':');
+
+                    if (String.IsNullOrEmpty(elements[1]))
+                    {
+                        elements[1] = elements[0];
+                    }
+
+                    return Convert.ToDouble(elements[0]) / Convert.ToDouble(elements[1]);
+                }
+
+                if (operation.Contains('/'))
+                {
+                    var elements = operation.Split('/');
+
+                    if (String.IsNullOrEmpty(elements[1]))
+                    {
+                        elements[1] = elements[0];
+                    }
+
+                    return Convert.ToDouble(elements[0]) / Convert.ToDouble(elements[1]);
+
+                }
+
+                if (operation.Contains('√'))
+                {
+                    var elements = operation.Split('√');
+
+
+                    if (String.IsNullOrEmpty(elements[0]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                    {
+                        return Math.Sqrt(Convert.ToDouble(elements[1]));
+                    }
+                    else
+                    {
+                        return Convert.ToDouble(elements[0]) * Math.Sqrt(Convert.ToDouble(elements[1]));
+                    }
+                }
+
+                if (operation.Contains('²'))
+                {
+                    var elements = operation.Split('²');
+
+                    return Math.Pow(Convert.ToDouble(elements[0]), 2);
+                }
             }
 
             return default;
