@@ -81,7 +81,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Calculator.xaml">
+    <Page Include="Menu\Kalkulator\Calculator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -93,93 +93,93 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Calculator.xaml.cs">
+    <Compile Include="Menu\Kalkulator\Calculator.xaml.cs">
       <DependentUpon>Calculator.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PageDzial1.xaml">
+    <Page Include="Menu\Dzialy\PageDzial1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageDzial2.xaml">
+    <Page Include="Menu\Dzialy\PageDzial2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageDzial3.xaml">
+    <Page Include="Menu\Dzialy\PageDzial3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageDzialyWybor.xaml">
+    <Page Include="Menu\PageDzialyWybor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageMatura2019.xaml">
+    <Page Include="Menu\Matury\2019\PageMatura2019.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageMatura2020.xaml">
+    <Page Include="Menu\Matury\2020\PageMatura2020.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageMatura2021.xaml">
+    <Page Include="Menu\Matury\2021\PageMatura2021.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageMaturaLata.xaml">
+    <Page Include="Menu\Matury\PageMaturaLata.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageMaturaPoprawkowa2021.xaml">
+    <Page Include="Menu\Matury\2021p\PageMaturaPoprawkowa2021.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PageMP21Z1.xaml">
+    <Page Include="Menu\Matury\2021p\PageMP21Z1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PageWideo.xaml">
+    <Page Include="Menu\PageWideo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageZadania.xaml">
+    <Page Include="Menu\PageZadania.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PageDzial1.xaml.cs">
+    <Compile Include="Menu\Dzialy\PageDzial1.xaml.cs">
       <DependentUpon>PageDzial1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageDzial2.xaml.cs">
+    <Compile Include="Menu\Dzialy\PageDzial2.xaml.cs">
       <DependentUpon>PageDzial2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageDzial3.xaml.cs">
+    <Compile Include="Menu\Dzialy\PageDzial3.xaml.cs">
       <DependentUpon>PageDzial3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageDzialyWybor.xaml.cs">
+    <Compile Include="Menu\PageDzialyWybor.xaml.cs">
       <DependentUpon>PageDzialyWybor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageMatura2019.xaml.cs">
+    <Compile Include="Menu\Matury\2019\PageMatura2019.xaml.cs">
       <DependentUpon>PageMatura2019.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageMatura2020.xaml.cs">
+    <Compile Include="Menu\Matury\2020\PageMatura2020.xaml.cs">
       <DependentUpon>PageMatura2020.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageMatura2021.xaml.cs">
+    <Compile Include="Menu\Matury\2021\PageMatura2021.xaml.cs">
       <DependentUpon>PageMatura2021.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageMaturaLata.xaml.cs">
+    <Compile Include="Menu\Matury\PageMaturaLata.xaml.cs">
       <DependentUpon>PageMaturaLata.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageMaturaPoprawkowa2021.xaml.cs" />
-    <Compile Include="PageMP21Z1.xaml.cs" />
-    <Compile Include="PageWideo.xaml.cs">
+    <Compile Include="Menu\Matury\2021p\PageMaturaPoprawkowa2021.xaml.cs" />
+    <Compile Include="Menu\Matury\2021p\PageMP21Z1.xaml.cs" />
+    <Compile Include="Menu\PageWideo.xaml.cs">
       <DependentUpon>PageWideo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageZadania.xaml.cs">
+    <Compile Include="Menu\PageZadania.xaml.cs">
       <DependentUpon>PageZadania.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
