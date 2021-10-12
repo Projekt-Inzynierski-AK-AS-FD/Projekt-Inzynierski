@@ -274,19 +274,10 @@ namespace Abituria
                 CurrentOperationText.Text += "+";
             }
             else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////Nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
-            else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0"))
+            else if (CurrentOperationText.Text.EndsWith(":0") || CurrentOperationText.Text.EndsWith("0²"))
             {
-                var elements = CurrentOperationText.Text.Split(':');
-                if (Convert.ToDouble(elements[1]) * 1 == 0)
-                {
-                    ResultText.Text = ZeroNIE;
-                    CurrentOperationText.Text = string.Empty;
-                }
-                else
-                {
-                    CurrentOperationText.Text = CalculateResult(operation).ToString();
-                    CurrentOperationText.Text += "+";
-                }
+                ResultText.Text = ZeroNIE;
+                CurrentOperationText.Text = string.Empty;
             }//////////////////////////////////////Nie dziel przez zero
             else if (ContainsOperation(operation) && !(CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")))
             {
@@ -313,19 +304,10 @@ namespace Abituria
                 CurrentOperationText.Text += "-";
             }
             else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
-            else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0"))
+            else if (CurrentOperationText.Text.EndsWith(":0") || CurrentOperationText.Text.EndsWith("0²"))
             {
-                var elements = CurrentOperationText.Text.Split(':');
-                if (Convert.ToDouble(elements[1]) * 1 == 0)
-                {
-                    ResultText.Text = ZeroNIE;
-                    CurrentOperationText.Text = string.Empty;
-                }
-                else
-                {
-                    CurrentOperationText.Text = CalculateResult(operation).ToString();
-                    CurrentOperationText.Text += "-";
-                }
+                ResultText.Text = ZeroNIE;
+                CurrentOperationText.Text = string.Empty;
             }
             else if (ContainsOperation(operation) && !(CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")))
             {
@@ -352,19 +334,10 @@ namespace Abituria
                 CurrentOperationText.Text += "*";
             }
             else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
-            else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0"))
+            else if (CurrentOperationText.Text.EndsWith(":0") || CurrentOperationText.Text.EndsWith("0²"))
             {
-                var elements = CurrentOperationText.Text.Split(':');
-                if (Convert.ToDouble(elements[1]) * 1 == 0)
-                {
-                    ResultText.Text = ZeroNIE;
-                    CurrentOperationText.Text = string.Empty;
-                }
-                else
-                {
-                    CurrentOperationText.Text = CalculateResult(operation).ToString();
-                    CurrentOperationText.Text += "*";
-                }
+                ResultText.Text = ZeroNIE;
+                CurrentOperationText.Text = string.Empty;
             }
             else if (ContainsOperation(operation) && !(CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")))
             {
@@ -391,20 +364,6 @@ namespace Abituria
                 CurrentOperationText.Text += ":";
             }
             else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
-            else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0"))
-            {
-                var elements = CurrentOperationText.Text.Split(':');
-                if (Convert.ToDouble(elements[1]) * 1 == 0)
-                {
-                    ResultText.Text = ZeroNIE;
-                    CurrentOperationText.Text = string.Empty;
-                }
-                else
-                {
-                    CurrentOperationText.Text = CalculateResult(operation).ToString();
-                    CurrentOperationText.Text += ":";
-                }
-            }
             else if (ContainsOperation(operation) && !(CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")))
             {
                 if (CurrentOperationText.Text.EndsWith(":0"))
@@ -445,18 +404,10 @@ namespace Abituria
 
             if (CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")) { }//nie wstawia potęgi za działaniem
             else if (CurrentOperationText.Text.EndsWith(",")) { }
-            else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0"))
+            else if (CurrentOperationText.Text.EndsWith(":0") || CurrentOperationText.Text.EndsWith("0²"))
             {
-                var elements = CurrentOperationText.Text.Split(':');
-                if (Convert.ToDouble(elements[1]) * 1 == 0)
-                {
-                    ResultText.Text = ZeroNIE;
-                    CurrentOperationText.Text = string.Empty;
-                }
-                else
-                {
-                    CurrentOperationText.Text += "²";
-                }
+                ResultText.Text = ZeroNIE;
+                CurrentOperationText.Text = string.Empty;
             }
             else if (CurrentOperationText.Text.Contains("²"))
             {
