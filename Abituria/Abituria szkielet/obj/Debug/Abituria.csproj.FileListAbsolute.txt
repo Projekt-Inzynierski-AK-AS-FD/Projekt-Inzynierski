@@ -328,3 +328,5 @@ C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\D
 C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\PageMP21Z1.baml
 C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\PageWideo.baml
 C:\Users\admin\source\repos\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\PageZadania.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\CalculatorChoice.g.cs
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\CalculatorChoice.baml
