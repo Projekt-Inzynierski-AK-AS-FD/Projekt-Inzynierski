@@ -68,7 +68,7 @@ namespace Abituria
             NavigationService.Navigate(pageWideo);
         }
 
-        private void ButtonCalculatorBasic(object sender, RoutedEventArgs e)
+        private void ButtonCalcBasic(object sender, RoutedEventArgs e)
         {
             var calculator = new Calculator();
             calculator.Show();
@@ -76,7 +76,8 @@ namespace Abituria
 
         private void ButtonCalcQuad(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("mlemlinki się cieszą radością i życiem mlemlinki (kalkulator dla kwadratowej robię, ciesz się mlemlinkami bo potem ich tu nie będzie)");
+            var calcQuad = new CalcQuadraticFunc();
+            calcQuad.Show();
         }
     }
 }
