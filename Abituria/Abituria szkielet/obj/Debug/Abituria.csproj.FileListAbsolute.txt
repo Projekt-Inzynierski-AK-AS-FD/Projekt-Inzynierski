@@ -332,3 +332,7 @@ C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abi
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\CalculatorChoice.baml
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\CalcQuadraticFunc.g.cs
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\CalcQuadraticFunc.baml
+C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\CalcQuadraticFunc.g.cs
+C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\CalculatorChoice.g.cs
+C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\CalcQuadraticFunc.baml
+C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\CalculatorChoice.baml
