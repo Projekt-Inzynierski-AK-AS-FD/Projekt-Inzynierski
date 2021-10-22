@@ -23,5 +23,15 @@ namespace Abituria
         {
             InitializeComponent();
         }
+
+        private void ButtonPrzelicz(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Sasha śpi w moim łożku i nie mogę się położyć spać");
+        }
+
+        private void ButtonReset(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Sashku mlemaj gdzie indziej");
+        }
     }
 }
