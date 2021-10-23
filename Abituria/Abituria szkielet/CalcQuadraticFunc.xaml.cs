@@ -33,5 +33,20 @@ namespace Abituria
         {
             MessageBox.Show("Sashku mlemaj gdzie indziej");
         }
+
+        private void ButtonOgolna(object sender, RoutedEventArgs e)
+        {
+            InitializeComponent();
+        }
+
+        private void ButtonIloczynowa(object sender, RoutedEventArgs e)
+        {
+            InitializeComponent();
+        }
+        private void ButtonKanoniczna(object sender, RoutedEventArgs e)
+        {
+            InitializeComponent();
+        }
     }
 }
+
