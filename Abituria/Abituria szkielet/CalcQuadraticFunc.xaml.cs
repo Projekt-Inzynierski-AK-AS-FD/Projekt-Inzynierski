@@ -24,19 +24,30 @@ namespace Abituria
             InitializeComponent();
         }
 
-        private void ButtonPrzelicz(object sender, RoutedEventArgs e)
+        private void Przelicz(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Sasha śpi w moim łożku i nie mogę się położyć spać");
         }
 
-        private void ButtonReset(object sender, RoutedEventArgs e)
+        private void Reset(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Sashku mlemaj gdzie indziej");
         }
 
         private void ButtonOgolna(object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
+            if (this.pOgolna.Visibility == Visibility.Collapsed && this.buttonPrzelicz.Visibility == Visibility.Collapsed && this.buttonReset.Visibility == Visibility.Collapsed)
+            {
+                this.pOgolna.Visibility = Visibility.Visible;
+                this.buttonPrzelicz.Visibility = Visibility.Visible;
+                this.buttonReset.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                this.pOgolna.Visibility = Visibility.Collapsed;
+                this.buttonPrzelicz.Visibility = Visibility.Collapsed;
+                this.buttonReset.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void ButtonIloczynowa(object sender, RoutedEventArgs e)
