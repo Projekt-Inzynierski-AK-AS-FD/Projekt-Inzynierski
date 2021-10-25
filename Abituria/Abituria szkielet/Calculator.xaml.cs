@@ -13,6 +13,7 @@ namespace Abituria
     public partial class Calculator : Window
     {
         private const string ZeroNIE = "Nie można dzielić przez ZERO!!!";
+        private const string BrakObslugi = "NIESTETY!!! Takie działanie jeszcze nie jest obsługiwane!";
         
         public Calculator()
         {
@@ -24,9 +25,9 @@ namespace Abituria
         {
             ResultText.Text = string.Empty;
 
-            var button = sender as Button;
+            Button button = sender as Button;
 
-            var currentNumber = button.Content;
+            object currentNumber = button.Content;
 
             if (string.IsNullOrEmpty(CurrentOperationText.Text))// i jeśli zawiera "znak,znak" w całym ciągu znaków to nie wypisuj... i to w rozszerzonym kalkulatorze, NIE tu!!!
             {
@@ -36,6 +37,30 @@ namespace Abituria
                 }
                 else
                 {
+                    CurrentOperationText.Text += currentNumber;
+                }
+            }
+            else if (CurrentOperationText.Text == "0")
+            {
+                if (currentNumber.ToString() == ",")
+                {
+                    CurrentOperationText.Text += currentNumber;
+                }
+                else
+                {
+                    CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
+                    CurrentOperationText.Text += currentNumber;
+                }
+            }
+            else if (CurrentOperationText.Text.EndsWith("√0"))
+            {
+                if (currentNumber.ToString() == ",")
+                {
+                    CurrentOperationText.Text += currentNumber;
+                }
+                else
+                {
+                    CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
                     CurrentOperationText.Text += currentNumber;
                 }
             }
@@ -55,7 +80,47 @@ namespace Abituria
             {
                 if (Regex.Matches(CurrentOperationText.Text, "[+]").Count == 2)
                 {
-                    var elements = CurrentOperationText.Text.Split('+');
+                    string[] elements = CurrentOperationText.Text.Split('+');
+                    if (elements[2].Length >= 15) { }
+                    else
+                    {
+                        if (elements[2].Contains(","))
+                        {
+                            if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                            else
+                            {
+                                CurrentOperationText.Text += currentNumber;
+                            }
+                        }
+                        else
+                        {
+                            CurrentOperationText.Text += currentNumber;
+                        }
+                    }
+                }
+                else if (Regex.Matches(CurrentOperationText.Text, "[-]").Count == 2)
+                {
+                    string[] elements = CurrentOperationText.Text.Split('-');
+                    if (elements[2].Length >= 15) { }
+                    else
+                    {
+                        if (elements[2].Contains(","))
+                        {
+                            if (currentNumber.ToString() == ",") { }     //jeśli istnieje już przecinek nie wypisuje kolejnego.
+                            else
+                            {
+                                CurrentOperationText.Text += currentNumber;
+                            }
+                        }
+                        else
+                        {
+                            CurrentOperationText.Text += currentNumber;
+                        }
+                    }
+                }
+                else if (CurrentOperationText.Text.Contains("-") && CurrentOperationText.Text.Contains("+"))
+                {
+                    string[] elements = CurrentOperationText.Text.Split('-', '+');
                     if (elements[2].Length >= 15) { }
                     else
                     {
@@ -75,7 +140,7 @@ namespace Abituria
                 }
                 else if (CurrentOperationText.Text.Contains("-"))
                 {
-                    var elements = CurrentOperationText.Text.Split('-');
+                    string[] elements = CurrentOperationText.Text.Split('-');
 
                     if (elements[1].Length >= 15) { }
                     else
@@ -96,7 +161,7 @@ namespace Abituria
                 }
                 else if (CurrentOperationText.Text.Contains(":"))
                 {
-                    var elements = CurrentOperationText.Text.Split(':');
+                    string[] elements = CurrentOperationText.Text.Split(':');
 
                     if (elements[1].Length >= 15) { }
                     else
@@ -117,7 +182,7 @@ namespace Abituria
                 }
                 else if (CurrentOperationText.Text.Contains("*"))
                 {
-                    var elements = CurrentOperationText.Text.Split('*');
+                    string[] elements = CurrentOperationText.Text.Split('*');
 
                     if (elements[1].Length >= 15) { }
                     else
@@ -160,7 +225,7 @@ namespace Abituria
             {
                 if (CurrentOperationText.Text.Contains("+"))
                 {
-                    var elements = CurrentOperationText.Text.Split('+');
+                    string[] elements = CurrentOperationText.Text.Split('+');
 
                     if (elements[1].Length >= 15) { }
                     else
@@ -181,7 +246,7 @@ namespace Abituria
                 }
                 else if (CurrentOperationText.Text.Contains("-"))
                 {
-                    var elements = CurrentOperationText.Text.Split('-');
+                    string[] elements = CurrentOperationText.Text.Split('-');
 
                     if (elements[1].Length >= 15) { }
                     else
@@ -202,7 +267,7 @@ namespace Abituria
                 }
                 else if (CurrentOperationText.Text.Contains(":"))
                 {
-                    var elements = CurrentOperationText.Text.Split(':');
+                    string[] elements = CurrentOperationText.Text.Split(':');
 
                     if (elements[1].Length >= 15) { }
                     else
@@ -223,7 +288,7 @@ namespace Abituria
                 }
                 else if (CurrentOperationText.Text.Contains("*"))
                 {
-                    var elements = CurrentOperationText.Text.Split('*');
+                    string[] elements = CurrentOperationText.Text.Split('*');
 
                     if (elements[1].Length >= 15) { }
                     else
@@ -263,10 +328,11 @@ namespace Abituria
                 }
             }
             
+
         }
         private void Button_ClickDodawanie(object sender, RoutedEventArgs e)
         {
-            var operation = CurrentOperationText.Text;
+            string operation = CurrentOperationText.Text;
 
             if (CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":"))//zamienia z + na inne działanie
             {
@@ -274,9 +340,10 @@ namespace Abituria
                 CurrentOperationText.Text += "+";
             }
             else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////Nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
+            else if (CurrentOperationText.Text.EndsWith("√")) { }
             else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0"))
             {
-                var elements = CurrentOperationText.Text.Split(':');
+                string[] elements = CurrentOperationText.Text.Split(':');
                 if (Convert.ToDouble(elements[1]) * 1 == 0)
                 {
                     ResultText.Text = ZeroNIE;
@@ -293,8 +360,8 @@ namespace Abituria
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
                 CurrentOperationText.Text += "+";
             }//Zawiera ale się nie kończy
-            else if (ResultText.Text == ZeroNIE) { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE))
+            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && (!(ResultText.Text == ZeroNIE) || !(ResultText.Text == BrakObslugi)))
             {
                 CurrentOperationText.Text = ResultText.Text + "+";
             }
@@ -305,7 +372,7 @@ namespace Abituria
         }
         private void Button_ClickOdejmowanie(object sender, RoutedEventArgs e)
         {
-            var operation = CurrentOperationText.Text;
+            string operation = CurrentOperationText.Text;
 
             if (CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":"))
             {
@@ -313,9 +380,10 @@ namespace Abituria
                 CurrentOperationText.Text += "-";
             }
             else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
+            else if (CurrentOperationText.Text.EndsWith("√")) { }
             else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0"))
             {
-                var elements = CurrentOperationText.Text.Split(':');
+                string[] elements = CurrentOperationText.Text.Split(':');
                 if (Convert.ToDouble(elements[1]) * 1 == 0)
                 {
                     ResultText.Text = ZeroNIE;
@@ -332,8 +400,8 @@ namespace Abituria
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
                 CurrentOperationText.Text += "-";
             }
-            else if (ResultText.Text == ZeroNIE) { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE))
+            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && (!(ResultText.Text == ZeroNIE) || !(ResultText.Text == BrakObslugi)))
             {
                 CurrentOperationText.Text = ResultText.Text + "-";
             }
@@ -352,9 +420,10 @@ namespace Abituria
                 CurrentOperationText.Text += "*";
             }
             else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
+            else if (CurrentOperationText.Text.EndsWith("√")) { }
             else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0"))
             {
-                var elements = CurrentOperationText.Text.Split(':');
+                string[] elements = CurrentOperationText.Text.Split(':');
                 if (Convert.ToDouble(elements[1]) * 1 == 0)
                 {
                     ResultText.Text = ZeroNIE;
@@ -371,8 +440,8 @@ namespace Abituria
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
                 CurrentOperationText.Text += "*";
             }
-            else if (ResultText.Text == ZeroNIE) { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE))
+            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && (!(ResultText.Text == ZeroNIE) || !(ResultText.Text == BrakObslugi)))
             {
                 CurrentOperationText.Text = ResultText.Text + "*";
             }
@@ -383,7 +452,7 @@ namespace Abituria
         }
         private void Button_ClickDzielenie(object sender, RoutedEventArgs e)
         {
-            var operation = CurrentOperationText.Text;
+            string operation = CurrentOperationText.Text;
 
             if (CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":"))
             {
@@ -391,9 +460,10 @@ namespace Abituria
                 CurrentOperationText.Text += ":";
             }
             else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
+            else if (CurrentOperationText.Text.EndsWith("√")) { }
             else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0"))
             {
-                var elements = CurrentOperationText.Text.Split(':');
+                string[] elements = CurrentOperationText.Text.Split(':');
                 if (Convert.ToDouble(elements[1]) * 1 == 0)
                 {
                     ResultText.Text = ZeroNIE;
@@ -418,8 +488,8 @@ namespace Abituria
                     CurrentOperationText.Text += ":";
                 }
             }
-            else if (ResultText.Text == ZeroNIE) { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE))
+            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && (!(ResultText.Text == ZeroNIE) || !(ResultText.Text == BrakObslugi)))
             {
                 CurrentOperationText.Text = ResultText.Text + ":";
             }
@@ -430,24 +500,45 @@ namespace Abituria
         }
         private void Button_ClickPierwiastek(object sender, RoutedEventArgs e)
         {
-            var operation = CurrentOperationText.Text;
+            string operation = CurrentOperationText.Text;
 
-            if (ContainsOperation(operation))
+            if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("²")) { }
+            else if (CurrentOperationText.Text.Contains("√"))
             {
-                CurrentOperationText.Text = CalculateResult(operation).ToString();
+                //if (CurrentOperationText.Text.EndsWith("√"))
+                //{
+                //    //potęga n tego stopnia
+                //}
+                //else { }
+            }
+            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && (!(ResultText.Text == ZeroNIE) || !(ResultText.Text == BrakObslugi)))
+            {
+                if (ResultText.Text == "0")
+                {
+                    CurrentOperationText.Text = "√";
+                }
+                else
+                {
+                    CurrentOperationText.Text = "√" + ResultText.Text;
+                }
+            }
+            else
+            {
+                CurrentOperationText.Text += "√";
             }
 
-            CurrentOperationText.Text += "√";
+            
         }
         private void Button_ClickPotega(object sender, RoutedEventArgs e)
         {
-            var operation = CurrentOperationText.Text;
+            string operation = CurrentOperationText.Text;
 
             if (CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":")) { }//nie wstawia potęgi za działaniem
-            else if (CurrentOperationText.Text.EndsWith(",")) { }
+            else if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("√")) { }
             else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0"))
             {
-                var elements = CurrentOperationText.Text.Split(':');
+                string[] elements = CurrentOperationText.Text.Split(':');
                 if (Convert.ToDouble(elements[1]) * 1 == 0)
                 {
                     ResultText.Text = ZeroNIE;
@@ -462,8 +553,8 @@ namespace Abituria
             {
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
             }
-            else if (ResultText.Text == ZeroNIE) { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE))
+            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && (!(ResultText.Text == ZeroNIE) || !(ResultText.Text == BrakObslugi)))
             {
                 CurrentOperationText.Text = ResultText.Text + "²";
             }
@@ -475,7 +566,7 @@ namespace Abituria
         private void Button_ClickUlamek(object sender, RoutedEventArgs e)
         {
             CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
-            var operation = CurrentOperationText.Text;
+            string operation = CurrentOperationText.Text;
 
             if (ContainsOperation(operation))
             {
@@ -484,13 +575,18 @@ namespace Abituria
         }
         private void Button_ClickWynik(object sender, RoutedEventArgs e)
         {
-            var operation = CurrentOperationText.Text;
+            string operation = CurrentOperationText.Text;
 
-            if (operation.Contains(':'))
+            if (Regex.Matches(operation, "[E]").Count >= 2 || Regex.Matches(ResultText.Text, "[E]").Count >= 2)
             {
-                var elements = CurrentOperationText.Text.Split(':');
+                ResultText.Text = BrakObslugi;
+                CurrentOperationText.Text = string.Empty;
+            }
+            else if (operation.Contains(':'))
+            {
+                string[] elements = CurrentOperationText.Text.Split(':');
 
-                if (elements[1] == "0")
+                if (Convert.ToDouble(elements[1]) * 1 == 0)
                 {
                     ResultText.Text = ZeroNIE;
                     CurrentOperationText.Text = string.Empty;
@@ -501,6 +597,11 @@ namespace Abituria
                     CurrentOperationText.Text = string.Empty;
                 }
             }
+            else if (operation.EndsWith("√"))
+            {
+            ResultText.Text = "0";
+            CurrentOperationText.Text = string.Empty;
+            }
             else
             {
                 ResultText.Text = CalculateResult(operation).ToString();
@@ -509,92 +610,459 @@ namespace Abituria
         }
 
         private bool ContainsOperation(string operation)
-            => operation.Contains('+') || operation.Contains('-') || operation.Contains('*') || operation.Contains(':') || operation.Contains('²');
+            => operation.Contains('+') || operation.Contains('-') || operation.Contains('*') || operation.Contains(':') || operation.Contains('²') || operation.Contains('√');
+
+        private void RemoveUnlessPoint(string currentNumber)
+        {
+            if (currentNumber.ToString() == ",")
+            {
+                CurrentOperationText.Text += currentNumber;
+            }
+            else
+            {
+                CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
+                CurrentOperationText.Text += currentNumber;
+            }
+        }////////////////////////Temat do ogarnięcia. PS skrócenie funkcji warunkowej
 
         private double CalculateResult(string operation)
         {
             if (operation.Contains('E'))
             {
-                if (Regex.Matches(operation, "[+]").Count == 2)
+                if (operation.Contains("E+"))
                 {
-                    var elements = operation.Split('+');
-
-                    //if (String.IsNullOrEmpty(elements[1]))
-                    //{
-                    //    elements[2] = operation.Concat(elements[0] + elements[1]);
-                    //}
-
-                    return Convert.ToDouble(elements[0] + elements[1]) + Convert.ToDouble(elements[2]);
-                }
-                else if (operation.Contains('-'))
-                {
-                    var elements = operation.Split('-');
-
-                    if (String.IsNullOrEmpty(elements[1]))
+                    if (Regex.Matches(operation, "[+]").Count == 2)
                     {
-                        elements[1] = elements[0];
-                    }
+                        if (operation.Contains('√'))
+                        {
+                            if (operation.Contains('²'))
+                            {
+                                string[] elements = operation.Split('+', '√', '²');
+                                string firstNum = string.Join("+", elements.Take(2));
 
-                    return Convert.ToDouble(elements[0]) - Convert.ToDouble(elements[1]);
+                                if (string.IsNullOrEmpty(elements[2]))
+                                {
+                                    return Convert.ToDouble(firstNum)
+                                           + Math.Sqrt(Math.Pow(Convert.ToDouble(elements[3]), 2));
+                                }
+                                else
+                                {
+                                    return Convert.ToDouble(firstNum)
+                                           + (Convert.ToDouble(elements[2])
+                                              * Math.Sqrt(Math.Pow(Convert.ToDouble(elements[3]), 2)));
+                                }
+                            }
+                            else
+                            {
+                                string[] elements = operation.Split('+', '√');
+                                string firstNum = string.Join("+", elements.Take(2));
+
+                                if (string.IsNullOrEmpty(elements[2]))
+                                {
+                                    return Convert.ToDouble(firstNum)
+                                           + Math.Sqrt(Convert.ToDouble(elements[3]));
+                                }
+                                else
+                                {
+                                    return Convert.ToDouble(firstNum)
+                                           + (Convert.ToDouble(elements[2])
+                                              * Math.Sqrt(Convert.ToDouble(elements[3])));
+                                }
+                            }
+                        }
+                        else if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split('+', '²');
+                            string firstNum = string.Join("+", elements.Take(2));
+
+                            return Convert.ToDouble(firstNum)
+                                    + Math.Pow(Convert.ToDouble(elements[2]), 2);
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split(new[] { '+' }, 3);
+
+                            if (string.IsNullOrEmpty(elements[2]))
+                            {
+                                elements[2] = elements[0] + elements[1];
+                            }
+                            string firstNum = string.Join("+", elements.Take(2));
+
+                            return Convert.ToDouble(firstNum)
+                                   + Convert.ToDouble(elements[2]);
+                        }
+                    }
+                    else if (operation.Contains('-'))
+                    {
+                        if (operation.Contains('√'))
+                        {
+                            string[] elements = operation.Split('-', '√');
+
+                            if (string.IsNullOrEmpty(elements[1]))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       - Math.Sqrt(Convert.ToDouble(elements[2]));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       - (Convert.ToDouble(elements[1])
+                                          * Math.Sqrt(Convert.ToDouble(elements[2])));
+                            }
+                        }
+                        else if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split('-', '²');
+
+                            return Convert.ToDouble(elements[0])
+                                   - Math.Pow(Convert.ToDouble(elements[1]), 2);
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split('-');
+                            return Convert.ToDouble(elements[0])
+                                   - Convert.ToDouble(elements[1]);
+                        }
+                    }
+                    else if (operation.Contains('*'))
+                    {
+                        if (operation.Contains('√'))
+                        {
+                            string[] elements = operation.Split('*', '√');
+
+                            if (string.IsNullOrEmpty(elements[1]))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       * Math.Sqrt(Convert.ToDouble(elements[2]));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       * (Convert.ToDouble(elements[1])
+                                          * Math.Sqrt(Convert.ToDouble(elements[2])));
+                            }
+                        }
+                        else if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split('*', '²');
+                            return Convert.ToDouble(elements[0])
+                                   * Math.Pow(Convert.ToDouble(elements[1]), 2);
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split('*');
+
+                            if (string.IsNullOrEmpty(elements[1]))
+                            {
+                                elements[1] = elements[0];
+                            }
+
+                            return Convert.ToDouble(elements[0]) * Convert.ToDouble(elements[1]);
+                        }
+                    }
+                    else if (operation.Contains(':'))
+                    {
+                        if (operation.Contains('√'))
+                        {
+                            string[] elements = operation.Split(':', '√');
+
+                            if (string.IsNullOrEmpty(elements[1]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       / Math.Sqrt(Convert.ToDouble(elements[2]));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       / (Convert.ToDouble(elements[1])
+                                          * Math.Sqrt(Convert.ToDouble(elements[2])));
+                            }
+                        }
+                        else if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split(':', '²');
+                            return Convert.ToDouble(elements[0])
+                                   / Math.Pow(Convert.ToDouble(elements[1]), 2);
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split(':');
+
+                            if (string.IsNullOrEmpty(elements[1]))
+                            {
+                                elements[1] = elements[0];
+                            }
+
+                            return Convert.ToDouble(elements[0])
+                                   / Convert.ToDouble(elements[1]);
+                        }
+                    }
+                    else if (operation.Contains('/'))
+                    {
+                        string[] elements = operation.Split('/');
+
+                        if (string.IsNullOrEmpty(elements[1]))
+                        {
+                            elements[1] = elements[0];
+                        }
+
+                        return Convert.ToDouble(elements[0])
+                               / Convert.ToDouble(elements[1]);
+
+                    }
+                    else if (operation.Contains('√'))
+                    {
+                        if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split('√', '²');
+                            if (string.IsNullOrEmpty(elements[0]))
+                            {
+                                return Math.Sqrt(Math.Pow(Convert.ToDouble(elements[1]), 2));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       * Math.Sqrt(Math.Pow(Convert.ToDouble(elements[1]), 2));
+                            }
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split('√');
+
+                            if (string.IsNullOrEmpty(elements[0]))
+                            {
+                                return Math.Sqrt(Convert.ToDouble(elements[1]));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       * Math.Sqrt(Convert.ToDouble(elements[1]));
+                            }
+                        }
+                    }
+                    else if (operation.Contains('²'))
+                    {
+                        string[] elements = operation.Split('²');
+
+                        return Math.Pow(Convert.ToDouble(elements[0]), 2);
+                    }
                 }
 
-                else if (operation.Contains('*'))
+                else if (operation.Contains("E-"))
                 {
-                    var elements = operation.Split('*');
-
-                    if (String.IsNullOrEmpty(elements[1]))
+                    if (Regex.Matches(operation, "[-]").Count == 2)
                     {
-                        elements[1] = elements[0];
+                        if (operation.Contains('√'))
+                        {
+                            if (operation.Contains('²'))
+                            {
+                                string[] elements = operation.Split('-', '√', '²');
+                                string firstNum = string.Join("-", elements.Take(2));
+
+                                if (string.IsNullOrEmpty(elements[2]))
+                                {
+                                    return Convert.ToDouble(firstNum)
+                                           - Math.Sqrt(Math.Pow(Convert.ToDouble(elements[3]), 2));
+                                }
+                                else
+                                {
+                                    return Convert.ToDouble(firstNum)
+                                           - (Convert.ToDouble(elements[2])
+                                              * Math.Sqrt(Math.Pow(Convert.ToDouble(elements[3]), 2)));
+                                }
+                            }
+                            else
+                            {
+                                string[] elements = operation.Split('-', '√');
+                                string firstNum = string.Join("-", elements.Take(2));
+
+                                if (string.IsNullOrEmpty(elements[2]))
+                                {
+                                    return Convert.ToDouble(firstNum)
+                                           - Math.Sqrt(Convert.ToDouble(elements[3]));
+                                }
+                                else
+                                {
+                                    return Convert.ToDouble(firstNum)
+                                           - (Convert.ToDouble(elements[2])
+                                              * Math.Sqrt(Convert.ToDouble(elements[3])));
+                                }
+                            }
+                        }
+                        else if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split('-', '²');
+                            string firstNum = string.Join("-", elements.Take(2));
+
+                            return Convert.ToDouble(firstNum)
+                                    - Math.Pow(Convert.ToDouble(elements[2]), 2);
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split(new[] { '-' }, 3);
+
+                            if (string.IsNullOrEmpty(elements[2]))
+                            {
+                                elements[2] = elements[0] + elements[1];
+                            }
+
+                            string firstNum = string.Join("-", elements.Take(2));
+
+                            return Convert.ToDouble(firstNum) - Convert.ToDouble(elements[2]); //Convert.ToDouble(firstNum) + Convert.ToDouble(secondNum);
+                        }
                     }
-
-                    return Convert.ToDouble(elements[0]) * Convert.ToDouble(elements[1]);
-                }
-
-                else if (operation.Contains(':'))
-                {
-                    var elements = operation.Split(':');
-
-                    if (String.IsNullOrEmpty(elements[1]))
+                    else if (operation.Contains('+'))//w wypadku notacji np. "1E-15 + coś tam"
                     {
-                        elements[1] = elements[0];
+                        if (operation.Contains('√'))
+                        {
+                            string[] elements = operation.Split('+', '√');
+
+                            if (string.IsNullOrEmpty(elements[1]))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       + Math.Sqrt(Convert.ToDouble(elements[2]));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       + (Convert.ToDouble(elements[1])
+                                          * Math.Sqrt(Convert.ToDouble(elements[2])));
+                            }
+                        }
+                        else if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split('+', '²');
+
+                            return Convert.ToDouble(elements[0])
+                                   + Math.Pow(Convert.ToDouble(elements[1]), 2);
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split('+');
+                            return Convert.ToDouble(elements[0])
+                                   + Convert.ToDouble(elements[1]);
+                        }
                     }
-
-                    return Convert.ToDouble(elements[0]) / Convert.ToDouble(elements[1]);
-                }
-
-                else if (operation.Contains('/'))
-                {
-                    var elements = operation.Split('/');
-
-                    if (String.IsNullOrEmpty(elements[1]))
+                    else if (operation.Contains('*'))
                     {
-                        elements[1] = elements[0];
+                        if (operation.Contains('√'))
+                        {
+                            string[] elements = operation.Split('*', '√');
+
+                            if (string.IsNullOrEmpty(elements[1]))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       * Math.Sqrt(Convert.ToDouble(elements[2]));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       * (Convert.ToDouble(elements[1])
+                                          * Math.Sqrt(Convert.ToDouble(elements[2])));
+                            }
+                        }
+                        else if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split('*', '²');
+                            return Convert.ToDouble(elements[0])
+                                   * Math.Pow(Convert.ToDouble(elements[1]), 2);
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split('*');
+
+                            if (string.IsNullOrEmpty(elements[1]))
+                            {
+                                elements[1] = elements[0];
+                            }
+
+                            return Convert.ToDouble(elements[0]) * Convert.ToDouble(elements[1]);
+                        }
                     }
-
-                    return Convert.ToDouble(elements[0]) / Convert.ToDouble(elements[1]);
-
-                }
-
-                else if (operation.Contains('√'))
-                {
-                    var elements = operation.Split('√');
-
-
-                    if (String.IsNullOrEmpty(elements[0]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                    else if (operation.Contains(':'))
                     {
-                        return Math.Sqrt(Convert.ToDouble(elements[1]));
+                        if (operation.Contains('√'))
+                        {
+                            string[] elements = operation.Split(':', '√');
+
+                            if (string.IsNullOrEmpty(elements[1]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       / Math.Sqrt(Convert.ToDouble(elements[2]));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       / (Convert.ToDouble(elements[1])
+                                          * Math.Sqrt(Convert.ToDouble(elements[2])));
+                            }
+                        }
+                        else if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split(':', '²');
+                            return Convert.ToDouble(elements[0])
+                                   / Math.Pow(Convert.ToDouble(elements[1]), 2);
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split(':');
+
+                            if (string.IsNullOrEmpty(elements[1]))
+                            {
+                                elements[1] = elements[0];
+                            }
+
+                            return Convert.ToDouble(elements[0]) / Convert.ToDouble(elements[1]);
+                        }
                     }
-                    else
+                    else if (operation.Contains('/'))
                     {
-                        return Convert.ToDouble(elements[0]) * Math.Sqrt(Convert.ToDouble(elements[1]));
+                        string[] elements = operation.Split('/');
+
+                        if (string.IsNullOrEmpty(elements[1]))
+                        {
+                            elements[1] = elements[0];
+                        }
+
+                        return Convert.ToDouble(elements[0]) / Convert.ToDouble(elements[1]);
+
                     }
-                }
+                    else if (operation.Contains('√'))
+                    {
+                        if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split('√', '²');
+                            if (string.IsNullOrEmpty(elements[0]))
+                            {
+                                return Math.Sqrt(Math.Pow(Convert.ToDouble(elements[1]), 2));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       * Math.Sqrt(Math.Pow(Convert.ToDouble(elements[1]), 2));
+                            }
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split('√');
 
-                else if (operation.Contains('²'))
-                {
-                    var elements = operation.Split('²');
+                            if (string.IsNullOrEmpty(elements[0]))
+                            {
+                                return Math.Sqrt(Convert.ToDouble(elements[1]));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       * Math.Sqrt(Convert.ToDouble(elements[1]));
+                            }
+                        }
+                    }
+                    else if (operation.Contains('²'))
+                    {
+                        string[] elements = operation.Split('²');
 
-                    return Math.Pow(Convert.ToDouble(elements[0]), 2);
+                        return Math.Pow(Convert.ToDouble(elements[0]), 2);
+                    }
                 }
             }
             else
@@ -603,28 +1071,48 @@ namespace Abituria
                 {
                     if (operation.Contains('√'))
                     {
-                        var elements = operation.Split('√', '+');
-
-
-                        if (String.IsNullOrEmpty(elements[0]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                        if (operation.Contains('²'))
                         {
-                            return Math.Sqrt(Convert.ToDouble(elements[1])) + Convert.ToDouble(elements[2]);
+                            string[] elements = operation.Split('+', '√', '²');
+                            if (string.IsNullOrEmpty(elements[1]))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       + Math.Sqrt(Math.Pow(Convert.ToDouble(elements[2]), 2));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       + (Convert.ToDouble(elements[1])
+                                          * Math.Sqrt(Math.Pow(Convert.ToDouble(elements[2]), 2)));
+                            }
                         }
                         else
                         {
-                            return Convert.ToDouble(elements[0]) * Math.Sqrt(Convert.ToDouble(elements[1])) + Convert.ToDouble(elements[2]);
+                            string[] elements = operation.Split('+', '√');
+
+                            if (string.IsNullOrEmpty(elements[1]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       + Math.Sqrt(Convert.ToDouble(elements[2]));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       + (Convert.ToDouble(elements[1])
+                                          * Math.Sqrt(Convert.ToDouble(elements[2])));
+                            }
                         }
                     }
                     else if (operation.Contains('²'))
                     {
-                        var elements = operation.Split('+', '²');
-                        return Convert.ToDouble(elements[0]) / Math.Pow(Convert.ToDouble(elements[1]), 2);
+                        string[] elements = operation.Split('+', '²');
+                        return Convert.ToDouble(elements[0]) + Math.Pow(Convert.ToDouble(elements[1]), 2);
                     }
                     else
                     {
-                        var elements = operation.Split('+');
+                        string[] elements = operation.Split('+');
 
-                        if (String.IsNullOrEmpty(elements[1]))
+                        if (string.IsNullOrEmpty(elements[1]))
                         {
                             elements[1] = elements[0];
                         }
@@ -635,36 +1123,106 @@ namespace Abituria
 
                 else if (operation.Contains('-'))
                 {
-                    if (operation.Contains('²'))
+                    if (operation.Contains('√'))
                     {
-                        var elements = operation.Split('-', '²');
-                        return Convert.ToDouble(elements[0]) - Math.Pow(Convert.ToDouble(elements[1]), 2);
+                        if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split('-', '√', '²');
+                            if (string.IsNullOrEmpty(elements[1]))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       - Math.Sqrt(Math.Pow(Convert.ToDouble(elements[2]), 2));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       - (Convert.ToDouble(elements[1])
+                                          * Math.Sqrt(Math.Pow(Convert.ToDouble(elements[2]), 2)));
+                            }
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split('-', '√');
+
+                            if (string.IsNullOrEmpty(elements[1]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       - Math.Sqrt(Convert.ToDouble(elements[2]));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       - (Convert.ToDouble(elements[1])
+                                          * Math.Sqrt(Convert.ToDouble(elements[2])));
+                            }
+                        }
+                    }
+                    else if (operation.Contains('²'))
+                    {
+                        string[] elements = operation.Split('-', '²');
+                        return Convert.ToDouble(elements[0])
+                               - Math.Pow(Convert.ToDouble(elements[1]), 2);
                     }
                     else
                     {
-                        var elements = operation.Split('-');
+                        string[] elements = operation.Split('-');
 
-                        if (String.IsNullOrEmpty(elements[1]))
+                        if (string.IsNullOrEmpty(elements[1]))
                         {
                             elements[1] = elements[0];
                         }
 
-                        return Convert.ToDouble(elements[0]) - Convert.ToDouble(elements[1]);
+                        return Convert.ToDouble(elements[0])
+                               - Convert.ToDouble(elements[1]);
                     }
                 }
 
                 else if (operation.Contains('*'))
                 {
-                    if (operation.Contains('²'))
+                    if (operation.Contains('√'))
                     {
-                        var elements = operation.Split('*', '²');
+                        if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split('*', '√', '²');
+                            if (string.IsNullOrEmpty(elements[1]))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       * Math.Sqrt(Math.Pow(Convert.ToDouble(elements[2]), 2));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       * (Convert.ToDouble(elements[1])
+                                          * Math.Sqrt(Math.Pow(Convert.ToDouble(elements[2]), 2)));
+                            }
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split('*', '√');
+
+                            if (string.IsNullOrEmpty(elements[1]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       * Math.Sqrt(Convert.ToDouble(elements[2]));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       * (Convert.ToDouble(elements[1])
+                                          * Math.Sqrt(Convert.ToDouble(elements[2])));
+                            }
+                        }
+                    }
+                    else if (operation.Contains('²'))
+                    {
+                        string[] elements = operation.Split('*', '²');
                         return Convert.ToDouble(elements[0]) * Math.Pow(Convert.ToDouble(elements[1]), 2);
                     }
                     else
                     {
-                        var elements = operation.Split('*');
+                        string[] elements = operation.Split('*');
 
-                        if (String.IsNullOrEmpty(elements[1]))
+                        if (string.IsNullOrEmpty(elements[1]))
                         {
                             elements[1] = elements[0];
                         }
@@ -675,16 +1233,50 @@ namespace Abituria
 
                 else if (operation.Contains(':'))
                 {
-                    if (operation.Contains('²'))
+                    if (operation.Contains('√'))
                     {
-                        var elements = operation.Split(':', '²');
+                        if (operation.Contains('²'))
+                        {
+                            string[] elements = operation.Split(':', '√', '²');
+                            if (string.IsNullOrEmpty(elements[1]))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       / Math.Sqrt(Math.Pow(Convert.ToDouble(elements[2]), 2));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       / (Convert.ToDouble(elements[1])
+                                          / Math.Sqrt(Math.Pow(Convert.ToDouble(elements[2]), 2)));
+                            }
+                        }
+                        else
+                        {
+                            string[] elements = operation.Split(':', '√');
+
+                            if (string.IsNullOrEmpty(elements[1]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       / Math.Sqrt(Convert.ToDouble(elements[2]));
+                            }
+                            else
+                            {
+                                return Convert.ToDouble(elements[0])
+                                       / (Convert.ToDouble(elements[1])
+                                          / Math.Sqrt(Convert.ToDouble(elements[2])));
+                            }
+                        }
+                    }
+                    else if (operation.Contains('²'))
+                    {
+                        string[] elements = operation.Split(':', '²');
                         return Convert.ToDouble(elements[0]) / Math.Pow(Convert.ToDouble(elements[1]), 2);
                     }
                     else
                     {
-                        var elements = operation.Split(':');
+                        string[] elements = operation.Split(':');
 
-                        if (String.IsNullOrEmpty(elements[1]))
+                        if (string.IsNullOrEmpty(elements[1]))
                         {
                             elements[1] = elements[0];
                         }
@@ -695,9 +1287,9 @@ namespace Abituria
 
                 else if (operation.Contains('/'))
                 {
-                    var elements = operation.Split('/');
+                    string[] elements = operation.Split('/');
 
-                    if (String.IsNullOrEmpty(elements[1]))
+                    if (string.IsNullOrEmpty(elements[1]))
                     {
                         elements[1] = elements[0];
                     }
@@ -708,23 +1300,39 @@ namespace Abituria
 
                 else if (operation.Contains('√'))
                 {
-                    var elements = operation.Split('√');
-
-
-                    if (String.IsNullOrEmpty(elements[0]))                          //Jeśli nic nie ma przed znakiem działania (.Split(...))
+                    if (operation.Contains('²'))
                     {
-                        return Math.Sqrt(Convert.ToDouble(elements[1]));
+                        string[] elements = operation.Split('√', '²');
+                        if (string.IsNullOrEmpty(elements[0]))
+                        {
+                            return Math.Sqrt(Math.Pow(Convert.ToDouble(elements[1]), 2));
+                        }
+                        else
+                        {
+                            return Convert.ToDouble(elements[0])
+                                   * Math.Sqrt(Math.Pow(Convert.ToDouble(elements[1]), 2));
+                        }
                     }
                     else
                     {
-                        return Convert.ToDouble(elements[0]) * Math.Sqrt(Convert.ToDouble(elements[1]));
+                        string[] elements = operation.Split('√');
+
+                        if (string.IsNullOrEmpty(elements[0]))
+                        {
+                            return Math.Sqrt(Convert.ToDouble(elements[1]));
+                        }
+                        else
+                        {
+                            return Convert.ToDouble(elements[0])
+                                   * Math.Sqrt(Convert.ToDouble(elements[1]));
+                        }
                     }
                 }
 
                 else if (operation.Contains('²'))//może być potrzebny warunek że nie zawiera pozostałych (niepewny)!!!
                 {
-                    var elements = operation.Split('²');
-                    
+                    string[] elements = operation.Split('²');
+
                     return Math.Pow(Convert.ToDouble(elements[0]), 2);
                 }
             }
