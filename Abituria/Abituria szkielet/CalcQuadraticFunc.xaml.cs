@@ -26,7 +26,16 @@ namespace Abituria
 
         private void Przelicz(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Sasha śpi w moim łożku i nie mogę się położyć spać");
+            if (this.pOgolna.Visibility == Visibility.Visible)
+            {
+                float warA = float.Parse(fieldA.Text);
+                FunKwadratOgolna(warA, 20, 10);
+            }
+            else 
+            {
+                MessageBox.Show("wiadomość testowa Ten warunek nie działa byku");
+            }
+            
         }
 
         private void Reset(object sender, RoutedEventArgs e)
@@ -58,6 +67,15 @@ namespace Abituria
         {
             InitializeComponent();
         }
+
+        private void FunKwadratOgolna(float a, float b, float c)
+        {
+            
+            float result = a + b + c;
+            
+            MessageBox.Show("haha  " + result);
+        }
+
     }
 }
 

@@ -72,7 +72,7 @@ namespace Abituria {
             {
             case 1:
             
-            #line 27 "..\..\CalculatorChoice.xaml"
+            #line 28 "..\..\CalculatorChoice.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonAbituria);
             
             #line default
@@ -80,7 +80,7 @@ namespace Abituria {
             return;
             case 2:
             
-            #line 30 "..\..\CalculatorChoice.xaml"
+            #line 31 "..\..\CalculatorChoice.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonKalkulator);
             
             #line default
@@ -88,7 +88,7 @@ namespace Abituria {
             return;
             case 3:
             
-            #line 33 "..\..\CalculatorChoice.xaml"
+            #line 34 "..\..\CalculatorChoice.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonMatura);
             
             #line default
@@ -96,7 +96,7 @@ namespace Abituria {
             return;
             case 4:
             
-            #line 36 "..\..\CalculatorChoice.xaml"
+            #line 37 "..\..\CalculatorChoice.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonDzialy);
             
             #line default
@@ -104,7 +104,7 @@ namespace Abituria {
             return;
             case 5:
             
-            #line 39 "..\..\CalculatorChoice.xaml"
+            #line 40 "..\..\CalculatorChoice.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonZadania);
             
             #line default
@@ -112,7 +112,7 @@ namespace Abituria {
             return;
             case 6:
             
-            #line 42 "..\..\CalculatorChoice.xaml"
+            #line 43 "..\..\CalculatorChoice.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonWideo);
             
             #line default
@@ -120,7 +120,7 @@ namespace Abituria {
             return;
             case 7:
             
-            #line 64 "..\..\CalculatorChoice.xaml"
+            #line 65 "..\..\CalculatorChoice.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonCalcBasic);
             
             #line default
@@ -128,7 +128,7 @@ namespace Abituria {
             return;
             case 8:
             
-            #line 65 "..\..\CalculatorChoice.xaml"
+            #line 66 "..\..\CalculatorChoice.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonCalcQuad);
             
             #line default
