@@ -26,10 +26,14 @@ namespace Abituria
 
         private void Przelicz(object sender, RoutedEventArgs e)
         {
+            //zastąpić to casem po postawieniu też iloczynej i kanocznicznej, mlem
+            //i oczywiście trzeba dodać weryfikację
             if (this.pOgolna.Visibility == Visibility.Visible)
             {
-                float warA = float.Parse(fieldA.Text);
-                FunKwadratOgolna(warA, 20, 10);
+                double a = double.Parse(fieldA.Text);
+                double b = double.Parse(fieldB.Text);
+                double c = double.Parse(fieldC.Text);
+                FunKwadratOgolna(a, b, c);
             }
             else 
             {
@@ -56,6 +60,8 @@ namespace Abituria
                 this.pOgolna.Visibility = Visibility.Collapsed;
                 this.buttonPrzelicz.Visibility = Visibility.Collapsed;
                 this.buttonReset.Visibility = Visibility.Collapsed;
+                this.resultHead.Visibility = Visibility.Collapsed;
+                this.result.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -68,12 +74,34 @@ namespace Abituria
             InitializeComponent();
         }
 
-        private void FunKwadratOgolna(float a, float b, float c)
+        private void FunKwadratOgolna(double a, double b, double c)
         {
+            double delta = Math.Pow(b, 2) - (4 * a * c);
+            double x0 = (-b) / (2 * a);
+            double x1 = Math.Round(((-b) - Math.Sqrt(delta)) / (2 * a), 2);
+            double x2 = Math.Round(((-b) + Math.Sqrt(delta)) / (2 * a), 2);
+
+
+            if (delta < 0)
+            {
+                string resultTxt = "Δ < 0, funkcja nie posiada miejsc zerowych";
+                result.Text = resultTxt;
+            }
+            else if (delta == 0)
+            {
+                string resultTxt = "Δ = 0, funkcja posiada jedno miejsce zerowe, gdzie wierzchołek dotyka osi x";
+                result.Text = resultTxt;
+            }
+            else
+            {
+                string resultTxt = $"Δ > 0, funkcja posiada dwa miejsca zerowe: x1 = {x1} i x2 = {x2}";
+                result.Text = resultTxt;
+            }
+
+            this.resultHead.Visibility = Visibility.Visible;
+            this.result.Visibility = Visibility.Visible;
             
-            float result = a + b + c;
-            
-            MessageBox.Show("haha  " + result);
+
         }
 
     }
