@@ -24,29 +24,32 @@ namespace Abituria
             InitializeComponent();
         }
 
-        private void Przelicz(object sender, RoutedEventArgs e)
+        private void ShowResult(object sender, RoutedEventArgs e)
         {
             //zastąpić to casem po postawieniu też iloczynej i kanocznicznej, mlem
             //i oczywiście trzeba dodać weryfikację
-            if (this.pOgolna.Visibility == Visibility.Visible)
-            {
-                double a = double.Parse(fieldA.Text);
-                double b = double.Parse(fieldB.Text);
-                double c = double.Parse(fieldC.Text);
-                FunKwadratOgolna(a, b, c);
-            }
-            else 
-            {
-                MessageBox.Show("wiadomość testowa Ten warunek nie działa byku");
-            }
             
+            double a = double.Parse(fieldA.Text);
+            double b = double.Parse(fieldB.Text);
+            double c = double.Parse(fieldC.Text);
+            FunKwadratOgolna(a, b, c);
+
+
+            // do zmiany tylko muszę wymyślić godne rozwiązanie
+            this.pOgolna.Text = $"y = {a}x2 + {b}x + {c}";
+
+            //  case tu nie zadziała, chyba że zakombinuję, bo if byłby chory, aaaaaaaaaaaaaaaaaaaaaaaaaaa
+
         }
 
         private void Reset(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Sashku mlemaj gdzie indziej");
+            fieldA.Text = "";
+            fieldB.Text = "";
+            fieldC.Text = "";
         }
 
+        /*
         private void ButtonOgolna(object sender, RoutedEventArgs e)
         {
             if (this.pOgolna.Visibility == Visibility.Collapsed && this.buttonPrzelicz.Visibility == Visibility.Collapsed && this.buttonReset.Visibility == Visibility.Collapsed)
@@ -64,15 +67,7 @@ namespace Abituria
                 this.result.Visibility = Visibility.Collapsed;
             }
         }
-
-        private void ButtonIloczynowa(object sender, RoutedEventArgs e)
-        {
-            InitializeComponent();
-        }
-        private void ButtonKanoniczna(object sender, RoutedEventArgs e)
-        {
-            InitializeComponent();
-        }
+        */
 
         private void FunKwadratOgolna(double a, double b, double c)
         {
@@ -98,7 +93,6 @@ namespace Abituria
                 result.Text = resultTxt;
             }
 
-            this.resultHead.Visibility = Visibility.Visible;
             this.result.Visibility = Visibility.Visible;
             
 
