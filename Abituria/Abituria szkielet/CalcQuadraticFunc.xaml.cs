@@ -51,8 +51,7 @@ namespace Abituria
                 return;
             }
 
-            FunQuad(a, b, c);
-
+            FunQuad(a, b, c);  
         }
         private void ResetBtn(object sender, RoutedEventArgs e)
         {
@@ -110,267 +109,60 @@ namespace Abituria
                 result.Text = resultTxt;
             }
 
-
             this.result.Visibility = Visibility.Visible;
             PosOgolnaShow(a, b, c);
-
-
         }
+
         private void PosOgolnaShow(double a, double b, double c)
         {
-            // wyświetlanie postaci ogólnej f. kwadratowej
+            string ogolna = "";
+
+            if (a == 1)
+            {
+                ogolna = "x2";
+            }
+            else if (a == -1)
+            {
+                ogolna = "-x2";
+            }
+            else
+            {
+                ogolna = $"{a}x2";
+            }
+
             if (b > 0)
             {
-                if (c > 0)
+                if (b == 1)
                 {
-                    if (a == 1)
-                    {
-                        if (b == 1)
-                        {
-                            this.pOgolna.Text = $"y = x2 + x + {c}";
-                        }
-                        else
-                        {
-                            this.pOgolna.Text = $"y = x2 + {b}x + {c}";
-                        }
-                    }
-                    else if (a == -1)
-                    {
-                        if (b == 1)
-                        {
-                            this.pOgolna.Text = $"y = -x2 + x + {c}";
-                        }
-                        else
-                        {
-                            this.pOgolna.Text = $"y = -x2 + {b}x + {c}";
-                        }
-                    }
-                    else if (b == 1)
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 + x + {c}";
-                    }
-                    else
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 + {b}x + {c}";
-                    }
+                    ogolna = ogolna + " + x";
                 }
-                else if (c < 0)
+                else
                 {
-                    if (a == 1)
-                    {
-                        if (b == 1)
-                        {
-                            this.pOgolna.Text = $"y = x2 + x - {c * (-1)}";
-                        }
-                        else
-                        {
-                            this.pOgolna.Text = $"y = x2 + {b}x - {c * (-1)}";
-                        }
-                    }
-                    else if (a == -1)
-                    {
-                        if (b == 1)
-                        {
-                            this.pOgolna.Text = $"y = -x2 + x - {c * (-1)}";
-                        }
-                        else
-                        {
-                            this.pOgolna.Text = $"y = -x2 + {b}x - {c * (-1)}";
-                        }
-                    }
-                    else if (b == 1)
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 + x - {c * (-1)}";
-                    }
-                    else
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 + {b}x - {c * (-1)}";
-                    }
-                }
-                else if (c == 0)
-                {
-                    if (a == 1)
-                    {
-                        if (b == 1)
-                        {
-                            this.pOgolna.Text = $"y = x2 + x";
-                        }
-                        else
-                        {
-                            this.pOgolna.Text = $"y = x2 + {b}x";
-                        }
-                    }
-                    else if (a == -1)
-                    {
-                        if (b == 1)
-                        {
-                            this.pOgolna.Text = $"y = -x2 + x";
-                        }
-                        else
-                        {
-                            this.pOgolna.Text = $"y = -x2 + {b}x";
-                        }
-                    }
-                    else if (b == 1)
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 + x";
-                    }
-                    else
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 + {b}x";
-                    }
+                    ogolna = ogolna + " + " + $"{b}x";
                 }
             }
             else if (b < 0)
             {
-                if (c > 0)
+                if (b == -1)
                 {
-                    if (a == 1)
-                    {
-                        if (b == -1)
-                        {
-                            this.pOgolna.Text = $"y = x2 - x + {c}";
-                        }
-                        else
-                        {
-                            this.pOgolna.Text = $"y = x2 - {b * (-1)}x + {c}";
-                        }
-                    }
-                    else if (a == -1)
-                    {
-                        if (b == 1)
-                        {
-                            this.pOgolna.Text = $"y = -x2 - x + {c}";
-                        }
-                        else
-                        {
-                            this.pOgolna.Text = $"y = -x2 - {b * (-1)}x + {c}";
-                        }
-                    }
-                    else if (b == -1)
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 - x + {c}";
-                    }
-                    else
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 - {b * (-1)}x + {c}";
-                    }
+                    ogolna = ogolna + " - x";
                 }
-                else if (c < 0)
+                else
                 {
-                    if (a == 1)
-                    {
-                        if (b == -1)
-                        {
-                            this.pOgolna.Text = $"y = x2 - x - {c * (-1)}";
-                        }
-                        else
-                        {
-                            this.pOgolna.Text = $"y = x2 - {b * (-1)}x - {c * (-1)}";
-                        }
-                    }
-                    else if (a == -1)
-                    {
-                        if (b == 1)
-                        {
-                            this.pOgolna.Text = $"y = -x2 - x - {c * (-1)}";
-                        }
-                        else
-                        {
-                            this.pOgolna.Text = $"y = -x2 - {b * (-1)}x - {c * (-1)}";
-                        }
-                    }
-                    else if (b == -1)
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 - x - {c * (-1)}";
-                    }
-                    else
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 - {b * (-1)}x - {c * (-1)}";
-                    }
-                }
-                else if (c == 0)
-                {
-                    if (a == 1)
-                    {
-                        if (b == -1)
-                        {
-                            this.pOgolna.Text = $"y = x2 - x";
-                        }
-                        else
-                        {
-                            this.pOgolna.Text = $"y = x2 - {b * (-1)}x";
-                        }
-                    }
-                    else if (a == -1)
-                    {
-                        if (b == -1)
-                        {
-                            this.pOgolna.Text = $"y = -x2 - x";
-                        }
-                        else
-                        {
-                            this.pOgolna.Text = $"y = -x2 - {b * (-1)}x";
-                        }
-                    }
-                    else if (b == -1)
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 - x";
-                    }
-                    else
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 - {b * (-1)}x";
-                    }
+                    ogolna = ogolna + " - " + $"{(b * -1)}x";
                 }
             }
-            else if (b == 0)
+
+            if (c > 0)
             {
-                if (c > 0)
-                {
-                    if (a == 1)
-                    {
-                        this.pOgolna.Text = $"y = x2 + {c}";
-                    }
-                    else if (a == -1)
-                    {
-                        this.pOgolna.Text = $"y = -x2 + {c}";
-                    }
-                    else
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 + {c}";
-                    }
-                }
-                else if (c < 0)
-                {
-                    if (a == 1)
-                    {
-                        this.pOgolna.Text = $"y = x2 - {c * (-1)}";
-                    }
-                    else if (a == -1)
-                    {
-                        this.pOgolna.Text = $"y = -x2 - {c * (-1)}";
-                    }
-                    else
-                    {
-                        this.pOgolna.Text = $"y = {a}x2 - {c * (-1)}";
-                    }
-                }
-                else if (c == 0)
-                {
-                    if (a == 1)
-                    {
-                        this.pOgolna.Text = $"y = x2";
-                    }
-                    else if (a == -1)
-                    {
-                        this.pOgolna.Text = $"y = -x2";
-                    }
-                    else
-                    {
-                        this.pOgolna.Text = $"y = {a}x2";
-                    }
-                }
+                ogolna = ogolna + " + " + $"{c}";
             }
+            else if (c < 0)
+            {
+                ogolna = ogolna + " - " + $"{(c * -1)}";
+            }
+
+            pOgolna.Text = ogolna;
         }
     }
 }

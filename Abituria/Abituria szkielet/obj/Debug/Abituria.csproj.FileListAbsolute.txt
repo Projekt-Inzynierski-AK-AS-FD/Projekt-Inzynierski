@@ -339,4 +339,3 @@ C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMP21Z2.g.cs
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMP21Z2.baml
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\PageMP21Z2.g.cs
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\PageMP21Z2.baml
-C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.csproj.AssemblyReference.cache
