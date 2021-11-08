@@ -116,18 +116,19 @@ namespace Abituria
         private void PosOgolnaShow(double a, double b, double c)
         {
             string ogolna = "";
+            string kwadrat = "²";
 
             if (a == 1)
             {
-                ogolna = "x2";
+                ogolna = "x" + kwadrat;
             }
             else if (a == -1)
             {
-                ogolna = "-x2";
+                ogolna = "-x" + kwadrat;
             }
             else
             {
-                ogolna = $"{a}x2";
+                ogolna = $"{a}x" + kwadrat;
             }
 
             if (b > 0)
