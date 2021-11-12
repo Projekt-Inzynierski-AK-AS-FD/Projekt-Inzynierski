@@ -82,5 +82,10 @@ namespace Abituria
             PageMatura2019 pageMatura2019 = new PageMatura2019();
             NavigationService.Navigate(pageMatura2019);
         }
+        private void Button2021Poprawkowy(object sender, RoutedEventArgs e)
+        {
+            PageMP21Z1 pageMP21Z1 = new PageMP21Z1();
+            NavigationService.Navigate(pageMP21Z1);
+        }
     }
 }

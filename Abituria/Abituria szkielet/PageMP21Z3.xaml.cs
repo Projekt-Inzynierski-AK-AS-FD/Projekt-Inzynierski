@@ -67,20 +67,20 @@ namespace Abituria
             PageWideo pageWideo = new PageWideo();
             NavigationService.Navigate(pageWideo);
         }
-        private void Button2021(object sender, RoutedEventArgs e)
+        private void MP2021Zad1(object sender, RoutedEventArgs e)
         {
-            PageMaturaPoprawkowa2021 pageMaturaPoprawkowa2021 = new PageMaturaPoprawkowa2021();
-            NavigationService.Navigate(pageMaturaPoprawkowa2021);
+            PageMP21Z1 pageMP21Z1 = new PageMP21Z1();
+            NavigationService.Navigate(pageMP21Z1);
         }
-        private void Button2020(object sender, RoutedEventArgs e)
+        private void MP2021Zad2(object sender, RoutedEventArgs e)
         {
-            PageMatura2020 pageMatura2020 = new PageMatura2020();
-            NavigationService.Navigate(pageMatura2020);
+            PageMP21Z2 pageMP21Z2 = new PageMP21Z2();
+            NavigationService.Navigate(pageMP21Z2);
         }
-        private void Button2019(object sender, RoutedEventArgs e)
+        private void MP2021Zad3(object sender, RoutedEventArgs e)
         {
-            PageMatura2019 pageMatura2019 = new PageMatura2019();
-            NavigationService.Navigate(pageMatura2019);
+            PageMP21Z3 pageMP21Z3 = new PageMP21Z3();
+            NavigationService.Navigate(pageMP21Z3);
         }
     }
 }
