@@ -103,12 +103,12 @@ namespace Abituria
             }
             else if (delta == 0)
             {
-                string resultTxt = $"Δ = 0, funkcja posiada jedno miejsce zerowe, gdzie wierzchołek dotyka osi x: \n x" +  subscript[0] + $" = {0}";
+                string resultTxt = $"Δ = 0, funkcja posiada jedno miejsce zerowe, gdzie wierzchołek dotyka osi x: \n 𝑥" +  subscript[0] + $" = {0}";
                 result.Text = resultTxt;
             }
             else
             {
-                string resultTxt = $"Δ > 0, funkcja posiada dwa miejsca zerowe: \n x" + subscript[1] + $" = {x1}                                     x" + subscript[2] + $" = {x2}";
+                string resultTxt = $"Δ > 0, funkcja posiada dwa miejsca zerowe: \n 𝑥" + subscript[1] + $" = {x1}                                     𝑥" + subscript[2] + $" = {x2}";
                 result.Text = resultTxt;
             }
 
@@ -120,8 +120,8 @@ namespace Abituria
             this.result.Visibility = Visibility.Visible;
             PosOgolnaShow(a, b, c);
             PosKanonShow(a, p, q);
-            PosIloczynShow(a, x1, x2, delta);
-            Explanation(a, b, c, delta, wierzch, x1, x2);
+            PosIloczynShow(a, x1, x2, delta, wierzch);
+            Explanation(a, b, c, delta, wierzch, x1, x2, x0);
 
         }
 
@@ -132,37 +132,37 @@ namespace Abituria
 
             if (a == 1)
             {
-                ogolna = "x" + kwadrat;
+                ogolna = "𝑓(𝑥) = 𝑥" + kwadrat;
             }
             else if (a == -1)
             {
-                ogolna = "-x" + kwadrat;
+                ogolna = "𝑓(𝑥) = -𝑥" + kwadrat;
             }
             else
             {
-                ogolna = $"{a}x" + kwadrat;
+                ogolna = $"𝑓(𝑥) = {a}𝑥" + kwadrat;
             }
 
             if (b > 0)
             {
                 if (b == 1)
                 {
-                    ogolna = ogolna + " + x";
+                    ogolna = ogolna + " + 𝑥";
                 }
                 else
                 {
-                    ogolna = ogolna + " + " + $"{b}x";
+                    ogolna = ogolna + " + " + $"{b}𝑥";
                 }
             }
             else if (b < 0)
             {
                 if (b == -1)
                 {
-                    ogolna = ogolna + " - x";
+                    ogolna = ogolna + " - 𝑥";
                 }
                 else
                 {
-                    ogolna = ogolna + " - " + $"{(b * -1)}x";
+                    ogolna = ogolna + " - " + $"{(b * -1)}𝑥";
                 }
             }
 
@@ -181,7 +181,7 @@ namespace Abituria
         {
             // f(x)=a(x−p)2+q 
             string kwadrat = "²";
-            string kanoniczna = $"f(x) = {a}(x";
+            string kanoniczna = $"𝑓(𝑥) = {a}(𝑥";
 
             if (p > 0 || p == 0)
             {
@@ -203,10 +203,11 @@ namespace Abituria
 
             pKanoniczna.Text = kanoniczna;
         }
-        private void PosIloczynShow(double a, double x1, double x2, double delta)
+        private void PosIloczynShow(double a, double x1, double x2, double delta, string wierzch)
         {
             string kwadrat = "²";
             string iloczynowa = "";
+            string parable = "";
 
             if (delta < 0)
             {
@@ -216,23 +217,23 @@ namespace Abituria
             {
                 if(x1 < 0)
                 {
-                    iloczynowa = $"f(x) = {a}(x + {x1})" + kwadrat;
+                    iloczynowa = $"𝑓(𝑥) = {a}(𝑥 + {x1})" + kwadrat;
                 }
                 else
                 {
-                    iloczynowa = $"f(x) = {a}(x - {x1})" + kwadrat;
+                    iloczynowa = $"𝑓(𝑥) = {a}(𝑥 - {x1})" + kwadrat;
                 }
             }
             else
             {
-                iloczynowa = iloczynowa + "(x ";
+                iloczynowa = iloczynowa + $"𝑓(𝑥) = {a}(x ";
                 if (x1 > 0 || x1 == 0)
                 {
-                    iloczynowa = iloczynowa + $"- {x1})(x ";
+                    iloczynowa = iloczynowa + $"- {x1})(𝑥 ";
                 }
                 else
                 {
-                    iloczynowa = iloczynowa + $"+ {x1 * (-1)})(x ";
+                    iloczynowa = iloczynowa + $"+ {x1 * (-1)})(𝑥 ";
                 }
                 if (x2 > 0 || x2 == 0)
                 {
@@ -244,14 +245,60 @@ namespace Abituria
                 }
             }
             pIloczynowa.Text = iloczynowa;
+
+            if (a > 0)
+            {
+                parable = "Ramiona paraboli skierowane są do góry, ponieważ współczynnik 𝒂 jest dodatni: ⎝⎠";
+            }
+            else if(a < 0)
+            {
+                parable = "Ramiona paraboli skierowane są do dołu, ponieważ współczynnik 𝒂 jest ujemny: ⎛⎞";
+            }
+            
+            string wierzcholek = $"Współrzędne wierzchołka paraboli znajdują się w punkcie W(p;q), czyli W = {wierzch}";
+            pParable.Text = "\n" + parable + "\n" + wierzcholek;
+            
+
         }
-        private void Explanation(double a, double b, double c, double delta, string wierzch, double x1, double x2)
+        private void Explanation(double a, double b, double c, double delta, string wierzch, double x1, double x2, double x0)
         {
-            string[] specialScript = new string[] { "₀", "₁", "₂", "²" };
-            string explained = "Znając wzór na postać ogólną funkcji kwadratowej, zaczynamy od policzenia Δ. \nUżyjemy wzoru Δ = b" + specialScript[3] + " − 4⋅a⋅c" + "\n";
-            explained = explained + "Δ = " + $"({b}) - 4⋅({a})⋅({c}) = {delta}";
+            string[] specialScript = new string[] { "₀", "₁", "₂", "²", "√" };
+            string delText = "";
+            double pierwDelta = Math.Round(Math.Sqrt(delta), 2);
+            //string wierzcholek = $"Współrzędne wierzchołka paraboli znajdują się w punkcie W(p, q), czyli W = {wierzch}";
+            if (delta < 0)
+            {
+                delText = "Δ < 0 i funkcja nie posiada miejsc zerowych";
+
+            }
+            else if (delta == 0)
+            {
+                delText = $"Δ = 0, funkcja posiada jedno miejsce zerowe: 𝑥" + specialScript[0] + $" = {x0}";
+            }
+            else
+            {
+                delText = $"Δ > 0, funkcja posiada dwa miejsca zerowe: 𝑥" + specialScript[1] + $" = {x1} oraz 𝑥" + specialScript[2] + $" = {x2}";
+            }
+
+            string explained = $@"
+Znając wzór na postać ogólną funkcji kwadratowej, zaczynamy od wyliczenia wartości Δ (delty, inaczej wyróżnika funkcji kwadratowej). Użyjemy wzoru: 
+                                                        Δ = 𝑏{specialScript[3]} − 4⋅𝑎⋅𝑐
+                                                Δ = ({b}){specialScript[3]} - 4⋅({a})⋅({c}) = {delta}
+
+Sama znajomość delty da nam już bardzo dużo, bo dowiemy się ile pierwiastków trójmianu kwadratowego (to znaczy miejsc zerowych funkcji kwadratowej) znajdziemy w naszej konkretnej funkcji.
+
+Pod uwagę bierzemy zawsze jeden z trzech przypadków:
+◍ Δ > 0 oznaczać będzie, że funkcja ma dwa rozwiązania (miejsca zerowe: 𝑥{specialScript[1]} oraz 𝑥{specialScript[2]},
+◍ Δ = 0 funkcja ma jedno rozwiązanie i gdzie 𝑥{specialScript[0]} jest jedynym miejscem zerowym,
+◍ Δ < 0 funkcja nie ma miejsc zerowych.
+
+W tym przypadku, {delText}. 
+
+
+
+";
+
             explanation.Text = explained;
-            string wierzcholek = $"Współrzędne wierzchołka paraboli znajdują się w punkcie W(p, q), czyli W = {wierzch}";
         }
     }
 }
