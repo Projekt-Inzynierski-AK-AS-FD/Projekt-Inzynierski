@@ -66,26 +66,6 @@ namespace Abituria
             this.groupResult.Visibility = Visibility.Collapsed;
         }
 
-        /*
-        private void ButtonOgolna(object sender, RoutedEventArgs e)
-        {
-            if (this.pOgolna.Visibility == Visibility.Collapsed && this.buttonPrzelicz.Visibility == Visibility.Collapsed && this.buttonReset.Visibility == Visibility.Collapsed)
-            {
-                this.pOgolna.Visibility = Visibility.Visible;
-                this.buttonPrzelicz.Visibility = Visibility.Visible;
-                this.buttonReset.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                this.pOgolna.Visibility = Visibility.Collapsed;
-                this.buttonPrzelicz.Visibility = Visibility.Collapsed;
-                this.buttonReset.Visibility = Visibility.Collapsed;
-                this.resultHead.Visibility = Visibility.Collapsed;
-                this.result.Visibility = Visibility.Collapsed;
-            }
-        }
-        */
-
         private void FunQuad(double a, double b, double c)
         {
             string[] subscript= new string[] { "₀", "₁", "₂" };
@@ -108,7 +88,7 @@ namespace Abituria
             }
             else
             {
-                string resultTxt = $"Δ > 0, funkcja posiada dwa miejsca zerowe: \n 𝑥" + subscript[1] + $" = {x1}                                     𝑥" + subscript[2] + $" = {x2}";
+                string resultTxt = $"\nΔ > 0, funkcja posiada dwa miejsca zerowe: \n 𝑥" + subscript[1] + $" = {x1}                                     𝑥" + subscript[2] + $" = {x2}";
                 result.Text = resultTxt;
             }
 
@@ -121,7 +101,7 @@ namespace Abituria
             PosOgolnaShow(a, b, c);
             PosKanonShow(a, p, q);
             PosIloczynShow(a, x1, x2, delta, wierzch);
-            Explanation(a, b, c, delta, wierzch, x1, x2, x0);
+            Explanation(a, b, c, delta, wierzch, x1, x2, x0, p, q);
 
         }
 
@@ -255,16 +235,17 @@ namespace Abituria
                 parable = "Ramiona paraboli skierowane są do dołu, ponieważ współczynnik 𝒂 jest ujemny: ⎛⎞";
             }
             
-            string wierzcholek = $"Współrzędne wierzchołka paraboli znajdują się w punkcie W(p;q), czyli W = {wierzch}";
+            string wierzcholek = $"Współrzędne wierzchołka paraboli znajdują się w punkcie 𝑊 = (𝑝;𝑞), czyli 𝑊 = {wierzch}";
             pParable.Text = "\n" + parable + "\n" + wierzcholek;
             
 
         }
-        private void Explanation(double a, double b, double c, double delta, string wierzch, double x1, double x2, double x0)
+        private void Explanation(double a, double b, double c, double delta, string wierzch, double x1, double x2, double x0, double p, double q)
         {
             string[] specialScript = new string[] { "₀", "₁", "₂", "²", "√" };
             string delText = "";
             double pierwDelta = Math.Round(Math.Sqrt(delta), 2);
+
             //string wierzcholek = $"Współrzędne wierzchołka paraboli znajdują się w punkcie W(p, q), czyli W = {wierzch}";
             if (delta < 0)
             {
@@ -277,28 +258,55 @@ namespace Abituria
             }
             else
             {
-                delText = $"Δ > 0, funkcja posiada dwa miejsca zerowe: 𝑥" + specialScript[1] + $" = {x1} oraz 𝑥" + specialScript[2] + $" = {x2}";
+                delText = $"Δ > 0, funkcja posiada zatem dwa miejsca zerowe: 𝑥" + specialScript[1] + $" = {x1} oraz 𝑥" + specialScript[2] + $" = {x2}";
             }
 
-            string explained = $@"
-Znając wzór na postać ogólną funkcji kwadratowej, zaczynamy od wyliczenia wartości Δ (delty, inaczej wyróżnika funkcji kwadratowej). Użyjemy wzoru: 
-                                                        Δ = 𝑏{specialScript[3]} − 4⋅𝑎⋅𝑐
-                                                Δ = ({b}){specialScript[3]} - 4⋅({a})⋅({c}) = {delta}
-
+            string explained1 = "Znając wzór na postać ogólną funkcji kwadratowej, zaczynamy od wyliczenia wartości Δ (delty, inaczej wyróżnika funkcji kwadratowej). Użyjemy wzoru:\n";
+            explanation1.Text = explained1;
+            string explained2 = $"Δ = 𝑏{specialScript[3]} − 4⋅𝑎⋅𝑐";
+            explanation2.Text = explained2;
+            string explained3 = $"Δ = ({b}){specialScript[3]} - 4⋅({a})⋅({c}) = {delta}";
+            explanation3.Text = explained3;
+            string explained4 = $@"
 Sama znajomość delty da nam już bardzo dużo, bo dowiemy się ile pierwiastków trójmianu kwadratowego (to znaczy miejsc zerowych funkcji kwadratowej) znajdziemy w naszej konkretnej funkcji.
 
-Pod uwagę bierzemy zawsze jeden z trzech przypadków:
-◍ Δ > 0 oznaczać będzie, że funkcja ma dwa rozwiązania (miejsca zerowe: 𝑥{specialScript[1]} oraz 𝑥{specialScript[2]},
-◍ Δ = 0 funkcja ma jedno rozwiązanie i gdzie 𝑥{specialScript[0]} jest jedynym miejscem zerowym,
-◍ Δ < 0 funkcja nie ma miejsc zerowych.
+    Pod uwagę bierzemy zawsze jeden z trzech przypadków:
+◍ Δ > 0 oznaczać będzie, że funkcja ma dwa rozwiązania - miejsca zerowe 𝑥{specialScript[1]} oraz 𝑥{specialScript[2]},
+◍ Δ = 0 funkcja ma jedno rozwiązanie, gdzie 𝑥{specialScript[0]} jest jedynym miejscem zerowym,
+◍ Δ < 0 funkcja nie posiada miejsc zerowych.
 
 W tym przypadku, {delText}. 
 
-
-
+Znając współczynniki funkcji kwadratowej, możemy przekształcić jej postać ogólną do postaci kanonicznej lub iloczynowej. Postać kanoniczna funkcji kwadratowej wyrażona jest wzorem:
 ";
+            explanation4.Text = explained4;
+            string explained5 = $"𝑓(𝑥) = 𝑎(𝑥 − 𝑝){specialScript[3]} + 𝑞";
+            explanation5.Text = explained5;
+            string explained6 = $"\nDo uzupełnienia wzoru brakuje nam współrzędnych wierzchołka paraboli, 𝑝 i 𝑞. Możesz zauważyć, iż współczynnik 𝑝 można obliczyć używając takiego samego wzoru, jak w przypadku x{specialScript[0]}. Dla 𝑝 i 𝑞 istnieją następujące wzory:";
+            explanation6.Text = explained6;
+            string explained8 = $@"Wierzchołek 𝑊 = {wierzch}, wobec czego po podstawieniu:
+                              𝑓(𝑥) = ({a})(𝑥 − ({p})){specialScript[3]} + ({q})
 
-            explanation.Text = explained;
+Dla dobra przekształcenia naszej funkcji w postać iloczynową ponownie sięgniemy po znalezione wcześniej miejsca zerowe. 
+Postać iloczynowa funkcji kwadratowej wyrażona jest wzorem:
+";
+            explanation8.Text = explained8;
+            string explained9 = $"𝑓(𝑥) = 𝑎(𝑥 − 𝑥{specialScript[1]})(𝑥 − 𝑥{specialScript[2]})";
+            explanation9.Text = explained9;
+            string explained10 = $"𝑓(𝑥) = ({a})(𝑥 − ({x1}))(𝑥 − ({x2}))\n";
+            if (delta < 0)
+            {
+                explained10 = "Funkcja nie ma miejsc zerowych, nie istnieje zatem jej postać iloczynowa!";
+            }
+            else if (delta == 0)
+            {
+                explained10 = $"Δ = 0, wystarczy więc policzyć x{specialScript[0]} i skrócić zapis: \n𝑓(𝑥) = ({a})(𝑥 − ({x1})){specialScript[3]}\n";
+            }
+            else
+            {
+                explained10 = $"𝑓(𝑥) = ({a})(𝑥 − ({x1}))(𝑥 − ({x2}))\n";
+            }
+            explanation10.Text = explained10;
         }
     }
 }
