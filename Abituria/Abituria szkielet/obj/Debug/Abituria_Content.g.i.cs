@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("help.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/mp21z17.png")]
 
 

@@ -82,5 +82,6 @@ namespace Abituria
             PageMatura2019 pageMatura2019 = new PageMatura2019();
             NavigationService.Navigate(pageMatura2019);
         }
+        ImageSource imageSource = new BitmapImage(new Uri("mp21z9.png"));
     }
 }
