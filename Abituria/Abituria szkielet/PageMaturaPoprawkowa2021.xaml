@@ -59,14 +59,13 @@
                         <ComboBoxItem>
                             <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 3" ToolTip="Arkusz maturalny z 2019" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Zad3"/>
                         </ComboBoxItem>
-
                     </ComboBox>
                 </Grid>
 
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black" Text="Poprawkowy arkusz maturalny z 2021"/>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black" Text=" info o zdawalności itp.  w tym roku, wybierz zadanko meserszmicie "/>
                 </Grid>
 
             </Border>

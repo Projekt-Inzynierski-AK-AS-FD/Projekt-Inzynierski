@@ -84,8 +84,8 @@ namespace Abituria
         }
         private void Button2021Poprawkowy(object sender, RoutedEventArgs e)
         {
-            PageMP21Z1 pageMP21Z1 = new PageMP21Z1();
-            NavigationService.Navigate(pageMP21Z1);
+            PageMaturaPoprawkowa2021 pageMaturaPoprawkowa2021 = new PageMaturaPoprawkowa2021();
+            NavigationService.Navigate(pageMaturaPoprawkowa2021);
         }
     }
 }
