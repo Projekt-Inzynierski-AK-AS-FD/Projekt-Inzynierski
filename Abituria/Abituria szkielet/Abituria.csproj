@@ -488,5 +488,23 @@
   <ItemGroup>
     <Resource Include="img\mp21z17.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\mp21z18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\mp21z19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\mp21z20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\mp21z24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\mp21z32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\mp21z33.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
