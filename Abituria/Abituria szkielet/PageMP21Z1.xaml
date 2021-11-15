@@ -8,6 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageMatura2021"
       xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath">
+
     <Grid>
         <DockPanel Margin="5">
             <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
@@ -42,7 +43,6 @@
                         <Button Background="Transparent" BorderThickness="0" Content="Wideo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWideo"/>
                     </TextBlock>
                     <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
-
                 </Grid>
             </Border>
 
@@ -59,20 +59,52 @@
                         <ComboBoxItem>
                             <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 3" ToolTip="Arkusz maturalny z 2019" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Zad3"/>
                         </ComboBoxItem>
-
                     </ComboBox>
                 </Grid>
-
             </Border>
+            
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.1*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.1*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.1*"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Viewbox Stretch="Uniform" StretchDirection="DownOnly" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 0, 0">
+                    <StackPanel>
+                            <TextBlock FontSize="27" Margin="80, 20, 0, 0" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
+                            <controls:FormulaControl Scale="27" Formula="9^{-10}\cdot3^{19}\:" />
+                        </InlineUIContainer>jest równa:<LineBreak/>
+                        <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <TextBlock>
+                            A. <controls:FormulaControl Scale="27" Formula="27^9"/>
+                        </TextBlock>
+
+                        <LineBreak/>B. <controls:FormulaControl  Scale="27" Formula="9^{-2}" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl  Scale="27" Formula="3^{10}" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl  Scale="27" Formula="3^{-1}" /></TextBlock>
+                    </StackPanel>
+                    </Viewbox>
+
+                    <TextBox Grid.Column="3" Grid.Row="0" Margin="20, 40, 20, 10" Grid.RowSpan="1" Grid.ColumnSpan="1" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Hidden" FontSize="20"/>
+                    <Viewbox Stretch="Uniform" StretchDirection="DownOnly" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 0, 0, 0">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Click="ConfirmBtn" Content="Potwierdź" FontSize="15" Height="40" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 0, 20, 0"/>
+                            <Button Click="HintBtn" Content="Podpowiedź" FontSize="15"  Height="40" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 0, 0, 0"/>
+                        </StackPanel>
+                    </Viewbox>
+                    <TextBlock x:Name="hintField" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" FontSize="15" Margin="20" Visibility="Visible"/>
+
+
                 </Grid>
             </Border>
         </DockPanel>

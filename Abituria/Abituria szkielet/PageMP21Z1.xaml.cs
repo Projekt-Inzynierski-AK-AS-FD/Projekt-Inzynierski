@@ -82,5 +82,17 @@ namespace Abituria
             PageMP21Z3 pageMP21Z3 = new PageMP21Z3();
             NavigationService.Navigate(pageMP21Z3);
         }
+
+        private void ConfirmBtn(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Mlem mlem!");
+        }
+
+        private void HintBtn(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Bzzz bzz bzzz");
+            string test = HintsClass.HintMP21Z1(2);
+            this.hintField.Text = test;
+        }
     }
 }

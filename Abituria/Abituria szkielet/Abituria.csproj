@@ -81,6 +81,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HintsClass.cs" />
     <Compile Include="PageMaturaPoprawkowa2021.xaml.cs">
       <DependentUpon>PageMaturaPoprawkowa2021.xaml</DependentUpon>
     </Compile>

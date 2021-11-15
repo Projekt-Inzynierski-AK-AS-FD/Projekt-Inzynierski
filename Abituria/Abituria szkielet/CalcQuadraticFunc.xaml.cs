@@ -235,8 +235,8 @@ namespace Abituria
                 parable = "Ramiona paraboli skierowane są do dołu, ponieważ współczynnik 𝒂 jest ujemny: ⎛⎞";
             }
             
-            string wierzcholek = $"Współrzędne wierzchołka paraboli znajdują się w punkcie 𝑊 = (𝑝;𝑞), czyli 𝑊 = {wierzch}";
-            pParable.Text = "\n" + parable + "\n" + wierzcholek;
+            string wierzcholek = $"Współrzędne wierzchołka paraboli znajdują się w punkcie 𝑊 = (𝑝;𝑞), czyli 𝑊 = {wierzch}\n";
+            pParable.Text = parable + "\n" + wierzcholek;
             
 
         }
@@ -296,11 +296,11 @@ Postać iloczynowa funkcji kwadratowej wyrażona jest wzorem:
             string explained10 = $"𝑓(𝑥) = ({a})(𝑥 − ({x1}))(𝑥 − ({x2}))\n";
             if (delta < 0)
             {
-                explained10 = "Funkcja nie ma miejsc zerowych, nie istnieje zatem jej postać iloczynowa!";
+                explained10 = "\nFunkcja nie ma miejsc zerowych, nie istnieje zatem jej postać iloczynowa!";
             }
             else if (delta == 0)
             {
-                explained10 = $"Δ = 0, wystarczy więc policzyć x{specialScript[0]} i skrócić zapis: \n𝑓(𝑥) = ({a})(𝑥 − ({x1})){specialScript[3]}\n";
+                explained10 = $"\nΔ = 0, wystarczy więc policzyć x{specialScript[0]} i skrócić zapis: \n𝑓(𝑥) = ({a})(𝑥 − ({x1})){specialScript[3]}\n";
             }
             else
             {

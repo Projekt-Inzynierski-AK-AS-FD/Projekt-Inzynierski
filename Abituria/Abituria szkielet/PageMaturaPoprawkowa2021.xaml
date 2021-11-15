@@ -65,7 +65,7 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black" Text=" info o zdawalności itp.  w tym roku, wybierz zadanko meserszmicie "/>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black" Text=" info o zdawalności itp.  w tym roku "/>
                 </Grid>
 
             </Border>

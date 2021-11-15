@@ -357,6 +357,7 @@ C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMP21Z6.baml
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMP21Z7.baml
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMP21Z8.baml
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMP21Z9.baml
+C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\CalcQuadraticFunc.g.cs
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Calculator.g.cs
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\CalculatorChoice.g.cs
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\MainWindow.g.cs
@@ -413,7 +414,6 @@ C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abi
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\bin\Debug\Abituria.exe
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\bin\Debug\Abituria.pdb
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\bin\Debug\WpfMath.dll
-C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\CalcQuadraticFunc.g.cs
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\CalcQuadraticFunc.baml
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Calculator.baml
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\CalculatorChoice.baml
@@ -471,4 +471,3 @@ C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abi
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.csproj.CopyComplete
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.exe
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.pdb
-C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.csproj.AssemblyReference.cache
