@@ -635,7 +635,8 @@ namespace Abituria
         {
             string operation = CurrentOperationText.Text;
 
-            if (ContainsOperation(operation))
+            if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("√")) { }
+            else if (ContainsOperation(operation))
             {
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
                 CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
@@ -674,15 +675,63 @@ namespace Abituria
             {
                 string[] elements = CurrentOperationText.Text.Split(':');
 
-                if (Convert.ToDouble(elements[1]) * 1 == 0)
+                if (elements[1].Contains(','))
                 {
-                    ResultText.Text = ZeroNIE;
-                    CurrentOperationText.Text = string.Empty;
+                    if (elements[1].Contains('√') || elements[1].Contains('²'))
+                    {
+                        if (CalculateResult(elements[1]) == 0)
+                        {
+                            ResultText.Text = ZeroNIE;
+                            CurrentOperationText.Text = string.Empty;
+                        }
+                        else
+                        {
+                            ResultText.Text = CalculateResult(operation).ToString();
+                            CurrentOperationText.Text = string.Empty;
+                        }
+                    }
+                    else if (Convert.ToDouble(elements[1]) * 1 == 0)
+                    {
+                        ResultText.Text = ZeroNIE;
+                        CurrentOperationText.Text = string.Empty;
+                    }
+                    else
+                    {
+                        ResultText.Text = CalculateResult(operation).ToString();
+                        CurrentOperationText.Text = string.Empty;
+                    }
                 }
                 else
                 {
-                    ResultText.Text = CalculateResult(operation).ToString();
-                    CurrentOperationText.Text = string.Empty;
+                    if (elements[1].ToString() == "√")
+                    {
+                        ResultText.Text = ZeroNIE;
+                        CurrentOperationText.Text = string.Empty;
+                    }
+                    else if (elements[1].Contains('√') || elements[1].Contains('²'))
+                    {
+                        if (CalculateResult(elements[1]) == 0)
+                        {
+                            ResultText.Text = ZeroNIE;
+                            CurrentOperationText.Text = string.Empty;
+                        }
+                        else
+                        {
+                            ResultText.Text = CalculateResult(operation).ToString();
+                            CurrentOperationText.Text = string.Empty;
+                        }
+                    }
+                    else if (!elements[1].Contains('√') || !elements[1].Contains('²') && Convert.ToDouble(elements[1]) * 1 == 0)
+                    {
+                        ResultText.Text = ZeroNIE;
+                        CurrentOperationText.Text = string.Empty;
+                    }
+                    
+                    else
+                    {
+                        ResultText.Text = CalculateResult(operation).ToString();
+                        CurrentOperationText.Text = string.Empty;
+                    }
                 }
             }
             else if (operation == "1/0" || operation == "1/0,")
@@ -704,7 +753,11 @@ namespace Abituria
 
         private void Button_Cofaj(object sender, RoutedEventArgs e)
         {
-            CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
+            if (string.IsNullOrEmpty(CurrentOperationText.Text)) { }
+            else
+            {
+                CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
+            }
         }
         private void Button_ClickCzysc(object sender, RoutedEventArgs e)
         {
@@ -716,6 +769,8 @@ namespace Abituria
             ResultText.Text = "0";
             CurrentOperationText.Text = string.Empty;
         }
+
+        private void Button_ClickHistory(object sender, RoutedEventArgs e) { }
 
         private bool ContainsOperation(string operation)
             => operation.Contains('+') || operation.Contains('-') || operation.Contains('*') || operation.Contains(':') || operation.Contains('²') || operation.Contains('√') || operation.Contains('/');
@@ -941,6 +996,7 @@ namespace Abituria
                             {
                                 return Math.Sqrt(Convert.ToDouble(elements[1]));
                             }
+                            
                             else
                             {
                                 return Convert.ToDouble(elements[0])
@@ -1350,44 +1406,6 @@ namespace Abituria
 
                 }
 
-                else if (operation.Contains('√'))
-                {
-                    if (operation.Contains('²'))
-                    {
-                        string[] elements = operation.Split('√', '²');
-                        if (string.IsNullOrEmpty(elements[0]))
-                        {
-                            return Math.Sqrt(Math.Pow(Convert.ToDouble(elements[1]), 2));
-                        }
-                        else
-                        {
-                            return Convert.ToDouble(elements[0])
-                                   * Math.Sqrt(Math.Pow(Convert.ToDouble(elements[1]), 2));
-                        }
-                    }
-                    else
-                    {
-                        string[] elements = operation.Split('√');
-
-                        if (string.IsNullOrEmpty(elements[0]))
-                        {
-                            return Math.Sqrt(Convert.ToDouble(elements[1]));
-                        }
-                        else
-                        {
-                            return Convert.ToDouble(elements[0])
-                                   * Math.Sqrt(Convert.ToDouble(elements[1]));
-                        }
-                    }
-                }
-
-                else if (operation.Contains('²'))//może być potrzebny warunek że nie zawiera pozostałych (niepewny)!!!
-                {
-                    string[] elements = operation.Split('²');
-
-                    return Math.Pow(Convert.ToDouble(elements[0]), 2);
-                }
-
                 else if (operation.Contains('-'))
                 {
                     if (operation.StartsWith("-"))
@@ -1455,6 +1473,49 @@ namespace Abituria
                         }
                     }
                 }
+
+                else if (operation.Contains('√'))
+                {
+                    if (operation.Contains('²'))
+                    {
+                        string[] elements = operation.Split('√', '²');
+                        if (string.IsNullOrEmpty(elements[0]))
+                        {
+                            return Math.Sqrt(Math.Pow(Convert.ToDouble(elements[1]), 2));
+                        }
+                        else
+                        {
+                            return Convert.ToDouble(elements[0])
+                                   * Math.Sqrt(Math.Pow(Convert.ToDouble(elements[1]), 2));
+                        }
+                    }
+                    else
+                    {
+                        string[] elements = operation.Split('√');
+
+                        if (string.IsNullOrEmpty(elements[0]))
+                        {
+                            return Math.Sqrt(Convert.ToDouble(elements[1]));
+                        }
+                        else if (string.IsNullOrEmpty(elements[1]))
+                        {
+                            return 0;
+                        }
+                        else
+                        {
+                            return Convert.ToDouble(elements[0])
+                                   * Math.Sqrt(Convert.ToDouble(elements[1]));
+                        }
+                    }
+                }
+
+                else if (operation.Contains('²'))//może być potrzebny warunek że nie zawiera pozostałych (niepewny)!!!
+                {
+                    string[] elements = operation.Split('²');
+
+                    return Math.Pow(Convert.ToDouble(elements[0]), 2);
+                }
+
             }
 
             return default;
