@@ -81,8 +81,6 @@
                         <LineBreak/>C. <controls:FormulaControl Formula="y = -x+5" /><LineBreak/>
                         <LineBreak/>D. <controls:FormulaControl Formula="y = x+5" /></TextBlock>
                     <Image  Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
-
-
                 </Grid>
             </Border>
         </DockPanel>

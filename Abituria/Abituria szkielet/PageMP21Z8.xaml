@@ -84,7 +84,6 @@
                             <controls:FormulaControl Formula="a = 5" />
                         </InlineUIContainer><InlineUIContainer>
                         </InlineUIContainer><LineBreak/></TextBlock>
-                    <Image Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
                 </Grid>
             </Border>
         </DockPanel>
