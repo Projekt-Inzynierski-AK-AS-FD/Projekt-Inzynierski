@@ -587,6 +587,7 @@ namespace Abituria
             string operation = CurrentOperationText.Text;
 
             if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("√")) { }
+            else if (CurrentOperationText.Text.EndsWith("/")) { }
             else if (operation.Contains(':'))
             {
                 SprawdzCzyNieZero(operation);
