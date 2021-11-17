@@ -531,6 +531,7 @@ namespace Abituria
             string operation = CurrentOperationText.Text;
 
             if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("²")) { }
+            else if (CurrentOperationText.Text.Contains("/")) { }
             else if (CurrentOperationText.Text.Contains("√"))
             {
                 //if (CurrentOperationText.Text.EndsWith("√"))
@@ -555,8 +556,6 @@ namespace Abituria
             {
                 CurrentOperationText.Text += "√";
             }
-
-            
         }
         private void Button_ClickPotega(object sender, RoutedEventArgs e)
         {
@@ -568,6 +567,7 @@ namespace Abituria
             {
                 SprawdzCzyNieZero(operation);
             }
+            else if (CurrentOperationText.Text.Contains("/")) { }
             else if (CurrentOperationText.Text.Contains("²"))
             {
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
