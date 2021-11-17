@@ -257,6 +257,5 @@ namespace Abituria
             PageMP21Z35 pageMP21Z35 = new PageMP21Z35();
             NavigationService.Navigate(pageMP21Z35);
         }
-        ImageSource imageSource = new BitmapImage(new Uri("mp21z9.png"));
     }
 }

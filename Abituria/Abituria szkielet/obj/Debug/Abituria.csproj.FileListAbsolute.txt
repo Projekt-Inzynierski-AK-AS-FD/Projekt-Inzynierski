@@ -472,3 +472,7 @@ C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abi
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.exe
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.pdb
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.csproj.AssemblyReference.cache
+C:\Users\Adam\source\repos\Abituria\Abituria szkielet\bin\Debug\Abituria.exe.manifest
+C:\Users\Adam\source\repos\Abituria\Abituria szkielet\bin\Debug\Abituria.application
+C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\Abituria.exe.manifest
+C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\Abituria.application
