@@ -92,6 +92,7 @@ namespace Abituria
                     CurrentOperationText.Text += currentNumber;
                 }
             }
+            else if (CurrentOperationText.Text.EndsWith("∞")) { }
             else if (CurrentOperationText.Text == "0")
             {
                 if (currentNumber.ToString() == ",")
