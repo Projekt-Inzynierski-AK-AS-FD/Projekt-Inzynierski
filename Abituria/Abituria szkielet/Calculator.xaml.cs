@@ -13,6 +13,7 @@ namespace Abituria
     public partial class Calculator : Window
     {
         private const string ZeroNIE = "Nie można dzielić przez ZERO!!!";
+        private const string wpiszLiczbe = "Proszę wpisz liczbę!!!";
         private const string BrakObslugi = "NIESTETY!!! Takie działanie jeszcze nie jest obsługiwane!";
         
         public Calculator()
@@ -422,6 +423,10 @@ namespace Abituria
 
             if (operation.ToString() == "-") { }
             else if (operation.EndsWith("/-")) { }
+            else if (operation == "1/")
+            {
+                ResultText.Text = wpiszLiczbe;
+            }
             else if (EndsWithOperation(operation))//zamienia z + na inne działanie
             {
                 CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
@@ -465,6 +470,10 @@ namespace Abituria
 
             if (operation.ToString() == "-") { }
             else if (operation.EndsWith("/-")) { }
+            else if (operation == "1/")
+            {
+                ResultText.Text = wpiszLiczbe;
+            }
             else if (EndsWithOperation(operation))
             {
                 CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
@@ -515,6 +524,10 @@ namespace Abituria
 
             if (operation.ToString() == "-") { }
             else if (operation.EndsWith("/-")) { }
+            else if (operation == "1/")
+            {
+                ResultText.Text = wpiszLiczbe;
+            }
             else if (EndsWithOperation(operation))
             {
                 CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
@@ -558,6 +571,10 @@ namespace Abituria
 
             if (operation.ToString() == "-") { }
             else if (operation.EndsWith("/-")) { }
+            else if (operation == "1/")
+            {
+                ResultText.Text = wpiszLiczbe;
+            }
             else if (EndsWithOperation(operation))
             {
                 CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
@@ -608,6 +625,10 @@ namespace Abituria
             string operation = CurrentOperationText.Text;
 
             if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("²") || operation.EndsWith("/-")) { }
+            else if (operation == "1/")
+            {
+                ResultText.Text = wpiszLiczbe;
+            }
             else if (CurrentOperationText.Text.Contains("/")) { }
             else if (CurrentOperationText.Text.Contains("√"))
             {
@@ -640,7 +661,11 @@ namespace Abituria
             string operation = CurrentOperationText.Text;
 
             if (EndsWithOperation(operation)) { }//nie wstawia potęgi za działaniem
-            else if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("√") || CurrentOperationText.Text.EndsWith("/")) { }
+            else if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("√")) { }
+            else if (operation == "1/")
+            {
+                ResultText.Text = wpiszLiczbe;
+            }
             else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0"))
             {
                 SprawdzCzyNieZero(operation);
@@ -686,6 +711,10 @@ namespace Abituria
             else if (CurrentOperationText.Text.Contains("²"))
             {
                 CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();
+            }
+            else if (operation == "1/")
+            {
+                ResultText.Text = wpiszLiczbe;
             }
             else if (operation.Contains(':') || operation.Contains('/'))
             {
@@ -734,6 +763,10 @@ namespace Abituria
                 CurrentOperationText.Text = string.Empty;
             }
             else if (operation.ToString() == "-") { }
+            else if (operation == "1/")
+            {
+                ResultText.Text = wpiszLiczbe;
+            }
             else if (operation.EndsWith("/-")) { }
             else if (CurrentOperationText.Text.Contains("²"))
             {
