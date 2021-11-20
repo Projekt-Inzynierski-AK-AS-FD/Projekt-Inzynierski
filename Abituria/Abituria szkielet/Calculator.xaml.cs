@@ -723,13 +723,13 @@ namespace Abituria
             }
             else if (ContainsOperation(operation) || CurrentOperationText.Text.Contains('-'))
             {
-                if (operation.StartsWith("-"))
-                {
-                    CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
-                }
                 if (Regex.Matches(operation, "[-]").Count == 2 || (operation.StartsWith("-") && ContainsOperation(operation)))
                 {
                     CurrentOperationText.Text = CalculateResult(operation).ToString();
+                    CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
+                }
+                else if (operation.StartsWith("-"))
+                {
                     CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
                 }
                 else
