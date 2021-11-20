@@ -21,7 +21,7 @@ namespace Abituria
             ResultText.Text = "0";
             CurrentOperationText.Text = string.Empty;
         }
-                        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             ResultText.Text = string.Empty;
 
