@@ -422,7 +422,10 @@ namespace Abituria
             string operation = CurrentOperationText.Text;
 
             if (operation.ToString() == "-") { }
-            else if (operation.EndsWith("/-")) { }
+            else if (operation.EndsWith("/-"))
+            {
+                ResultText.Text = wpiszLiczbe;
+            }
             else if (operation == "1/")
             {
                 ResultText.Text = wpiszLiczbe;
@@ -454,8 +457,8 @@ namespace Abituria
                     CurrentOperationText.Text += "+";
                 }
             }
-            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi) { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi))
+            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi || ResultText.Text == wpiszLiczbe) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi) && !(ResultText.Text == wpiszLiczbe))
             {
                 CurrentOperationText.Text = ResultText.Text + "+";
             }
@@ -469,18 +472,20 @@ namespace Abituria
             string operation = CurrentOperationText.Text;
 
             if (operation.ToString() == "-") { }
-            else if (operation.EndsWith("/-")) { }
-            else if (operation == "1/")
+            else if (operation.EndsWith("/-")) 
             {
                 ResultText.Text = wpiszLiczbe;
+            }
+            else if (operation == "1/")
+            {
+                CurrentOperationText.Text += "-";
             }
             else if (EndsWithOperation(operation))
             {
                 CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
                 CurrentOperationText.Text += "-";
             }
-            else if (CurrentOperationText.Text.EndsWith(",")) { }////////////////////////////////////////nie doda znaku działania dopuki nie dopiszemy liczby po przecinku
-            else if (CurrentOperationText.Text.EndsWith("√")) { }
+            else if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("√")) { }
             else if (CurrentOperationText.Text.Contains("²"))
             {
                 CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();
@@ -501,8 +506,8 @@ namespace Abituria
                     CurrentOperationText.Text += "-";
                 }
             }
-            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi) { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi))
+            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi || ResultText.Text == wpiszLiczbe) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi) && !(ResultText.Text == wpiszLiczbe))
             {
                 if (ResultText.Text.ToString() != "0")
                 {
@@ -523,7 +528,10 @@ namespace Abituria
             string operation = CurrentOperationText.Text;//było var...
 
             if (operation.ToString() == "-") { }
-            else if (operation.EndsWith("/-")) { }
+            else if (operation.EndsWith("/-"))
+            {
+                ResultText.Text = wpiszLiczbe;
+            }
             else if (operation == "1/")
             {
                 ResultText.Text = wpiszLiczbe;
@@ -555,8 +563,8 @@ namespace Abituria
                     CurrentOperationText.Text += "*";
                 }
             }
-            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi) { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi))
+            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi || ResultText.Text == wpiszLiczbe) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi) && !(ResultText.Text == wpiszLiczbe))
             {
                 CurrentOperationText.Text = ResultText.Text + "*";
             }
@@ -570,7 +578,10 @@ namespace Abituria
             string operation = CurrentOperationText.Text;
 
             if (operation.ToString() == "-") { }
-            else if (operation.EndsWith("/-")) { }
+            else if (operation.EndsWith("/-"))
+            {
+                ResultText.Text = wpiszLiczbe;
+            }
             else if (operation == "1/")
             {
                 ResultText.Text = wpiszLiczbe;
@@ -610,8 +621,8 @@ namespace Abituria
                     }
                 }
             }
-            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi) { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi))
+            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi || ResultText.Text == wpiszLiczbe) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi) && !(ResultText.Text == wpiszLiczbe))
             {
                 CurrentOperationText.Text = ResultText.Text + ":";
             }
@@ -624,7 +635,11 @@ namespace Abituria
         {
             string operation = CurrentOperationText.Text;
 
-            if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("²") || operation.EndsWith("/-")) { }
+            if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("²")) { }
+            else if (operation.EndsWith("/-"))
+            {
+                ResultText.Text = wpiszLiczbe;
+            }
             else if (operation == "1/")
             {
                 ResultText.Text = wpiszLiczbe;
@@ -639,8 +654,8 @@ namespace Abituria
                 //else { }
             }
             else if (CurrentOperationText.Text.EndsWith("²")) { }
-            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi) { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi))
+            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi || ResultText.Text == wpiszLiczbe) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi) && !(ResultText.Text == wpiszLiczbe))
             {
                 if (ResultText.Text == "0")
                 {
@@ -660,12 +675,12 @@ namespace Abituria
         {
             string operation = CurrentOperationText.Text;
 
-            if (EndsWithOperation(operation)) { }//nie wstawia potęgi za działaniem
-            else if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("√")) { }
-            else if (operation == "1/")
+            if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("√")) { }
+            else if (operation.EndsWith("/-") || operation == "1/")
             {
                 ResultText.Text = wpiszLiczbe;
             }
+            else if (EndsWithOperation(operation)) { }//nie wstawia potęgi za działaniem
             else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0"))
             {
                 SprawdzCzyNieZero(operation);
@@ -688,8 +703,8 @@ namespace Abituria
                     CurrentOperationText.Text += "²";
                 }
             }
-            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi) { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi))
+            else if (ResultText.Text == ZeroNIE || ResultText.Text == BrakObslugi || ResultText.Text == wpiszLiczbe) { }
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi) && !(ResultText.Text == wpiszLiczbe))
             {
                 CurrentOperationText.Text = ResultText.Text + "²";
             }
@@ -702,7 +717,11 @@ namespace Abituria
         {
             string operation = CurrentOperationText.Text;
 
-            if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("√") || operation.EndsWith("/-")) { }
+            if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("√")) { }
+            else if (operation.EndsWith("/-"))
+            {
+                ResultText.Text = wpiszLiczbe;
+            }
             else if (CurrentOperationText.Text.EndsWith(":")) 
             {
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
@@ -749,7 +768,7 @@ namespace Abituria
                 CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
             }
             else if (CurrentOperationText.Text.EndsWith("/")) { }
-            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi) && !(ResultText.Text == "0"))
+            else if (string.IsNullOrEmpty(CurrentOperationText.Text) && !(ResultText.Text == ZeroNIE) && !(ResultText.Text == BrakObslugi) && !(ResultText.Text == wpiszLiczbe) && !(ResultText.Text == "0"))
             {
                 CurrentOperationText.Text = "1/" + ResultText.Text;
             }
@@ -768,7 +787,7 @@ namespace Abituria
                 CurrentOperationText.Text = string.Empty;
             }
             else if (operation.ToString() == "-") { }
-            else if (operation == "1/")
+            else if (operation.EndsWith("/-") || operation == "1/")
             {
                 ResultText.Text = wpiszLiczbe;
             }
