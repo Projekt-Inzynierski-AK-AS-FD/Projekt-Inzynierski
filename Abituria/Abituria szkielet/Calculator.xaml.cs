@@ -719,12 +719,17 @@ namespace Abituria
             else if (operation.Contains(':') || operation.Contains('/'))
             {
                 SprawdzCzyNieZero(operation);
-                CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();
+                //CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();  // nie wiem czemu to dodałem
             }
             else if (ContainsOperation(operation) || CurrentOperationText.Text.Contains('-'))
             {
                 if (operation.StartsWith("-"))
                 {
+                    CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
+                }
+                if (Regex.Matches(operation, "[-]").Count == 2 || (operation.StartsWith("-") && ContainsOperation(operation)))
+                {
+                    CurrentOperationText.Text = CalculateResult(operation).ToString();
                     CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
                 }
                 else
