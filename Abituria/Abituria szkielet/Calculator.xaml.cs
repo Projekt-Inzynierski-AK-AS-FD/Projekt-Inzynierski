@@ -439,7 +439,7 @@ namespace Abituria
             else if (CurrentOperationText.Text.EndsWith("√")) { }
             else if (CurrentOperationText.Text.Contains("²"))
             {
-                CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();
+                CurrentOperationText.Text = CalculateResult(operation).ToString() + '+';
             }
             else if (CurrentOperationText.Text.Contains(':') && CurrentOperationText.Text.EndsWith("0") || operation.Contains('/'))
             {
@@ -488,7 +488,7 @@ namespace Abituria
             else if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("√")) { }
             else if (CurrentOperationText.Text.Contains("²"))
             {
-                CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();
+                CurrentOperationText.Text = CalculateResult(operation).ToString() + '-';
             }
             else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0") || operation.Contains('/'))
             {
@@ -545,7 +545,7 @@ namespace Abituria
             else if (CurrentOperationText.Text.EndsWith("√")) { }
             else if (CurrentOperationText.Text.Contains("²"))
             {
-                CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();
+                CurrentOperationText.Text = CalculateResult(operation).ToString() + '*';
             }
             else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0") || operation.Contains('/'))
             {
@@ -595,7 +595,7 @@ namespace Abituria
             else if (CurrentOperationText.Text.EndsWith("√")) { }
             else if (CurrentOperationText.Text.Contains("²"))
             {
-                CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();
+                CurrentOperationText.Text = CalculateResult(operation).ToString() + ':';
             }
             else if (CurrentOperationText.Text.Contains(":") && CurrentOperationText.Text.EndsWith("0") || operation.Contains('/'))
             {
@@ -735,7 +735,7 @@ namespace Abituria
             {
                 ResultText.Text = wpiszLiczbe;
             }
-            else if (operation.Contains(':') || operation.Contains('/'))
+            else if (operation.Contains(':') && CurrentOperationText.Text.EndsWith("0") || operation.Contains('/'))
             {
                 SprawdzCzyNieZero(operation);
                 //CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();  // nie wiem czemu to dodałem
