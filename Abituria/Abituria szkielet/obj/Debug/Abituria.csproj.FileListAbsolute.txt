@@ -594,3 +594,7 @@ C:\Users\1.04.12 - Student\Source\Repos\Projekt-Inzynierski\Abituria\Abituria sz
 C:\Users\1.04.12 - Student\Source\Repos\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.application
 C:\Users\1.04.12 - Student\Source\Repos\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.exe
 C:\Users\1.04.12 - Student\Source\Repos\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.pdb
+C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\bin\Debug\Abituria.exe.manifest
+C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\bin\Debug\Abituria.application
+C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.exe.manifest
+C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.application

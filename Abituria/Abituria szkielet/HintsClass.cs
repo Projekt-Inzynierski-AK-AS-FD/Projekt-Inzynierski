@@ -24,20 +24,19 @@ namespace Abituria
             Button button = sender as Button;
             if (ansChecked == true)
             {
-                button.Background = Brushes.Green;
+                button.Background = Brushes.LimeGreen;
                 message = "To prawidłowa odpowiedź!";
             }
             else
             {
-                button.Background = Brushes.Red;
+                button.Background = Brushes.IndianRed;
                 message = "Odpowiedź jest niepoprawna. Spróbuj jeszcze raz.";
             }
             return message;
         }
-        public static string HintMP21Z1(int counter)
+        public static string Hint(int counter, string[] hintsArray)
         {
             string hint = "";
-            string[] hintsArray = { "Krok 1: podpowiedź", "Krok 2: podpowiedź", "Krok 3: podpowiedź", "Krok 4: podpowiedź" };
             // wzór: należy uzupełnić go faktyczną treścią
             switch (counter)
             {
@@ -62,7 +61,6 @@ namespace Abituria
                     hint = hintsArray[0] + "\n" + hintsArray[1] + "\n" + hintsArray[2] + "\n" + hintsArray[3];
                     break;
             }
-
             return hint;
         }
     }
