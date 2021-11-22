@@ -62,10 +62,10 @@ namespace Abituria
             NavigationService.Navigate(pageZadania);
         }
 
-        private void ButtonWideo(object sender, RoutedEventArgs e)
+        private void ButtonWzory(object sender, RoutedEventArgs e)
         {
-            PageWideo pageWideo = new PageWideo();
-            NavigationService.Navigate(pageWideo);
+            PageWzory pageWzory = new PageWzory();
+            NavigationService.Navigate(pageWzory);
         }
         private void Button2021(object sender, RoutedEventArgs e)
         {
