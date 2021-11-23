@@ -29,7 +29,7 @@ namespace Abituria
         private void Login()
         {
             string username = "";
-            string path = @"C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\user.txt";
+            string path = ;
             string readText = File.ReadAllText(path);
             this.txt1.Text = readText;
         }
