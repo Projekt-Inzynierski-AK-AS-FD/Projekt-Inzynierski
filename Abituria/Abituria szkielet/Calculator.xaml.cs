@@ -812,6 +812,21 @@ namespace Abituria
             {
                 CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();
             }
+            else if (operation.StartsWith("0") && operation.Contains(':'))
+            {
+                string[] elements = operation.Split(':');
+
+                if (Convert.ToDouble(elements[0]) * 1 == 0)
+                {
+                    ResultText.Text = ZeroNIE;
+                    CurrentOperationText.Text = string.Empty;
+                }
+                else
+                {
+                    ResultText.Text = CalculateResult(operation).ToString();
+                    CurrentOperationText.Text = string.Empty;
+                }
+            }
             else if (CurrentOperationText.Text.EndsWith(":")) 
             {
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
@@ -901,6 +916,21 @@ namespace Abituria
             else if (CurrentOperationText.Text.Contains("²"))
             {
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
+            }
+            else if (operation.StartsWith("0") && operation.Contains(':'))
+            {
+                string[] elements = operation.Split(':');
+
+                if (Convert.ToDouble(elements[0]) * 1 == 0)
+                {
+                    ResultText.Text = ZeroNIE;
+                    CurrentOperationText.Text = string.Empty;
+                }
+                else
+                {
+                    ResultText.Text = CalculateResult(operation).ToString();
+                    CurrentOperationText.Text = string.Empty;
+                }
             }
             else if (operation.Contains(':') && !operation.EndsWith(":") || operation.Contains('/'))
             {
