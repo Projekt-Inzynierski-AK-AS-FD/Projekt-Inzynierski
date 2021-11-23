@@ -212,7 +212,6 @@ C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMatura2021.g
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMaturaLata.g.cs
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMaturaPoprawkowa2021.g.cs
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMP21Z1.g.cs
-C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageWideo.g.cs
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageZadania.g.cs
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\App.g.cs
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\Abituria_MarkupCompile.cache
@@ -235,7 +234,6 @@ C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMatura2021.b
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMaturaLata.baml
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMaturaPoprawkowa2021.baml
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageMP21Z1.baml
-C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageWideo.baml
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageZadania.baml
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\Abituria.g.resources
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\Abituria.Properties.Resources.resources
@@ -598,3 +596,5 @@ C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abi
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\bin\Debug\Abituria.application
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.exe.manifest
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.application
+C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageWzory.g.cs
+C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\PageWzory.baml

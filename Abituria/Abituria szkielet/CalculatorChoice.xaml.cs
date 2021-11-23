@@ -64,7 +64,7 @@ namespace Abituria
 
         private void ButtonWideo(object sender, RoutedEventArgs e)
         {
-            PageWideo pageWideo = new PageWideo();
+            PageWzory pageWideo = new PageWzory();
             NavigationService.Navigate(pageWideo);
         }
 

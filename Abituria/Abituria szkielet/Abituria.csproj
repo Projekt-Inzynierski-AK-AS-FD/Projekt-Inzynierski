@@ -314,7 +314,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageWideo.xaml">
+    <Page Include="PageWzory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -453,8 +453,8 @@
     <Compile Include="PageMP21Z9.xaml.cs">
       <DependentUpon>PageMP21Z9.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageWideo.xaml.cs">
-      <DependentUpon>PageWideo.xaml</DependentUpon>
+    <Compile Include="PageWzory.xaml.cs">
+      <DependentUpon>PageWzory.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageZadania.xaml.cs">
       <DependentUpon>PageZadania.xaml</DependentUpon>

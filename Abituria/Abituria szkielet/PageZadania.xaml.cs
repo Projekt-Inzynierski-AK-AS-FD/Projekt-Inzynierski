@@ -34,8 +34,8 @@ namespace Abituria
 
         private void ButtonKalkulator(object sender, RoutedEventArgs e)
         {
-            var calculator = new Calculator();
-            calculator.Show();
+            var calculator = new CalculatorChoice();
+            NavigationService.Navigate(calculator);
         }
 
         private void ButtonMatura(object sender, RoutedEventArgs e)
@@ -62,10 +62,10 @@ namespace Abituria
             NavigationService.Navigate(pageZadania);
         }
 
-        private void ButtonWideo(object sender, RoutedEventArgs e)
+        private void ButtonWzory(object sender, RoutedEventArgs e)
         {
-            PageWideo pageWideo = new PageWideo();
-            NavigationService.Navigate(pageWideo);
+            PageWzory pageWzory = new PageWzory();
+            NavigationService.Navigate(pageWzory);
         }
     }
 }

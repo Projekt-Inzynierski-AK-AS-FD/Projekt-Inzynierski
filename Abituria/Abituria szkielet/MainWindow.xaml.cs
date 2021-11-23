@@ -63,10 +63,10 @@ namespace Abituria
             this.Visibility = Visibility.Hidden;
         }
 
-        private void ButtonWideo(object sender, RoutedEventArgs e)
+        private void ButtonWzory(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("PageWideo.xaml", UriKind.Relative);
+            window.Source = new Uri("PageWzory.xaml", UriKind.Relative);
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
