@@ -896,6 +896,8 @@ namespace Abituria
         private void Button_ClickWynik(object sender, RoutedEventArgs e)
         {
             string operation = CurrentOperationText.Text;
+            double arg2 = 0;
+            bool canConvert = double.TryParse(operation, out arg2);
 
             if (Regex.Matches(operation, "[E]").Count >= 2 || Regex.Matches(ResultText.Text, "[E]").Count >= 2)
             {
@@ -945,6 +947,26 @@ namespace Abituria
             {
                 ResultText.Text = "0";
                 CurrentOperationText.Text = string.Empty;
+            }
+            else if (canConvert == true)
+            {
+                if (operation.EndsWith(","))
+                {
+                    CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
+                    ResultText.Text = CurrentOperationText.Text;
+                    CurrentOperationText.Text = string.Empty;
+                }
+                else if (operation.Contains(',') && !operation.EndsWith(","))
+                {
+                    double test = Convert.ToDouble(CurrentOperationText.Text) * 1;
+                    ResultText.Text = test.ToString();
+                    CurrentOperationText.Text = string.Empty;
+                }
+                else
+                {
+                    ResultText.Text = operation;
+                    CurrentOperationText.Text = string.Empty;
+                }
             }
             else
             {
