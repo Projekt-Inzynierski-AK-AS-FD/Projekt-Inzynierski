@@ -26,12 +26,6 @@ namespace Abituria
             Login();
         }
 
-        class MyClass
-        {
-            public int Id { get; set; }
-            public string Name { get; set; }
-        }
-
         private void Login()
         {
             string path = @"users.txt";
