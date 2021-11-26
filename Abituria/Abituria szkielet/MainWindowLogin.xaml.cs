@@ -26,12 +26,25 @@ namespace Abituria
             Login();
         }
 
+        class MyClass
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+        }
+
         private void Login()
         {
-            string username = "";
-            string path = @"user.txt";
-            string readText = File.ReadAllText(path);
-            this.txt1.Text = readText;
+            string path = @"users.txt";
+
+
+            using (StreamWriter writer = File.AppendText(path))
+            {
+                //writer.WriteLine("\n heeeeh?");
+                //writer.Close();
+            }
+
+            comboBox1.ItemsSource = new List<string> { "ty mi", "piętnastaka", "dajesz jeżyco?" };
+
         }
         private static void CreateProfile()
         {

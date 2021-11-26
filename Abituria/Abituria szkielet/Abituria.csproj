@@ -528,10 +528,5 @@
   <ItemGroup>
     <Resource Include="img\mp21z33.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="user.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
