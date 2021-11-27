@@ -23,7 +23,6 @@ namespace Abituria
         {
             InitializeComponent();
         }
-
         private void ShowResult(object sender, RoutedEventArgs e)
         {
             // POBIERANIE INPUTU

@@ -7,8 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Rok matury"
-      ShowsNavigationUI="False"
-      >
+      ShowsNavigationUI="False">
 
     <Grid>
         <DockPanel Margin="5">

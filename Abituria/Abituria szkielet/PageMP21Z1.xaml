@@ -174,7 +174,6 @@
                         <RowDefinition Height="0.1*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-
                     <Viewbox Stretch="Uniform" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 0, 0">
                     <StackPanel>
                             <TextBlock FontSize="27" Margin="80, 80, 100, 80" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>

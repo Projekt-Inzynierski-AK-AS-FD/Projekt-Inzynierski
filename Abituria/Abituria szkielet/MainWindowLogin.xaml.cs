@@ -25,7 +25,6 @@ namespace Abituria
             InitializeComponent();
             Login();
         }
-
         private void Login()
         {
             string path = @"users.txt";

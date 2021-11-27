@@ -42,7 +42,6 @@
                         <Button Background="Transparent" BorderThickness="0" Content="Tablice matematyczne" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWzory"/>
                     </TextBlock>
                     <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
-
                 </Grid>
             </Border>
 
@@ -157,7 +156,6 @@
                         </ComboBoxItem>
                     </ComboBox>
                 </Grid>
-
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>

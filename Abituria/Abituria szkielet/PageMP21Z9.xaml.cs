@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Abituria
 {
-    /// <summary>
-    /// Logika interakcji dla klasy PageMatura.xaml
-    /// </summary>
     public partial class PageMP21Z9 : Page
     {
         public PageMP21Z9()

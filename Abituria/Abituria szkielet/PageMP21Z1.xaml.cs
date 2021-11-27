@@ -251,7 +251,6 @@ namespace Abituria
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = answer;
         }
-
         private void HintBtn(object sender, RoutedEventArgs e)
         {
             clickCounter += 1;
