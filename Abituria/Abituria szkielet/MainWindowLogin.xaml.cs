@@ -39,10 +39,30 @@ namespace Abituria
 
             comboBox1.ItemsSource = new List<string> { "ty mi", "piętnastaka", "dajesz jeżyco?" };
 
+            
+            
+
+
         }
         private static void CreateProfile()
         {
 
+        }
+
+        private void BtnAcntExists(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnCreateNew(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Confirm(object sender, RoutedEventArgs e)
+        {
+            string eh = comboBox1.SelectedItem as string;
+            MessageBox.Show(eh);
         }
     }
 }

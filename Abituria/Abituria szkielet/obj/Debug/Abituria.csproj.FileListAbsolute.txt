@@ -601,3 +601,4 @@ C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abi
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\PageWzory.baml
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\MainWindowLogin.g.cs
 C:\Users\Adam\source\repos\Abituria\Abituria szkielet\obj\Debug\MainWindowLogin.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\Abituria\Abituria szkielet\obj\Debug\Abituria.csproj.AssemblyReference.cache
