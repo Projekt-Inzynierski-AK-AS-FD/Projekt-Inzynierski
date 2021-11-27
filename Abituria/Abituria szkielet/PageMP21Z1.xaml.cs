@@ -244,6 +244,7 @@ namespace Abituria
             PageMP21Z35 pageMP21Z35 = new PageMP21Z35();
             NavigationService.Navigate(pageMP21Z35);
         }
+
         private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
             bool ansChecked = CheckAnswer(correctAnsw);
@@ -251,7 +252,6 @@ namespace Abituria
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = answer;
         }
-
         private void HintBtn(object sender, RoutedEventArgs e)
         {
             clickCounter += 1;

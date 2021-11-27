@@ -157,7 +157,6 @@
                         </ComboBoxItem>
                     </ComboBox>
                 </Grid>
-
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>

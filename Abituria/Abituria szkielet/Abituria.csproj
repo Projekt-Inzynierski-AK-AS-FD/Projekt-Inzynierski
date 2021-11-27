@@ -314,6 +314,78 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageW1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW10.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW11.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW12.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW13.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW14.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW15.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW16.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW17.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW18.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageW9.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageWzory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -452,6 +524,60 @@
     </Compile>
     <Compile Include="PageMP21Z9.xaml.cs">
       <DependentUpon>PageMP21Z9.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW1.xaml.cs">
+      <DependentUpon>PageW1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW10.xaml.cs">
+      <DependentUpon>PageW10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW11.xaml.cs">
+      <DependentUpon>PageW11.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW12.xaml.cs">
+      <DependentUpon>PageW12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW13.xaml.cs">
+      <DependentUpon>PageW13.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW14.xaml.cs">
+      <DependentUpon>PageW14.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW15.xaml.cs">
+      <DependentUpon>PageW15.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW16.xaml.cs">
+      <DependentUpon>PageW16.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW17.xaml.cs">
+      <DependentUpon>PageW17.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW18.xaml.cs">
+      <DependentUpon>PageW18.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW2.xaml.cs">
+      <DependentUpon>PageW2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW3.xaml.cs">
+      <DependentUpon>PageW3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW4.xaml.cs">
+      <DependentUpon>PageW4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW5.xaml.cs">
+      <DependentUpon>PageW5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW6.xaml.cs">
+      <DependentUpon>PageW6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW7.xaml.cs">
+      <DependentUpon>PageW7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW8.xaml.cs">
+      <DependentUpon>PageW8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageW9.xaml.cs">
+      <DependentUpon>PageW9.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageWzory.xaml.cs">
       <DependentUpon>PageWzory.xaml</DependentUpon>
