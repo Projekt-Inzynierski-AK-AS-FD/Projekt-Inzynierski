@@ -8,8 +8,7 @@
         WindowState="Maximized"
         Title="ABITURIA Kalkulator - funkcja kwadratowa" Height="1080" Width="1980"
         xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath">
-    
-    
+
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20" />

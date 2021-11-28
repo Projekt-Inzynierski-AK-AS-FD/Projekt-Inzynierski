@@ -116,23 +116,6 @@
                         </InlineUIContainer><Run Text=" definiujemy jej"/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:n" />
                         </InlineUIContainer><Run Text="-tą potęgę:"/><LineBreak/>
-                            <controls:FormulaControl Formula="\underbrace{text}_{text}" /> od punktu
-                        <controls:FormulaControl Formula="\:0" />.<LineBreak/>Dla dowolnej liczby
-                        <controls:FormulaControl Formula="\:x\:" />mamy:<LineBreak/>
-                        <controls:FormulaControl Formula="\mid{x}\mid\:\geq0" /><LineBreak/>
-                        <controls:FormulaControl Formula="\mid{x}\mid\:=0\:" /> wtedy i tylko wtedy, gdy
-                        <controls:FormulaControl Formula="\:x=0\:"/><LineBreak/>
-                        <controls:FormulaControl Formula="\mid{-x}\mid\:=\mid{x}\mid\:\:"/><LineBreak/>Dla dowolnych liczb
-                        <controls:FormulaControl Formula="\:x,y\:"/>mamy:<LineBreak/>
-                        <controls:FormulaControl Formula="\mid{x+y}\mid\:\leq\mid{x}\mid+\mid{y}\mid\:"/><LineBreak/>
-                        <controls:FormulaControl Formula="\mid{x-y}\mid\:\leq\mid{x}\mid+\mid{y}\mid\:"/><LineBreak/>
-                        <controls:FormulaControl Formula="\mid{x{\cdot}y}\mid\:\geq\mid{x}\mid\cdot\mid{y}\mid\:"/><LineBreak/>Ponadto, jeśli
-                        <controls:FormulaControl Formula="\:y\neq0\:"/>, to<controls:FormulaControl Formula="\mid\frac{\:{x}}{{y}}\mid=\frac{\:\mid{x}\mid}{\:\mid{y}\mid}" />.
-                        <LineBreak/>Dla dowolnych liczb <controls:FormulaControl Formula="\:a\:"/>oraz <controls:FormulaControl Formula="\:r\geq0\:"/>mamy:<LineBreak/>
-                        <controls:FormulaControl Formula="\mid{x-a}\mid\leqr\:" /> wtedy i tylko wtedy, gdy
-                        <controls:FormulaControl Formula="\:a-r\leqx\leqa+r\:"/><LineBreak/>
-                        <controls:FormulaControl Formula="\mid{x-a}\mid\geqr\:" /> wtedy i tylko wtedy, gdy
-                        <controls:FormulaControl Formula="\:x\leqa-r"/> lub <controls:FormulaControl Formula="\:x\geqa+r"/><LineBreak/>
                     </TextBlock>
                 </Grid>
             </Border>

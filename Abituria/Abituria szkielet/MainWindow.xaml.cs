@@ -33,7 +33,12 @@ namespace Abituria
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
+        private void ButtonAbituria(object sender, RoutedEventArgs e)
+        {
+            var mainWin = new MainWindowLogin();
+            mainWin.Show();
 
+        }
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
