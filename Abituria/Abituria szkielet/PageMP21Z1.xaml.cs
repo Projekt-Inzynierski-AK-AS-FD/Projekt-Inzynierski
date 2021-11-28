@@ -244,6 +244,7 @@ namespace Abituria
             PageMP21Z35 pageMP21Z35 = new PageMP21Z35();
             NavigationService.Navigate(pageMP21Z35);
         }
+
         private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
             bool ansChecked = CheckAnswer(correctAnsw);
