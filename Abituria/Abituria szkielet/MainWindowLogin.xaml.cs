@@ -28,16 +28,24 @@ namespace Abituria
 
         private void Login()
         {
-            string path = @"users.txt";
+            string usersFile = @"users.txt";
+            List<string> usersList = new List<string>();
 
-
-            using (StreamWriter writer = File.AppendText(path))
+            using (StreamReader reader = new StreamReader(usersFile))
             {
-                //writer.WriteLine("\n heeeeh?");
-                //writer.Close();
+                string user = "";
+                int i = 0;
+                MessageBox.Show(reader.ReadLine() + " mlem???");
+                while ((user = reader.ReadLine()) != null || i > 9)
+                {
+                    MessageBox.Show(user + " mlem???");
+                    comboBox1.ItemsSource = new List<string> { "ty mi", "piętnastaka", "dajesz jeżyco?" };
+                    i++;
+                }
             }
 
-            comboBox1.ItemsSource = new List<string> { "ty mi", "piętnastaka", "dajesz jeżyco?" };
+            
+
 
             
             
@@ -46,12 +54,19 @@ namespace Abituria
         }
         private static void CreateProfile()
         {
-
+            /*
+            using (StreamWriter writer = File.AppendText(usersFile))
+            {
+                //writer.WriteLine("\n heeeeh?");
+                //writer.Close();
+            }
+            */
         }
 
         private void BtnAcntExists(object sender, RoutedEventArgs e)
         {
-
+            btn1.Visibility = Visibility.Collapsed;
+            comboBox1.Visibility = Visibility.Visible;
         }
 
         private void BtnCreateNew(object sender, RoutedEventArgs e)
