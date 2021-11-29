@@ -22,6 +22,39 @@ namespace Abituria
             ResultText.Text = "0";
             CurrentOperationText.Text = string.Empty;
         }
+        //private void ListaHistori(object sender, RoutedEventArgs e)
+        //{
+        //    ListaHistorii = new List<string>() { new string() { } };
+            
+        //}
+
+        private void ListaHistorii_Click(object sender, RoutedEventArgs e)
+        {
+            //ListBox listBox1 = new ListBox();
+
+            //ListaHistorii.Items.CopyTo(liczba);
+
+            ListBoxItem wartosci = ((sender as ListBox).SelectedItem as ListBoxItem);
+
+            string liczba = ListaHistorii.ToString();
+
+            //string pole = ;
+
+            string [] elements = liczba.Split('=', ' ');
+
+            //string wynik = elements[2];
+
+            //ResultText.Text = elements[0].ToString();
+            ResultText.Text = wartosci.Content.ToString();
+            //ResultText.Text = ;
+            //this.Controls.Add(listBox1);
+
+
+            //ListBoxItem ListaHistorii1 = (ListBoxItem)
+            //    (ListaHistorii.ItemContainerGenerator.ContainerFromIndex(0));
+            //ResultText.Text = ListBoxItem.ToString();
+            ////Item.Content = "Siedemnaście" + (ListaHistorii1.Content.ToString()) + "....";
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ResultText.Text = string.Empty;
@@ -432,6 +465,7 @@ namespace Abituria
             }
             else if (operation.StartsWith("√") && operation.Contains('E'))
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = CalculateResult(operation).ToString() + '+';
             }
             else if (EndsWithOperation(operation))//zamienia z + na inne działanie
@@ -443,6 +477,7 @@ namespace Abituria
             else if (CurrentOperationText.Text.EndsWith("√") || CurrentOperationText.Text.EndsWith("E")) { }
             else if (CurrentOperationText.Text.Contains("²"))
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = CalculateResult(operation).ToString() + '+';
             }
             else if (operation.Contains("E+") || operation.Contains("E-"))
@@ -453,6 +488,7 @@ namespace Abituria
                 }
                 else if (CzyMaZnaki(operation))
                 {
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                     CurrentOperationText.Text = CalculateResult(operation).ToString() + '+';
                 }
             }
@@ -468,6 +504,7 @@ namespace Abituria
                 }
                 else
                 {
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                     CurrentOperationText.Text = CalculateResult(operation).ToString();
                     CurrentOperationText.Text += "+";
                 }
@@ -497,6 +534,7 @@ namespace Abituria
             }
             else if (operation.StartsWith("√") && operation.Contains('E'))
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = CalculateResult(operation).ToString() + '-';
             }
             else if (EndsWithOperation(operation))
@@ -507,6 +545,7 @@ namespace Abituria
             else if (CurrentOperationText.Text.EndsWith(",") || CurrentOperationText.Text.EndsWith("√") || CurrentOperationText.Text.EndsWith("E")) { }
             else if (CurrentOperationText.Text.Contains("²"))
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = CalculateResult(operation).ToString() + '-';
             }
             else if (operation.Contains("E+") || operation.Contains("E-"))
@@ -517,6 +556,7 @@ namespace Abituria
                 }
                 else if (CzyMaZnaki(operation))
                 {
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                     CurrentOperationText.Text = CalculateResult(operation).ToString() + '-';
                 }
             }
@@ -532,6 +572,7 @@ namespace Abituria
                 }
                 else
                 {
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                     CurrentOperationText.Text = CalculateResult(operation).ToString();
                     CurrentOperationText.Text += "-";
                 }
@@ -568,6 +609,7 @@ namespace Abituria
             }
             else if (operation.StartsWith("√") && operation.Contains('E'))
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = CalculateResult(operation).ToString() + '*';
             }
             else if (EndsWithOperation(operation))
@@ -579,6 +621,7 @@ namespace Abituria
             else if (CurrentOperationText.Text.EndsWith("√") || CurrentOperationText.Text.EndsWith("E")) { }
             else if (CurrentOperationText.Text.Contains("²"))
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = CalculateResult(operation).ToString() + '*';
             }
             else if (operation.Contains("E+") || operation.Contains("E-"))
@@ -589,6 +632,7 @@ namespace Abituria
                 }
                 else if (CzyMaZnaki(operation))
                 {
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                     CurrentOperationText.Text = CalculateResult(operation).ToString() + '*';
                 }
             }
@@ -604,6 +648,7 @@ namespace Abituria
                 }
                 else
                 {
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                     CurrentOperationText.Text = CalculateResult(operation).ToString();
                     CurrentOperationText.Text += "*";
                 }
@@ -633,6 +678,7 @@ namespace Abituria
             }
             else if (operation.StartsWith("√") && operation.Contains('E'))
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = CalculateResult(operation).ToString() + ':';
             }
             else if (EndsWithOperation(operation))
@@ -644,6 +690,7 @@ namespace Abituria
             else if (CurrentOperationText.Text.EndsWith("√") || CurrentOperationText.Text.EndsWith("E")) { }
             else if (CurrentOperationText.Text.Contains("²"))
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = CalculateResult(operation).ToString() + ':';
             }
             else if (operation.Contains("E+") || operation.Contains("E-"))
@@ -654,6 +701,7 @@ namespace Abituria
                 }
                 else if (CzyMaZnaki(operation))
                 {
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                     CurrentOperationText.Text = CalculateResult(operation).ToString() + ':';
                 }
             }
@@ -676,6 +724,7 @@ namespace Abituria
                     }
                     else
                     {
+                        ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                         CurrentOperationText.Text = CalculateResult(operation).ToString();
                         CurrentOperationText.Text += ":";
                     }
@@ -762,6 +811,7 @@ namespace Abituria
             }
             else if (CurrentOperationText.Text.Contains("²"))
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
             }
             else if (CurrentOperationText.Text.Contains("/"))
@@ -786,6 +836,7 @@ namespace Abituria
                 }
                 else if (CzyMaZnaki(operation))
                 {
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                     CurrentOperationText.Text = CalculateResult(operation).ToString();
                 }
             }
@@ -810,6 +861,7 @@ namespace Abituria
             }
             else if (operation.StartsWith("√") && operation.Contains('E'))
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();
             }
             else if (operation.StartsWith("0") && operation.Contains(':'))
@@ -823,17 +875,20 @@ namespace Abituria
                 }
                 else
                 {
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                     ResultText.Text = CalculateResult(operation).ToString();
                     CurrentOperationText.Text = string.Empty;
                 }
             }
             else if (CurrentOperationText.Text.EndsWith(":")) 
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
                 CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
             }
             else if (CurrentOperationText.Text.Contains("²"))
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();
             }
             else if (operation == "1/")
@@ -848,6 +903,7 @@ namespace Abituria
                 }
                 else if (CzyMaZnaki(operation))
                 {
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                     CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();
                 }
             }
@@ -860,6 +916,7 @@ namespace Abituria
             {
                 if (Regex.Matches(operation, "[-]").Count == 2 || (operation.StartsWith("-") && ContainsOperation(operation)))
                 {
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                     CurrentOperationText.Text = CalculateResult(operation).ToString();
                     CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
                 }
@@ -869,6 +926,7 @@ namespace Abituria
                 }
                 else
                 {
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                     CurrentOperationText.Text = CalculateResult(operation).ToString();
                     CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
                 }
@@ -880,6 +938,7 @@ namespace Abituria
             }
             else if (CurrentOperationText.Text.Contains("/") && CurrentOperationText.Text.EndsWith("/"))
             {
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
                 CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
             }
@@ -917,7 +976,9 @@ namespace Abituria
             else if (operation.EndsWith("/-")) { }
             else if (CurrentOperationText.Text.Contains("²"))
             {
-                CurrentOperationText.Text = CalculateResult(operation).ToString();
+                ResultText.Text = CalculateResult(operation).ToString();
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
+                CurrentOperationText.Text = string.Empty;
             }
             else if (operation.StartsWith("0") && operation.Contains(':'))
             {
@@ -931,6 +992,7 @@ namespace Abituria
                 else
                 {
                     ResultText.Text = CalculateResult(operation).ToString();
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
                     CurrentOperationText.Text = string.Empty;
                 }
             }
@@ -946,6 +1008,7 @@ namespace Abituria
             else if (operation.EndsWith("√"))
             {
                 ResultText.Text = "0";
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
                 CurrentOperationText.Text = string.Empty;
             }
             else if (canConvert == true)
@@ -954,24 +1017,30 @@ namespace Abituria
                 {
                     CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
                     ResultText.Text = CurrentOperationText.Text;
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
                     CurrentOperationText.Text = string.Empty;
                 }
                 else if (operation.Contains(',') && !operation.EndsWith(","))
                 {
                     double test = Convert.ToDouble(CurrentOperationText.Text) * 1;
                     ResultText.Text = test.ToString();
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
                     CurrentOperationText.Text = string.Empty;
                 }
                 else
                 {
                     ResultText.Text = operation;
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
                     CurrentOperationText.Text = string.Empty;
                 }
             }
             else
             {
                 ResultText.Text = CalculateResult(operation).ToString();
+                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
+                //mylist.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
                 CurrentOperationText.Text = string.Empty;
+                //this.Controls.Add(mylist);
             }
         }
 
@@ -988,10 +1057,9 @@ namespace Abituria
             ResultText.Text = "0";
             CurrentOperationText.Text = string.Empty;
         }
-        private void Button_ClickCzyscWszystko(object sender, RoutedEventArgs e)
+        private void Button_ClickCzyscHistorie(object sender, RoutedEventArgs e)
         {
-            ResultText.Text = "0";
-            CurrentOperationText.Text = string.Empty;
+            ListaHistorii.Items.Clear();
         }
 
         private void Button_ClickHistory(object sender, RoutedEventArgs e) { }
@@ -1020,6 +1088,7 @@ namespace Abituria
                         else
                         {
                             ResultText.Text = CalculateResult(operation).ToString();
+                            ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
                             CurrentOperationText.Text = string.Empty;
                         }
                     }
@@ -1031,6 +1100,7 @@ namespace Abituria
                     else
                     {
                         ResultText.Text = CalculateResult(operation).ToString();
+                        ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
                         CurrentOperationText.Text = string.Empty;
                     }
                 }
@@ -1051,6 +1121,7 @@ namespace Abituria
                         else
                         {
                             ResultText.Text = CalculateResult(operation).ToString();
+                            ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
                             CurrentOperationText.Text = string.Empty;
                         }
                     }
@@ -1062,6 +1133,7 @@ namespace Abituria
                     else
                     {
                         ResultText.Text = CalculateResult(operation).ToString();
+                        ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
                         CurrentOperationText.Text = string.Empty;
                     }
                 }
@@ -1078,6 +1150,7 @@ namespace Abituria
                 else
                 {
                     ResultText.Text = CalculateResult(operation).ToString();
+                    ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
                     CurrentOperationText.Text = string.Empty;
                 }
             }
@@ -1086,7 +1159,7 @@ namespace Abituria
             => (Regex.Matches(operation, "[+]").Count < 2 && Regex.Matches(operation, "[-]").Count < 1 && !ContainsOperationNoPlusNoMinus(operation)) || (Regex.Matches(operation, "[-]").Count < 2 && Regex.Matches(operation, "[+]").Count < 1 && !ContainsOperationNoPlusNoMinus(operation));//bez znaków
         private bool CzyMaZnaki(string operation)
             => Regex.Matches(operation, "[+]").Count > 1 || Regex.Matches(operation, "[-]").Count > 1 || operation.Contains('*') || operation.Contains(':') || operation.Contains('√') || operation.Contains('²') || operation.Contains("1/");//ze znakami
-
+            
         private void RemoveUnlessPoint(string currentNumber)
         {
             if (currentNumber.ToString() == ",")
