@@ -61,10 +61,10 @@
                 <Canvas Background="White">
                     <TextBlock TextWrapping="Wrap" Foreground="Black" FontFamily="Cavolini" FontSize="20">  
                         History:
-                        </TextBlock>
+                    </TextBlock>
                     <ListBox Name="ListaHistorii" Margin="0,30,0,0" BorderBrush="White" FontFamily="Cavolini" SelectionChanged="ListaHistorii_Click" SelectionMode="Single">
-                        <ListBoxItem Background="White" Foreground="Black" FontFamily="Cavolini" FontSize="20" Width="250" BorderBrush="White">Test 1</ListBoxItem>
-                        <ListBoxItem Content="Test 2" Background="White" Foreground="Black" FontFamily="Cavolini" FontSize="20" Width="250" BorderBrush="White"/>
+                        <!--<ListBoxItem Background="White" Foreground="Black" FontFamily="Cavolini" FontSize="20" Width="250" BorderBrush="White">Test 1</ListBoxItem>
+                        <ListBoxItem Content="Test 2" Background="White" Foreground="Black" FontFamily="Cavolini" FontSize="20" Width="250" BorderBrush="White"/>-->
                     </ListBox>
                 </Canvas>
             </Popup>
