@@ -3,6 +3,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Collections.Generic;
 
 namespace Abituria
 {
@@ -36,11 +37,11 @@ namespace Abituria
 
             ListBoxItem wartosci = ((sender as ListBox).SelectedItem as ListBoxItem);
 
-            string liczba = ListaHistorii.ToString();
+            //string liczba = ListaHistorii.ToString();
 
             //string pole = ;
 
-            string [] elements = liczba.Split('=', ' ');
+            //string [] elements = liczba.Split('=', ' ');
 
             //string wynik = elements[2];
 
