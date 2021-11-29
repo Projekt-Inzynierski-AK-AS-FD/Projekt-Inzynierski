@@ -47,7 +47,7 @@
             <Button x:Name="ButtonUlamek" Click="Button_ClickUlamek" Grid.Row="3" Grid.Column="4" Height="72" Content="1/x" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonCofaj" Click="Button_Cofaj" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Height="72" Content="DEL" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonCzysc" Click="Button_ClickCzysc" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Height="72" Content="C" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
-            <Button x:Name="ButtonCzyscWszystko" Click="Button_ClickCzyscWszystko" Grid.Row="4" Grid.Column="4" Height="72" Content="AC" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="Button_ClickCzyscHistorie" Click="Button_ClickCzyscHistorie" Grid.Row="4" Grid.Column="4" Height="72" Content="AC" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <!--<Popup Margin="10,10,0,13" Name="Popup1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="450" IsOpen="True" Grid.Row="4" Grid.Column="4">
                 <StackPanel>
                     <TextBlock Name="McTextBlock" Background="White" >
