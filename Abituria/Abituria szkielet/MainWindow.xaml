@@ -24,7 +24,8 @@
                 <ColumnDefinition Width="60*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="3*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10*"/>
                 <RowDefinition Height="10*"/>
                 <RowDefinition Height="8*"/>
             </Grid.RowDefinitions>
@@ -34,12 +35,18 @@
                 </TextBlock>
             </Border>
             <TextBlock Grid.Row="1" Text="Witaj w programie ABITURIA, twoim matematycznym korepetytorze." FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
-            <TextBlock Grid.Row="1" Text="Wybierz moduł:" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Margin="0,0,0,10" Grid.Column="1" Grid.ColumnSpan="3"/>
-            <Button Grid.Row="2" Content="Kalkulator" ToolTip="Zaawansowany kalkulator do wykonania dowolnego obliczenia matematycznego" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonCalculator"/>
-            <Button Grid.Row="2" Grid.Column="1" Content="Matura" ToolTip="Zobacz arkusze i rozwiązywanie zadań!" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonMatura"/>
-            <Button Grid.Row="2" Grid.Column="2" Content="Działy" ToolTip="Matematyka według działów" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonDzialy" />
-            <Button Grid.Row="2" Grid.Column="3" Content="Zadania" ToolTip="Ta strona umożliwia trening na losowych zadaniach maturalnych!" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonZadania"/>
-            <Button Grid.Row="2" Grid.Column="4" Content="Wzory" ToolTip="Tablice matematyczne" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonWzory"/>
+            <TextBlock Grid.Row="2" Text="Wybierz moduł:" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Margin="0,0,0,10" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
+                <TextBlock Text="Witaj, " FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+                <TextBlock x:Name="name" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            </StackPanel>
+            
+            <Button Grid.Row="3" Content="Kalkulator" ToolTip="Zaawansowany kalkulator do wykonania dowolnego obliczenia matematycznego" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonCalculator"/>
+            <Button Grid.Row="3" Grid.Column="1" Content="Matura" ToolTip="Zobacz arkusze i rozwiązywanie zadań!" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonMatura"/>
+            <Button Grid.Row="3" Grid.Column="2" Content="Działy" ToolTip="Matematyka według działów" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonDzialy" />
+            <Button Grid.Row="3" Grid.Column="3" Content="Zadania" ToolTip="Ta strona umożliwia trening na losowych zadaniach maturalnych!" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonZadania"/>
+            <Button Grid.Row="3" Grid.Column="4" Content="Wzory" ToolTip="Tablice matematyczne" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonWzory"/>
         </Grid>
     </Grid>
 </Window>

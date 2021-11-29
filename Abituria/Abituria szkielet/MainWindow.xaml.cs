@@ -26,6 +26,7 @@ namespace Abituria
         {
             InitializeComponent();
         }
+
         private void ButtonCalculator(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
@@ -48,7 +49,6 @@ namespace Abituria
 
             //Ta linijka będzie przydatna, gdy zamiast main window będzie uruchamiało się main page, bo w tej formie ukrywa całe okno
             //Application.Current.MainWindow.Visibility = Visibility.Hidden;
-
         }
 
         private void ButtonDzialy(object sender, RoutedEventArgs e)

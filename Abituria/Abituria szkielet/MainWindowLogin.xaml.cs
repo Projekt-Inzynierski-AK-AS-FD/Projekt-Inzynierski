@@ -39,7 +39,7 @@ namespace Abituria
                 string user = "";
                 int i = 0;
 
-                while ((user = reader.ReadLine()) != null || i > 9)
+                while ((user = reader.ReadLine()) != null || i > 10)
                 {
                     usersList.Add(user);
                     i++;
@@ -78,6 +78,13 @@ namespace Abituria
             mainWin.ShowDialog();
         }
 
+        private void BtnCreateNew(object sender, RoutedEventArgs e)
+        {
+            btn1.Visibility = Visibility.Collapsed;
+            btn2.Visibility = Visibility.Collapsed;
+            inputGB.Visibility = Visibility.Visible;
+        }
+
         private void CreateProfile(string newUser, string usersFile, bool isValid)
         {
             MessageBox.Show(newUser);
@@ -86,25 +93,32 @@ namespace Abituria
                 if (isValid == true)
                 {
                     writer.WriteLine(newUser);
+
+                    btn1.Visibility = Visibility.Visible;
+                    btn2.Visibility = Visibility.Visible;
+                    btnConfirm.Visibility = Visibility.Collapsed;
+                    comboBox1.Visibility = Visibility.Collapsed;
+                    inputGB.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    MessageBox.Show("Nie udało się utworzyć nowego profili", "Błąd!");
                 }
             }
-        }
-        private void BtnCreateNew(object sender, RoutedEventArgs e)
-        {
-            btn1.Visibility = Visibility.Collapsed;
-            btn2.Visibility = Visibility.Collapsed;
-            inputGB.Visibility = Visibility.Visible;
         }
 
         private void AddUser(object sender, RoutedEventArgs e)
         {
             string newUsername = nameInput.Text;
-            List<string> userslist = SetUsersList(usersFile);
+            List<string> usersList = SetUsersList(usersFile);
+            int usersCount = usersList.Count();
+
+            bool isSpaces = string.IsNullOrWhiteSpace(newUsername);
             bool isTaken = true;
             bool isValid = false;
 
-            //dokończyć weryfikację
-            foreach (string user in userslist)
+            // WERYFIKACJA
+            foreach (string user in usersList)
             {
                 if (user == newUsername)
                 {
@@ -118,22 +132,38 @@ namespace Abituria
                 }
             }
 
-            if (newUsername.Length > 15)
+            if (usersCount > 9)
+            {
+                MessageBox.Show("Wyczerpałeś już limit tworzenia profili. Wybierz istniejący:", "Przekroczono limit dostępnych miejsc");
+                isValid = false;
+                btn1.Visibility = Visibility.Visible;
+                btn2.Visibility = Visibility.Visible;
+                btnConfirm.Visibility = Visibility.Collapsed;
+                comboBox1.Visibility = Visibility.Collapsed;
+                inputGB.Visibility = Visibility.Collapsed;
+
+            }
+            else if (newUsername.Length > 15)
             {
                 MessageBox.Show("Wybrana nazwa jest za długa!", "Nazwa zbyt długa");
+                isValid = false;
+                nameInput.Text = "";
+            }
+            else if (newUsername.Length < 1 || isSpaces == true)
+            {
+                MessageBox.Show("Wybrana nazwa jest nieprawidłowa! Spróbuj jeszcze raz", "Nieprawidłowa nazwa:");
+                isValid = false;
+                nameInput.Text = "";
+            }
+            else if (isTaken == true)
+            {
                 isValid = false;
             }
             else
             {
-                if (isTaken == false)
-                {
-                    isValid = true;
-                }
-                else
-                {
-                    isValid = false;
-                }
+                isValid = true;
             }
+
             CreateProfile(newUsername, usersFile, isValid);
         }
     }
