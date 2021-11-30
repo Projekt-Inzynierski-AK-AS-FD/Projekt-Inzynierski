@@ -35,26 +35,17 @@ namespace Abituria
 
             //ListaHistorii.Items.CopyTo(liczba);
 
-            ListBoxItem wartosci = ((sender as ListBox).SelectedItem as ListBoxItem);
+            ////ListBoxItem wartosci = ((sender as ListBox).SelectedItems as ListBoxItem);
 
             //string liczba = ListaHistorii.ToString();
 
-            //string pole = ;
+            string dzialanie = ListaHistorii.SelectedItem.ToString();
 
-            //string [] elements = liczba.Split('=', ' ');
+            string [] elements = dzialanie.Split('=');
 
-            //string wynik = elements[2];
+            string wynik = Regex.Replace(elements[1], @"\s+", ""); ;
 
-            //ResultText.Text = elements[0].ToString();
-            ResultText.Text = wartosci.Content.ToString();
-            //ResultText.Text = ;
-            //this.Controls.Add(listBox1);
-
-
-            //ListBoxItem ListaHistorii1 = (ListBoxItem)
-            //    (ListaHistorii.ItemContainerGenerator.ContainerFromIndex(0));
-            //ResultText.Text = ListBoxItem.ToString();
-            ////Item.Content = "Siedemnaście" + (ListaHistorii1.Content.ToString()) + "....";
+            ResultText.Text = wynik;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -1038,7 +1029,9 @@ namespace Abituria
             else
             {
                 ResultText.Text = CalculateResult(operation).ToString();
-                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
+                var wartosc = ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);//a może by tą Listahistorii zamienić na funkcję w której łączy się z tamtym listboxem
+                //string ile = ListaHistorii.SelectedItem.ToString();
+                //setItems(wartosc.ToString);
                 //mylist.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
                 CurrentOperationText.Text = string.Empty;
                 //this.Controls.Add(mylist);
@@ -1060,6 +1053,11 @@ namespace Abituria
         }
         private void Button_ClickCzyscHistorie(object sender, RoutedEventArgs e)
         {
+            //if (ListaHistorii) { }
+            //else
+            //{
+            //    ListaHistorii.Items.Clear();
+            //}
             ListaHistorii.Items.Clear();
         }
 
@@ -1160,7 +1158,7 @@ namespace Abituria
             => (Regex.Matches(operation, "[+]").Count < 2 && Regex.Matches(operation, "[-]").Count < 1 && !ContainsOperationNoPlusNoMinus(operation)) || (Regex.Matches(operation, "[-]").Count < 2 && Regex.Matches(operation, "[+]").Count < 1 && !ContainsOperationNoPlusNoMinus(operation));//bez znaków
         private bool CzyMaZnaki(string operation)
             => Regex.Matches(operation, "[+]").Count > 1 || Regex.Matches(operation, "[-]").Count > 1 || operation.Contains('*') || operation.Contains(':') || operation.Contains('√') || operation.Contains('²') || operation.Contains("1/");//ze znakami
-            
+
         private void RemoveUnlessPoint(string currentNumber)
         {
             if (currentNumber.ToString() == ",")
