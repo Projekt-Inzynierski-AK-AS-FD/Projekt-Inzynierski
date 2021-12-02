@@ -67,7 +67,6 @@ namespace Abituria
             PageWzory pageWzory = new PageWzory();
             NavigationService.Navigate(pageWzory);
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 

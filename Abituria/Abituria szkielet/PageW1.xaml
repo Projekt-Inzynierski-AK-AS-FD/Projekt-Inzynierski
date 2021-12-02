@@ -8,7 +8,6 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="WartośćBezwzględnaLiczby"
       xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath">
-
     <Grid>
         <DockPanel Margin="5">
             <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">

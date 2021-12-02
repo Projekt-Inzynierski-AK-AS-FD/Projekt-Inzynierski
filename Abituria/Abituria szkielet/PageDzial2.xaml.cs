@@ -75,7 +75,6 @@ namespace Abituria
         {
             InitializeComponent();
         }
-
         private void ButtonPoddzial3(object sender, RoutedEventArgs e)
         {
             InitializeComponent();

@@ -9,7 +9,6 @@
       Title="Tablice matematyczne"
       xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
       ShowsNavigationUI="False">
-
     <Grid>
         <DockPanel Margin="5">
             <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
