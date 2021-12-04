@@ -1,6 +1,0 @@
-C:\Users\Adam\source\repos\DataGrid\DemoLibrary\bin\Debug\DemoLibrary.dll
-C:\Users\Adam\source\repos\DataGrid\DemoLibrary\bin\Debug\DemoLibrary.pdb
-C:\Users\Adam\source\repos\DataGrid\DemoLibrary\obj\Debug\DemoLibrary.csprojAssemblyReference.cache
-C:\Users\Adam\source\repos\DataGrid\DemoLibrary\obj\Debug\DemoLibrary.csproj.CoreCompileInputs.cache
-C:\Users\Adam\source\repos\DataGrid\DemoLibrary\obj\Debug\DemoLibrary.dll
-C:\Users\Adam\source\repos\DataGrid\DemoLibrary\obj\Debug\DemoLibrary.pdb
