@@ -23,6 +23,6 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           # Comment to post on an individual's first issue
-          issue-message: Pomocy
+          issue-message: Action
           # Comment to post on an individual's first pull request
-          pr-message: Ściągniij to
+          pr-message: Pull
