@@ -109,21 +109,14 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:k\:" />
-                        </InlineUIContainer><Run Text="przechodzi przez punkt "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:A = (2, -3) \:" />
-                        </InlineUIContainer><Run Text=" i jest nachylona do osi  "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:Ox\:" />
-                        </InlineUIContainer><Run Text="pod kątem "/>
-                            <controls:FormulaControl Formula="\: 45\text{°}\:" />(zobacz rysunek). Prosta
-                        <controls:FormulaControl Formula="\:k\:" /> ma równanie<LineBreak/>
-                        
-                        <LineBreak/>A. <controls:FormulaControl Formula="y = x-5" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="y = -x-1" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="y = -x+5" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="y = x+5" /></TextBlock>
-                    <Image  Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        W czasie matury z matematyki na obu poziomach możesz korzystać z tablic matematycznych przygotowanych przez CKE.
+                        Znajdziesz tam bardzo dużo wzorów i przydatnych informacji, które będą pomocne w czasie egzaminu, gdy stres spowoduje braki w pamięci. 
+                        Przejrzyj na spokojnie całe tablice, tak abyś w czasie egzaminu wiedział gdzie czego szukać. 
+                        Oszczędzi Ci to trochę stresu, którego na pewno i tak w tym czasie będziesz miał/a<!-- not gender inclusive --> pod dostatkiem. 
+                        Jeżeli zdajesz tylko poziom podstawowy to pamiętaj że nie cały tablice matematyczne Cię obowiązują. 
+                        Duża część z zawartości to poziom rozszerzony więc warto wiedzieć co będzie dla Ciebie "nieprzydatne" i od razu pomijać te strony w czasie egzaminu. 
+                        <!--Wzory których nie ma w tablicach maturalnych.Jest całkiem sporo przydatnych wzorów, których nie znajdziesz w tablicach maturalnych CKE. Dodawać to?--></TextBlock>
                 </Grid>
             </Border>
 
