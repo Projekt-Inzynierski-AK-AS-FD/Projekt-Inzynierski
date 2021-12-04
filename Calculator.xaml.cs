@@ -45,7 +45,21 @@ namespace Abituria
 
             string wynik = Regex.Replace(elements[1], @"\s+", ""); ;
 
-            ResultText.Text = wynik;
+            if (EndsWithOperation(CurrentOperationText.Text))
+            {
+                ResultText.Text = string.Empty;
+                CurrentOperationText.Text += wynik;
+            }
+            else if (wynik.Contains('E'))//Tymczasowo
+            {
+                ResultText.Text = BrakObslugi;
+                CurrentOperationText.Text = string.Empty;
+            }
+            else
+            {
+                ResultText.Text = wynik;
+                CurrentOperationText.Text = string.Empty;
+            }
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {

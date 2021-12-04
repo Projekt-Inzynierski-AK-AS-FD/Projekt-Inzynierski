@@ -1142,3 +1142,4 @@ C:\Users\Filippo\source\repos\Kalkulator\Projekt-Inzynierski\obj\Debug\Abituria.
 C:\Users\Filippo\source\repos\Kalkulator\Projekt-Inzynierski\obj\Debug\Abituria.csproj.CopyComplete
 C:\Users\Filippo\source\repos\Kalkulator\Projekt-Inzynierski\obj\Debug\Abituria.exe
 C:\Users\Filippo\source\repos\Kalkulator\Projekt-Inzynierski\obj\Debug\Abituria.pdb
+C:\Users\Filippo\source\repos\Kalkulator\Projekt-Inzynierski\bin\Debug\Abituria.pdb
