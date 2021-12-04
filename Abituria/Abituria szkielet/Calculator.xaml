@@ -48,7 +48,7 @@
             <Button x:Name="ButtonCofaj" Click="Button_Cofaj" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Height="72" Content="DEL" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonCzysc" Click="Button_ClickCzysc" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Height="72" Content="C" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <ToggleButton Name="PCheckBox"  Grid.Row="4" Grid.Column="4" Content="Click" FontFamily="Cavolini" FontSize="20" Background="White" Foreground="black"/>
-            <Popup x:Name="popup"  IsOpen="{Binding IsChecked, ElementName=PCheckBox}" PlacementTarget="{Binding ElementName=Okno}" Placement = "Left" AllowsTransparency="True" Width="250" Height="411">
+            <Popup x:Name="popup"  IsOpen="{Binding IsChecked, ElementName=PCheckBox}" PlacementTarget="{Binding ElementName=Okno}" Placement = "Left" AllowsTransparency="True" Width="250" Height="411" StaysOpen="False">
                 <Canvas Background="White">
                     <TextBlock TextWrapping="Wrap" Foreground="Black" FontFamily="Cavolini" FontSize="20">  
                         History:
