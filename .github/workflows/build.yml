@@ -18,11 +18,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      - name: First interaction
-        uses: actions/first-interaction@v1.1.0
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          # Comment to post on an individual's first issue
-          issue-message: Action
-          # Comment to post on an individual's first pull request
-          pr-message: Pull
