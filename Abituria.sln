@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30611.23
+VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abituria", "Abituria szkielet\Abituria.csproj", "{1F0E1145-4830-4F32-ABD7-574491CF3B1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abituria", "Abituria.csproj", "{1F0E1145-4830-4F32-ABD7-574491CF3B1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3E5F0895-E4CC-4096-8B00-E9F438E276EC}
+		SolutionGuid = {B79912A8-00C5-41C6-939E-60CC27A89851}
 	EndGlobalSection
 EndGlobal
