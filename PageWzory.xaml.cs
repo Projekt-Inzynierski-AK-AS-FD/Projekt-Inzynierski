@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Abituria
 {
-    /// <summary>
-    /// Logika interakcji dla klasy PageWideo.xaml
-    /// </summary>
     public partial class PageWzory : Page
     {
         public PageWzory()
@@ -40,11 +37,6 @@ namespace Abituria
 
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
-
-            //MaturaFrame.NavigationService.Navigate(new Uri("PageMatura.xaml", UriKind.Relative));
-            //MaturaFrame.NavigationService.Navigate(new PageMatura());
-            //MaturaFrame.Content = new PageMatura();
-
             PageMaturaLata pageMaturaLata = new PageMaturaLata();
             NavigationService.Navigate(pageMaturaLata);
         }
@@ -69,7 +61,7 @@ namespace Abituria
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //Do stestowania
         }
         private void W1(object sender, RoutedEventArgs e)
         {

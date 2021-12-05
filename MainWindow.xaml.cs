@@ -16,10 +16,6 @@ using System.IO;
 
 namespace Abituria
 {
-    /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
-    /// </summary>
-    /// koty to mlemlinki
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -29,8 +25,10 @@ namespace Abituria
 
         private void ButtonCalculator(object sender, RoutedEventArgs e)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("CalculatorChoice.xaml", UriKind.Relative);
+            NavigationWindow window = new NavigationWindow
+            {
+                Source = new Uri("CalculatorChoice.xaml", UriKind.Relative)
+            };
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
@@ -42,35 +40,40 @@ namespace Abituria
         }
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("PageMaturaLata.xaml", UriKind.Relative);
+            NavigationWindow window = new NavigationWindow
+            {
+                Source = new Uri("PageMaturaLata.xaml", UriKind.Relative)
+            };
             window.Show();
             this.Visibility = Visibility.Hidden;
-
-            //Ta linijka będzie przydatna, gdy zamiast main window będzie uruchamiało się main page, bo w tej formie ukrywa całe okno
-            //Application.Current.MainWindow.Visibility = Visibility.Hidden;
         }
 
         private void ButtonDzialy(object sender, RoutedEventArgs e)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("PageDzialyWybor.xaml", UriKind.Relative);
+            NavigationWindow window = new NavigationWindow
+            {
+                Source = new Uri("PageDzialyWybor.xaml", UriKind.Relative)
+            };
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
 
         private void ButtonZadania(object sender, RoutedEventArgs e)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("PageZadania.xaml", UriKind.Relative);
+            NavigationWindow window = new NavigationWindow
+            {
+                Source = new Uri("PageZadania.xaml", UriKind.Relative)
+            };
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
 
         private void ButtonWzory(object sender, RoutedEventArgs e)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("PageWzory.xaml", UriKind.Relative);
+            NavigationWindow window = new NavigationWindow
+            {
+                Source = new Uri("PageWzory.xaml", UriKind.Relative)
+            };
             window.Show();
             this.Visibility = Visibility.Hidden;
         }

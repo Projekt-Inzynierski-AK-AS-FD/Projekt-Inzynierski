@@ -15,16 +15,12 @@ using System.Windows.Shapes;
 
 namespace Abituria
 {
-    /// <summary>
-    /// Logika interakcji dla klasy PageZadania.xaml
-    /// </summary>
     public partial class PageZadania : Page
     {
         public PageZadania()
         {
             InitializeComponent();
         }
-
         private void ButtonAbituria(object sender, RoutedEventArgs e)
         {
             var mainWin = new MainWindow();
@@ -40,10 +36,6 @@ namespace Abituria
 
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
-
-            //MaturaFrame.NavigationService.Navigate(new Uri("PageMatura.xaml", UriKind.Relative));
-            //MaturaFrame.NavigationService.Navigate(new PageMatura());
-            //MaturaFrame.Content = new PageMatura();
 
             PageMaturaLata pageMaturaLata = new PageMaturaLata();
             NavigationService.Navigate(pageMaturaLata);

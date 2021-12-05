@@ -16,13 +16,9 @@ using System.IO;
 
 namespace Abituria
 {
-    /// <summary>
-    /// Logika interakcji dla klasy MainWindowLogin.xaml
-    /// </summary>
-    /// 
     public partial class MainWindowLogin : Window
     {
-        string usersFile = @"users.txt";
+        readonly string usersFile = @"users.txt";
 
         public MainWindowLogin()
         {
@@ -31,7 +27,6 @@ namespace Abituria
 
         private List<string> SetUsersList(string usersFile)
         {
-            //comboBox1.ItemsSource = new List<string> {};
             List<string> usersList = new List<string>();
 
             using (StreamReader reader = new StreamReader(usersFile))
@@ -72,8 +67,10 @@ namespace Abituria
             MessageBox.Show(username);
 
             //do zmiany na lepsze, gdy ustawi się frame'y
-            var mainWin = new MainWindow();
-            mainWin.Owner = this;
+            var mainWin = new MainWindow
+            {
+                Owner = this
+            };
             this.Hide();
             mainWin.ShowDialog();
         }
@@ -90,7 +87,7 @@ namespace Abituria
             MessageBox.Show(newUser);
             using (StreamWriter writer = File.AppendText(usersFile))
             {
-                if (isValid == true)
+                if (isValid)
                 {
                     writer.WriteLine(newUser);
 
@@ -149,19 +146,15 @@ namespace Abituria
                 isValid = false;
                 nameInput.Text = "";
             }
-            else if (newUsername.Length < 1 || isSpaces == true)
+            else if (newUsername.Length < 1 || isSpaces)
             {
                 MessageBox.Show("Wybrana nazwa jest nieprawidłowa! Spróbuj jeszcze raz", "Nieprawidłowa nazwa:");
                 isValid = false;
                 nameInput.Text = "";
             }
-            else if (isTaken == true)
-            {
-                isValid = false;
-            }
             else
             {
-                isValid = true;
+                isValid = !isTaken;
             }
 
             CreateProfile(newUsername, usersFile, isValid);

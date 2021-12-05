@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 using System.IO;
 namespace Abituria
 {
-    /// <summary>
-    /// Logika interakcji dla klasy App.xaml
-    /// </summary>
     public partial class App : Application
     {
     }

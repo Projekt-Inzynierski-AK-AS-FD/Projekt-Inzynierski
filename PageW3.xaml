@@ -139,7 +139,6 @@
                     </TextBlock>
                 </Grid>
             </Border>
-
         </DockPanel>
     </Grid>
 </Page>

@@ -116,7 +116,6 @@
                         </InlineUIContainer><Run Text="pod kątem "/>
                             <controls:FormulaControl Formula="\: 45\text{°}\:" />(zobacz rysunek). Prosta
                         <controls:FormulaControl Formula="\:k\:" /> ma równanie<LineBreak/>
-                        
                         <LineBreak/>A. <controls:FormulaControl Formula="y = x-5" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="y = -x-1" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="y = -x+5" /><LineBreak/>

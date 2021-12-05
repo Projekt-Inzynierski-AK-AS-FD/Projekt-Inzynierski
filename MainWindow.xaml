@@ -14,7 +14,6 @@
     </Window.Resources>
     <Grid>
         <Frame Margin="0,60,0,0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
-
         <Grid Margin="-1,0,-1,0" HorizontalAlignment="Center" Width="794">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="60*"/>

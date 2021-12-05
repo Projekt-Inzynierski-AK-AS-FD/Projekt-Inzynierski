@@ -36,11 +36,6 @@ namespace Abituria
 
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
-
-            //MaturaFrame.NavigationService.Navigate(new Uri("PageMatura.xaml", UriKind.Relative));
-            //MaturaFrame.NavigationService.Navigate(new PageMatura());
-            //MaturaFrame.Content = new PageMatura();
-
             PageMaturaLata pageMaturaLata = new PageMaturaLata();
             NavigationService.Navigate(pageMaturaLata);
         }

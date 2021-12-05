@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,14 +16,14 @@ using System.Windows.Shapes;
 
 namespace Abituria
 {
+    [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public class HintsClass
     {
-
         public static string AnswerButtonChange(object sender, bool ansChecked)
         {
-            string message = "";
             Button button = sender as Button;
-            if (ansChecked == true)
+            string message;
+            if (ansChecked)
             {
                 button.Background = Brushes.LimeGreen;
                 message = "To prawidłowa odpowiedź!";
@@ -36,7 +37,7 @@ namespace Abituria
         }
         public static string Hint(int counter, string[] hintsArray)
         {
-            string hint = "";
+            string hint;
             // wzór: należy uzupełnić go faktyczną treścią
             switch (counter)
             {
@@ -62,6 +63,11 @@ namespace Abituria
                     break;
             }
             return hint;
+        }
+
+        private string GetDebuggerDisplay()
+        {
+            return ToString();
         }
     }
 }

@@ -16,9 +16,6 @@ using System.IO;
 
 namespace Abituria
 {
-    /// <summary>
-    /// Logika interakcji dla klasy CalculatorChoice.xaml
-    /// </summary>
     public partial class CalculatorChoice : Page
     {
         public CalculatorChoice()
@@ -40,11 +37,6 @@ namespace Abituria
 
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
-
-            //MaturaFrame.NavigationService.Navigate(new Uri("PageMatura.xaml", UriKind.Relative));
-            //MaturaFrame.NavigationService.Navigate(new PageMatura());
-            //MaturaFrame.Content = new PageMatura();
-
             PageMaturaLata pageMaturaLata = new PageMaturaLata();
             NavigationService.Navigate(pageMaturaLata);
         }

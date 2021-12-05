@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Abituria
 {
-    /// <summary>
-    /// Interaction logic for CalcQuadraticFunc.xaml
-    /// </summary>
     public partial class CalcQuadraticFunc : Window
     {
         public CalcQuadraticFunc()
