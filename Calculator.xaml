@@ -59,15 +59,6 @@
                 </Canvas>
             </Popup>
         </Grid>
-
-
-
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <!--<Button x:Name="Button0" Click="Button_Click" Width = "140" Content="0" FontFamily="Cavolini" FontSize="20"/>-->
-
-
-
-        </StackPanel>
-
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"></StackPanel>
     </StackPanel>
 </Window>

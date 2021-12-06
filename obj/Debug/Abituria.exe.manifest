@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Abituria.exe" size="1036760">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Abituria.exe" size="1036248">
       <assemblyIdentity name="Abituria" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ocN60T+tP34R1SGHjYhPfa9YcHOMYseYjGolPbNg9Xo=</dsig:DigestValue>
+        <dsig:DigestValue>IUWE5Ff7n39OBHwGtWnzzTEihNVFhYg3rHo+Hkxe7/I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

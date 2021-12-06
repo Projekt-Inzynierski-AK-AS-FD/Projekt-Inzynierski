@@ -3,7 +3,6 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Collections.Generic;
 
 namespace Abituria
 {
@@ -760,14 +759,7 @@ namespace Abituria
                 ResultText.Text = wpiszLiczbe;
             }
             else if (CurrentOperationText.Text.Contains("/")) { }
-            else if (CurrentOperationText.Text.Contains("√"))
-            {
-                //if (CurrentOperationText.Text.EndsWith("√"))
-                //{
-                //    //potęga n tego stopnia
-                //}
-                //else { }
-            }
+            else if (CurrentOperationText.Text.Contains("√")) { }
             else if (CurrentOperationText.Text.EndsWith("²")) { }
             else if (operation.Contains("E+") || operation.Contains("E-"))
             {
@@ -886,10 +878,9 @@ namespace Abituria
                     CurrentOperationText.Text = string.Empty;
                 }
             }
-            else if (CurrentOperationText.Text.EndsWith(":"))
+            else if (EndsWithOperation(operation))
             {
-                ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
-                CurrentOperationText.Text = CalculateResult(operation).ToString();
+                CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
                 CurrentOperationText.Text = "1/" + CurrentOperationText.Text;
             }
             else if (CurrentOperationText.Text.Contains("²"))
@@ -1040,8 +1031,7 @@ namespace Abituria
                     CurrentOperationText.Text = string.Empty;
                 }
             }
-            else if (!string.IsNullOrEmpty(ResultText.Text) && string.IsNullOrEmpty(CurrentOperationText.Text))
-            { }
+            else if (!string.IsNullOrEmpty(ResultText.Text) && string.IsNullOrEmpty(CurrentOperationText.Text)) { }
             else
             {
                 ResultText.Text = CalculateResult(operation).ToString();
