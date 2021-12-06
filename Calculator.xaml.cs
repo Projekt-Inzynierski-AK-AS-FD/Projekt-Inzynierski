@@ -16,7 +16,7 @@ namespace Abituria
         private const string ZeroNIE = "Nie można dzielić przez ZERO!!!";
         private const string wpiszLiczbe = "Proszę wpisz liczbę!!!";
         private const string BrakObslugi = "NIESTETY!!! Takie działanie nie jest obsługiwane!";
-        
+
         public Calculator()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace Abituria
         //private void ListaHistori(object sender, RoutedEventArgs e)
         //{
         //    ListaHistorii = new List<string>() { new string() { } };
-            
+
         //}
 
         private void ListaHistorii_Click(object sender, RoutedEventArgs e)
@@ -41,7 +41,7 @@ namespace Abituria
 
             string dzialanie = ListaHistorii.SelectedItem.ToString();
 
-            string [] elements = dzialanie.Split('=');
+            string[] elements = dzialanie.Split('=');
 
             string wynik = Regex.Replace(elements[1], @"\s+", ""); ;
 
@@ -530,7 +530,7 @@ namespace Abituria
             string operation = CurrentOperationText.Text;
 
             if (operation.ToString() == "-") { }
-            else if (operation.EndsWith("/-")) 
+            else if (operation.EndsWith("/-"))
             {
                 ResultText.Text = wpiszLiczbe;
             }
@@ -777,7 +777,7 @@ namespace Abituria
                 }
                 else if (CzyMaZnaki(operation))
                 {
-                    if (operation.Contains('√')){ }
+                    if (operation.Contains('√')) { }
                     else
                     {
                         CurrentOperationText.Text += '√';
@@ -886,7 +886,7 @@ namespace Abituria
                     CurrentOperationText.Text = string.Empty;
                 }
             }
-            else if (CurrentOperationText.Text.EndsWith(":")) 
+            else if (CurrentOperationText.Text.EndsWith(":"))
             {
                 ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
                 CurrentOperationText.Text = CalculateResult(operation).ToString();
@@ -990,7 +990,7 @@ namespace Abituria
             {
                 string[] elements = operation.Split(':');
 
-                if (Convert.ToDouble(elements[0]) * 1 == 0)
+                if (Convert.ToDouble(elements[1]) * 1 == 0)
                 {
                     ResultText.Text = ZeroNIE;
                     CurrentOperationText.Text = string.Empty;
@@ -1054,11 +1054,11 @@ namespace Abituria
 
         private void Button_Cofaj(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(CurrentOperationText.Text)) { }
-            else
+            if (!string.IsNullOrEmpty(CurrentOperationText.Text))
             {
                 CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
             }
+            else { }
         }
         private void Button_ClickCzysc(object sender, RoutedEventArgs e)
         {
@@ -1067,11 +1067,6 @@ namespace Abituria
         }
         private void Button_ClickCzyscHistorie(object sender, RoutedEventArgs e)
         {
-            //if (ListaHistorii) { }
-            //else
-            //{
-            //    ListaHistorii.Items.Clear();
-            //}
             ListaHistorii.Items.Clear();
         }
 
@@ -1451,7 +1446,7 @@ namespace Abituria
                             {
                                 return Math.Sqrt(Convert.ToDouble(elements[1]));
                             }
-                            
+
                             else
                             {
                                 return Convert.ToDouble(elements[0])
@@ -2238,7 +2233,7 @@ namespace Abituria
                             elements[1] = elements[0];
                         }
 
-                    return Convert.ToDouble(elements[0]) / Convert.ToDouble(elements[1]);
+                        return Convert.ToDouble(elements[0]) / Convert.ToDouble(elements[1]);
                     }
                 }
 
@@ -2297,5 +2292,5 @@ namespace Abituria
             //to pozwoli na późniejsze wklejenie ZE schowka DO pola tekstowego, np. z kalku do zadania, ale trzeba określić konkretne miejsce wklejenia
             //ResultText.Text = Clipboard.GetText();
         }
-        }
+    }
 }

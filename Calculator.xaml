@@ -46,7 +46,8 @@
             <Button x:Name="ButtonPotega" Click="Button_ClickPotega" Grid.Row="3" Grid.Column="3" Height="72" Content="x²" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonUlamek" Click="Button_ClickUlamek" Grid.Row="3" Grid.Column="4" Height="72" Content="1/x" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="Gray" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonCofaj" Click="Button_Cofaj" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Height="72" Content="DEL" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
-            <Button x:Name="ButtonCzysc" Click="Button_ClickCzysc" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Height="72" Content="C" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="ButtonCzysc" Click="Button_ClickCzysc" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="1" Height="72" Content="C" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
+            <Button x:Name="ButtonCzyscHistorie" Click="Button_ClickCzyscHistorie" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="1" Height="72" Content="Clear History" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <ToggleButton Name="PCheckBox"  Grid.Row="4" Grid.Column="4" Content="Click" FontFamily="Cavolini" FontSize="20" Background="White" Foreground="black"/>
             <Popup x:Name="popup"  IsOpen="{Binding IsChecked, ElementName=PCheckBox}" PlacementTarget="{Binding ElementName=Okno}" Placement = "Left" AllowsTransparency="True" Width="250" Height="411" StaysOpen="False">
                 <Canvas Background="White">
@@ -61,13 +62,13 @@
             </Popup>
         </Grid>
 
-        
-        
+
+
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <!--<Button x:Name="Button0" Click="Button_Click" Width = "140" Content="0" FontFamily="Cavolini" FontSize="20"/>-->
-            
-            
-            
+
+
+
         </StackPanel>
 
     </StackPanel>
