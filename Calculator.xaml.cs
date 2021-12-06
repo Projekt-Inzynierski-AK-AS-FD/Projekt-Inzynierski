@@ -1040,6 +1040,8 @@ namespace Abituria
                     CurrentOperationText.Text = string.Empty;
                 }
             }
+            else if (!string.IsNullOrEmpty(ResultText.Text) && string.IsNullOrEmpty(CurrentOperationText.Text))
+            { }
             else
             {
                 ResultText.Text = CalculateResult(operation).ToString();
