@@ -1298,3 +1298,4 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.applicatio
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csproj.CopyComplete
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.exe
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.pdb
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csprojAssemblyReference.cache

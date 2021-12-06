@@ -40,7 +40,7 @@ namespace Abituria
                 Reset();
                 return;
             }
-            if (double.TryParse(valA, out a) != true || double.TryParse(valB, out b) != true || double.TryParse(valC, out c) != true)
+            if (!double.TryParse(valA, out a) || !double.TryParse(valB, out b) || !double.TryParse(valC, out c))
             {
                 MessageBox.Show("Ups, coś poszło nie tak. Sprawdź, czy wprowadzone dane są prawidłowe i spróbuj jeszcze raz.", "Nieprawidłowa wartość!");
                 Reset();
@@ -240,9 +240,7 @@ namespace Abituria
         {
             string[] specialScript = new string[] { "₀", "₁", "₂", "²", "√" };
             string delText = "";
-            double pierwDelta = Math.Round(Math.Sqrt(delta), 2);
-
-            //string wierzcholek = $"Współrzędne wierzchołka paraboli znajdują się w punkcie W(p, q), czyli W = {wierzch}";
+            _ = Math.Round(Math.Sqrt(delta), 2);
             if (delta < 0)
             {
                 delText = "Δ < 0 i funkcja nie posiada miejsc zerowych";
@@ -289,7 +287,8 @@ Postać iloczynowa funkcji kwadratowej wyrażona jest wzorem:
             explanation8.Text = explained8;
             string explained9 = $"𝑓(𝑥) = 𝑎(𝑥 − 𝑥{specialScript[1]})(𝑥 − 𝑥{specialScript[2]})";
             explanation9.Text = explained9;
-            string explained10 = $"𝑓(𝑥) = ({a})(𝑥 − ({x1}))(𝑥 − ({x2}))\n";
+            _ = $"𝑓(𝑥) = ({a})(𝑥 − ({x1}))(𝑥 − ({x2}))\n";
+            string explained10;
             if (delta < 0)
             {
                 explained10 = "\nFunkcja nie ma miejsc zerowych, nie istnieje zatem jej postać iloczynowa!";

@@ -128,7 +128,6 @@ namespace Abituria
                     isTaken = false;
                 }
             }
-
             if (usersCount > 9)
             {
                 MessageBox.Show("Wyczerpałeś już limit tworzenia profili. Wybierz istniejący:", "Przekroczono limit dostępnych miejsc");

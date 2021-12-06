@@ -64,7 +64,6 @@ namespace Abituria
             }
             return hint;
         }
-
         private string GetDebuggerDisplay()
         {
             return ToString();

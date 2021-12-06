@@ -165,7 +165,6 @@
                         <LineBreak/>B. <controls:FormulaControl Formula="\frac{x+2}2=1" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="\frac{x}{x+2}=0" /><LineBreak/>
                         <LineBreak/>D. <controls:FormulaControl Formula="x^2(x+2)+2(x+2)=0" /></TextBlock>
-                    
                 </Grid>
             </Border>
         </DockPanel>

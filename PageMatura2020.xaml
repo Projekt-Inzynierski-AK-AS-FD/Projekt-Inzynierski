@@ -56,7 +56,6 @@
                         <ComboBoxItem>
                             <Button Width="108" Background="Transparent" BorderThickness="0" Grid.Row="2" Content="Zadanie 3" ToolTip="Arkusz maturalny z 2019" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonZad3"/>
                         </ComboBoxItem>
-
                     </ComboBox>
                 </Grid>
 

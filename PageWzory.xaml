@@ -118,7 +118,6 @@
                         <!--Wzory których nie ma w tablicach maturalnych.Jest całkiem sporo przydatnych wzorów, których nie znajdziesz w tablicach maturalnych CKE. Dodawać to?--></TextBlock>
                 </Grid>
             </Border>
-
         </DockPanel>
     </Grid>
 </Page>

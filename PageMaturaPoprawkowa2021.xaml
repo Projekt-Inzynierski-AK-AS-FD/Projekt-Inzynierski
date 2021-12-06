@@ -170,7 +170,6 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="20"/>
                     </Grid.RowDefinitions>
-                    
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black" Text=" info o zdawalności itp.  w tym roku "/>
 
                     <GroupBox Grid.Column="2" Grid.Row="1" BorderThickness="0">

@@ -35,7 +35,6 @@
             </Border>
             <TextBlock Grid.Row="1" Text="Witaj w programie ABITURIA, twoim matematycznym korepetytorze." FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
             <TextBlock Grid.Row="2" Text="Wybierz moduł:" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Margin="0,0,0,10" Grid.Column="1" Grid.ColumnSpan="3"/>
-
             <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
                 <TextBlock Text="Witaj, " FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
                 <TextBlock x:Name="name" Tag="name"  Text="{Binding name}" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top"/>

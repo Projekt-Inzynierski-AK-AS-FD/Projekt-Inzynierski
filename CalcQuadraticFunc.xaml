@@ -16,7 +16,6 @@
             <Setter Property="TextWrapping" Value="Wrap" />
         </Style>
     </Window.Resources>
-    
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Grid>
             <Grid.ColumnDefinitions>

@@ -65,7 +65,6 @@ namespace Abituria
             var calculator = new Calculator();
             calculator.Show();
         }
-
         private void ButtonCalcQuad(object sender, RoutedEventArgs e)
         {
             var calcQuad = new CalcQuadraticFunc();
