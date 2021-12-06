@@ -15,12 +15,17 @@ namespace Abituria
         private const string ZeroNIE = "Nie można dzielić przez ZERO!!!";
         private const string wpiszLiczbe = "Proszę wpisz liczbę!!!";
         private const string BrakObslugi = "NIESTETY!!! Takie działanie nie jest obsługiwane!";
-
         public Calculator()
         {
             InitializeComponent();
             ResultText.Text = "0";
             CurrentOperationText.Text = string.Empty;
+
+            var nlBE = new System.Globalization.CultureInfo("nl-BE");/////
+            nlBE.NumberFormat.CurrencyDecimalDigits = 2;//////////////////
+            nlBE.NumberFormat.CurrencyDecimalSeparator = ",";/////////////W Polsce nie tolerujemy kropek. Tylko przecinki. Koniec kropka.
+            nlBE.NumberFormat.CurrencyGroupSeparator = ".";///////////////
+            System.Threading.Thread.CurrentThread.CurrentCulture = nlBE;//
         }
         //private void ListaHistori(object sender, RoutedEventArgs e)
         //{
@@ -901,7 +906,8 @@ namespace Abituria
                 else if (CzyMaZnaki(operation))
                 {
                     ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + CalculateResult(operation).ToString());
-                    CurrentOperationText.Text = "1/" + CalculateResult(operation).ToString();
+                    ResultText.Text = CalculateResult(operation).ToString();
+                    CurrentOperationText.Text = string.Empty;
                 }
             }
             else if (operation.Contains(':') && CurrentOperationText.Text.EndsWith("0") || operation.Contains('/'))

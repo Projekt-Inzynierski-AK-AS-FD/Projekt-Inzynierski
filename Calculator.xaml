@@ -51,7 +51,7 @@
             <ToggleButton Name="PCheckBox"  Grid.Row="4" Grid.Column="4" Content="Click" FontFamily="Cavolini" FontSize="20" Background="White" Foreground="black"/>
             <Popup x:Name="popup"  IsOpen="{Binding IsChecked, ElementName=PCheckBox}" PlacementTarget="{Binding ElementName=Okno}" Placement = "Left" AllowsTransparency="True" Width="300" Height="411" StaysOpen="False">
                 <Canvas Background="White">
-                    <TextBlock TextWrapping="Wrap" Foreground="Black" FontFamily="Cavolini" FontSize="20">  
+                    <TextBlock TextWrapping="Wrap" Foreground="Black" FontFamily="Cavolini" FontSize="20">
                         History:
                     </TextBlock>
                     <ListBox Name="ListaHistorii" Margin="0,30,0,0" BorderBrush="White" FontFamily="Cavolini" PreviewMouseLeftButtonUp="ListaHistorii_Click" SelectionMode="Single">
