@@ -39,7 +39,6 @@
                 <TextBlock Text="Witaj, " FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
                 <TextBlock x:Name="name" Tag="name"  Text="{Binding name}" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
             </StackPanel>
-            
             <Button Grid.Row="3" Content="Kalkulator" ToolTip="Zaawansowany kalkulator do wykonania dowolnego obliczenia matematycznego" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonCalculator"/>
             <Button Grid.Row="3" Grid.Column="1" Content="Matura" ToolTip="Zobacz arkusze i rozwiązywanie zadań!" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonMatura"/>
             <Button Grid.Row="3" Grid.Column="2" Content="Działy" ToolTip="Matematyka według działów" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonDzialy" />

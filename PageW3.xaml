@@ -134,8 +134,8 @@
                         <controls:FormulaControl Formula="\:c\gt0"/>, to<LineBreak/>
                         <controls:FormulaControl Formula="\:\log_bc=\frac{\log_ac}{\log_ab}"/><LineBreak/>Logarytm
                         <controls:FormulaControl Formula="\:\log_{10}x"/>można też zapisać jako
-                        <controls:FormulaControl Formula="\:\logx"/> lub
-                        <controls:FormulaControl Formula="\:\lgx"/>.
+                        <controls:FormulaControl Formula="\:\log{x}"/> lub
+                        <controls:FormulaControl Formula="\:\lg{x}"/>.<!--dalej nie widze-->
                     </TextBlock>
                 </Grid>
             </Border>

@@ -604,11 +604,13 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Abituria_TemporaryKey.pfx" />
+    <None Include="CONTRIBUTING.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="SECURITY.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -654,6 +656,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\mp21z33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="security.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

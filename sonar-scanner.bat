@@ -1,0 +1,4 @@
+  -D"sonar.organization=projekt-inzynierski-ak-as-fd" \
+  -D"sonar.projectKey=Projekt-Inzynierski-AK-AS-FD_Projekt-Inzynierski" \
+  -D"sonar.sources=." \
+  -D"sonar.host.url=https://sonarcloud.io"

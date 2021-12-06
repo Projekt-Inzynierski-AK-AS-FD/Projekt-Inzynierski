@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("users.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("security.txt")]
 
 

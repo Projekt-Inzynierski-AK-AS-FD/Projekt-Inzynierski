@@ -107,20 +107,27 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:k\:" />
-                        </InlineUIContainer><Run Text="przechodzi przez punkt "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:A = (2, -3) \:" />
-                        </InlineUIContainer><Run Text=" i jest nachylona do osi  "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:Ox\:" />
-                        </InlineUIContainer><Run Text="pod kątem "/>
-                            <controls:FormulaControl Formula="\: 45\text{°}\:" />(zobacz rysunek). Prosta
-                        <controls:FormulaControl Formula="\:k\:" /> ma równanie<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="y = x-5" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="y = -x-1" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="y = -x+5" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="y = x+5" /></TextBlock>
-                    <Image  Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Ciąg arytmetyczny"/><LineBreak/><InlineUIContainer>
+                        </InlineUIContainer><Run Text="Wzór na"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:n" />
+                        </InlineUIContainer><Run Text="-ty wyraz ciągu arytmetycznego"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:(a_n)\:" />
+                        </InlineUIContainer><Run Text="o pierwszym wyrazie"/>
+                        <controls:FormulaControl Formula="\:a_1\:" />i różnicy
+                        <controls:FormulaControl Formula="\:r\:" />:<LineBreak/>
+                        <controls:FormulaControl Formula="a_n=a_1+(n-1)r" /><LineBreak/>Wzór na sumę
+                        <controls:FormulaControl Formula="S_n=a_1+a_2+...+a_n" /> początkowych
+                        <controls:FormulaControl Formula="\:n" /> n wyrazów ciągu arytmetycznego:<LineBreak/>
+                        <controls:FormulaControl Formula="S_n=\frac{a_1+a_n}{2}\cdot{n}=\frac{2a_1+(n-1)r}{2}\cdot{n}" /><LineBreak/>Między sąsiednimi wyrazami ciągu arytmetycznego zachodzi związek:
+                        <controls:FormulaControl Formula="a_n=\frac{a_{n-1}+a_{n+1}}{2}" /> dla
+                        <controls:FormulaControl Formula="\:n\geq2" /><LineBreak/>Ciąg geometryczny<LineBreak/>Wzór na
+                        <controls:FormulaControl Formula="\:n" />-ty wyraz ciągu geometrycznego
+                        <controls:FormulaControl Formula="\:(a_n)\:" />o pierwszym wyrazie
+                        <controls:FormulaControl Formula="\:a_1\:" />i ilorazie
+                        <controls:FormulaControl Formula="\:q\:" />:<LineBreak/>
+                        <controls:FormulaControl Formula="a_n=a_1+(n-1)r" />dla
+                        <controls:FormulaControl Formula="\:n\geq2" /><LineBreak/>Wzór na sumę<!--dalej nie widze-->
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

@@ -51,7 +51,6 @@
                         <ComboBoxItem>Liczby pierwsze</ComboBoxItem>
                         <ComboBoxItem>Funkcja kwadratowa</ComboBoxItem>
                         <ComboBoxItem>Logarytmy</ComboBoxItem>
-
                     </ComboBox>
                 </Grid>
 

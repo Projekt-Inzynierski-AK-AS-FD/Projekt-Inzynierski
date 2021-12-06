@@ -58,7 +58,6 @@
                         <RowDefinition Height="10*"/>
                         <RowDefinition Height="10*"/>
                     </Grid.RowDefinitions>
-
                     <TextBlock Grid.Row="0" Text="Wybierz dział:" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
                     <Button Grid.Column="2" Grid.Row="0" Margin="10" Content="Liczby pierwsze" ToolTip="Dział I" FontFamily="Cavolini" Height="40" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="ButtonDzial1"/>
                     <Button Grid.Column="2" Grid.Row="1" Margin="10" Content="Funkcja kwadratowa" ToolTip="Dział II" FontFamily="Cavolini" Height="40" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonDzial2"/>

@@ -59,7 +59,6 @@ namespace Abituria
             PageWzory pageWideo = new PageWzory();
             NavigationService.Navigate(pageWideo);
         }
-
         private void ButtonCalcBasic(object sender, RoutedEventArgs e)
         {
             var calculator = new Calculator();

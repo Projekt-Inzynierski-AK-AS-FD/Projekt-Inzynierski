@@ -103,7 +103,6 @@ namespace Abituria
                 }
             }
         }
-
         private void AddUser(object sender, RoutedEventArgs e)
         {
             string newUsername = nameInput.Text;

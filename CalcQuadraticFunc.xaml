@@ -30,7 +30,6 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-
             <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0">
             <TextBlock Text="Funkcja kwadratowa" Grid.ColumnSpan="5" HorizontalAlignment="Center"  VerticalAlignment="Top"  FontSize="30" FontWeight="Bold" Padding="10"/>
                 <Border BorderBrush="LightGray" BorderThickness="1" >

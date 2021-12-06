@@ -124,7 +124,7 @@
                         <controls:FormulaControl Formula="\binom{n}{k}=\frac{n!}{k!(n-k)!}" /><LineBreak/>Zachodzą równości:<LineBreak/>
                         <controls:FormulaControl Formula="\binom{n}{k}=\frac{n!}{k!(n-k)!}"/><LineBreak/>
                         <controls:FormulaControl Formula="\binom{n}{k}=\binom{n}{n-k}"/><LineBreak/><!-- Tak powinno być? Wygląda podejrzanie... -->
-                        <controls:FormulaControl Formula="\binom{n}{0}=1"/><LineBreak/>
+                        <controls:FormulaControl Formula="\binom{n}{0}=1"/><LineBreak/><!--dalej nie widze-->
                         <controls:FormulaControl Formula="\binom{n}{n}=1"/><LineBreak/>
                     </TextBlock>
                 </Grid>

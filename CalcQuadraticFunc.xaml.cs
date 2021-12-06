@@ -32,7 +32,6 @@ namespace Abituria
             double.TryParse(valA, out a);
             double.TryParse(valB, out b);
             double.TryParse(valC, out c);
-
             //weryfikacja poprawności wprowadzonych danych
             if (a == 0)
             {

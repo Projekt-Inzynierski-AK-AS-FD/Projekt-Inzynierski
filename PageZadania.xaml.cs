@@ -32,7 +32,6 @@ namespace Abituria
             var calculator = new CalculatorChoice();
             NavigationService.Navigate(calculator);
         }
-
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
 

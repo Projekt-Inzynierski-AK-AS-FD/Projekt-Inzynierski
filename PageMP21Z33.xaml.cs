@@ -27,7 +27,6 @@ namespace Abituria
             mainWin.Show();
 
         }
-
         private void ButtonKalkulator(object sender, RoutedEventArgs e)
         {
             var calculator = new CalculatorChoice();

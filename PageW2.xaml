@@ -131,36 +131,7 @@
                         <controls:FormulaControl Formula="\:a^{-n}=\frac1{a^n}\:"/>oraz
                         <controls:FormulaControl Formula="\:a^0=1\:"/><LineBreak/>dla
                         <controls:FormulaControl Formula="\:a\geq0\:"/>:
-                        <controls:FormulaControl Formula="\:a^{-n}=\frac1{a^n}\:"/>pomocy #12 na gicie
-                        <!-- :
-1 m
-n
-n m a
-a
-−
-=
-Niech r, s będą dowolnymi liczbami rzeczywistymi. Jeśli a > 0 i b > 0, to zachodzą równości:
-⋅= + ⋅ a a a a = a
-a b
-r s r s r s r s
-r
-( )
-( ) ⋅
-= ⋅ a b r r
-r r
-r
-a a
-b b
-    =  
-r
-r s
-s
-a
-a
-a
-− =
-Jeżeli wykładniki r, s są liczbami całkowitymi, to powyższe wzory obowiązują dla wszystkich
-liczb a ≠ 0 i b ≠ 0. -->
+                        <controls:FormulaControl Formula="\:a^{-n}=\frac1{a^n}\:"/><!--dalej nie widze, pomocy #12 na gicie-->
                     </TextBlock>
                 </Grid>
             </Border>

@@ -43,7 +43,6 @@
                 W każdym momencie możesz jednak utworzyć do dziesięciu indywidualnych profili dla danego urządzenia, wystarczy wybrać opcję "Chcę stworzyć nowy profil" i podać imię, jakim pragniesz się posługiwać.
                 Przy każdym uruchomieniu Abiturii możesz zalogować się na dowolny profil, a przypisane do niego rozwiązania nigdzie nie uciekną.
             </TextBlock>
-
             <Button x:Name="btn1" Click="BtnAcntExists" Content="Mam już konto" ToolTip="Zaloguj się używając istniejącego profilu" Visibility="Visible" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="10" Height="40" Width="130" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20"/>
             <Button x:Name="btn2" Click="BtnCreateNew" Content="Chcę stworzyć nowy profil" ToolTip="Utwórz i zaloguj się na nowym profilu" Visibility="Visible" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="10" Height="40" Width="130" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20"/>
 
