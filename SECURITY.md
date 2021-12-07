@@ -38,7 +38,6 @@ Keep these OWASP guidelines in mind ( https://www.owasp.org/index.php/Vulnerabil
 
 Below are some recommendations for security disclosures:
 
-
 "@Projekt-Inzynierski-AK-AS-FD/ich-troje" security contact { contact: mailto:haribo84111@gmail.com }
 When disclosing vulnerabilities please do the following:
   1. Your name and affiliation (if any).
@@ -46,7 +45,7 @@ When disclosing vulnerabilities please do the following:
   3. document steps to identify the vulnerability. It is important that we can reproduce your findings. 
   4. how to exploit vulnerability, give us an attack scenario.
 
-### Encryption key for [EMAIL ADDRESS]
+### Encryption key for haribo84111@gmail.com
 For critical flaws and sensitive security information you may encrypt your transmission with key below.
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -163,4 +162,4 @@ Through experience we have found it is best to goto #2 in this situation.
 or goto #2
 
 ## Version
-**version 0.0.1**
+**version 0.0.2**

@@ -52,7 +52,6 @@ namespace Abituria
                 case 3:
                     hint = hintsArray[0] + "\n" + hintsArray[1] + "\n" + hintsArray[2];
                     break;
-
                 case 4:
                     hint = hintsArray[0] + "\n" + hintsArray[1] + "\n" + hintsArray[2] + "\n" + hintsArray[3];
                     break;

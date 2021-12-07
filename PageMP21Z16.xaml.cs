@@ -38,7 +38,6 @@ namespace Abituria
             PageMaturaLata pageMaturaLata = new PageMaturaLata();
             NavigationService.Navigate(pageMaturaLata);
         }
-
         private void ButtonDzialy(object sender, RoutedEventArgs e)
         {
             //przełączenie z jednej strony (matury) na inną

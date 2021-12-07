@@ -47,7 +47,6 @@ namespace Abituria
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
-
         private void ButtonDzialy(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow

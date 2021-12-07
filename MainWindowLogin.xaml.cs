@@ -108,7 +108,6 @@ namespace Abituria
             string newUsername = nameInput.Text;
             List<string> usersList = SetUsersList(usersFile);
             int usersCount = usersList.Count();
-
             bool isSpaces = string.IsNullOrWhiteSpace(newUsername);
             bool isTaken = true;
             bool isValid = false;

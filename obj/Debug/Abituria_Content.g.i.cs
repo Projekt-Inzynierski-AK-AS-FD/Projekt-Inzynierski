@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("security.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w9a.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w9b.png")]
 
 

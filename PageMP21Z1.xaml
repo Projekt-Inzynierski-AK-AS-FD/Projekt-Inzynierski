@@ -189,7 +189,6 @@
                             <Button Click="HintBtn" Content="Podpowiedź" FontSize="15"  Height="40" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 0, 0, 0"/>
                         </StackPanel>
                     </Viewbox>
-
                     <Border x:Name="brdHint" Visibility="Collapsed" BorderBrush="Gray" BorderThickness="1" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Margin="20">
                         <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Stretch="Uniform" StretchDirection="DownOnly">
                             <TextBlock x:Name="hintField" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" FontSize="30" Margin="20" Visibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Center"/>

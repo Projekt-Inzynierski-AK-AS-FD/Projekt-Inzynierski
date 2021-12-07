@@ -107,20 +107,28 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:k\:" />
-                        </InlineUIContainer><Run Text="przechodzi przez punkt "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:A = (2, -3) \:" />
-                        </InlineUIContainer><Run Text=" i jest nachylona do osi  "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:Ox\:" />
-                        </InlineUIContainer><Run Text="pod kątem "/>
-                            <controls:FormulaControl Formula="\: 45\text{°}\:" />(zobacz rysunek). Prosta
-                        <controls:FormulaControl Formula="\:k\:" /> ma równanie<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="y = x-5" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="y = -x-1" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="y = -x+5" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="y = x+5" /></TextBlock>
-                    <Image  Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Odcinek"/><LineBreak/><InlineUIContainer>
+                        </InlineUIContainer><Run Text="Długość odcinka o końcach w punktach"/><LineBreak/><InlineUIContainer>
+                            <controls:FormulaControl Formula="A=(x_A, y_A),B=(x_B,y_B)" />
+                        </InlineUIContainer><Run Text=" jest dana wzorem:"/><LineBreak/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:\mid{AB}\mid=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}" />
+                        </InlineUIContainer><LineBreak/><Run Text="Współrzędne środka odcinka"/>
+                        <controls:FormulaControl Formula="\:AB" />:<LineBreak/>
+                        <controls:FormulaControl Formula="\left(\frac{x_A+x_B}2,\frac{y_A+y_B}2\right)\:" /><LineBreak/>
+                        <Run Text="Wektory"/><LineBreak/><InlineUIContainer>
+                        </InlineUIContainer><Run Text="Współrzędne wektora"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:\vec{AB}" />
+                        </InlineUIContainer>:<LineBreak/>
+                        <controls:FormulaControl Formula="\:\vec{AB}=[x_B-x_A,y_B-y_A]" /><LineBreak/>Jeżeli
+                        <controls:FormulaControl Formula="\:\vec{u}=[u_1,u_2]" />,
+                        <controls:FormulaControl Formula="\:\vec{v}=[v_1,v_2]" />są wektorami, zaś
+                        <controls:FormulaControl Formula="\:a" /> jest liczbą, to<LineBreak/>
+                        <controls:FormulaControl Formula="\:\vec{u}+\vec{v}=[u_1+v_1,u_2+v_2]" /><LineBreak/>
+                        <controls:FormulaControl Formula="\:a\cdot\vec{u}=[a\cdot{u_1},a\cdot{u_2}]" /><LineBreak/>
+                        <Run Text="Prosta"/><LineBreak/><InlineUIContainer>
+                        </InlineUIContainer><Run Text="Równanie ogólne prostej:"/><LineBreak/><!--dalej nie widze-->
+                    </TextBlock>
+                    <Image  Width="300" Height="200" Source="/img/w9a.png" Margin="278,138,10,10" />
                 </Grid>
             </Border>
         </DockPanel>

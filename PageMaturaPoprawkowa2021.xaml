@@ -210,7 +210,6 @@
                             <Button Content="35" Height="50" Width="50" Margin="5"/>
                         </WrapPanel>
                     </GroupBox>
-                    
                 </Grid>
 
             </Border>

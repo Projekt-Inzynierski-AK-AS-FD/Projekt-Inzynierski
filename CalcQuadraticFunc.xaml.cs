@@ -45,7 +45,6 @@ namespace Abituria
                 Reset();
                 return;
             }
-
             FunQuad(a, b, c);
             this.groupResult.Visibility = Visibility.Visible;
         }

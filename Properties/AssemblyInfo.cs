@@ -39,7 +39,6 @@ using System.Windows;
                                               // aplikacji lub słowników zasobów specyficznych dla motywów)
 )]
 
-
 // Informacje o wersji zestawu zawierają następujące cztery wartości:
 //
 //      Wersja główna

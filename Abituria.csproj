@@ -660,5 +660,9 @@
   <ItemGroup>
     <Resource Include="security.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\w9a.png" />
+    <Resource Include="img\w9b.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

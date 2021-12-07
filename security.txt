@@ -27,7 +27,6 @@ Contact: https://twitter.com/MichaKulka1
 > Encryption: openpgp4fpr:893C59C28D095ED27F95B941CCA2314130936E6F
 > Encryption: openpgp4fpr:5E8D52D581D2634A37B83350484EE8497D95FB83
 
-
 ### **Policy**
 
 https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/blob/mainSECURITY.md

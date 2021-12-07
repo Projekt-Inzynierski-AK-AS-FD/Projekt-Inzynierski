@@ -31,14 +31,13 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0">
-            <TextBlock Text="Funkcja kwadratowa" Grid.ColumnSpan="5" HorizontalAlignment="Center"  VerticalAlignment="Top"  FontSize="30" FontWeight="Bold" Padding="10"/>
+                <TextBlock Text="Funkcja kwadratowa" Grid.ColumnSpan="5" HorizontalAlignment="Center"  VerticalAlignment="Top"  FontSize="30" FontWeight="Bold" Padding="10"/>
                 <Border BorderBrush="LightGray" BorderThickness="1" >
                     <TextBlock>
             Kalkulator funkcji kwadratowej jest narzędziem, które nie tylko pomoże ci sprawdzić poprawność swoich rozwiązań, ale przede wszystkim w praktyczny sposób przeprowadzi cię przez proces analizy oraz zrozumienia funkcji, nad którą pracujesz. Zatrzymałeś się w zadaniu, o czymś zapomniałeś, albo po prostu chcesz poćwiczyć? Kalkulator przeliczy dla ciebie wszystkie istotne informacje na konkretnym przykładzie funkcji, której parametry podasz, pomoże też znaleźć jej postać ogólną, iloczynową oraz kanoniczną.
                     </TextBlock>
                 </Border>
             </StackPanel>
-
             <GroupBox Header="Postać ogólna funkcji kwadratowej" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="15" Padding="10">
                 <StackPanel>
                     <TextBlock Grid.Column="1" Grid.Row="1" TextAlignment="Center"  VerticalAlignment="Bottom" Grid.ColumnSpan="2" ToolTip="Pamiętaj, że współczynnik a nie może wynosić 0!">
