@@ -99,6 +99,9 @@
     <Compile Include="MainWindowLogin.xaml.cs">
       <DependentUpon>MainWindowLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="matury\m21\PageM21Z1.xaml.cs">
+      <DependentUpon>PageM21Z1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageMaturaPoprawkowa2021.xaml.cs">
       <DependentUpon>PageMaturaPoprawkowa2021.xaml</DependentUpon>
     </Compile>
@@ -136,6 +139,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MainWindowLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="matury\m21\PageM21Z1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

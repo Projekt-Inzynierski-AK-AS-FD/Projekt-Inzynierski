@@ -1299,3 +1299,5 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csproj.Cop
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.exe
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.pdb
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csprojAssemblyReference.cache
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\matury\m21\PageM21Z1.g.cs
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\matury\m21\PageM21Z1.baml
