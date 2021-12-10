@@ -43,26 +43,30 @@ namespace Abituria
 
             //string liczba = ListaHistorii.ToString();
 
-            string dzialanie = ListaHistorii.SelectedItem.ToString();
-
-            string[] elements = dzialanie.Split('=');
-
-            string wynik = Regex.Replace(elements[1], @"\s+", ""); ;
-
-            if (EndsWithOperation(CurrentOperationText.Text))
-            {
-                ResultText.Text = string.Empty;
-                CurrentOperationText.Text += wynik;
-            }
-            else if (wynik.Contains('E'))//Tymczasowo
-            {
-                ResultText.Text = BrakObslugi;
-                CurrentOperationText.Text = string.Empty;
-            }
+            if (ListaHistorii.SelectedItem == null) { }
             else
             {
-                ResultText.Text = wynik;
-                CurrentOperationText.Text = string.Empty;
+                string dzialanie = ListaHistorii.SelectedItem.ToString();
+
+                string[] elements = dzialanie.Split('=');
+
+                string wynik = Regex.Replace(elements[1], @"\s+", ""); ;
+
+                if (EndsWithOperation(CurrentOperationText.Text))
+                {
+                    ResultText.Text = string.Empty;
+                    CurrentOperationText.Text += wynik;
+                }
+                else if (wynik.Contains('E'))//Tymczasowo
+                {
+                    ResultText.Text = BrakObslugi;
+                    CurrentOperationText.Text = string.Empty;
+                }
+                else
+                {
+                    ResultText.Text = wynik;
+                    CurrentOperationText.Text = string.Empty;
+                }
             }
         }
         private void Button_Click(object sender, RoutedEventArgs e)
