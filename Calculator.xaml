@@ -67,8 +67,8 @@
                             </ListBox>
                         </Grid>
                     </Border>-->
-                    <ScrollViewer>
-                        <Grid x:Name="aproposWysokosci" Width="375" Height="411">
+                    <ScrollViewer x:Name="aproposWysokosci" UseLayoutRounding="True">
+                        <Grid Width="375" Height="411">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
@@ -76,10 +76,10 @@
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
 
-                            <TextBlock TextWrapping="Wrap" Background="Green" Foreground="Black" FontFamily="Cavolini" FontSize="20">
+                            <TextBlock TextWrapping="Wrap" Background="White" Foreground="Black" FontFamily="Cavolini" FontSize="20">
                                 History:
                             </TextBlock>
-                            <ListBox Name="ListaHistorii" Grid.ColumnSpan="2" Margin="0,30,0,0" BorderBrush="white" FontFamily="Cavolini" PreviewMouseLeftButtonUp="ListaHistorii_Click" SelectionMode="Single" Height="{Binding ElementName=aproposWysokosci, Path=ActualHeight}"/>
+                            <ListBox Name="ListaHistorii" Grid.ColumnSpan="2" Margin="0,30,0,0" BorderBrush="white" FontFamily="Cavolini" PreviewMouseLeftButtonUp="ListaHistorii_Click" SelectionMode="Single" Height="400"/>
                         </Grid>
 
                     </ScrollViewer>
