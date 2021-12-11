@@ -13,6 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using Abituria.wzory;
+using Abituria.zadania;
+using Abituria.dzialy;
+using Abituria.matury;
 
 namespace Abituria
 {
@@ -53,10 +57,10 @@ namespace Abituria
             PageZadania pageZadania = new PageZadania();
             NavigationService.Navigate(pageZadania);
         }
-        private void ButtonWideo(object sender, RoutedEventArgs e)
+        private void ButtonWzory(object sender, RoutedEventArgs e)
         {
-            PageWzory pageWideo = new PageWzory();
-            NavigationService.Navigate(pageWideo);
+            PageWzory pageWzory = new PageWzory();
+            NavigationService.Navigate(pageWzory);
         }
         private void ButtonCalcBasic(object sender, RoutedEventArgs e)
         {

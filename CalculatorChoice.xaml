@@ -39,7 +39,7 @@
                         <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonZadania"/>
                     </TextBlock>
                     <TextBlock Grid.Column="4" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button Background="Transparent" BorderThickness="0" Content="Wideo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWideo"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Wideo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWzory"/>
                     </TextBlock>
                     <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
                 </Grid>
