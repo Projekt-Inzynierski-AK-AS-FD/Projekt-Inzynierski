@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-We are using Visual Studio 2019
+We are using Visual Studio 2019 and Visual Studio 2022
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -162,4 +162,4 @@ Through experience we have found it is best to goto #2 in this situation.
 or goto #2
 
 ## Version
-**version 0.0.2**
+**version 0.0.3**
