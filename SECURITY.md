@@ -33,17 +33,17 @@ Report security bugs in third-party modules to the person or team maintaining th
 
 - **SECURITY DISCLOSURE**: Your responsibility is to report vulnerabilities to us using the guidelines outlined below.
 
-lease give detailed steps on how to disclose the vulnerability. 
+Please give detailed steps on how to disclose the vulnerability. 
 Keep these OWASP guidelines in mind ( https://www.owasp.org/index.php/Vulnerability_Disclosure_Cheat_Sheet ) when creating your disclosure policy.
 
 Below are some recommendations for security disclosures:
 
 "@Projekt-Inzynierski-AK-AS-FD/ich-troje" security contact { contact: mailto:haribo84111@gmail.com }
 When disclosing vulnerabilities please do the following:
-  1. Your name and affiliation (if any).
-  2. include scope of vulnerability. Let us know who could use this exploit.
-  3. document steps to identify the vulnerability. It is important that we can reproduce your findings. 
-  4. how to exploit vulnerability, give us an attack scenario.
+  1. Include your name and affiliation (if any).
+  2. Include scope of vulnerability. Let us know who could use this exploit.
+  3. Document steps to identify the vulnerability. It is important that we can reproduce your findings. 
+  4. How to exploit vulnerability, give us an attack scenario.
 
 ### Encryption key for haribo84111@gmail.com
 For critical flaws and sensitive security information you may encrypt your transmission with key below.
@@ -162,4 +162,4 @@ Through experience we have found it is best to goto #2 in this situation.
 or goto #2
 
 ## Version
-**version 0.0.3**
+**version 0.0.4**
