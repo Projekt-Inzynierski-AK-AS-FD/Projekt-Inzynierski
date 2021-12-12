@@ -13,7 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
-
+using Abituria.dzialy;
+using Abituria.matury;
+using Abituria.Properties;
+using Abituria.wzory;
+using Abituria.zadania;
+using Abituria.matury.mp21;
 namespace Abituria
 {
     public partial class MainWindow : Window
@@ -42,7 +47,7 @@ namespace Abituria
         {
             NavigationWindow window = new NavigationWindow
             {
-                Source = new Uri("PageMaturaLata.xaml", UriKind.Relative)
+                Source = new Uri("/matury/PageMaturaLata.xaml", UriKind.Relative)
             };
             window.Show();
             this.Visibility = Visibility.Hidden;
@@ -51,7 +56,7 @@ namespace Abituria
         {
             NavigationWindow window = new NavigationWindow
             {
-                Source = new Uri("PageDzialyWybor.xaml", UriKind.Relative)
+                Source = new Uri("/dzialy/PageDzialyWybor.xaml", UriKind.Relative)
             };
             window.Show();
             this.Visibility = Visibility.Hidden;
@@ -60,7 +65,7 @@ namespace Abituria
         {
             NavigationWindow window = new NavigationWindow
             {
-                Source = new Uri("PageZadania.xaml", UriKind.Relative)
+                Source = new Uri("/zadania/PageZadania.xaml", UriKind.Relative)
             };
             window.Show();
             this.Visibility = Visibility.Hidden;
@@ -69,7 +74,7 @@ namespace Abituria
         {
             NavigationWindow window = new NavigationWindow
             {
-                Source = new Uri("PageWzory.xaml", UriKind.Relative)
+                Source = new Uri("/wzory/PageWzory.xaml", UriKind.Relative)
             };
             window.Show();
             this.Visibility = Visibility.Hidden;

@@ -13,6 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
 using System.IO;
+using Abituria.dzialy;
+using Abituria.matury;
+using Abituria.Properties;
+using Abituria.wzory;
+using Abituria.zadania;
+using Abituria.matury.mp21;
 
 namespace Abituria
 {
@@ -20,10 +26,13 @@ namespace Abituria
     {
         readonly string usersFile = @"users.txt";
 
+
         public MainWindowLogin()
         {
             InitializeComponent();
         }
+
+
 
         private List<string> SetUsersList(string usersFile)
         {
@@ -70,7 +79,9 @@ namespace Abituria
             var mainWin = new MainWindow
             {
                 Owner = this
+
             };
+            
             this.Hide();
             mainWin.ShowDialog();
         }
