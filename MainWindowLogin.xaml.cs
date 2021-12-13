@@ -167,5 +167,11 @@ namespace Abituria
 
             CreateProfile(newUsername, usersFile, isValid);
         }
+        private void ButtonAbituria(object sender, RoutedEventArgs e)
+        {
+            var mainWin = new MainWindow();
+            mainWin.Show();
+
+        }
     }
 }
