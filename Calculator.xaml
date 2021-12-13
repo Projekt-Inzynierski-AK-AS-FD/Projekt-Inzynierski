@@ -51,7 +51,7 @@
             <Button x:Name="ButtonCofaj" Click="Button_Cofaj" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Height="72" Content="DEL" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonCzysc" Click="Button_ClickCzysc" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="1" Height="72" Content="C" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
             <Button x:Name="ButtonCzyscHistorie" Click="Button_ClickCzyscHistorie" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="1" Height="72" Content="Clear History" FontFamily="Cavolini" FontSize="20" FontWeight="ExtraBold" Background="black" Foreground="White" BorderThickness="2,2,2,2" BorderBrush="White"/>
-            <ToggleButton Name="PCheckBox"  Grid.Row="4" Grid.Column="4" Content="Click" FontFamily="Cavolini" FontSize="20" Background="White" Foreground="black"/>
+            <ToggleButton Name="PCheckBox"  Grid.Row="4" Grid.Column="4" Content="History" FontFamily="Cavolini" FontSize="20" Background="White" Foreground="black"/>
             <Popup x:Name="popup"  IsOpen="{Binding IsChecked, ElementName=PCheckBox}" PlacementTarget="{Binding ElementName=Okno}" Placement = "Left" AllowsTransparency="True" Width="350" Height="411" StaysOpen="False">
                 <Canvas>
 

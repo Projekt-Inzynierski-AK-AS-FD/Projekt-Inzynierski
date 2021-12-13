@@ -27,11 +27,6 @@ namespace Abituria
             nlBE.NumberFormat.CurrencyGroupSeparator = ".";///////////////
             System.Threading.Thread.CurrentThread.CurrentCulture = nlBE;//
         }
-        //private void ListaHistori(object sender, RoutedEventArgs e)
-        //{
-        //    ListaHistorii = new List<string>() { new string() { } };
-
-        //}
 
         private void ListaHistorii_Click(object sender, RoutedEventArgs e)
         {
@@ -76,58 +71,6 @@ namespace Abituria
             Button button = sender as Button;
 
             object currentNumber = button.Content;
-            //ConsoleKeyInfo myString = Console.ReadKey();
-
-            //if (myString.KeyChar == '1')
-            //{
-            //    currentNumber = "1";
-            //    //switch (myString)
-            //    //{
-            //    //    case "0":
-            //    //        Console.WriteLine("0");
-            //    //        break;
-
-            //    //    case "1":
-            //    //        currentNumber = "1";
-            //    //        break;
-
-            //    //    case "2":
-            //    //        Console.WriteLine("2");
-            //    //        break;
-
-            //    //    case "3":
-            //    //        Console.WriteLine("3");
-            //    //        break;
-
-            //    //    case "4":
-            //    //        Console.WriteLine("4");
-            //    //        break;
-
-            //    //    case "5":
-            //    //        Console.WriteLine("5");
-            //    //        break;
-
-            //    //    case "6":
-            //    //        Console.WriteLine("6");
-            //    //        break;
-
-            //    //    case "7":
-            //    //        Console.WriteLine("7");
-            //    //        break;
-
-            //    //    case "8":
-            //    //        Console.WriteLine("8");
-            //    //        break;
-
-            //    //    case "9":
-            //    //        Console.WriteLine("9");
-            //    //        break;
-            //    //}
-            //}
-            //else
-            //{
-            //    currentNumber = button.Content;
-            //}
 
             if (string.IsNullOrEmpty(CurrentOperationText.Text))// i jeśli zawiera "znak,znak" w całym ciągu znaków to nie wypisuj... i to w rozszerzonym kalkulatorze, NIE tu!!!
             {
@@ -142,6 +85,23 @@ namespace Abituria
             }
             else if (CurrentOperationText.Text.EndsWith("∞")) { }
             else if (CurrentOperationText.Text == "0")
+            {
+                if (currentNumber.ToString() == ",")
+                {
+                    CurrentOperationText.Text += currentNumber;
+                }
+                else
+                {
+                    CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
+                    CurrentOperationText.Text += currentNumber;
+                }
+            }
+            else if (CurrentOperationText.Text.EndsWith("+0")
+                      || CurrentOperationText.Text.EndsWith("-0")
+                      || CurrentOperationText.Text.EndsWith("*0")
+                      || CurrentOperationText.Text.EndsWith(":0")
+                      || CurrentOperationText.Text.EndsWith("/0")
+                      || CurrentOperationText.Text.EndsWith("√0"))
             {
                 if (currentNumber.ToString() == ",")
                 {
