@@ -45,7 +45,7 @@ namespace Abituria
 
                 string[] elements = dzialanie.Split('=');
 
-                string wynik = Regex.Replace(elements[1], @"\s+", ""); ;
+                string wynik = Regex.Replace(elements[1], @"\s+", "");
 
                 if (EndsWithOperation(CurrentOperationText.Text))
                 {
@@ -1005,7 +1005,7 @@ namespace Abituria
             else
             {
                 ResultText.Text = CalculateResult(operation).ToString();
-                var wartosc = ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);//a może by tą Listahistorii zamienić na funkcję w której łączy się z tamtym listboxem
+                _ = ListaHistorii.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);//a może by tą Listahistorii zamienić na funkcję w której łączy się z tamtym listboxem
                 //string ile = ListaHistorii.SelectedItem.ToString();
                 //setItems(wartosc.ToString);
                 //mylist.Items.Add(CurrentOperationText.Text + " = " + ResultText.Text);
@@ -1032,14 +1032,12 @@ namespace Abituria
             ListaHistorii.Items.Clear();
         }
 
-        private void Button_ClickHistory(object sender, RoutedEventArgs e) { }
-
         private bool ContainsOperation(string operation)
             => operation.Contains('+') || operation.Contains('*') || operation.Contains(':') || operation.Contains('²') || operation.Contains('√') || operation.Contains('/');//usunięto || operation.Contains('-')
         private bool ContainsOperationNoPlusNoMinus(string operation)
             => Regex.Matches(operation, "[+]").Count > 1 || Regex.Matches(operation, "[-]").Count > 1 || operation.Contains('*') || operation.Contains(':') || operation.Contains('²') || operation.Contains('√') || operation.Contains('/');
         private bool EndsWithOperation(string operation)
-            => CurrentOperationText.Text.EndsWith("+") || CurrentOperationText.Text.EndsWith("-") || CurrentOperationText.Text.EndsWith("*") || CurrentOperationText.Text.EndsWith(":");
+            => operation.EndsWith("+") || operation.EndsWith("-") || operation.EndsWith("*") || operation.EndsWith(":");
         private void SprawdzCzyNieZero(string operation)
         {
             if (CurrentOperationText.Text.Contains(':'))
@@ -1129,19 +1127,6 @@ namespace Abituria
             => (Regex.Matches(operation, "[+]").Count < 2 && Regex.Matches(operation, "[-]").Count < 1 && !ContainsOperationNoPlusNoMinus(operation)) || (Regex.Matches(operation, "[-]").Count < 2 && Regex.Matches(operation, "[+]").Count < 1 && !ContainsOperationNoPlusNoMinus(operation));//bez znaków
         private bool CzyMaZnaki(string operation)
             => Regex.Matches(operation, "[+]").Count > 1 || Regex.Matches(operation, "[-]").Count > 1 || operation.Contains('*') || operation.Contains(':') || operation.Contains('√') || operation.Contains('²') || operation.Contains("1/");//ze znakami
-
-        private void RemoveUnlessPoint(string currentNumber)
-        {
-            if (currentNumber.ToString() == ",")
-            {
-                CurrentOperationText.Text += currentNumber;
-            }
-            else
-            {
-                CurrentOperationText.Text = CurrentOperationText.Text.Remove(CurrentOperationText.Text.Length - 1);
-                CurrentOperationText.Text += currentNumber;
-            }
-        }////////////////////////Temat do ogarnięcia. PS skrócenie funkcji warunkowej
 
         private double CalculateResult(string operation)
         {
