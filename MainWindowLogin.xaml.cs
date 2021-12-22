@@ -92,7 +92,6 @@ namespace Abituria
             btn2.Visibility = Visibility.Collapsed;
             inputGB.Visibility = Visibility.Visible;
         }
-
         private void CreateProfile(string newUser, string usersFile, bool isValid)
         {
             MessageBox.Show(newUser);

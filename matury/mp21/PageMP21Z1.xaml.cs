@@ -27,7 +27,6 @@ namespace Abituria.matury.mp21
         {
             InitializeComponent();
         }
-
         private void ButtonAbituria(object sender, RoutedEventArgs e)
         {
             var mainWin = new MainWindow();

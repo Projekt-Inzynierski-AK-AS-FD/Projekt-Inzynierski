@@ -41,7 +41,6 @@ namespace Abituria
         {
             var mainWin = new MainWindowLogin();
             mainWin.Show();
-
         }
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {

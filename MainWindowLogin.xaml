@@ -49,7 +49,6 @@
             <Button x:Name="btn2" Click="BtnCreateNew" Content="Chcę stworzyć nowy profil" ToolTip="Utwórz i zaloguj się na nowym profilu" Visibility="Visible" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="10" Height="40" Width="130" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20"/>
             <ComboBox x:Name="comboBox1" Visibility="Collapsed" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Height="30" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" IsEditable="False"/>
             <Button x:Name="btnConfirm" Click="LoginConfirm" Visibility="Collapsed" Content="Logowanie" ToolTip="Potwierdź swój wybór" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="10" Height="40" Width="130" HorizontalAlignment="Center" VerticalAlignment="Center" />
-
             <GroupBox x:Name="inputGB" Visibility="Collapsed" Header="Nowy profil" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3" Padding="20" >
                 <StackPanel>
                     <TextBlock Text="Wprowadź swoje imię:" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Cavolini" FontSize="20" Padding="10"/>

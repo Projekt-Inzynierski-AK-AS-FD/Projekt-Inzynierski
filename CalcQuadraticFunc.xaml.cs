@@ -59,7 +59,6 @@ namespace Abituria
             fieldC.Text = "";
             this.groupResult.Visibility = Visibility.Collapsed;
         }
-
         private void FunQuad(double a, double b, double c)
         {
             string[] subscript= new string[] { "₀", "₁", "₂" };

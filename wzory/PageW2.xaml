@@ -126,12 +126,30 @@
                         <controls:FormulaControl Formula="\sqrt[n]{a}\:"/> oznacza liczbę
                         <controls:FormulaControl Formula="\:b\lt0\:"/>taką, że
                         <controls:FormulaControl Formula="b^n=a" />.<LineBreak/>Pierwiastki stopni parzystych z liczb ujemnych nie istnieją.<LineBreak/>Niech
-                        <controls:FormulaControl Formula="\:m,n\:"/>będą liczbami całkowitymi dodatnimi. Definiujemy:<LineBreak/>dla
+                        <controls:FormulaControl Formula="\:m,n\:"/>będą liczbami całkowitymi dodatnimi. Definiujemy:<LineBreak/>
+                        <controls:FormulaControl Formula="-"/> dla
                         <controls:FormulaControl Formula="\:a\neq0\:"/>:
                         <controls:FormulaControl Formula="\:a^{-n}=\frac1{a^n}\:"/>oraz
-                        <controls:FormulaControl Formula="\:a^0=1\:"/><LineBreak/>dla
+                        <controls:FormulaControl Formula="\:a^0=1\:"/><LineBreak/>
+                        <controls:FormulaControl Formula="-"/> dla
                         <controls:FormulaControl Formula="\:a\geq0\:"/>:
-                        <controls:FormulaControl Formula="\:a^{-n}=\frac1{a^n}\:"/><!--dalej nie widze, pomocy #12 na gicie-->
+                        <controls:FormulaControl Formula="\:a^{\frac{m}n}=\sqrt[n]{a^m}"/><LineBreak/>
+                        <controls:FormulaControl Formula="-"/> dla
+                        <controls:FormulaControl Formula="\:a\gt0\:"/>:<LineBreak/>
+                        <controls:FormulaControl Formula="\:a^{-\frac{m}n}={\frac{1}{\sqrt[n]{a^m}}}"/><LineBreak/>Niech
+                        <controls:FormulaControl Formula="\:r" />,
+                        <controls:FormulaControl Formula="\:s\:" />będą dowolnymi liczbami rzeczywistymi. Jeśli
+                        <controls:FormulaControl Formula="\:a\gt0\:"/> i
+                        <controls:FormulaControl Formula="\:b\gt0\:"/>, to zachodzą równości:<LineBreak/>
+                        <controls:FormulaControl Formula="\:a^r\cdot{a^s}=a^{r+s}"/><LineBreak/>
+                        <controls:FormulaControl Formula="\:(a^r)^s=a^{r\cdot{s}}"/><LineBreak/>
+                        <controls:FormulaControl Formula="\:\frac{a^r}{a^s}=a^{r-s}"/><LineBreak/>
+                        <controls:FormulaControl Formula="\:({a}\cdot{b})^r=a^r\cdot{b^r}"/><LineBreak/>
+                        <controls:FormulaControl Formula="\:(\frac{a}{b})^r=\frac{a^r}{b^r}"/><LineBreak/>Jeżeli wykładniki
+                        <controls:FormulaControl Formula="\:r" />,
+                        <controls:FormulaControl Formula="\:s\:" />są liczbami całkowitymi, to powyższe wzory obowiązują dla wszystkich liczb
+                        <controls:FormulaControl Formula="\:a\neq0\:"/> i
+                        <controls:FormulaControl Formula="\:b\neq0\:"/>.<LineBreak/>
                     </TextBlock>
                 </Grid>
             </Border>
