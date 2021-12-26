@@ -121,7 +121,6 @@ namespace Abituria
             bool isSpaces = string.IsNullOrWhiteSpace(newUsername);
             bool isTaken = true;
             bool isValid = false;
-
             // WERYFIKACJA
             foreach (string user in usersList)
             {

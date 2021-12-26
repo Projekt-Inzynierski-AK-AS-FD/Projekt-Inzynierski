@@ -67,7 +67,6 @@ namespace Abituria
             double x0 = (-b) / (2 * a);
             double x1 = Math.Round(((-b) - Math.Sqrt(delta)) / (2 * a), 2);
             double x2 = Math.Round(((-b) + Math.Sqrt(delta)) / (2 * a), 2);
-
             // wyświetlanie pierwiastków
             if (delta < 0)
             {

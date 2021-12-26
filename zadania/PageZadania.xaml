@@ -63,7 +63,6 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 Suspendisse fermentum, eros a consequat gravida, augue lacus facilisis nunc, at semper quam orci varius velit. Fusce hendrerit purus massa, id porttitor augue ultricies at. Sed iaculis euismod nulla sed posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nec facilisis dui. Suspendisse augue tellus, dignissim ut lectus eu, maximus fringilla erat. Proin eu leo tincidunt, vestibulum lacus sit amet, fringilla lorem.
                     </TextBlock>
                 </Grid>
-
             </Border>
         </DockPanel>
     </Grid>

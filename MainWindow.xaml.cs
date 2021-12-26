@@ -27,7 +27,6 @@ namespace Abituria
         {
             InitializeComponent();
         }
-
         private void ButtonCalculator(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow

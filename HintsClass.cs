@@ -15,7 +15,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Abituria.matury;
 using Abituria.wzory;
-using Abituria.zadania;
 namespace Abituria
 {
     [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]

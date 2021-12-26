@@ -16,7 +16,6 @@ using System.IO;
 using Abituria.matury;
 using Abituria.wzory;
 using Abituria.zadania;
-
 namespace Abituria.dzialy
 {
     public partial class PageDzialyWybor : Page

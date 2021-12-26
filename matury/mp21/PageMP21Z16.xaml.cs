@@ -35,7 +35,6 @@ namespace Abituria.matury.mp21
             var calculator = new CalculatorChoice();
             NavigationService.Navigate(calculator);
         }
-
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
             PageMaturaLata pageMaturaLata = new PageMaturaLata();

@@ -56,7 +56,6 @@
                     <Button x:Name="btnAddUser" Click="AddUser" Content="Dodaj użytkownika" Margin="10" FontFamily="Cavolini" FontSize="10" Height="40" Width="130"/>
                 </StackPanel>
             </GroupBox>
-
         </Grid>
     </Grid>
 </Window>

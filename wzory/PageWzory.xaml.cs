@@ -32,7 +32,6 @@ namespace Abituria.wzory
             var mainWin = new MainWindow();
             mainWin.Show();
         }
-
         private void ButtonKalkulator(object sender, RoutedEventArgs e)
         {
             var calculator = new CalculatorChoice();
