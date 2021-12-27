@@ -26,14 +26,10 @@ namespace Abituria
     {
         readonly string usersFile = @"users.txt";
 
-
         public MainWindowLogin()
         {
             InitializeComponent();
         }
-
-
-
         private List<string> SetUsersList(string usersFile)
         {
             List<string> usersList = new List<string>();
@@ -53,7 +49,6 @@ namespace Abituria
             comboBox1.ItemsSource = usersList;
             return usersList;
         }
-
         private void BtnAcntExists(object sender, RoutedEventArgs e)
         {
             btn1.Visibility = Visibility.Collapsed;
@@ -63,25 +58,20 @@ namespace Abituria
 
             SetUsersList(usersFile);
         }
-
         private string ChosenUsername()
         {
             string username = comboBox1.SelectedItem as string;
             return username;
         }
-
         private void LoginConfirm(object sender, RoutedEventArgs e)
         {
             string username = ChosenUsername();
             MessageBox.Show(username);
-
             //do zmiany na lepsze, gdy ustawi się frame'y
             var mainWin = new MainWindow
             {
                 Owner = this
-
             };
-            
             this.Hide();
             mainWin.ShowDialog();
         }
@@ -163,6 +153,15 @@ namespace Abituria
                 isValid = !isTaken;
             }
             CreateProfile(newUsername, usersFile, isValid);
+        }
+        private void UserCancel(object sender, RoutedEventArgs e)
+        {
+            var mainWin = new MainWindowLogin
+            {
+                Owner = this
+            };
+            this.Hide();
+            mainWin.ShowDialog();
         }
         private void ButtonAbituria(object sender, RoutedEventArgs e)
         {

@@ -53,7 +53,10 @@
                 <StackPanel>
                     <TextBlock Text="Wprowadź swoje imię:" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Cavolini" FontSize="20" Padding="10"/>
                     <TextBox x:Name="nameInput" FontFamily="Cavolini" FontSize="15" Padding="10"/>
-                    <Button x:Name="btnAddUser" Click="AddUser" Content="Dodaj użytkownika" Margin="10" FontFamily="Cavolini" FontSize="10" Height="40" Width="130"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="btnAddUser" Click="AddUser" Content="Dodaj użytkownika" Margin="10" FontFamily="Cavolini" FontSize="10" Height="40" Width="130"/>
+                        <Button x:Name="btnCancel" Click="UserCancel" Content="Cofnij" Margin="10" FontFamily="Cavolini" FontSize="10" Height="40" Width="130"/>
+                    </StackPanel>
                 </StackPanel>
             </GroupBox>
         </Grid>
