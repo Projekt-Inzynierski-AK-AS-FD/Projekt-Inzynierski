@@ -83,7 +83,6 @@ namespace Abituria
                 string resultTxt = $"\nΔ > 0, funkcja posiada dwa miejsca zerowe: \n 𝑥" + subscript[1] + $" = {x1}                                     𝑥" + subscript[2] + $" = {x2}";
                 result.Text = resultTxt;
             }
-
             // obliczenia dla postaci kanonicznej
             double p = Math.Round(x0, 2);
             double q = Math.Round((-delta) / (4 * a), 2);

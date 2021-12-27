@@ -18,7 +18,6 @@ using Abituria.matury;
 using Abituria.Properties;
 using Abituria.wzory;
 using Abituria.zadania;
-using Abituria.matury.mp21;
 namespace Abituria
 {
     public partial class MainWindow : Window

@@ -667,5 +667,9 @@
   <ItemGroup>
     <Folder Include="matury\m19\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\w10a.png" />
+    <Resource Include="img\w10b.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,6 @@ using Abituria.dzialy;
 using Abituria.matury;
 using Abituria.wzory;
 using Abituria.zadania;
-
 namespace Abituria.matury.mp21
 {
     public partial class PageMP21Z22 : Page

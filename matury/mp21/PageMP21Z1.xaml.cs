@@ -33,7 +33,6 @@ namespace Abituria.matury.mp21
             mainWin.Show();
 
         }
-
         private void ButtonKalkulator(object sender, RoutedEventArgs e)
         {
             var calculator = new CalculatorChoice();

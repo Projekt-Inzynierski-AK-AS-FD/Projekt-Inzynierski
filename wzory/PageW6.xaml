@@ -105,7 +105,8 @@
                     </ComboBox>
                 </Grid>
             </Border>
-            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+            <ScrollViewer>
+                <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Dla dowolnych liczb "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:a\:" />
@@ -134,6 +135,7 @@
                     </TextBlock>
                 </Grid>
             </Border>
+            </ScrollViewer>
         </DockPanel>
     </Grid>
 </Page>

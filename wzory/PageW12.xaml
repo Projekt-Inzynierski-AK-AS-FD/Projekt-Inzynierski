@@ -105,7 +105,8 @@
                     </ComboBox>
                 </Grid>
             </Border>
-            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+            <ScrollViewer>
+                <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:k\:" />
@@ -123,6 +124,7 @@
                     <Image  Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
                 </Grid>
             </Border>
+            </ScrollViewer>
         </DockPanel>
     </Grid>
 </Page>

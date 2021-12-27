@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Abituria.dzialy;
-using Abituria.matury;
 using Abituria.matury.mp21;
 using Abituria.wzory;
 using Abituria.zadania;

@@ -55,7 +55,6 @@ namespace Abituria.dzialy
             PageWzory pageWzory = new PageWzory();
             NavigationService.Navigate(pageWzory);
         }
-
         private void ButtonPoddzial1(object sender, RoutedEventArgs e)
         {
             InitializeComponent();

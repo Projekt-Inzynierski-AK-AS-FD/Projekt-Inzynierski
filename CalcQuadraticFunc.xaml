@@ -75,7 +75,7 @@
                     <TextBlock x:Name="explanation5"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
                     <TextBlock x:Name="explanation6"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
                     <TextBlock x:Name="explanation7"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" xml:space="preserve">
-                        <controls:FormulaControl Formula="p = \frac{-b}{2 \cdot a}" />          <controls:FormulaControl Formula="q = -\frac{\Delta}{4 \cdot a}" />
+                        <controls:FormulaControl Formula="p = \frac{-b}{2 \cdot a}" />          <controls:FormulaControl Formula="q = -\frac{\Delta}{4 \cdot a}"/>
                     </TextBlock>
                     <TextBlock x:Name="explanation8"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
                     <TextBlock x:Name="explanation9"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>

@@ -46,7 +46,6 @@ namespace Abituria.matury
             PageDzialyWybor pageDzialyWybor = new PageDzialyWybor();
             NavigationService.Navigate(pageDzialyWybor);
         }
-
         private void ButtonZadania(object sender, RoutedEventArgs e)
         {
             PageZadania pageZadania = new PageZadania();

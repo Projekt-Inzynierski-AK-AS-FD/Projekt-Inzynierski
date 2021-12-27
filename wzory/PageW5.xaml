@@ -105,7 +105,8 @@
                     </ComboBox>
                 </Grid>
             </Border>
-            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+            <ScrollViewer>
+                <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Dla dowolnej liczby całkowitej dodatniej "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:n\:" />
@@ -117,6 +118,7 @@
                         <controls:FormulaControl Formula="(a+b)^n=\binom{n}{0}=a^n+\binom{n}{1}a^{n-1}b+...+\binom{n}{k}a^{n-k}b^k+...+\binom{n}{n-1}ab^{n-1}+\binom{n}{n}b^n" /></TextBlock>
                 </Grid>
             </Border>
+            </ScrollViewer>
         </DockPanel>
     </Grid>
 </Page>

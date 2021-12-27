@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Abituria"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PotęgiPierwiastki."
+      Title="PotęgiPierwiastki"
       xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath">
     <Grid>
         <DockPanel Margin="5">
@@ -105,7 +105,8 @@
                     </ComboBox>
                 </Grid>
             </Border>
-            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+            <ScrollViewer>
+                <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Niech "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:n\:" />
@@ -153,7 +154,7 @@
                     </TextBlock>
                 </Grid>
             </Border>
-
+            </ScrollViewer>
         </DockPanel>
     </Grid>
 </Page>

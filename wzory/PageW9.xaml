@@ -216,7 +216,7 @@
                             <controls:FormulaControl Formula="\:x^2+y^2-2ax-2by+c=0" /> gdy
                             <controls:FormulaControl Formula="\:r^2=a^2+b^2-c\gt0" />
                         </TextBlock>
-                        <Image  Width="300" Height="200" Source="/img/w9a.png" Margin="578,138,10,10" />
+                        <Image  Width="300" Height="200" Source="/img/w9a.png" Margin="578,138,10,10"/>
                     </Grid>
                 </Border>
             </ScrollViewer>

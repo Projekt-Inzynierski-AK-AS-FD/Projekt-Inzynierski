@@ -162,7 +162,6 @@ namespace Abituria
             {
                 isValid = !isTaken;
             }
-
             CreateProfile(newUsername, usersFile, isValid);
         }
         private void ButtonAbituria(object sender, RoutedEventArgs e)

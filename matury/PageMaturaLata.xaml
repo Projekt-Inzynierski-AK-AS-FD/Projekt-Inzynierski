@@ -44,7 +44,7 @@
                     <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
                 </Grid>
             </Border>
-            <Border Background="White" BorderBrush="Black" BorderThickness="1" >
+            <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="60*"/>

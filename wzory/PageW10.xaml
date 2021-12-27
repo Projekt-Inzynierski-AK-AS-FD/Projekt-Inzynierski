@@ -105,24 +105,31 @@
                     </ComboBox>
                 </Grid>
             </Border>
-            <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:k\:" />
-                        </InlineUIContainer><Run Text="przechodzi przez punkt "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:A = (2, -3) \:" />
-                        </InlineUIContainer><Run Text=" i jest nachylona do osi  "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:Ox\:" />
-                        </InlineUIContainer><Run Text="pod kątem "/>
-                            <controls:FormulaControl Formula="\: 45\text{°}\:" />(zobacz rysunek). Prosta
-                        <controls:FormulaControl Formula="\:k\:" /> ma równanie<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="y = x-5" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="y = -x-1" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="y = -x+5" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="y = x+5" /></TextBlock>
-                    <Image  Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
-                </Grid>
+            <ScrollViewer>
+                <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                    <Grid>
+                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                                <controls:FormulaControl Formula="\cdot" />
+                                <Run Text="Cechy przystawania trójkątów"/><LineBreak/>
+                                <!--<Image  Width="300" Height="200" Source="/img/w10a.png"/>
+                                <Image  Width="300" Height="200" Source="/img/w10b.png"/><LineBreak/>-->
+                                <Run Text="To, że dwa trójkąty"/>
+                                <controls:FormulaControl Formula="\:ABC" /> i
+                                <controls:FormulaControl Formula="DEF"/> są przystające
+                                <controls:FormulaControl Formula="(\Delta{ABC}\equiv\Delta{DEF})"/>, możemy stwierdzić na podstawie każdejz następujących
+                                <Run FontWeight="Bold" FontSize="15" Text="cech przystawania trójkątów" />:<LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="-" />
+                            <TextBlock FontSize="15" Margin="4" TextWrapping="WrapWithOverflow" Foreground="Black">cecha przystawania „bok – bok – bok”:<LineBreak/>odpowiadające sobie boki obu trójkątów mają te same długości:<LineBreak/>
+                                <controls:FormulaControl Formula="\mid{AB}\mid=\mid{DE}\mid" />,
+                                <controls:FormulaControl Formula="\;\mid{AC}\mid=\mid{DF}\mid" />,
+                                <controls:FormulaControl Formula="\;\mid{BC}\mid=\mid{EF}\mid" /><LineBreak/></TextBlock><LineBreak/>
+                                <controls:FormulaControl Formula="-" />
+                            <TextBlock FontSize="15" Margin="4" TextWrapping="WrapWithOverflow" Foreground="Black">cecha przystawania „bok – kąt – bok”:<LineBreak/>dwa boki jednego trójkąta są równe odpowiadającym im bokom drugiego trójkąta oraz kąt zawarty między tymi bokami jednego trójkąta ma taką samą miarę jak odpowiadający mu kąt drugiego trójkąta, np.</TextBlock><LineBreak/>
+                            eluwina
+                        </TextBlock>
+                    </Grid>
             </Border>
+            </ScrollViewer>
         </DockPanel>
     </Grid>
 </Page>

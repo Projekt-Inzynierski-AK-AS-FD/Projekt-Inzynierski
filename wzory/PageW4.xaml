@@ -105,7 +105,8 @@
                     </ComboBox>
                 </Grid>
             </Border>
-            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+            <ScrollViewer>
+                <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Silnią liczby całkowitej dodatniej "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:n\:" />
@@ -129,6 +130,7 @@
                     </TextBlock>
                 </Grid>
             </Border>
+            </ScrollViewer>
         </DockPanel>
     </Grid>
 </Page>
