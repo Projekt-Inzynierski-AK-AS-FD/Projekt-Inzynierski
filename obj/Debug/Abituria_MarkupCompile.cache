@@ -4,16 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\
+=======
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\
+>>>>>>> d0862a9be173ffe6a5b2ec895f419d73a1a675e4
 Abituria
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\App.xaml
 69559523168
 
 74-1776812475
 141243481144
+=======
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\App.xaml
+69-1154845166
+
+741715336664
+141263115701
+>>>>>>> d0862a9be173ffe6a5b2ec895f419d73a1a675e4
 CalcQuadraticFunc.xaml;Calculator.xaml;CalculatorChoice.xaml;MainWindow.xaml;MainWindowLogin.xaml;dzialy\PageDzial1.xaml;dzialy\PageDzial2.xaml;dzialy\PageDzial3.xaml;dzialy\PageDzialyWybor.xaml;matury\PageMatura2019.xaml;matury\PageMatura2020.xaml;matury\PageMatura2021.xaml;matury\PageMaturaLata.xaml;matury\PageMaturaPoprawkowa2021.xaml;matury\mp21\PageMP21Z1.xaml;matury\mp21\PageMP21Z10.xaml;matury\mp21\PageMP21Z11.xaml;matury\mp21\PageMP21Z12.xaml;matury\mp21\PageMP21Z13.xaml;matury\mp21\PageMP21Z14.xaml;matury\mp21\PageMP21Z15.xaml;matury\mp21\PageMP21Z16.xaml;matury\mp21\PageMP21Z17.xaml;matury\mp21\PageMP21Z18.xaml;matury\mp21\PageMP21Z19.xaml;matury\mp21\PageMP21Z2.xaml;matury\mp21\PageMP21Z20.xaml;matury\mp21\PageMP21Z21.xaml;matury\mp21\PageMP21Z22.xaml;matury\mp21\PageMP21Z23.xaml;matury\mp21\PageMP21Z24.xaml;matury\mp21\PageMP21Z25.xaml;matury\mp21\PageMP21Z26.xaml;matury\mp21\PageMP21Z27.xaml;matury\mp21\PageMP21Z28.xaml;matury\mp21\PageMP21Z29.xaml;matury\mp21\PageMP21Z3.xaml;matury\mp21\PageMP21Z30.xaml;matury\mp21\PageMP21Z31.xaml;matury\mp21\PageMP21Z32.xaml;matury\mp21\PageMP21Z33.xaml;matury\mp21\PageMP21Z34.xaml;matury\mp21\PageMP21Z35.xaml;matury\mp21\PageMP21Z4.xaml;matury\mp21\PageMP21Z5.xaml;matury\mp21\PageMP21Z6.xaml;matury\mp21\PageMP21Z7.xaml;matury\mp21\PageMP21Z8.xaml;matury\mp21\PageMP21Z9.xaml;wzory\PageW1.xaml;wzory\PageW10.xaml;wzory\PageW11.xaml;wzory\PageW12.xaml;wzory\PageW13.xaml;wzory\PageW14.xaml;wzory\PageW15.xaml;wzory\PageW16.xaml;wzory\PageW17.xaml;wzory\PageW18.xaml;wzory\PageW2.xaml;wzory\PageW3.xaml;wzory\PageW4.xaml;wzory\PageW5.xaml;wzory\PageW6.xaml;wzory\PageW7.xaml;wzory\PageW8.xaml;wzory\PageW9.xaml;wzory\PageWzory.xaml;zadania\PageZadania.xaml;
 
 False
