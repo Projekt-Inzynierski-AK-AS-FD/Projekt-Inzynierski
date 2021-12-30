@@ -164,7 +164,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="24\sqrt{3}" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="72" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="54\sqrt{2}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="648\sqrt{3}" /></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="648\sqrt{3}" />
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

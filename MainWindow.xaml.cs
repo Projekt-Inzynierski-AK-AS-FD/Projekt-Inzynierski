@@ -17,7 +17,6 @@ using Abituria.dzialy;
 using Abituria.matury;
 using Abituria.Properties;
 using Abituria.wzory;
-using Abituria.zadania;
 namespace Abituria
 {
     public partial class MainWindow : Window

@@ -87,7 +87,6 @@ namespace Abituria
             double p = Math.Round(x0, 2);
             double q = Math.Round((-delta) / (4 * a), 2);
             string wierzch = $"({p} ; {q})";
-
             this.result.Visibility = Visibility.Visible;
             PosOgolnaShow(a, b, c);
             PosKanonShow(a, p, q);

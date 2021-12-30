@@ -58,10 +58,6 @@ namespace Abituria.wzory
             PageWzory pageWzory = new PageWzory();
             NavigationService.Navigate(pageWzory);
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //Do stestowania
-        }
         private void W1(object sender, RoutedEventArgs e)
         {
             PageW1 pageW1 = new PageW1();

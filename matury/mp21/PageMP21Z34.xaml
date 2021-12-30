@@ -160,8 +160,8 @@
                 <Grid>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Doświadczenie losowe polega na dwukrotnym rzucie symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek – od jednego do sześciu oczek. Niech "/>
                         <InlineUIContainer><controls:FormulaControl Formula="A\:" /></InlineUIContainer>oznacza zdarzenie polegające na tym, że iloczyn liczb oczek wyrzuconych w dwóch rzutach jest równy
-                    <InlineUIContainer><controls:FormulaControl Formula="\:12\:" /></InlineUIContainer>. Oblicz prawdopodobieństwo zdarzenia
-                    <InlineUIContainer><controls:FormulaControl Formula="\:A\:" /></InlineUIContainer>.</TextBlock>
+                        <InlineUIContainer><controls:FormulaControl Formula="\:12\:" /></InlineUIContainer>. Oblicz prawdopodobieństwo zdarzenia
+                        <InlineUIContainer><controls:FormulaControl Formula="\:A\:" /></InlineUIContainer>.</TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

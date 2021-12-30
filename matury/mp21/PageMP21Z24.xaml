@@ -164,7 +164,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="24+2\sqrt{3}" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="24+6\sqrt{3}" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="24+12\sqrt{3}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="24+24\sqrt{3}" /></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="24+24\sqrt{3}" />
+                    </TextBlock>
                     <Image Width="300" Height="200" Source="/img/mp21z24.png" Margin="278,138,10,10" />
                 </Grid>
             </Border>

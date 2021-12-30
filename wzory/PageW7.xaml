@@ -105,10 +105,10 @@
                     </ComboBox>
                 </Grid>
             </Border>
-            <ScrollViewer>
-                <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
                         <controls:FormulaControl Formula="\:\cdot\:" />
                         <Run Text="Ciąg arytmetyczny"/><LineBreak/><InlineUIContainer>
                         </InlineUIContainer><Run Text="Wzór na"/><InlineUIContainer>
@@ -142,10 +142,10 @@
                         <controls:FormulaControl Formula="\:p\%" /> w skali rocznej i kapitalizacja odsetek następuje po upływie każdego roku trwania lokaty, to kapitał końcowy
                         <controls:FormulaControl Formula="\:K_n" /> wyraża się wzorem:<LineBreak/>
                         <controls:FormulaControl Formula="\:K_n=K\cdot(1+\frac{p}{100})^n" />
-                    </TextBlock>
-                </Grid>
+                        </TextBlock>
+                    </Grid>
+                </ScrollViewer>
             </Border>
-            </ScrollViewer>
         </DockPanel>
     </Grid>
 </Page>

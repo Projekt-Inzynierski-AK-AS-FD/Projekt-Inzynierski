@@ -36,9 +36,9 @@ namespace Abituria {
     
     
     /// <summary>
-    /// PageMaturaPoprawkowa2021
+    /// Window1
     /// </summary>
-    public partial class PageMaturaPoprawkowa2021 : System.Windows.Controls.Page, System.Windows.Markup.IComponentConnector {
+    public partial class Window1 : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         private bool _contentLoaded;
         
@@ -68,81 +68,6 @@ namespace Abituria {
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
-            switch (connectionId)
-            {
-            case 1:
-            
-            #line 27 "..\..\Window1.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonAbituria);
-            
-            #line default
-            #line hidden
-            return;
-            case 2:
-            
-            #line 30 "..\..\Window1.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonKalkulator);
-            
-            #line default
-            #line hidden
-            return;
-            case 3:
-            
-            #line 33 "..\..\Window1.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonMatura);
-            
-            #line default
-            #line hidden
-            return;
-            case 4:
-            
-            #line 36 "..\..\Window1.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonDzialy);
-            
-            #line default
-            #line hidden
-            return;
-            case 5:
-            
-            #line 39 "..\..\Window1.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonZadania);
-            
-            #line default
-            #line hidden
-            return;
-            case 6:
-            
-            #line 42 "..\..\Window1.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ButtonWideo);
-            
-            #line default
-            #line hidden
-            return;
-            case 7:
-            
-            #line 54 "..\..\Window1.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button2021);
-            
-            #line default
-            #line hidden
-            return;
-            case 8:
-            
-            #line 57 "..\..\Window1.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button2020);
-            
-            #line default
-            #line hidden
-            return;
-            case 9:
-            
-            #line 60 "..\..\Window1.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button2019);
-            
-            #line default
-            #line hidden
-            return;
-            }
             this._contentLoaded = true;
         }
     }

@@ -164,7 +164,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="(-{\infty},1\rangle" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="\langle1,+{\infty})" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="(-{\infty},7\rangle" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="\langle7,+\infty)" /><LineBreak/></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="\langle7,+\infty)" /><LineBreak/>
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

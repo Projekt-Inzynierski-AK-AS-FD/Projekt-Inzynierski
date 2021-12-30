@@ -105,10 +105,10 @@
                     </ComboBox>
                 </Grid>
             </Border>
-            <ScrollViewer>
-                <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Niech "/><InlineUIContainer>
+            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Niech "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:n\:" />
                         </InlineUIContainer><Run Text=" będzie liczbą całkowitą dodatnią. Dla dowolnej liczby"/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:a\:" />
@@ -151,10 +151,10 @@
                         <controls:FormulaControl Formula="\:s\:" />są liczbami całkowitymi, to powyższe wzory obowiązują dla wszystkich liczb
                         <controls:FormulaControl Formula="\:a\neq0\:"/> i
                         <controls:FormulaControl Formula="\:b\neq0\:"/>.<LineBreak/>
-                    </TextBlock>
-                </Grid>
+                        </TextBlock>
+                    </Grid>
+                </ScrollViewer>
             </Border>
-            </ScrollViewer>
         </DockPanel>
     </Grid>
 </Page>

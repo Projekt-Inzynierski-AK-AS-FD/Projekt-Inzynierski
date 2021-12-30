@@ -159,7 +159,8 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Rozwiąż nierówność: "/><LineBreak/><LineBreak/>
-                    <controls:FormulaControl Formula="x^2-5\geq4x" /></TextBlock>
+                        <controls:FormulaControl Formula="x^2-5\geq4x" />
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

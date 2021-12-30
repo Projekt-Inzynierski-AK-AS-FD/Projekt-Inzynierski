@@ -105,10 +105,10 @@
                     </ComboBox>
                 </Grid>
             </Border>
-            <ScrollViewer>
-                <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Dla dowolnych liczb "/><InlineUIContainer>
+            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Dla dowolnych liczb "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:a\:" />
                         </InlineUIContainer><Run Text=","/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:b\:" />
@@ -132,10 +132,10 @@
                         <controls:FormulaControl Formula="a^3-1=(a-1)(a^2+a+1)" /><LineBreak/>
                         <controls:FormulaControl Formula="a^3-1=(a+1)(a^2-a+1)" /><LineBreak/>
                         <controls:FormulaControl Formula="a^n-1=(a-1)(a^{n-1}+a^{n-2}+...+a+1)" /><LineBreak/>
-                    </TextBlock>
-                </Grid>
+                        </TextBlock>
+                    </Grid>
+                </ScrollViewer>
             </Border>
-            </ScrollViewer>
         </DockPanel>
     </Grid>
 </Page>

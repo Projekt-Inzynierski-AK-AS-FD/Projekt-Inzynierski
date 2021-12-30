@@ -26,7 +26,6 @@ namespace Abituria
         {
             InitializeComponent();
         }
-
         private void ButtonAbituria(object sender, RoutedEventArgs e)
         {
             var mainWin = new MainWindow();

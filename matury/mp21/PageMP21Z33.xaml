@@ -163,7 +163,8 @@
                         <controls:FormulaControl Formula="\:CD" />. Przekątne <controls:FormulaControl Formula="AC" /> i
                         <controls:FormulaControl Formula="\:BD" /> tego trapezu przecinają się w punkcie <controls:FormulaControl Formula="S" /> (zobacz rysunek) tak, że
                         <controls:FormulaControl Formula="\frac{\:\mid{AS}\mid}{\:\mid{SC}\mid}=\frac{3}{2}" />. Pole trójkąta <controls:FormulaControl Formula="ABS" /> jest równe
-                        <controls:FormulaControl Formula="\:12" />. Oblicz pole trójkąta<controls:FormulaControl Formula="\:CDS" />.<LineBreak/></TextBlock>
+                        <controls:FormulaControl Formula="\:12" />. Oblicz pole trójkąta<controls:FormulaControl Formula="\:CDS" />.<LineBreak/>
+                    </TextBlock>
                     <Image  Width="300" Height="200" Source="/img/mp21z33.png" Margin="278,138,10,10" />
                 </Grid>
             </Border>

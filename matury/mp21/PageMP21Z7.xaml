@@ -172,7 +172,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="g(x) = -2x + 2" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="g(x) = -2x" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="g(x) = -2x + 6" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="g(x) = -2x + 8" /><LineBreak/></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="g(x) = -2x + 8" /><LineBreak/>
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

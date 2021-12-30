@@ -164,7 +164,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="\log_6\frac{9}{4}" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="1" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="2" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="\log_6{\frac{81}{2}}" /></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="\log_6{\frac{81}{2}}" />
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

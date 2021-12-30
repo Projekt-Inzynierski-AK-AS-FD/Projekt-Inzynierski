@@ -164,7 +164,8 @@
                         <controls:FormulaControl Formula="n\geq1\:" />. Trójwyrazowy ciąg
                         <controls:FormulaControl Formula="(a_4,x^2+2,a_{11})\:" />, gdzie
                         <controls:FormulaControl Formula="x" />jest liczbą rzeczywistą, jest geometryczny. Oblicz
-                        <controls:FormulaControl Formula="x" />oraz iloraz tego ciągu geometrycznego.<LineBreak/></TextBlock>
+                        <controls:FormulaControl Formula="x" />oraz iloraz tego ciągu geometrycznego.<LineBreak/>
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

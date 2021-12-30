@@ -59,7 +59,6 @@ namespace Abituria.matury
         {
             InitializeComponent();
         }
-
         private void ButtonZad2(object sender, RoutedEventArgs e)
         {
             InitializeComponent();

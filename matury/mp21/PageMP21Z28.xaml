@@ -164,7 +164,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="(-35)" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="0" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="0,35" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="35" /></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="35" />
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

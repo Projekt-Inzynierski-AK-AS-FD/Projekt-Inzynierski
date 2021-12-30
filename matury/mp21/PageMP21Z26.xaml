@@ -162,7 +162,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="9\cdot2\cdot10^3" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="9\cdot5\cdot10^3" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="5\cdot10^4" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="4\cdot10^5" /></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="4\cdot10^5" />
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

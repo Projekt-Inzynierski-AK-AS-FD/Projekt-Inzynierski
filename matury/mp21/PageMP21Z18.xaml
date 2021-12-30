@@ -166,7 +166,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="20\text{°}" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="30\text{°}" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="40\text{°}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="40\text{°}" /></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="40\text{°}" />
+                    </TextBlock>
                     <Image Width="300" Height="200" Source="/img/mp21z18.png" Margin="278,138,10,10" />
                 </Grid>
             </Border>

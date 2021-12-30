@@ -159,7 +159,8 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Rozwiąż równanie: "/><LineBreak/><LineBreak/>
-                    <controls:FormulaControl Formula="\frac{x+8}{x-7}=2x" /></TextBlock>
+                        <controls:FormulaControl Formula="\frac{x+8}{x-7}=2x" />
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

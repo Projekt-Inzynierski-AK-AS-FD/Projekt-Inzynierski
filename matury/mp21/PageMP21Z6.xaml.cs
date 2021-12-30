@@ -16,7 +16,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Abituria.matury;
-using Abituria.wzory;
 
 namespace Abituria.matury.mp21
 {

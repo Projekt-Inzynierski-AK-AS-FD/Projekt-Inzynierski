@@ -10,7 +10,7 @@
         xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath">
     <Window.Resources>
         <Style TargetType="TextBlock">
-            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontFamily" Value="Cavolini" />
             <Setter Property="Padding" Value="15" />
             <Setter Property="TextWrapping" Value="Wrap" />

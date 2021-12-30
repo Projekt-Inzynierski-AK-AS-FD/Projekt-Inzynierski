@@ -164,7 +164,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="\frac{2+998}{2}\cdot499" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="\frac{2+1000}{2}\cdot500" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="\frac{2+1001}{2}\cdot500" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="\frac{1+1001}{2}\cdot1001" /></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="\frac{1+1001}{2}\cdot1001" />
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

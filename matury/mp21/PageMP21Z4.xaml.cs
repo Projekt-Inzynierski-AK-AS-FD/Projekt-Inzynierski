@@ -15,7 +15,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Abituria.wzory;
 using Abituria.zadania;
-
 namespace Abituria.matury.mp21
 {
     public partial class PageMP21Z4 : Page

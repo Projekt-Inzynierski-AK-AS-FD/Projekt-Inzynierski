@@ -168,7 +168,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="9x^2+48xy+64y^2" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="9x^2+64y^2" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="3x^2+48xy+8y^2" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3x^2+8y^2" /><LineBreak/></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="3x^2+8y^2" /><LineBreak/>
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

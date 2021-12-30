@@ -164,7 +164,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="\frac{7}4" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="(-\frac{7}4)" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="(-\frac{4}7)" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="\frac{4}7" /></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="\frac{4}7" />
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

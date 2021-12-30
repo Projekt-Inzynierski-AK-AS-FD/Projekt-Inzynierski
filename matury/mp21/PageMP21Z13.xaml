@@ -168,7 +168,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="a_{24}-a_{6}=18" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="a_{24}-a_{6}=20" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="a_{24}-a_{6}=36" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="a_{24}-a_{6}=38" /></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="a_{24}-a_{6}=38" />
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

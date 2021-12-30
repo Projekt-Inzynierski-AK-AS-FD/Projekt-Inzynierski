@@ -167,7 +167,6 @@ namespace Abituria
         {
             var mainWin = new MainWindow();
             mainWin.Show();
-
         }
     }
 }

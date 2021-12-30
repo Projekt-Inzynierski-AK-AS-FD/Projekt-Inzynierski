@@ -105,8 +105,8 @@
                     </ComboBox>
                 </Grid>
             </Border>
-            <ScrollViewer>
-                <Border Background="White" BorderBrush="Black" BorderThickness="1">
+            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                <ScrollViewer>
                     <Grid>
                         <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
                                 <controls:FormulaControl Formula="\cdot" />
@@ -128,8 +128,8 @@
                             eluwina
                         </TextBlock>
                     </Grid>
+                </ScrollViewer>
             </Border>
-            </ScrollViewer>
         </DockPanel>
     </Grid>
 </Page>

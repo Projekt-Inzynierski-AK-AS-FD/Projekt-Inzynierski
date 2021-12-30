@@ -173,7 +173,7 @@
                         </InlineUIContainer><LineBreak/><LineBreak/><Run Text="C. "/><InlineUIContainer>
                             <controls:FormulaControl Formula="a = 4" />
                         </InlineUIContainer><LineBreak/><LineBreak/><Run Text="D. "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="a = 5" />
+                            <controls:FormulaControl Formula="a = 5"/>
                         </InlineUIContainer><InlineUIContainer>
                         </InlineUIContainer><LineBreak/></TextBlock>
                 </Grid>

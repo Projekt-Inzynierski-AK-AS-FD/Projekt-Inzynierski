@@ -170,7 +170,8 @@
                         <LineBreak/>A. <controls:FormulaControl Formula="125\%" /> liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="120\%" /> liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="25\%" /> liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="20\%" /> liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/></TextBlock>
+                        <LineBreak/>D. <controls:FormulaControl Formula="20\%" /> liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/>
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

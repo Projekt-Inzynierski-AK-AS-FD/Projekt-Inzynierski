@@ -44,7 +44,6 @@ namespace Abituria
                 case 1:
                     hint = hintsArray[0];
                     break;
-
                 case 2:
                     hint = hintsArray[0] + "\n" + hintsArray[1];
                     break;

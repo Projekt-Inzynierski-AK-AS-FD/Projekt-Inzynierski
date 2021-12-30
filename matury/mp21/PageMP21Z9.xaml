@@ -159,7 +159,7 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:k\:" />
+                            <controls:FormulaControl Formula="\:k\:"/>
                         </InlineUIContainer><Run Text="przechodzi przez punkt "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:A = (2, -3) \:" />
                         </InlineUIContainer><Run Text=" i jest nachylona do osi  "/><InlineUIContainer>

@@ -105,10 +105,10 @@
                     </ComboBox>
                 </Grid>
             </Border>
-            <ScrollViewer>
-                <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Silnią liczby całkowitej dodatniej "/><InlineUIContainer>
+            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Silnią liczby całkowitej dodatniej "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:n\:" />
                         </InlineUIContainer><Run Text="nazywamy iloczyn kolejnych liczb całkowitych od"/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:1\:" />
@@ -127,10 +127,10 @@
                         <controls:FormulaControl Formula="\binom{n}{k}=\binom{n}{n-k}"/><LineBreak/><!-- Tak powinno być? Wygląda podejrzanie... -->
                         <controls:FormulaControl Formula="\binom{n}{0}=1"/><LineBreak/><!--dalej nie widze-->
                         <controls:FormulaControl Formula="\binom{n}{n}=1"/><LineBreak/>
-                    </TextBlock>
-                </Grid>
+                        </TextBlock>
+                    </Grid>
+                </ScrollViewer>
             </Border>
-            </ScrollViewer>
         </DockPanel>
     </Grid>
 </Page>
