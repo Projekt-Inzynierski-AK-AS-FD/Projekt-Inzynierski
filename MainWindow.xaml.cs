@@ -17,6 +17,7 @@ using Abituria.dzialy;
 using Abituria.matury;
 using Abituria.Properties;
 using Abituria.wzory;
+using Abituria.viewmodel;
 namespace Abituria
 {
     public partial class MainWindow : Window
@@ -24,6 +25,7 @@ namespace Abituria
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new WindowViewModel(this);
         }
         private void ButtonCalculator(object sender, RoutedEventArgs e)
         {

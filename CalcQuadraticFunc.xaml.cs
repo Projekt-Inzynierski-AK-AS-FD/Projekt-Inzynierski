@@ -28,10 +28,9 @@ namespace Abituria
             string valA = fieldA.Text;
             string valB = fieldB.Text;
             string valC = fieldC.Text;
-            double a, b, c = 0;
-            double.TryParse(valA, out a);
-            double.TryParse(valB, out b);
-            double.TryParse(valC, out c);
+            double.TryParse(valA, result: out double a);
+            double.TryParse(valB, result: out double b);
+            double.TryParse(valC, result: out double c);
             //weryfikacja poprawności wprowadzonych danych
             if (a == 0)
             {
@@ -39,7 +38,8 @@ namespace Abituria
                 Reset();
                 return;
             }
-            if (!double.TryParse(valA, out a) || !double.TryParse(valB, out b) || !double.TryParse(valC, out c))
+
+            if (!double.TryParse(valA, out _) || !double.TryParse(valB, out _) || !double.TryParse(valC, out _))
             {
                 MessageBox.Show("Ups, coś poszło nie tak. Sprawdź, czy wprowadzone dane są prawidłowe i spróbuj jeszcze raz.", "Nieprawidłowa wartość!");
                 Reset();
@@ -97,9 +97,9 @@ namespace Abituria
 
         private void PosOgolnaShow(double a, double b, double c)
         {
-            string ogolna = "";
             string kwadrat = "²";
 
+            string ogolna;
             if (a == 1)
             {
                 ogolna = "𝑓(𝑥) = 𝑥" + kwadrat;
@@ -117,7 +117,7 @@ namespace Abituria
             {
                 if (b == 1)
                 {
-                    ogolna = ogolna + " + 𝑥";
+                    ogolna += " + 𝑥";
                 }
                 else
                 {
@@ -128,7 +128,7 @@ namespace Abituria
             {
                 if (b == -1)
                 {
-                    ogolna = ogolna + " - 𝑥";
+                    ogolna += " - 𝑥";
                 }
                 else
                 {
@@ -164,11 +164,11 @@ namespace Abituria
 
             if (q > 0 || q == 0)
             {
-                kanoniczna = kanoniczna + $" + {q}";
+                kanoniczna += $" + {q}";
             }
             else
             {
-                kanoniczna = kanoniczna + $" - {q * (-1)}";
+                kanoniczna += $" - {q * (-1)}";
             }
 
             pKanoniczna.Text = kanoniczna;
@@ -196,22 +196,22 @@ namespace Abituria
             }
             else
             {
-                iloczynowa = iloczynowa + $"𝑓(𝑥) = {a}(x ";
+                iloczynowa += $"𝑓(𝑥) = {a}(x ";
                 if (x1 > 0 || x1 == 0)
                 {
-                    iloczynowa = iloczynowa + $"- {x1})(𝑥 ";
+                    iloczynowa += $"- {x1})(𝑥 ";
                 }
                 else
                 {
-                    iloczynowa = iloczynowa + $"+ {x1 * (-1)})(𝑥 ";
+                    iloczynowa += $"+ {x1 * (-1)})(𝑥 ";
                 }
                 if (x2 > 0 || x2 == 0)
                 {
-                    iloczynowa = iloczynowa + $"- {x2})";
+                    iloczynowa += $"- {x2})";
                 }
                 else
                 {
-                    iloczynowa = iloczynowa + $"+ {x2 * (-1)})";
+                    iloczynowa += $"+ {x2 * (-1)})";
                 }
             }
             pIloczynowa.Text = iloczynowa;
@@ -233,8 +233,8 @@ namespace Abituria
         private void Explanation(double a, double b, double c, double delta, string wierzch, double x1, double x2, double x0, double p, double q)
         {
             string[] specialScript = new string[] { "₀", "₁", "₂", "²", "√" };
-            string delText = "";
             _ = Math.Round(Math.Sqrt(delta), 2);
+            string delText;
             if (delta < 0)
             {
                 delText = "Δ < 0 i funkcja nie posiada miejsc zerowych";

@@ -7,18 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Abituria.exe.manifest" size="4563">
+    <dependentAssembly dependencyType="install" codebase="Abituria.exe.manifest" size="5240">
       <assemblyIdentity name="Abituria.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-<<<<<<< HEAD
-        <dsig:DigestValue>CRgxW5X8iIb6YbrjKvGFW2dNbaJgHTh1izTop+EwoYI=</dsig:DigestValue>
-=======
-        <dsig:DigestValue>Pth9XGeRnvmKo0N9Toahl4rE6dCEhfQJVTdSHIAS/Es=</dsig:DigestValue>
->>>>>>> d0862a9be173ffe6a5b2ec895f419d73a1a675e4
+        <dsig:DigestValue>L4Xzkj3lL0h0BtvfePgj+n89U0qJ2cZlGFDmr8D/nwo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

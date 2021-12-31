@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w9a.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w9b.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fodyweavers.xml")]
 
 

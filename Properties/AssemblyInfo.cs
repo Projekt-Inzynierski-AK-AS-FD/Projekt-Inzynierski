@@ -7,7 +7,7 @@ using System.Windows;
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
 [assembly: AssemblyTitle("Abituria")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Korepetytor maturalny")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Abituria")]

@@ -235,8 +235,7 @@ namespace Abituria.matury.mp21
         }
         private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
-            bool ansChecked = CheckAnswer(correctAnsw);
-            string answer = HintsClass.AnswerButtonChange(sender, ansChecked);
+            string answer = HintsClass.AnswerButtonChange(sender, CheckAnswer(correctAnsw: correctAnsw));
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = answer;
         }
@@ -249,10 +248,10 @@ namespace Abituria.matury.mp21
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = hint;
         }
-        private bool CheckAnswer(int correct)
+        private bool CheckAnswer(int correctAnsw)
         {
-            bool isAnsCorrect = false;
-            if(checkBox4.IsChecked == true)
+            bool isAnsCorrect;
+            if (checkBox4.IsChecked == true)
             {
                 if(checkBox1.IsChecked == true || checkBox2.IsChecked == true || checkBox3.IsChecked == true)
                 {

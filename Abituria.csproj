@@ -30,6 +30,8 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,7 +59,7 @@
     <StartupObject>Abituria.App</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>help.ico</ApplicationIcon>
+    <ApplicationIcon>img\help.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>68BD361C1E2519F15977139189AADE2A26E3EDCD</ManifestCertificateThumbprint>
@@ -72,6 +74,13 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Windows.Shell, Version=3.5.41019.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\dotnetCampus.Windows7.Shell.2.0.0\lib\net40\Microsoft.Windows.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyChanged, Version=1.52.1.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
+      <HintPath>packages\PropertyChanged.Fody.1.52.1\lib\netstandard10\PropertyChanged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -95,6 +104,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="HintsClass.cs" />
     <Compile Include="MainWindowLogin.xaml.cs">
       <DependentUpon>MainWindowLogin.xaml</DependentUpon>
@@ -315,6 +325,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="styles\Windows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="styles\Texts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="styles\Buttons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="styles\Colors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="styles\Fonts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="wzory\PageW1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -526,6 +556,9 @@
     <Compile Include="matury\mp21\PageMP21Z9.xaml.cs">
       <DependentUpon>PageMP21Z9.xaml</DependentUpon>
     </Compile>
+    <Compile Include="viewmodel\WindowViewModel.cs" />
+    <Compile Include="viewmodel\base\RelayCommand.cs" />
+    <Compile Include="viewmodel\base\BaseViewModel.cs" />
     <Compile Include="wzory\PageW1.xaml.cs">
       <DependentUpon>PageW1.xaml</DependentUpon>
     </Compile>
@@ -605,6 +638,24 @@
     </EmbeddedResource>
     <None Include="Abituria_TemporaryKey.pfx" />
     <None Include="CONTRIBUTING.md" />
+    <Resource Include="fonts\Mulish-Black.ttf" />
+    <Resource Include="fonts\Mulish-BlackItalic.ttf" />
+    <Resource Include="fonts\Mulish-Bold.ttf" />
+    <Resource Include="fonts\Mulish-BoldItalic.ttf" />
+    <Resource Include="fonts\Mulish-ExtraBold.ttf" />
+    <Resource Include="fonts\Mulish-ExtraBoldItalic.ttf" />
+    <Resource Include="fonts\Mulish-ExtraLight.ttf" />
+    <Resource Include="fonts\Mulish-ExtraLightItalic.ttf" />
+    <Resource Include="fonts\Mulish-Italic-VariableFont_wght.ttf" />
+    <Resource Include="fonts\Mulish-Italic.ttf" />
+    <Resource Include="fonts\Mulish-Light.ttf" />
+    <Resource Include="fonts\Mulish-LightItalic.ttf" />
+    <Resource Include="fonts\Mulish-Medium.ttf" />
+    <Resource Include="fonts\Mulish-MediumItalic.ttf" />
+    <Resource Include="fonts\Mulish-Regular.ttf" />
+    <Resource Include="fonts\Mulish-SemiBold.ttf" />
+    <Resource Include="fonts\Mulish-SemiBoldItalic.ttf" />
+    <Resource Include="fonts\Mulish-VariableFont_wght.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -616,7 +667,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="help.ico" />
+    <Resource Include="img\help.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -671,5 +722,15 @@
     <Resource Include="img\w10a.png" />
     <Resource Include="img\w10b.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FodyWeavers.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Fody.1.29.2\build\dotnet\Fody.targets" Condition="Exists('packages\Fody.1.29.2\build\dotnet\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Fody.1.29.2\build\dotnet\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Fody.1.29.2\build\dotnet\Fody.targets'))" />
+  </Target>
 </Project>
