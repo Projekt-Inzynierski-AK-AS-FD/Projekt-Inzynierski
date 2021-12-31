@@ -1299,7 +1299,14 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.applicatio
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csproj.CopyComplete
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.exe
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.pdb
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\bin\Debug\Abituria.exe.config
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\bin\Debug\Abituria.exe.manifest
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\bin\Debug\Abituria.application
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\bin\Debug\Abituria.exe
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\bin\Debug\Abituria.pdb
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\Abituria.csproj.AssemblyReference.cache
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\MainWindow.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\matury\PageMatura2019.baml
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\CalcQuadraticFunc.g.cs
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\Calculator.g.cs
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\CalculatorChoice.g.cs
@@ -1372,12 +1379,6 @@ C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\App.g.cs
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\Abituria_MarkupCompile.cache
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\Abituria_MarkupCompile.lref
-C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\Abituria.csproj.AssemblyReference.cache
-C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\bin\Debug\Abituria.exe.config
-C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\bin\Debug\Abituria.exe.manifest
-C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\bin\Debug\Abituria.application
-C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\bin\Debug\Abituria.exe
-C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\bin\Debug\Abituria.pdb
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\CalcQuadraticFunc.baml
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\Calculator.baml
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\CalculatorChoice.baml
@@ -1386,7 +1387,6 @@ C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\dzialy\PageDzial2.baml
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\dzialy\PageDzial3.baml
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\dzialy\PageDzialyWybor.baml
-C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\matury\PageMatura2019.baml
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\matury\PageMatura2020.baml
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\matury\PageMatura2021.baml
 C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\matury\PageMaturaLata.baml
