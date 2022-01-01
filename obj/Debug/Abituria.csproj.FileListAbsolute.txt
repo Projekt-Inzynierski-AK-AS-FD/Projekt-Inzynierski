@@ -1462,3 +1462,10 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Buttons.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Colors.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Fonts.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\App.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\styles\Windows.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\styles\Texts.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\styles\Buttons.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\styles\Colors.baml
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\styles\Fonts.baml
