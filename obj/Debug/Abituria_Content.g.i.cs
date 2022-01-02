@@ -8,6 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w10d.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11a.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11b.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11c.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11d.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11e.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11f.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11g.png")]
 
 

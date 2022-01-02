@@ -731,6 +731,40 @@
   <ItemGroup>
     <Resource Include="img\w10d.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\w10e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\w10f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\w10g.png" />
+    <Resource Include="img\w10h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\w10i.png" />
+    <Resource Include="img\w10j.png" />
+    <Resource Include="img\w10k.png" />
+    <Resource Include="img\w10l.png" />
+    <Resource Include="img\w10m.png" />
+    <Resource Include="img\w10n.png" />
+    <Resource Include="img\w10o.png" />
+    <Resource Include="img\w10p.png" />
+    <Resource Include="img\w10r.png" />
+    <Resource Include="img\w10s.png" />
+    <Resource Include="img\w10t.png" />
+    <Resource Include="img\w10u.png" />
+    <Resource Include="img\w10w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\w11a.png" />
+    <Resource Include="img\w11b.png" />
+    <Resource Include="img\w11c.png" />
+    <Resource Include="img\w11d.png" />
+    <Resource Include="img\w11e.png" />
+    <Resource Include="img\w11f.png" />
+    <Resource Include="img\w11g.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Fody.1.29.2\build\dotnet\Fody.targets" Condition="Exists('packages\Fody.1.29.2\build\dotnet\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
