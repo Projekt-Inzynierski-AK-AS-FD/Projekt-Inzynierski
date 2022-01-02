@@ -8,9 +8,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/close.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/icon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/max.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/min.png")]
+=======
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11a.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11b.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11c.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11d.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11e.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11f.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w11g.png")]
+>>>>>>> 36adb22c12c0311dc46038eabed524d8f8bfb1dc
 
 
