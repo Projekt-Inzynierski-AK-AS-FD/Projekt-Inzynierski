@@ -108,20 +108,39 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer>
                     <Grid>
-                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:k\:" />
-                        </InlineUIContainer><Run Text="przechodzi przez punkt "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:A = (2, -3) \:" />
-                        </InlineUIContainer><Run Text=" i jest nachylona do osi  "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:Ox\:" />
-                        </InlineUIContainer><Run Text="pod kątem "/>
-                            <controls:FormulaControl Formula="\: 45\text{°}\:" />(zobacz rysunek). Prosta
-                        <controls:FormulaControl Formula="\:k\:" /> ma równanie<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="y = x-5" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="y = -x-1" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="y = -x+5" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="y = x+5" /></TextBlock>
-                        <Image  Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
+                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                            <TextBlock FontSize="17" ><Bold>TRYGONOMETRIA</Bold></TextBlock><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Definicje funkcji trygonometrycznych kąta ostrego w trójkącie prostokątnym</Underline><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Width="360" Height="240" Source="/img/w12a.png"/>
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    <LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Margin="100,0,90,0" Formula="\sin \alpha = \frac{a}{c}"/><controls:FormulaControl Formula="\sin \beta = \frac{b}{c}"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Margin="100,0,85,0" Formula="\cos \alpha = \frac{b}{c}"/><controls:FormulaControl Formula="\cos \beta = \frac{a}{c}"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Margin="100,0,90,0" Formula="\tg \alpha = \frac{a}{b}"/><controls:FormulaControl Formula="\tg \beta = \frac{b}{a}"/><LineBreak/><LineBreak/>
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Definicje funkcji trygonometrycznych</Underline><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Width="420" Height="300" Source="/img/w12b.png"/>
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    <LineBreak/>
+                                    <controls:FormulaControl Formula="\sin \alpha = \frac{y}{r}"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="\cos \alpha = \frac{x}{r}"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="\tg \alpha = \frac{y}{x}"/>, gdy x ≠ 0<LineBreak/><LineBreak/>
+                                    gdzie <controls:FormulaControl Formula="r = \sqrt{x^2 + y^2} > 0"/> jest promieniem wodzącym punktu <controls:FormulaControl Formula="M"/><LineBreak/><LineBreak/>
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        </TextBlock>
                     </Grid>
                 </ScrollViewer>
             </Border>
