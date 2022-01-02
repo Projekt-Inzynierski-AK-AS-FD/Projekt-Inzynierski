@@ -19,6 +19,7 @@ using Abituria.Properties;
 using Abituria.wzory;
 using Abituria.zadania;
 using Abituria.matury.mp21;
+using Abituria.viewmodel;
 
 namespace Abituria
 {
@@ -165,8 +166,8 @@ namespace Abituria
         }
         private void ButtonAbituria(object sender, RoutedEventArgs e)
         {
-            var mainWin = new MainWindow();
-            mainWin.Show();
+            InitializeComponent();
+            this.DataContext = new WindowViewModel(this);
         }
     }
 }

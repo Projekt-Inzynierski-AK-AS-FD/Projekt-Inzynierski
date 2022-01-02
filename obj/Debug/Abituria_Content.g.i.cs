@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w10d.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/close.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/icon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/max.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/min.png")]
 
 

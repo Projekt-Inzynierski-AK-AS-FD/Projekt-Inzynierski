@@ -22,23 +22,18 @@ namespace Abituria
         }
         private void ShowResult(object sender, RoutedEventArgs e)
         {
-            // POBIERANIE INPUTU
-            // bezpieczniejsze niż double.Parse, lepiej weryfikuje i nie wyrzuca wyjątku w przypadku nieprawidłowej wartości
-            // z double.Parse trzeba by napisać wyjątek i wychodzi podobnie, bo i tak potrzeba weryfikacji, ale TryParse działa pewniej i jest zalecany
-            string valA = fieldA.Text;
-            string valB = fieldB.Text;
-            string valC = fieldC.Text;
+            string valA = fieldA.Text;// POBIERANIE INPUTU
+            string valB = fieldB.Text;// bezpieczniejsze niż double.Parse, lepiej weryfikuje i nie wyrzuca wyjątku w przypadku nieprawidłowej wartości
+            string valC = fieldC.Text;// z double.Parse trzeba by napisać wyjątek i wychodzi podobnie, bo i tak potrzeba weryfikacji, ale TryParse działa pewniej i jest zalecany
             double.TryParse(valA, result: out double a);
             double.TryParse(valB, result: out double b);
             double.TryParse(valC, result: out double c);
-            //weryfikacja poprawności wprowadzonych danych
-            if (a == 0)
+            if (a == 0)//weryfikacja poprawności wprowadzonych danych
             {
                 MessageBox.Show("Psss, w każdej funkcji kwadratowej współczynnik a jest liczbą rzeczywistą różną od 0! Spróbuj jeszcze raz.", "Nieprawidłowa wartość!");
                 Reset();
                 return;
             }
-
             if (!double.TryParse(valA, out _) || !double.TryParse(valB, out _) || !double.TryParse(valC, out _))
             {
                 MessageBox.Show("Ups, coś poszło nie tak. Sprawdź, czy wprowadzone dane są prawidłowe i spróbuj jeszcze raz.", "Nieprawidłowa wartość!");
@@ -62,13 +57,11 @@ namespace Abituria
         private void FunQuad(double a, double b, double c)
         {
             string[] subscript= new string[] { "₀", "₁", "₂" };
-            // obliczenia
-            double delta = Math.Pow(b, 2) - (4 * a * c);
+            double delta = Math.Pow(b, 2) - (4 * a * c);// obliczenia
             double x0 = (-b) / (2 * a);
             double x1 = Math.Round(((-b) - Math.Sqrt(delta)) / (2 * a), 2);
             double x2 = Math.Round(((-b) + Math.Sqrt(delta)) / (2 * a), 2);
-            // wyświetlanie pierwiastków
-            if (delta < 0)
+            if (delta < 0)// wyświetlanie pierwiastków
             {
                 string resultTxt = "Δ < 0, funkcja nie posiada miejsc zerowych";
                 result.Text = resultTxt;
@@ -83,8 +76,7 @@ namespace Abituria
                 string resultTxt = $"\nΔ > 0, funkcja posiada dwa miejsca zerowe: \n 𝑥" + subscript[1] + $" = {x1}                                     𝑥" + subscript[2] + $" = {x2}";
                 result.Text = resultTxt;
             }
-            // obliczenia dla postaci kanonicznej
-            double p = Math.Round(x0, 2);
+            double p = Math.Round(x0, 2);// obliczenia dla postaci kanonicznej
             double q = Math.Round((-delta) / (4 * a), 2);
             string wierzch = $"({p} ; {q})";
             this.result.Visibility = Visibility.Visible;
@@ -94,7 +86,6 @@ namespace Abituria
             Explanation(a, b, c, delta, wierzch, x1, x2, x0, p, q);
 
         }
-
         private void PosOgolnaShow(double a, double b, double c)
         {
             string kwadrat = "²";
@@ -112,7 +103,6 @@ namespace Abituria
             {
                 ogolna = $"𝑓(𝑥) = {a}𝑥" + kwadrat;
             }
-
             if (b > 0)
             {
                 if (b == 1)
@@ -135,7 +125,6 @@ namespace Abituria
                     ogolna = ogolna + " - " + $"{(b * -1)}𝑥";
                 }
             }
-
             if (c > 0)
             {
                 ogolna = ogolna + " + " + $"{c}";
@@ -144,24 +133,20 @@ namespace Abituria
             {
                 ogolna = ogolna + " - " + $"{(c * -1)}";
             }
-
             pOgolna.Text = ogolna;
         }
         private void PosKanonShow(double a, double p, double q)
         {
-            // f(x)=a(x−p)2+q 
-            string kwadrat = "²";
+            string kwadrat = "²";// f(x)=a(x−p)2+q 
             string kanoniczna = $"𝑓(𝑥) = {a}(𝑥";
-
             if (p > 0 || p == 0)
             {
-                kanoniczna = kanoniczna + $" - {p})" + kwadrat;
+                kanoniczna = $"{kanoniczna} - {p}){kwadrat}";
             }
             else
             {
-                kanoniczna = kanoniczna + $" + {p * (-1)})" + kwadrat;
+                kanoniczna = $"{kanoniczna} + {p * (-1)}){kwadrat}";
             }
-
             if (q > 0 || q == 0)
             {
                 kanoniczna += $" + {q}";
@@ -170,7 +155,6 @@ namespace Abituria
             {
                 kanoniczna += $" - {q * (-1)}";
             }
-
             pKanoniczna.Text = kanoniczna;
         }
         private void PosIloczynShow(double a, double x1, double x2, double delta, string wierzch)
@@ -178,7 +162,6 @@ namespace Abituria
             string kwadrat = "²";
             string iloczynowa = "";
             string parable = "";
-
             if (delta < 0)
             {
                 iloczynowa = "Funkcja nie ma miejsc zerowych, nie ma też zatem postaci iloczynowej!";
@@ -215,7 +198,6 @@ namespace Abituria
                 }
             }
             pIloczynowa.Text = iloczynowa;
-
             if (a > 0)
             {
                 parable = "Ramiona paraboli skierowane są do góry, ponieważ współczynnik 𝒂 jest dodatni: ⎝⎠";
@@ -224,11 +206,8 @@ namespace Abituria
             {
                 parable = "Ramiona paraboli skierowane są do dołu, ponieważ współczynnik 𝒂 jest ujemny: ⎛⎞";
             }
-            
             string wierzcholek = $"Współrzędne wierzchołka paraboli znajdują się w punkcie 𝑊 = (𝑝;𝑞), czyli 𝑊 = {wierzch}\n";
             pParable.Text = parable + "\n" + wierzcholek;
-            
-
         }
         private void Explanation(double a, double b, double c, double delta, string wierzch, double x1, double x2, double x0, double p, double q)
         {
@@ -238,7 +217,6 @@ namespace Abituria
             if (delta < 0)
             {
                 delText = "Δ < 0 i funkcja nie posiada miejsc zerowych";
-
             }
             else if (delta == 0)
             {
@@ -248,7 +226,6 @@ namespace Abituria
             {
                 delText = $"Δ > 0, funkcja posiada zatem dwa miejsca zerowe: 𝑥" + specialScript[1] + $" = {x1} oraz 𝑥" + specialScript[2] + $" = {x2}";
             }
-
             string explained1 = "Znając wzór na postać ogólną funkcji kwadratowej, zaczynamy od wyliczenia wartości Δ (delty, inaczej wyróżnika funkcji kwadratowej). Użyjemy wzoru:\n";
             explanation1.Text = explained1;
             string explained2 = $"Δ = 𝑏{specialScript[3]} − 4⋅𝑎⋅𝑐";
