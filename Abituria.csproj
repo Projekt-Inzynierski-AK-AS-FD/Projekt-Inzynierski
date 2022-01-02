@@ -731,12 +731,10 @@
     <Resource Include="img\w10d.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Resource Include="img\close.png" />
     <Resource Include="img\icon.png" />
     <Resource Include="img\max.png" />
     <Resource Include="img\min.png" />
-=======
     <Resource Include="img\w10e.png" />
   </ItemGroup>
   <ItemGroup>
@@ -769,7 +767,6 @@
     <Resource Include="img\w11e.png" />
     <Resource Include="img\w11f.png" />
     <Resource Include="img\w11g.png" />
->>>>>>> 36adb22c12c0311dc46038eabed524d8f8bfb1dc
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Fody.1.29.2\build\dotnet\Fody.targets" Condition="Exists('packages\Fody.1.29.2\build\dotnet\Fody.targets')" />

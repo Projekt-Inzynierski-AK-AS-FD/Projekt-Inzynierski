@@ -1470,3 +1470,4 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csproj.Cop
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.exe
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.pdb
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\GeneratedInternalTypeHelper.g.cs

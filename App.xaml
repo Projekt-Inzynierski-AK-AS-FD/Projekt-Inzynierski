@@ -1,7 +1,7 @@
 ﻿<Application x:Class="Abituria.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="MainWindowLogin.xaml">
+             StartupUri="wzory/PageWzory.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries><!--Kolejjność jest istotna-->
