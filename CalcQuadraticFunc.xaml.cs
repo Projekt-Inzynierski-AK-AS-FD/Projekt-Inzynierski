@@ -43,10 +43,7 @@ namespace Abituria
             FunQuad(a, b, c);
             this.groupResult.Visibility = Visibility.Visible;
         }
-        private void ResetBtn(object sender, RoutedEventArgs e)
-        {
-            Reset();
-        }
+        private void ResetBtn(object sender, RoutedEventArgs e) => Reset();
         private void Reset()
         {
             fieldA.Text = "";

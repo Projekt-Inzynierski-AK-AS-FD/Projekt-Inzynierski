@@ -17,7 +17,6 @@ using Abituria.wzory;
 using Abituria.zadania;
 using Abituria.dzialy;
 using Abituria.matury;
-
 namespace Abituria
 {
     public partial class CalculatorChoice : Page

@@ -6,15 +6,20 @@ namespace Abituria.viewmodel
     class RelayCommand : ICommand///Podstawowa komenda odpalacjąca Akcje
     {
         private readonly Action mAction;///Akcja do odpalenia
-        public event EventHandler CanExecuteChanged = (sender, e) => { };///Wydarzenie odpalane, kiedy wartość <see cref="CanExecute(object)"/> jest zmieniona
-        public RelayCommand(Action action)///Standardowy konstruktor
+        private Func<object, bool> mCanExecute;
+        public event EventHandler CanExecuteChanged///Wydarzenie odpalane, kiedy wartość obiektu jest zmieniona
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public RelayCommand(Action action, Func<object, bool> canExecute = null)///Standardowy konstruktor
         {
             mAction = action;
+            mCanExecute = canExecute;
         }
         public bool CanExecute(object parameter)/// Polecenie przekaźnika zawsze może zostać wykonane
         {
-            return true;
-        }
+            return mCanExecute == null || mCanExecute(parameter);        }
         public void Execute(object parameter)/// Wykonuje komende Akcja
         {
             mAction();

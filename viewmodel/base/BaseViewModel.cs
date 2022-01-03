@@ -1,11 +1,12 @@
 ﻿using PropertyChanged;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 namespace Abituria.viewmodel
 {
     [ImplementPropertyChanged]
     public class BaseViewModel : INotifyPropertyChanged///Bazowy model widoku odpala Property Changed kiedy trzeba
     {
-        public event PropertyChangedEventHandler PropertyChanged = (sender, e) =>
+        public event PropertyChangedEventHandler PropertyChanged = (sender, e) =>///Obserwowalny obiekt
         {
             if (sender is null)
             {
@@ -16,9 +17,9 @@ namespace Abituria.viewmodel
                 throw new System.ArgumentNullException(nameof(e));
             }
         };///Wydarzenie odpala się, kiedy właściwość potomka się zmienia
-        public void OnPropertyChanged(string name)///Wywołuje wydarzenie PropertyChanged
+        protected void OnPropertyChanged([CallerMemberName]string name = null)///Wywołuje wydarzenie PropertyChanged
         {
-            PropertyChanged(this, new PropertyChangedEventArgs(name));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }

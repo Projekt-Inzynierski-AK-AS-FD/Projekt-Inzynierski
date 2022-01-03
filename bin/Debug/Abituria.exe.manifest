@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
   <asmv1:assemblyIdentity name="Abituria.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Abituria" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -42,22 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-<<<<<<< HEAD
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Abituria.exe" size="3237848">
-=======
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Abituria.exe" size="3580376">
->>>>>>> 36adb22c12c0311dc46038eabed524d8f8bfb1dc
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Abituria.exe" size="3961304">
       <assemblyIdentity name="Abituria" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-<<<<<<< HEAD
-        <dsig:DigestValue>VX2D/8mPH2c9MMS5jlbWasOa61OGQ6YM7rwZ1pI46co=</dsig:DigestValue>
-=======
-        <dsig:DigestValue>YAtIV9e9xUXuVNyUuwGZ1jFPsEwM4VgfECfHWhRV+ak=</dsig:DigestValue>
->>>>>>> 36adb22c12c0311dc46038eabed524d8f8bfb1dc
+        <dsig:DigestValue>uJKhtMwfK8tckw5GnabJFxMu+cjR5MbM5xbsJnkhnBA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,13 +78,22 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Abituria.exe.config" size="184">
+  <file name="Abituria.exe.config" size="183">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>X+GtgC9o18R9u9jmAWK6iKuu0WLaXTgchdPkk1MRli4=</dsig:DigestValue>
+      <dsig:DigestValue>Ks9EieF39f5FK0pPwi9nrSUw0z8Jlz9DnnG2r648o7E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="icon.ico" size="197532">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/zgF+31yOvxZMatQztLiVgy/uiBkBpYzqndiVhtJrBw=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

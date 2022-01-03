@@ -53,8 +53,7 @@ namespace Abituria
                     break;
                 case 4:
                     hint = hintsArray[0] + "\n" + hintsArray[1] + "\n" + hintsArray[2] + "\n" + hintsArray[3];
-                    break;
-                    // Itd. do momentu, aż nie wyczerpie się pula podpowiedzi, wtedy:
+                    break;// Itd. do momentu, aż nie wyczerpie się pula podpowiedzi, wtedy: 
                 default:
                     hint = hintsArray[0] + "\n" + hintsArray[1] + "\n" + hintsArray[2] + "\n" + hintsArray[3];
                     break;

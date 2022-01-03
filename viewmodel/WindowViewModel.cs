@@ -4,6 +4,8 @@ using System.Windows.Input;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using PropertyChanged;
+
+
 namespace Abituria.viewmodel
 {
     [ImplementPropertyChanged]
@@ -12,8 +14,11 @@ namespace Abituria.viewmodel
         private readonly Window mWindow;///Okno, które kontroluje Model widoku
         private int mOuterMarginSize = 10;///Margines okna pozwalający na cień
         private int mWindowRadius = 10;///Promień od krawędzi okna
+        public Thickness InnerContentPadding { get { return new Thickness(ResizeBorder); } }///Wypełnienie wewnętrznej zawartoścu okna
+        public double WindowMinimumWidth { get; set; } = 1115;///najmniejsza szerokość jaką może mieć okno
+        public double WindowMinimumHeight { get; set; } = 815;///najmniejsza wysokość jaką może mieć okno
         public int ResizeBorder { get; set; } = 6;
-        public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
+        public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }///Rozmiar obramówki okna do zewnętrznego marginesu
         public int OuterMarginSize///Zmaksymalizowane okno nie będzie miało przeźroczystego marginesu
         {
             get
@@ -40,6 +45,7 @@ namespace Abituria.viewmodel
         public CornerRadius WindowCornerRadius { get { return new CornerRadius(WindowRadius); } }
         public int TitleHeight { get; set; } = 42;///wysokość paska tytułowego
         public GridLength TitleHeightGridLength { get { return new GridLength(ResizeBorder + TitleHeight); } }
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;///Obecna strona aplikacji
         public ICommand MinimizeCommand { get; set; }///Komenda do minimalizacji okna
         public ICommand MaximizeCommand { get; set; }///Komenda do maksymalizacji okna
         public ICommand CloseCommand { get; set; }///Komenda do zamykania okna
@@ -59,6 +65,7 @@ namespace Abituria.viewmodel
             MaximizeCommand = new RelayCommand(() => mWindow.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => mWindow.Close());
             MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(mWindow, GetMousePosition()));
+            var resizer = new WindowResizer(mWindow);///Naprawia problem ze zmianą rozmiaru okna
         }
         private Point GetMousePosition()///Bierze aktualną pozycje kursora na ekranie
         {
