@@ -13,7 +13,7 @@ namespace Abituria
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            switch ((ApplicationPage)value)
+            switch ((ApplicationPage)value)///Znajdź odpowiednią strone
             {
                 case ApplicationPage.Login:
                     return new LoginPage();
@@ -21,9 +21,7 @@ namespace Abituria
                     Debugger.Break();
                     return null;
             }
-
         }
-
         public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();

@@ -18,6 +18,7 @@ using Abituria.matury;
 using Abituria.Properties;
 using Abituria.wzory;
 using Abituria.viewmodel;
+using PropertyChanged;
 namespace Abituria
 {
     public partial class MainWindow : Window

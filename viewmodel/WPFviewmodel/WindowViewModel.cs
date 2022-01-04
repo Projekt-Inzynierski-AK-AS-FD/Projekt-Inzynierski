@@ -16,7 +16,8 @@ namespace Abituria
         private WindowResizer mWindowResizer;///Utrzymuje odpowiedni rozmiar okna
         private int mOuterMarginSize = 10;///Margines okna pozwalający na cień
         private int mWindowRadius = 10;///Promień od krawędzi okna
-        private WindowDockPosition mDockPosition = WindowDockPosition.Undocked;///Ostatnia znana pozycja doku
+        private WindowDockPosition mDockPosition = WindowDockPosition.Undocked;
+        ///Ostatnia znana pozycja doku
         public double WindowMinimumWidth { get; set; } = 1115;///Najmniejsza szerokość jaką może mieć okno
         public double WindowMinimumHeight { get; set; } = 815;///Najmniejsza wysokość jaką może mieć okno
         public bool BeingMoved { get; set; }///Prawda jeśli okno jest obecnie przeciągane
@@ -42,6 +43,7 @@ namespace Abituria
         public CornerRadius WindowCornerRadius => new CornerRadius(WindowRadius);///Promień krawędzi okna
         public int TitleHeight { get; set; } = 42;///Wysokość paska tytułowego
         public GridLength TitleHeightGridLength => new GridLength(TitleHeight + ResizeBorder);///Wysokość paska tytułowego
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;///Obecna strona aplikacji
         public bool DimmableOverlayVisible { get; set; }
         public ICommand MinimizeCommand { get; set; }///Komenda do minimalizacji okna
         public ICommand MaximizeCommand { get; set; }///Komenda do maksymalizacji okna
