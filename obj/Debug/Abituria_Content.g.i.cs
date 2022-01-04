@@ -8,6 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w12a.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w12b.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w12c.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w12d.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w12e.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/w12f.png")]
 
 
