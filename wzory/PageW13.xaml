@@ -108,20 +108,22 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer>
                     <Grid>
-                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:k\:" />
-                        </InlineUIContainer><Run Text="przechodzi przez punkt "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:A = (2, -3) \:" />
-                        </InlineUIContainer><Run Text=" i jest nachylona do osi  "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:Ox\:" />
-                        </InlineUIContainer><Run Text="pod kątem "/>
-                            <controls:FormulaControl Formula="\: 45\text{°}\:" />(zobacz rysunek). Prosta
-                        <controls:FormulaControl Formula="\:k\:" /> ma równanie<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="y = x-5" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="y = -x-1" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="y = -x+5" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="y = x+5" /></TextBlock>
-                        <Image  Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
+                        <TextBlock FontSize="17" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                            <TextBlock FontSize="18" ><Bold>KOMBINATORYKA</Bold></TextBlock><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Wariacje z powtórzeniami</Underline><LineBreak/>
+                            Liczba sposobów, na które z <controls:FormulaControl Margin="-3" Formula="\: n \:"/> różnych elementów można utworzyć ciąg, składający się z <controls:FormulaControl Margin="-3" Formula="\: k \:"/> niekoniecznie różnych wyrazów, jest równa <controls:FormulaControl Margin="-3" Formula="\: n^k \:"/>.<LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Wariacje bez powtórzeń</Underline><LineBreak/>
+                            Liczba sposobów, na które z <controls:FormulaControl Margin="-3" Formula="\: n \:"/> różnych elementów można utworzyć ciąg, składający się z <controls:FormulaControl Margin="-6" Formula="\: k (1 \leq k \leq n) \:"/> różnych wyrazów, jest równa <LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="n \cdot (n-1) \cdot ... \cdot (n-k+1) = \frac{n!}{(n-k)!}"/><LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Permutacje</Underline><LineBreak/>
+                            Liczba sposobów, na które <controls:FormulaControl Margin="-6" Formula="\: n(n \geq 1) \:"/> różnych elementów można ustawić w ciąg, jest równa <controls:FormulaControl Margin="-3" Formula="\: n! \:"/>.<LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Kombinacje</Underline><LineBreak/>
+                            Liczba sposobów, na które spośród <controls:FormulaControl Margin="-3" Formula="\: n \:"/> różnych elementów można wybrać <controls:FormulaControl Margin="-6" Formula="\: k (0 \leq k \leq n) \:"/> elementów, jest równa <controls:FormulaControl Margin="-13" Formula="\: \: \binom{n}{k} \: \: \:"/>.<LineBreak/><LineBreak/><LineBreak/>
+                        </TextBlock>
                     </Grid>
                 </ScrollViewer>
             </Border>
