@@ -9,7 +9,6 @@
                 <ResourceDictionary Source="styles/Fonts.xaml"/>
                 <ResourceDictionary Source="styles/Buttons.xaml"/>
                 <ResourceDictionary Source="styles/Texts.xaml"/>
-                <ResourceDictionary Source="styles/Windows.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -95,7 +95,6 @@
             GlassFrameThickness="0"
             />
     </WindowChrome.WindowChrome>
-    <Grid Background="{StaticResource BackgroundLightBrush}">
-        <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
+    <Grid Background="{StaticResource ForegroundLightBrush}">
     </Grid>
 </Window>

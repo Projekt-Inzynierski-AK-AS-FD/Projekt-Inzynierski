@@ -113,7 +113,8 @@
     <Compile Include="datamodels\ApplicationPage.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="HintsClass.cs" />
-    <Compile Include="matury\PageMaturaPoprawkowa2021.xaml.cs">
+    <Compile Include="pages\BasePage.cs" />
+    <Compile Include="pages\finalexams\PageMaturaPoprawkowa2021.xaml.cs">
       <DependentUpon>PageMaturaPoprawkowa2021.xaml</DependentUpon>
     </Compile>
     <Page Include="CalcQuadraticFunc.xaml">
@@ -149,179 +150,179 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="dzialy\PageDzial1.xaml">
+    <Page Include="pages\chapters\PageDzial1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="dzialy\PageDzial2.xaml">
+    <Page Include="pages\chapters\PageDzial2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="dzialy\PageDzial3.xaml">
+    <Page Include="pages\chapters\PageDzial3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="dzialy\PageDzialyWybor.xaml">
+    <Page Include="pages\chapters\PageDzialyWybor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\PageMatura2019.xaml">
+    <Page Include="pages\finalexams\PageMatura2019.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\PageMatura2020.xaml">
+    <Page Include="pages\finalexams\PageMatura2020.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\PageMatura2021.xaml">
+    <Page Include="pages\finalexams\PageMatura2021.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\PageMaturaLata.xaml">
+    <Page Include="pages\finalexams\PageMaturaLata.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\PageMaturaPoprawkowa2021.xaml">
+    <Page Include="pages\finalexams\PageMaturaPoprawkowa2021.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z1.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z10.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z10.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z11.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z11.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z12.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z12.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z13.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z13.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z14.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z14.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z15.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z15.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z16.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z16.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z17.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z17.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z18.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z18.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z19.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z19.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z2.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z20.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z20.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z21.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z21.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z22.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z22.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z23.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z23.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z24.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z24.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z25.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z25.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z26.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z26.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z27.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z27.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z28.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z28.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z29.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z29.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z3.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z3.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z30.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z30.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z31.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z31.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z32.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z32.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z33.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z33.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z34.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z34.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z35.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z35.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z4.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z5.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z5.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z6.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z7.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z7.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z8.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z8.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="matury\mp21\PageMP21Z9.xaml">
+    <Page Include="pages\finalexams\mp21\PageMP21Z9.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -329,7 +330,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="styles\Windows.xaml">
+    <Page Include="styles\Scroll.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -349,215 +350,215 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW1.xaml">
+    <Page Include="pages\equations\PageW1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW10.xaml">
+    <Page Include="pages\equations\PageW10.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW11.xaml">
+    <Page Include="pages\equations\PageW11.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW12.xaml">
+    <Page Include="pages\equations\PageW12.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW13.xaml">
+    <Page Include="pages\equations\PageW13.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW14.xaml">
+    <Page Include="pages\equations\PageW14.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW15.xaml">
+    <Page Include="pages\equations\PageW15.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW16.xaml">
+    <Page Include="pages\equations\PageW16.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW17.xaml">
+    <Page Include="pages\equations\PageW17.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW18.xaml">
+    <Page Include="pages\equations\PageW18.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW2.xaml">
+    <Page Include="pages\equations\PageW2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW3.xaml">
+    <Page Include="pages\equations\PageW3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW4.xaml">
+    <Page Include="pages\equations\PageW4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW5.xaml">
+    <Page Include="pages\equations\PageW5.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW6.xaml">
+    <Page Include="pages\equations\PageW6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW7.xaml">
+    <Page Include="pages\equations\PageW7.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW8.xaml">
+    <Page Include="pages\equations\PageW8.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageW9.xaml">
+    <Page Include="pages\equations\PageW9.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="wzory\PageWzory.xaml">
+    <Page Include="pages\equations\PageWzory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="zadania\PageZadania.xaml">
+    <Page Include="pages\excercises\PageZadania.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dzialy\PageDzial1.xaml.cs">
+    <Compile Include="pages\chapters\PageDzial1.xaml.cs">
       <DependentUpon>PageDzial1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="dzialy\PageDzial2.xaml.cs">
+    <Compile Include="pages\chapters\PageDzial2.xaml.cs">
       <DependentUpon>PageDzial2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="dzialy\PageDzial3.xaml.cs">
+    <Compile Include="pages\chapters\PageDzial3.xaml.cs">
       <DependentUpon>PageDzial3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="dzialy\PageDzialyWybor.xaml.cs">
+    <Compile Include="pages\chapters\PageDzialyWybor.xaml.cs">
       <DependentUpon>PageDzialyWybor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\PageMatura2019.xaml.cs">
+    <Compile Include="pages\finalexams\PageMatura2019.xaml.cs">
       <DependentUpon>PageMatura2019.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\PageMatura2020.xaml.cs">
+    <Compile Include="pages\finalexams\PageMatura2020.xaml.cs">
       <DependentUpon>PageMatura2020.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\PageMatura2021.xaml.cs">
+    <Compile Include="pages\finalexams\PageMatura2021.xaml.cs">
       <DependentUpon>PageMatura2021.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\PageMaturaLata.xaml.cs">
+    <Compile Include="pages\finalexams\PageMaturaLata.xaml.cs">
       <DependentUpon>PageMaturaLata.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z1.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z1.xaml.cs">
       <DependentUpon>PageMP21Z1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z10.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z10.xaml.cs">
       <DependentUpon>PageMP21Z10.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z11.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z11.xaml.cs">
       <DependentUpon>PageMP21Z11.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z12.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z12.xaml.cs">
       <DependentUpon>PageMP21Z12.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z13.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z13.xaml.cs">
       <DependentUpon>PageMP21Z13.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z14.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z14.xaml.cs">
       <DependentUpon>PageMP21Z14.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z15.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z15.xaml.cs">
       <DependentUpon>PageMP21Z15.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z16.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z16.xaml.cs">
       <DependentUpon>PageMP21Z16.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z17.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z17.xaml.cs">
       <DependentUpon>PageMP21Z17.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z18.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z18.xaml.cs">
       <DependentUpon>PageMP21Z18.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z19.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z19.xaml.cs">
       <DependentUpon>PageMP21Z19.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z2.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z2.xaml.cs">
       <DependentUpon>PageMP21Z2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z20.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z20.xaml.cs">
       <DependentUpon>PageMP21Z20.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z21.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z21.xaml.cs">
       <DependentUpon>PageMP21Z21.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z22.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z22.xaml.cs">
       <DependentUpon>PageMP21Z22.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z23.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z23.xaml.cs">
       <DependentUpon>PageMP21Z23.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z24.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z24.xaml.cs">
       <DependentUpon>PageMP21Z24.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z25.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z25.xaml.cs">
       <DependentUpon>PageMP21Z25.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z26.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z26.xaml.cs">
       <DependentUpon>PageMP21Z26.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z27.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z27.xaml.cs">
       <DependentUpon>PageMP21Z27.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z28.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z28.xaml.cs">
       <DependentUpon>PageMP21Z28.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z29.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z29.xaml.cs">
       <DependentUpon>PageMP21Z29.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z3.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z3.xaml.cs">
       <DependentUpon>PageMP21Z3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z30.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z30.xaml.cs">
       <DependentUpon>PageMP21Z30.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z31.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z31.xaml.cs">
       <DependentUpon>PageMP21Z31.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z32.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z32.xaml.cs">
       <DependentUpon>PageMP21Z32.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z33.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z33.xaml.cs">
       <DependentUpon>PageMP21Z33.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z34.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z34.xaml.cs">
       <DependentUpon>PageMP21Z34.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z35.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z35.xaml.cs">
       <DependentUpon>PageMP21Z35.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z4.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z4.xaml.cs">
       <DependentUpon>PageMP21Z4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z5.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z5.xaml.cs">
       <DependentUpon>PageMP21Z5.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z6.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z6.xaml.cs">
       <DependentUpon>PageMP21Z6.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z7.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z7.xaml.cs">
       <DependentUpon>PageMP21Z7.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z8.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z8.xaml.cs">
       <DependentUpon>PageMP21Z8.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matury\mp21\PageMP21Z9.xaml.cs">
+    <Compile Include="pages\finalexams\mp21\PageMP21Z9.xaml.cs">
       <DependentUpon>PageMP21Z9.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\LoginPage.xaml.cs">
@@ -565,68 +566,68 @@
     </Compile>
     <Compile Include="valueconverters\ApplicationPageValueConverter.cs" />
     <Compile Include="valueconverters\BaseValueConverter.cs" />
-    <Compile Include="viewmodel\WindowResizer.cs" />
-    <Compile Include="viewmodel\WindowViewModel.cs" />
+    <Compile Include="window\WindowResizer.cs" />
+    <Compile Include="viewmodel\WPFviewmodel\WindowViewModel.cs" />
     <Compile Include="viewmodel\base\RelayCommand.cs" />
     <Compile Include="viewmodel\base\BaseViewModel.cs" />
-    <Compile Include="wzory\PageW1.xaml.cs">
+    <Compile Include="pages\equations\PageW1.xaml.cs">
       <DependentUpon>PageW1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW10.xaml.cs">
+    <Compile Include="pages\equations\PageW10.xaml.cs">
       <DependentUpon>PageW10.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW11.xaml.cs">
+    <Compile Include="pages\equations\PageW11.xaml.cs">
       <DependentUpon>PageW11.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW12.xaml.cs">
+    <Compile Include="pages\equations\PageW12.xaml.cs">
       <DependentUpon>PageW12.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW13.xaml.cs">
+    <Compile Include="pages\equations\PageW13.xaml.cs">
       <DependentUpon>PageW13.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW14.xaml.cs">
+    <Compile Include="pages\equations\PageW14.xaml.cs">
       <DependentUpon>PageW14.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW15.xaml.cs">
+    <Compile Include="pages\equations\PageW15.xaml.cs">
       <DependentUpon>PageW15.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW16.xaml.cs">
+    <Compile Include="pages\equations\PageW16.xaml.cs">
       <DependentUpon>PageW16.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW17.xaml.cs">
+    <Compile Include="pages\equations\PageW17.xaml.cs">
       <DependentUpon>PageW17.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW18.xaml.cs">
+    <Compile Include="pages\equations\PageW18.xaml.cs">
       <DependentUpon>PageW18.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW2.xaml.cs">
+    <Compile Include="pages\equations\PageW2.xaml.cs">
       <DependentUpon>PageW2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW3.xaml.cs">
+    <Compile Include="pages\equations\PageW3.xaml.cs">
       <DependentUpon>PageW3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW4.xaml.cs">
+    <Compile Include="pages\equations\PageW4.xaml.cs">
       <DependentUpon>PageW4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW5.xaml.cs">
+    <Compile Include="pages\equations\PageW5.xaml.cs">
       <DependentUpon>PageW5.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW6.xaml.cs">
+    <Compile Include="pages\equations\PageW6.xaml.cs">
       <DependentUpon>PageW6.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW7.xaml.cs">
+    <Compile Include="pages\equations\PageW7.xaml.cs">
       <DependentUpon>PageW7.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW8.xaml.cs">
+    <Compile Include="pages\equations\PageW8.xaml.cs">
       <DependentUpon>PageW8.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageW9.xaml.cs">
+    <Compile Include="pages\equations\PageW9.xaml.cs">
       <DependentUpon>PageW9.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wzory\PageWzory.xaml.cs">
+    <Compile Include="pages\equations\PageWzory.xaml.cs">
       <DependentUpon>PageWzory.xaml</DependentUpon>
     </Compile>
-    <Compile Include="zadania\PageZadania.xaml.cs">
+    <Compile Include="pages\excercises\PageZadania.xaml.cs">
       <DependentUpon>PageZadania.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -723,7 +724,8 @@
     <Resource Include="img\w9b.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="matury\m19\" />
+    <Folder Include="pages\finalexams\m19\" />
+    <Folder Include="viewmodel\application\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\w10a.png" />

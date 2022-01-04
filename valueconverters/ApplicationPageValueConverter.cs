@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -14,7 +13,7 @@ namespace Abituria
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            switch ((ApplicationPage)value)///Znajdź odpowiednią strone
+            switch ((ApplicationPage)value)
             {
                 case ApplicationPage.Login:
                     return new LoginPage();
@@ -22,6 +21,7 @@ namespace Abituria
                     Debugger.Break();
                     return null;
             }
+
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
