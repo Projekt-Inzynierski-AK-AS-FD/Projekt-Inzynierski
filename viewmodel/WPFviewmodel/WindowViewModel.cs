@@ -23,7 +23,7 @@ namespace Abituria
         public bool Borderless => (mWindow.WindowState == WindowState.Maximized || mDockPosition != WindowDockPosition.Undocked);///Prawda jeśli okno powinno być bez ramki bo jest zmaksymalizowane albo zadokowane
         public int ResizeBorder => mWindow.WindowState == WindowState.Maximized ? 0 : 4;///Rozmiar granicy zmiany rozmiaru wokół okna
         public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }///Rozmiar obramówki okna do zewnętrznego marginesu
-        public Thickness InnerContentPadding { get; set; } = new Thickness(0);///Wypełnienie wewnętrznej zawartoścu okna
+        public Thickness InnerContentPadding { get { return new Thickness(ResizeBorder); } }///Wypełnienie wewnętrznej zawartoścu okna
         public int OuterMarginSize///Margines wokół okna pozwalający na cień
         {
             get

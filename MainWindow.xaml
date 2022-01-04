@@ -77,7 +77,8 @@
                                             </LinearGradientBrush>
                                         </Border.Background>
                                     </Border>
-                                    <Border Grid.Row="2" Padding="{Binding InnerContentPadding}"><!--Cień belki-->
+                                    <Border Grid.Row="2" Padding="{Binding InnerContentPadding}"><!--Zawartość strony-->
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
                                     </Border>
                                 </Grid>
                             </Grid>
@@ -96,5 +97,6 @@
             />
     </WindowChrome.WindowChrome>
     <Grid Background="{StaticResource ForegroundLightBrush}">
+        <Button Content="ELO"/>
     </Grid>
 </Window>
