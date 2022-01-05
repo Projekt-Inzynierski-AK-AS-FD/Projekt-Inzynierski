@@ -108,20 +108,43 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer>
                     <Grid>
-                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:k\:" />
-                        </InlineUIContainer><Run Text="przechodzi przez punkt "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:A = (2, -3) \:" />
-                        </InlineUIContainer><Run Text=" i jest nachylona do osi  "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:Ox\:" />
-                        </InlineUIContainer><Run Text="pod kątem "/>
-                            <controls:FormulaControl Formula="\: 45\text{°}\:" />(zobacz rysunek). Prosta
-                        <controls:FormulaControl Formula="\:k\:" /> ma równanie<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="y = x-5" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="y = -x-1" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="y = -x+5" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="y = x+5" /></TextBlock>
-                        <Image  Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
+                        <TextBlock FontSize="17" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                            <TextBlock FontSize="18" ><Bold>RACHUNEK PRAWDOPODOBIEŃSTWA</Bold></TextBlock><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Własności prawdopodobieństwa</Underline><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,30,0" Formula="0 \leq P(A) \leq 1"/>
+                            <TextBlock FontSize="18" Margin="-7">dla każdego zdarzenia</TextBlock><controls:FormulaControl Margin="15,-20,0,0" Formula="A \subset \Omega"/><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,50,0" Formula="P( \Omega ) = 1"/><controls:FormulaControl Margin="15,-20,0,0" Formula="\Omega \: \:"/>
+                            <TextBlock FontSize="18" Margin="-7"> - zdarzenie pewne</TextBlock><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,50,0" Formula="P( \emptyset ) = 0"/><controls:FormulaControl Margin="20,-20,0,0" Formula="\emptyset \: \:"/>
+                            <TextBlock FontSize="18" Margin="-7"> - zdarzenie niemożliwe (pusty podzbiór <controls:FormulaControl Margin="0,0,0,-3" Formula="\Omega"/> )</TextBlock><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,30,0" Formula="P(A) \leq P(B), \: gdy \: A \subset B \subset \Omega"/><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,5,0" Formula="P(A') = 1 - P(A),"/>
+                            <TextBlock FontSize="18" Margin="-7">gdzie<controls:FormulaControl Margin="5,0,0,-1" Formula="A'"/> oznacza zdarzenie przeciwne do zdarzenia <controls:FormulaControl Margin="5,0,0,-3" Formula="A"/></TextBlock><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,5,0" Formula="P(A \cup B) = P(A) + P(B) - P(A \cap B),"/>
+                            <TextBlock FontSize="18" Margin="-7"> dla dowolnych zdarzeń <controls:FormulaControl Margin="5,0,0,-3" Formula="A, B \subset \Omega"/></TextBlock><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,5,0" Formula="P(A \cup B) \leq P(A) + P(B),"/>
+                            <TextBlock FontSize="18" Margin="-7"> dla dowolnych zdarzeń <controls:FormulaControl Margin="5,0,0,-3" Formula="A, B \subset \Omega"/></TextBlock><LineBreak/>
+                            <LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Twierdzenie: Klasyczna definicja prawdopodobieństwa</Underline><LineBreak/>
+                            Niech <controls:FormulaControl Margin="-3" Formula="\: \Omega \:"/> będzie skończonym zbiorem wszystkich zdarzeń elementarnych. Jeżeli wszystkie zdarzenia jednoelementowe są jednakowo prawdopodobne, to prawdopodobieństwo zdarzenia <controls:FormulaControl Margin="-3" Formula="\: A \subset \Omega \:"/> jest równe<LineBreak/>
+                            <controls:FormulaControl Margin="50,15,0,15" Formula="P(A) = \frac{|A|}{| \Omega |}"/><LineBreak/>
+                            gdzie <controls:FormulaControl Margin="-7" Formula="\: |A| \:"/> oznacza liczbę elementów zbioru <controls:FormulaControl Margin="-3" Formula="\: A \:"/>, zaś <controls:FormulaControl Margin="-7" Formula="\: | \Omega | \:"/> – liczbę elementów zbioru <controls:FormulaControl Margin="-3" Formula="\: \Omega \:"/>.<LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Prawdopodobieństwo warunkowe</Underline><LineBreak/>
+                            Niech <controls:FormulaControl Margin="-7" Formula="\: \: A, B \: \:"/> będą zdarzeniami losowymi zawartymi w <controls:FormulaControl Margin="-3" Formula="\: \Omega \:"/> przy czym <controls:FormulaControl Margin="-8" Formula="\: \: P(B) > 0 \:"/>. 
+                            Prawdopodobieństwem warunkowym <controls:FormulaControl Margin="-6" Formula="\: P(A|B) \:"/> nazywamy liczbę<LineBreak/>
+                            <controls:FormulaControl Margin="50,15,0,15" Formula="P(A|B) = \frac{P(A \cap B)}{P(B)}"/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Twierdzenie o prawdopodobieństwie całkowitym</Underline><LineBreak/>
+                            Jeżeli zdarzenia losowe <controls:FormulaControl Margin="-6" Formula="\: \: B_1, B_2,..., B_n\: \:"/> zawarte w <controls:FormulaControl Margin="-4" Formula="\: \: \Omega \: \:"/> spełniają warunki:<LineBreak/>
+                            <controls:FormulaControl Margin="20,15,0,-6" Formula="1. \: \: \: \: \: B_1, B_2,..., B_n\: \:"/> są parami rozłączne, tzn. <controls:FormulaControl Margin="5,15,0,-8" Formula="B_i \cap B_j = \emptyset"/> dla <controls:FormulaControl Margin="5,15,0,-4" Formula="i \neq j, \: 1 \leq i \leq n, \: 1 \leq j \leq n,"/><LineBreak/>
+                            <controls:FormulaControl Margin="20,15,0,-6" Formula="2. \: \: \: \: \: B_1 \cup B_2 \cup ... \cup B_n = \Omega ,"/><LineBreak/>
+                            <controls:FormulaControl Margin="20,15,0,-6" Formula="3. \: \: \: \: \: P(B_i) > 0 \: dla \: 1 \leq i \leq n,"/><LineBreak/><LineBreak/>
+                            to dla każdego zdarzenia losowego <controls:FormulaControl Margin="-3" Formula="\: A \:"/> zawartego w <controls:FormulaControl Margin="-3" Formula="\: \Omega \:"/> zachodzi równość<LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="P(A) = P(A|B_1) \cdot P(B_1) + P(A|B_2) \cdot P(B_2) + ... + P(A|B_n) \cdot P(B_n)"/>
+                        </TextBlock>
                     </Grid>
                 </ScrollViewer>
             </Border>

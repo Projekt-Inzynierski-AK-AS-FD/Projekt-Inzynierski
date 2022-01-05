@@ -795,6 +795,13 @@
     <Resource Include="img\w12e.png" />
     <Resource Include="img\w12f.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\w17a.png" />
+    <Resource Include="img\w18a.png" />
+    <Resource Include="img\w18b.png" />
+    <Resource Include="img\w18c.png" />
+    <Resource Include="img\w18d.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Fody.1.29.2\build\dotnet\Fody.targets" Condition="Exists('packages\Fody.1.29.2\build\dotnet\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

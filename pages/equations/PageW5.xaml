@@ -108,6 +108,8 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer>
                     <Grid>
+                        <TextBlock FontSize="15" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        <TextBlock FontSize="17" Margin="10"><Bold>WZÓR DWUMIANOWY NEWTONA</Bold></TextBlock><LineBreak/>
                         <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Dla dowolnej liczby całkowitej dodatniej "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:n\:" />
                         </InlineUIContainer><Run Text="oraz dla dowolnych liczb"/><InlineUIContainer>
@@ -116,6 +118,7 @@
                             <controls:FormulaControl Formula="\:b\:" />
                         </InlineUIContainer><Run Text="mamy:"/><LineBreak/>
                         <controls:FormulaControl Formula="(a+b)^n=\binom{n}{0}=a^n+\binom{n}{1}a^{n-1}b+...+\binom{n}{k}a^{n-k}b^k+...+\binom{n}{n-1}ab^{n-1}+\binom{n}{n}b^n" /></TextBlock>
+                        </TextBlock>
                     </Grid>
                 </ScrollViewer>
             </Border>

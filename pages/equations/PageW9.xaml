@@ -54,7 +54,7 @@
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <Grid>
                         <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
-                            <TextBlock FontSize="17" ><Bold>GEOMETRIA ANALITYCZNA</Bold></TextBlock><LineBreak/>
+                            <TextBlock FontSize="17" ><Bold>GEOMETRIA ANALITYCZNA</Bold></TextBlock><LineBreak/><LineBreak/>
                             <controls:FormulaControl Formula="\cdot" />
                             <Run/><Underline>Odcinek</Underline><LineBreak/><InlineUIContainer>
                             </InlineUIContainer><Run Text="Długość odcinka o końcach w punktach"/><LineBreak/><InlineUIContainer>

@@ -108,6 +108,8 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer>
                     <Grid>
+                        <TextBlock FontSize="15" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        <TextBlock FontSize="17" Margin="10"><Bold>CIĄGI</Bold></TextBlock><LineBreak/>
                         <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
                         <controls:FormulaControl Formula="\:\cdot\:" />
                         <Run Text="Ciąg arytmetyczny"/><LineBreak/><InlineUIContainer>
@@ -142,6 +144,7 @@
                         <controls:FormulaControl Formula="\:p\%" /> w skali rocznej i kapitalizacja odsetek następuje po upływie każdego roku trwania lokaty, to kapitał końcowy
                         <controls:FormulaControl Formula="\:K_n" /> wyraża się wzorem:<LineBreak/>
                         <controls:FormulaControl Formula="\:K_n=K\cdot(1+\frac{p}{100})^n" />
+                        </TextBlock>
                         </TextBlock>
                     </Grid>
                 </ScrollViewer>

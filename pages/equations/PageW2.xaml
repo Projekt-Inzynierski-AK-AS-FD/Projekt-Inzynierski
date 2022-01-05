@@ -108,6 +108,8 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer>
                     <Grid>
+                        <TextBlock FontSize="15" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        <TextBlock FontSize="17" Margin="10"><Bold>POTĘGI I PIERWIASTKI</Bold></TextBlock><LineBreak/>
                         <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Niech "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:n\:" />
                         </InlineUIContainer><Run Text=" będzie liczbą całkowitą dodatnią. Dla dowolnej liczby"/><InlineUIContainer>
@@ -151,6 +153,7 @@
                         <controls:FormulaControl Formula="\:s\:" />są liczbami całkowitymi, to powyższe wzory obowiązują dla wszystkich liczb
                         <controls:FormulaControl Formula="\:a\neq0\:"/> i
                         <controls:FormulaControl Formula="\:b\neq0\:"/>.<LineBreak/>
+                        </TextBlock>
                         </TextBlock>
                     </Grid>
                 </ScrollViewer>
