@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media;
@@ -20,7 +21,8 @@ namespace Abituria.viewmodel
     {
         private Window mWindow;///Okno do zmieniania rozmiaru
         private Rect mScreenSize = new Rect();///Ostatni obliczony rozmiar ekranu
-        private int mEdgeTolerance = 1;///Jak blisko krawędzi ma być wykryte okno, tak jak na krawędzi ekranu
+        private int mEdgeTolerance = 2;///Jak blisko krawędzi ma być wykryte okno, tak jak na krawędzi ekranu
+        private Matrix mTransformToDevice;///Macierz transformacji używana do konwersji rozmiarów WPF na piksele
         private DpiScale? mMonitorDpi;///Macierz transformacji używana do konwersji rozmiarów WPF na piksele
         private IntPtr mLastScreen;///Ostatni ekran na którym było okno
         private WindowDockPosition mLastDock = WindowDockPosition.Undocked;///Ostatnia znana pozycja doku
@@ -43,9 +45,18 @@ namespace Abituria.viewmodel
         public WindowResizer(Window window)///Standardowy konstruktor z parametrem okna do poprawnej maksymalizacji
         {
             mWindow = window;
+            GetTransform();
             mWindow.SourceInitialized += Window_SourceInitialized; ///Nasłuchuje na inicjalizacje źródła
             mWindow.SizeChanged += Window_SizeChanged;///Do dokowanmia
             mWindow.LocationChanged += Window_LocationChanged;
+        }
+        private void GetTransform()
+        {
+            var source = PresentationSource.FromVisual(mWindow);///Weź źródło
+            mTransformToDevice = default(Matrix);///Resetuje transformacje do domyślnej
+            if (source == null)///Jeśli nie można dostać źródła ignoruje
+                return;
+            mTransformToDevice = source.CompositionTarget.TransformToDevice;///Inaczej weź nowy obiekt do transformacji
         }
         private void Window_SourceInitialized(object sender, System.EventArgs e)///Inicjalizuje i zaczepia okno
         {
@@ -63,8 +74,9 @@ namespace Abituria.viewmodel
         {
             WmGetMinMaxInfo(IntPtr.Zero, IntPtr.Zero);///Aktualna informacja o monitorze            
             mMonitorDpi = VisualTreeHelper.GetDpi(mWindow);///Transformacja z obecnej pozycji            
-            if (mMonitorDpi == null)///Nie można obliczyć rozmiaru dopóki skaluje
+            if (mMonitorDpi == null || mTransformToDevice == default(Matrix))///Nie można obliczyć rozmiaru dopóki skaluje
                 return;
+            var size = e.NewSize;///Weź rozmiar WPFa
             var top = mWindow.Top;///Prostokąt okna
             var left = mWindow.Left;
             var bottom = top + mWindow.Height;
