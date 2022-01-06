@@ -108,6 +108,8 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer>
                     <Grid>
+                        <TextBlock FontSize="15" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        <TextBlock FontSize="17" Margin="10"><Bold>LOGARYTMY</Bold></TextBlock><LineBreak/>
                         <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Logarytmem "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:\log_ac\:" />
                         </InlineUIContainer><Run Text=" dodatniej liczby"/><InlineUIContainer>
@@ -137,6 +139,7 @@
                         <controls:FormulaControl Formula="\:\log_{10}x"/>można też zapisać jako
                         <controls:FormulaControl Formula="\:\log{x}"/> lub
                         <controls:FormulaControl Formula="\:\lg{x}"/>.<!--dalej nie widze-->
+                        </TextBlock>
                         </TextBlock>
                     </Grid>
                 </ScrollViewer>

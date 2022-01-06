@@ -108,6 +108,8 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer>
                     <Grid>
+                        <TextBlock FontSize="15" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        <TextBlock FontSize="17" Margin="10"><Bold>FUNKCJA KWADRATOWA</Bold></TextBlock><LineBreak/>
                         <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Postać ogólna funkcji kwadratowej: "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:f(x)=ax^2+bx+c\:" />
                         </InlineUIContainer><Run Text=","/><InlineUIContainer>
@@ -140,6 +142,7 @@
                         <controls:FormulaControl Formula="\:\Delta\geq0" />, to<LineBreak/>
                         <controls:FormulaControl Formula="\:x_1+x_1=\frac{-b}{a}" /><LineBreak/>
                         <controls:FormulaControl Formula="\:x_1\cdot{x_1}=\frac{c}{a}" />
+                        </TextBlock>
                         </TextBlock>
                     </Grid>
                 </ScrollViewer>

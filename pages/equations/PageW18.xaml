@@ -108,20 +108,17 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer>
                     <Grid>
-                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:k\:" />
-                        </InlineUIContainer><Run Text="przechodzi przez punkt "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:A = (2, -3) \:" />
-                        </InlineUIContainer><Run Text=" i jest nachylona do osi  "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:Ox\:" />
-                        </InlineUIContainer><Run Text="pod kątem "/>
-                            <controls:FormulaControl Formula="\: 45\text{°}\:" />(zobacz rysunek). Prosta
-                        <controls:FormulaControl Formula="\:k\:" /> ma równanie<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="y = x-5" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="y = -x-1" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="y = -x+5" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="y = x+5" /></TextBlock>
-                        <Image  Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
+                        <StackPanel>
+                            <TextBlock Margin="10" FontSize="18" ><Bold>TABLICA WARTOŚCI FUNKCJI TRYGONOMETRYCZNYCH</Bold></TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Width="360"  Margin="10" Source="/img/w18a.png"/>
+                                <Image Width="360"  Margin="10" Source="/img/w18c.png"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Width="360"  Margin="10" Source="/img/w18b.png"/>
+                                <Image Width="360"  Margin="10,-21,0,0" Source="/img/w18d.png"/>
+                            </StackPanel>
+                        </StackPanel>
                     </Grid>
                 </ScrollViewer>
             </Border>

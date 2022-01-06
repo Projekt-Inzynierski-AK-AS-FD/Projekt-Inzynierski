@@ -108,20 +108,31 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer>
                     <Grid>
-                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:k\:" />
-                        </InlineUIContainer><Run Text="przechodzi przez punkt "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:A = (2, -3) \:" />
-                        </InlineUIContainer><Run Text=" i jest nachylona do osi  "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:Ox\:" />
-                        </InlineUIContainer><Run Text="pod kątem "/>
-                            <controls:FormulaControl Formula="\: 45\text{°}\:" />(zobacz rysunek). Prosta
-                        <controls:FormulaControl Formula="\:k\:" /> ma równanie<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="y = x-5" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="y = -x-1" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="y = -x+5" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="y = x+5" /></TextBlock>
-                        <Image  Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
+                        <TextBlock FontSize="17" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                            <TextBlock FontSize="18" ><Bold>POCHODNA FUNKCJI</Bold></TextBlock><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Pochodna sumy, różnicy, iloczynu i ilorazu funkcji</Underline><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,3,-7" Formula="[ c \cdot f(x) ]' = c \cdot f'(x)"/> dla
+                            <controls:FormulaControl Margin="3,10,0,-3" Formula=" c \in R"/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Margin="10,0,0,0" Formula="[ f(x)+g(x) ]' = f'(x)+g'(x)"/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Margin="10,0,0,-7" Formula="[ f(x)-g(x) ]' = f'(x)-g'(x)"/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,0,-20" Formula="[ f(x) \cdot g(x) ]' = f'(x) \cdot g(x)+f(x) \cdot g'(x)"/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Margin="10,20,8,-23" Formula="\left\[\frac{f(x)}{g(x)}\right\]' = \frac{f'(x) \cdot g(x)-f(x) \cdot g'(x)}{[ g(x) ]^2}"/>
+                            gdy <controls:FormulaControl Margin="10,10,3,-7" Formula="g(x) \neq 0"/><LineBreak/><LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Pochodne niektórych funkcji</Underline><LineBreak/>
+                            Niech <controls:FormulaControl Margin="0,10,3,-6" Formula="a, b, c"/> będą dowolnymi liczbami rzeczywistymi, <controls:FormulaControl Margin="0,10,0,-2" Formula="n"/> dowolną liczbą całkowitą.<LineBreak/>
+                            <Image Width="550"  Margin="10" Source="/img/w17a.png"/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Równanie stycznej</Underline><LineBreak/><LineBreak/>
+                            Jeżeli funkcja <controls:FormulaControl Margin="-7" Formula="\: \: f \: \:"/> ma pochodną w punkcie <controls:FormulaControl Margin="-7" Formula="\: \: x_0 \: \:"/>, 
+                            to równanie stycznej do wykresu funkcji <controls:FormulaControl Margin="-7" Formula="\: \: f \: \:"/> w punkcie <controls:FormulaControl Margin="-7" Formula="\: \: (x_0, f(x_0)) \: \:"/> dane jest wzorem<LineBreak/>
+                            <controls:FormulaControl Margin="20,10,0,10" Formula="y = ax+b,"/><LineBreak/>
+                            gdzie współczynnik kierunkowy stycznej jest równy wartości pochodnej funkcji <controls:FormulaControl Margin="-7" Formula="\: \: f \: \:"/> w punkcie 
+                            <controls:FormulaControl Margin="-7" Formula="\: \: x_0, \: \:"/> to znaczy <controls:FormulaControl Margin="-7" Formula="\: \: a = f'(x_0), \: \:"/> natomiast
+                            <controls:FormulaControl Margin="-7" Formula="\: \: b = f(x_0)-f'(x_0) \cdot x_0 \: \:"/>.<LineBreak/>Równanie stycznej możemy zapisać w postaci<LineBreak/>
+                            <controls:FormulaControl Margin="10,10,0,0" Formula="\: \: y = f'(x_0) \cdot (x-x_0)+f(x_0) \: \:"/>
+                        </TextBlock>
                     </Grid>
                 </ScrollViewer>
             </Border>

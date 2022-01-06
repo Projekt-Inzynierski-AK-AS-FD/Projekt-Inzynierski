@@ -108,20 +108,33 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer>
                     <Grid>
-                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:k\:" />
-                        </InlineUIContainer><Run Text="przechodzi przez punkt "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:A = (2, -3) \:" />
-                        </InlineUIContainer><Run Text=" i jest nachylona do osi  "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:Ox\:" />
-                        </InlineUIContainer><Run Text="pod kątem "/>
-                            <controls:FormulaControl Formula="\: 45\text{°}\:" />(zobacz rysunek). Prosta
-                        <controls:FormulaControl Formula="\:k\:" /> ma równanie<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="y = x-5" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="y = -x-1" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="y = -x+5" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="y = x+5" /></TextBlock>
-                        <Image  Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />
+                        <TextBlock FontSize="17" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                            <TextBlock FontSize="18" ><Bold>PARAMETRY DANYCH STATYSTYCZNYCH</Bold></TextBlock><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Średnia arytmetyczna</Underline><LineBreak/>
+                            Średnia arytmetyczna <controls:FormulaControl Margin="-3" Formula="\: n \:"/> liczb <controls:FormulaControl Margin="-3" Formula="\: a_1, a_2,..., a_n \:"/> jest równa:<LineBreak/>
+                            <controls:FormulaControl Margin="10,10,30,0" Formula="\bar{a} = \frac{a_1 + a_2 + ... + a_n}{n}"/><LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Średnia ważona</Underline><LineBreak/>
+                            Średnia ważona <controls:FormulaControl Margin="-3" Formula="\: n \:"/> liczb <controls:FormulaControl Margin="-5" Formula="\: a_1, a_2,..., a_n, \:"/> którym przypisano dodatnie wagi – odpowiednio: <controls:FormulaControl Margin="-5" Formula="\: w_1, w_2,..., w_n \:"/> jest równa:<LineBreak/>
+                            <controls:FormulaControl Margin="10,10,30,0" Formula="\frac{w_1 \cdot a_1 + w_2 \cdot a_2 + ... + w_n \cdot a_n}{w_1 + w_2 + ... +w_n}"/><LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Średnia geometryczna</Underline><LineBreak/>
+                            Średnia geometryczna <controls:FormulaControl Margin="-3" Formula="\: n \:"/> nieujemnych liczb <controls:FormulaControl Margin="-5" Formula="\: a_1, a_2,..., a_n, \:"/> jest równa:<LineBreak/>
+                            <controls:FormulaControl Margin="10,10,30,0" Formula="\sqrt[n]{a_1 \cdot a_2 \cdot ... \cdot a_n}"/><LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Mediana</Underline><LineBreak/>
+                            Medianą uporządkowanego w kolejności niemalejącej zbioru <controls:FormulaControl Margin="-3" Formula="\: n \:"/> danych liczbowych <controls:FormulaControl Margin="-5" Formula="\: \: a_1 \leq a_2 \leq a_3 \leq ... \leq a_n \: \:"/> jest:<LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="-"/>
+                            dla <controls:FormulaControl Margin="-3" Formula="\: n \:"/> nieparzystych: <controls:FormulaControl Margin="5,0,0,-10" Formula="\: a_{ \frac{n+1}{2} } \:"/> (środkowy wyraz ciągu)<LineBreak/>
+                            <controls:FormulaControl Formula="-"/>
+                            dla <controls:FormulaControl Margin="-3" Formula="\: n \:"/> parzystych: <controls:FormulaControl Margin="5,0,0,-15" Formula="\: \frac{1}{2}( a_{ \frac{n}{2} } + a_{ \frac{n}{2} +1 }) \:"/> (średnia arytmetyczna środkowych wyrazów ciągu)<LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Wariancja i odchylenie standardowe</Underline><LineBreak/>
+                            Wariancją <controls:FormulaControl Margin="-3" Formula="\: n \:"/> danych liczbowych <controls:FormulaControl Margin="-5" Formula="\: a_1, a_2,..., a_n, \:"/> o średniej arytmetycznej <controls:FormulaControl Margin="-3" Formula="\: \bar{a} \:"/> jest liczba:<LineBreak/>
+                            <controls:FormulaControl Margin="10,10,30,0" Formula="\sigma ^2 = \frac{(a_1 - \bar{a})^2 + (a_2 - \bar{a})^2+...+(a_n - \bar{a})^2}{n} = \frac{a_1^2 + a_2^2+...+a_n^2}{n} - ( \bar{a} )^2"/><LineBreak/><LineBreak/>
+                            Odchylenie standardowe <controls:FormulaControl Margin="-3" Formula="\: \sigma \:"/> jest pierwiastkiem kwadratowym z wariancji. 
+                        </TextBlock>
                     </Grid>
                 </ScrollViewer>
             </Border>
