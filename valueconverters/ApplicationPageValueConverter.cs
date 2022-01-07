@@ -15,8 +15,11 @@ namespace Abituria
         {
             switch ((ApplicationPage)value)///Znajdź odpowiednią strone
             {
+                case ApplicationPage.Main:
+                    return new MainPage();
                 case ApplicationPage.Login:
                     return new LoginPage();
+                
                 default:
                     Debugger.Break();
                     return null;

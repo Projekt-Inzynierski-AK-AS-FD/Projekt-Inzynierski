@@ -6,9 +6,14 @@ using System.Runtime.InteropServices;
 using PropertyChanged;
 using Abituria.pages;
 using Abituria.viewmodel;
+using System.Windows.Controls;
 
 namespace Abituria
 {
+    public class MyPasswordBox
+    {
+
+    }
     [ImplementPropertyChanged]
     public class WindowViewModel : BaseViewModel///Model widoku dla niestandardowego okna
     {
@@ -43,7 +48,8 @@ namespace Abituria
         public CornerRadius WindowCornerRadius => new CornerRadius(WindowRadius);///Promień krawędzi okna
         public int TitleHeight { get; set; } = 42;///Wysokość paska tytułowego
         public GridLength TitleHeightGridLength => new GridLength(TitleHeight + ResizeBorder);///Wysokość paska tytułowego
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;///Obecna strona aplikacji
+        public ApplicationPage CurrentPage1 { get; set; } = ApplicationPage.Login;///Obecna strona aplikacji
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Main;///Główna strona aplikacji
         public bool DimmableOverlayVisible { get; set; }
         public ICommand MinimizeCommand { get; set; }///Komenda do minimalizacji okna
         public ICommand MaximizeCommand { get; set; }///Komenda do maksymalizacji okna

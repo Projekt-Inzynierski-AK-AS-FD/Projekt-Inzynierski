@@ -20,11 +20,11 @@
                             <TextBlock Text="Stwórz konto" FontSize="{StaticResource FontSizeLarge}" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource WordBlueBrush}"/><!--Nagłówek tworzenia konta-->
                             <TextBlock Text="Zachowasz swoje postępy!" FontSize="{StaticResource FontSizeRegular}" Foreground="{StaticResource ForegroundDarkBrush}"/><!--Podpis tworzenia konta-->
                             <TextBox Tag="Nazwa użytkownika"/><!--Nazwa użytkownika-->
-                            <TextBox Tag="Hasło" Margin="0 0 0 30"/><!--Hasło użytkownika-->
+                            <PasswordBox Tag="Hasło" Margin="0 0 0 30"/><!--Hasło użytkownika-->
                             <Button IsEnabled="False" Content="Dalej" HorizontalAlignment="Center"/><!--Guzik od przechodzenia dalej-->
                         </StackPanel>
                     </Border>
-                    <Button Style="{StaticResource TextButton}" Content="Mam już konto" ToolTip="Zaloguj się" HorizontalAlignment="Center"/>
+                    <Button Style="{StaticResource TextButton}" Content="Mam już konto" ToolTip="Zaloguj się" HorizontalAlignment="Center" Command="{Binding CurrentPage2}" />
                 </StackPanel>
             </ScrollViewer>
         </Grid>

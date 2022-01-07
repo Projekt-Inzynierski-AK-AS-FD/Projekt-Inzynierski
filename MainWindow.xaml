@@ -57,14 +57,11 @@
                                         </StackPanel>
                                         <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="0"><!--Tytuł belki-->
                                             <StackPanel>
-                                                <TextBlock FontFamily="{StaticResource MulishBold}">
-                                                    <Run Text="Pla" Foreground="{StaticResource WordBlueBrush}"/><Run Text="ce" Foreground="{StaticResource WordOrangeBrush}"/>
-                                                    <Run Text="Ho" Foreground="{StaticResource WordRedBrush}"/><Run Text="lder" Foreground="{StaticResource WordGreenBrush}"/>
-                                                </TextBlock>
+                                                <Image Source="/img/abituria.png"/>
                                             </StackPanel>
                                         </Viewbox>
                                         <Button ToolTip="Dasz radę!" Grid.Column="2" Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}"><!--Ikonka-->                      
-                                            <Image Source="img/icon.png"/>
+                                            <Image Source="/img/icon.png"/>
                                         </Button>
                                     </Grid>
                                     <Border Grid.Row="1" Padding="{Binding InnerContentPadding}"><!--Zawartość strony-->
@@ -83,8 +80,7 @@
             ResizeBorderThickness="{Binding ResizeBorderThickness}"
             CaptionHeight="{Binding TitleHeight}"
             CornerRadius="0"
-            GlassFrameThickness="0"
-            />
+            GlassFrameThickness="0"/>
     </WindowChrome.WindowChrome>
     <Grid Background="{StaticResource ForegroundLightBrush}">
         <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>

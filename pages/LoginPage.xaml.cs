@@ -21,6 +21,6 @@ namespace Abituria.pages
         public LoginPage()
         {
             InitializeComponent();
-        }    
+        }
     }
 }
