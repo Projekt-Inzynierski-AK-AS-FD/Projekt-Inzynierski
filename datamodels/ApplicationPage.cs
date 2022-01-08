@@ -2,8 +2,9 @@
 {
     public enum ApplicationPage///Strona aplikacji
     {
-        Main = 0,///Strona główna
-        Login = 1,///Początkowa strona logowania
-        
+        Login = 0,///Początkowa strona logowania
+        Main = 1,///Strona główna
+        Menu = 2,///Zawartość menu
+
     }
 }

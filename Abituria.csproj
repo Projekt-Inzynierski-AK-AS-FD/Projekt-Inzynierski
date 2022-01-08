@@ -435,6 +435,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="viewmodel\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="pages\chapters\PageDzial1.xaml.cs">
@@ -574,6 +578,9 @@
     </Compile>
     <Compile Include="valueconverters\ApplicationPageValueConverter.cs" />
     <Compile Include="valueconverters\BaseValueConverter.cs" />
+    <Compile Include="viewmodel\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="window\WindowResizer.cs" />
     <Compile Include="viewmodel\WPFviewmodel\WindowViewModel.cs" />
     <Compile Include="viewmodel\base\RelayCommand.cs" />
@@ -812,6 +819,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\abituria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Fody.1.29.2\build\dotnet\Fody.targets" Condition="Exists('packages\Fody.1.29.2\build\dotnet\Fody.targets')" />

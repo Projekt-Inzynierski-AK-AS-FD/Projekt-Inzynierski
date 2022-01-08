@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using Abituria.pages;
 using System.IO;
+using Abituria.viewmodel;
+
 namespace Abituria
 {
     public class ApplicationPageValueConverter : BaseValueConverter<ApplicationPageValueConverter>///Zamienia strone aplikacji na aktualną strone
@@ -15,11 +17,12 @@ namespace Abituria
         {
             switch ((ApplicationPage)value)///Znajdź odpowiednią strone
             {
-                case ApplicationPage.Main:
-                    return new MainPage();
                 case ApplicationPage.Login:
                     return new LoginPage();
-                
+                case ApplicationPage.Main:
+                    return new MainPage();
+                case ApplicationPage.Menu:
+                    return new HomeView();
                 default:
                     Debugger.Break();
                     return null;

@@ -11,7 +11,7 @@
     <Border Background="{StaticResource WordBlueBrush}">
         <Grid>
             <Grid.Background><!--Obrazek i niebieskie tło-->
-                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="/img/max.png"/>
+                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="/img/bg.png"/>
             </Grid.Background>
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"><!--Scroll z główną zawartością-->
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.TextAlignment="Center">
