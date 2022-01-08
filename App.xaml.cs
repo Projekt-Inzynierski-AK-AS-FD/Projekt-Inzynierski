@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,5 +16,18 @@ namespace Abituria
 {
     public partial class App : Application
     {
+        public static new App Current
+        {
+            get { return (App)Application.Current; }
+        }
+
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            Trace.AutoFlush = true;
+        }
+
+        private void Application_Exit(object sender, ExitEventArgs e)
+        {
+        }
     }
 }

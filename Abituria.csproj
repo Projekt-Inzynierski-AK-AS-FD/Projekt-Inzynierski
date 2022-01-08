@@ -439,6 +439,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="pages\chapters\PageDzial1.xaml.cs">
@@ -580,6 +584,9 @@
     <Compile Include="valueconverters\BaseValueConverter.cs" />
     <Compile Include="viewmodel\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Compile Include="window\WindowResizer.cs" />
     <Compile Include="viewmodel\WPFviewmodel\WindowViewModel.cs" />
