@@ -110,8 +110,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="attachedproperties\ButtonAttachedProperty .cs" />
+    <Compile Include="attachedproperties\BaseAttachedProperty.cs" />
     <Compile Include="attachedproperties\PasswordBoxProperties.cs" />
     <Compile Include="datamodels\ApplicationPage.cs" />
+    <Compile Include="expressions\ExpressionHelpers.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="HintsClass.cs" />
     <Compile Include="pages\BasePage.cs" />
@@ -326,6 +329,10 @@
     <Page Include="pages\finalexams\mp21\PageMP21Z9.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\MenuPage - Copy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="pages\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -574,14 +581,22 @@
     <Compile Include="pages\finalexams\mp21\PageMP21Z9.xaml.cs">
       <DependentUpon>PageMP21Z9.xaml</DependentUpon>
     </Compile>
+    <Compile Include="pages\MenuPage - Copy.xaml.cs">
+      <DependentUpon>MenuPage - Copy.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="security\SecureStringHelpers.cs" />
     <Compile Include="valueconverters\ApplicationPageValueConverter.cs" />
     <Compile Include="valueconverters\BaseValueConverter.cs" />
+    <Compile Include="valueconverters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="viewmodel\base\IHavePassword.cs" />
+    <Compile Include="viewmodel\base\LoginViewModel.cs" />
+    <Compile Include="viewmodel\base\RelayParametrizedCommand.cs" />
     <Compile Include="viewmodel\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>

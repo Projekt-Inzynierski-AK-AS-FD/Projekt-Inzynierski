@@ -163,13 +163,7 @@ C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\Abituria.csproj.CopyComplete
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\Abituria.exe
 C:\Users\admin\Source\Repos\Projekt-Inzynierski-AK-AS-FD\Projekt-Inzynierski\obj\Debug\Abituria.pdb
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\Abituria.exe.config
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\Abituria.exe.manifest
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\Abituria.application
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\Abituria.exe
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\Abituria.pdb
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\Microsoft.Windows.Shell.dll
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\WpfMath.dll
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csprojAssemblyReference.cache
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\finalexams\PageMatura2019.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\App.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\CalcQuadraticFunc.g.cs
@@ -243,6 +237,7 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\equations\Pag
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\equations\PageWzory.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\excercises\PageZadania.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\viewmodel\HomeView.g.cs
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Window1.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\App.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria_MarkupCompile.cache
@@ -298,7 +293,6 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\MainPage.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\LoginPage.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Scroll.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Texts.baml
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Buttons.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Colors.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Fonts.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\equations\PageW1.baml
@@ -322,6 +316,17 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\equations\Pag
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\equations\PageWzory.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\excercises\PageZadania.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\viewmodel\HomeView.baml
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Window1.baml
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.exe
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.pdb
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\Abituria.exe.config
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\Abituria.exe.manifest
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\Abituria.application
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\Abituria.exe
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\Abituria.pdb
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\WpfMath.dll
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Buttons.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.g.resources
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.Properties.Resources.resources
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csproj.GenerateResource.cache
@@ -329,8 +334,3 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csproj.Cor
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.exe.manifest
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.application
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csproj.CopyComplete
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.exe
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.pdb
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csprojAssemblyReference.cache
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Window1.g.cs
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Window1.baml

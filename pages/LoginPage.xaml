@@ -1,13 +1,14 @@
-﻿<Page x:Class="Abituria.pages.LoginPage"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Abituria.pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="1000"
-      Title="LoginPage">
-
+﻿<local:BasePage x:TypeArguments="local:LoginViewModel"
+                x:Class="Abituria.pages.LoginPage"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"    
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"     
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"      
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"      
+                xmlns:local="clr-namespace:Abituria" d:DataContext="{d:DesignInstance Type=local:LoginViewModel}"
+                mc:Ignorable="d"     
+                x:Name="Page"
+                d:DesignHeight="800" d:DesignWidth="1000"
+                Title="LoginPage">
     <Border Background="{StaticResource WordBlueBrush}">
         <Grid>
             <Grid.Background><!--Obrazek i niebieskie tło-->
@@ -17,16 +18,46 @@
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.TextAlignment="Center">
                     <Border Background="{StaticResource ForegroundLightBrush}" CornerRadius="10" Padding="15 50 15 15" Width="400" Margin="50 50 50 0"><!--Główne pudełko od logowania-->
                         <StackPanel>
-                            <TextBlock Text="Stwórz konto" FontSize="{StaticResource FontSizeLarge}" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource WordBlueBrush}"/><!--Nagłówek tworzenia konta-->
-                            <TextBlock Text="Zachowasz swoje postępy!" FontSize="{StaticResource FontSizeRegular}" Foreground="{StaticResource ForegroundDarkBrush}"/><!--Podpis tworzenia konta-->
-                            <TextBox Tag="Nazwa użytkownika"/><!--Nazwa użytkownika-->
-                            <PasswordBox Tag="Hasło" Margin="0 0 0 30"/><!--Hasło użytkownika-->
-                            <Button IsEnabled="False" Content="Dalej" HorizontalAlignment="Center"/><!--Guzik od przechodzenia dalej-->
+                            <TextBlock Text="Zaloguj się"
+                                       ToolTip="Wypełnij poniższy formularz"
+                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                       FontFamily="{StaticResource MulishRegular}"
+                                       Foreground="{StaticResource WordBlueBrush}"/><!--Nagłówek tworzenia konta-->
+                            <TextBlock Text="Zostań abiturientem!"
+                                       ToolTip="Z nami spokojnie zdasz maturę!"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       Foreground="{StaticResource ForegroundDarkBrush}"/><!--Podpis tworzenia konta-->
+                            <TextBox Tag="Nazwa użytkownika"
+                                     Text="{Binding UserName}"
+                                     ToolTip="Wprowadź swoją nazwę"/><!--Nazwa użytkownika-->
+                            <PasswordBox Tag="Hasło"
+                                         x:Name="PasswordText"
+                                         Margin="0 0 0 30"
+                                         ToolTip="Wprowadź swoje hasło"/><!--Hasło użytkownika-->
+                            <Button Command="{Binding LoginCommand}"
+                                    local:IsBusyProperty.Value="{Binding LoginIsRunning}"
+                                    CommandParameter="{Binding ElementName=Page}"
+                                    IsEnabled="True" 
+                                    ToolTip="Przejdź dalej"
+                                    Content="Dalej"
+                                    HorizontalAlignment="Center"/><!--Guzik od przechodzenia dalej-->
                         </StackPanel>
                     </Border>
-                    <Button Style="{StaticResource TextButton}" Content="Mam już konto" ToolTip="Zaloguj się" HorizontalAlignment="Center" Command="{Binding CurrentPage2}" />
+                    <Button Style="{StaticResource TextButton}"
+                            FontSize="{StaticResource FontSizeLarge}"
+                            FontWeight="DemiBold"
+                            ToolTip="Załóż konto i zachowaj swoje postępy!"
+                            HorizontalAlignment="Center"
+                            Command="{Binding CurrentPage2}">
+                        <Button.InputBindings>
+                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMenuPage}"/>
+                        </Button.InputBindings>
+                        <Button.Content>
+                            Nie mam konta
+                        </Button.Content>
+                    </Button>
                 </StackPanel>
             </ScrollViewer>
         </Grid>
     </Border>
-</Page>
+</local:BasePage>

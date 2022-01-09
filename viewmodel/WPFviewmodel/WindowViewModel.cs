@@ -57,6 +57,7 @@ namespace Abituria
         public ICommand MaximizeCommand { get; set; }///Komenda do maksymalizacji okna
         public ICommand CloseCommand { get; set; }///Komenda do zamykania okna
         public ICommand MenuCommand { get; set; }///Komenda do pokazania menu okna
+        public ICommand GoToMenuPage { get; set; }///Komenda przechodzi do strony MenuPage
         public WindowViewModel(Window window)///Standardowy konstruktor
         {
             mWindow = window;

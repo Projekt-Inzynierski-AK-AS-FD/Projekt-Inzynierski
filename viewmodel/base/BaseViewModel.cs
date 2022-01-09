@@ -1,6 +1,10 @@
 ﻿using PropertyChanged;
+using System;
 using System.ComponentModel;
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+
 namespace Abituria.viewmodel
 {
     [ImplementPropertyChanged]
@@ -11,6 +15,20 @@ namespace Abituria.viewmodel
         protected void OnPropertyChanged(string name)///Wywołuje wydarzenie PropertyChanged
         {
             PropertyChanged(this, new PropertyChangedEventArgs(name));
+        }
+        protected async Task RunCommand(Expression<Func<bool>> updatingFlag, Func<Task> action)///Odpala komende jeżeli flaga aktualizowania nie jest ustawiona
+        {
+            if (updatingFlag.GetPropertyValue())//.Compile().Invoke())
+                return;
+            updatingFlag.SetPropertyValue(true);
+            try
+            {
+                await action();///Odpala akcje
+            }
+            finally
+            {
+                updatingFlag.SetPropertyValue(false);///Ustawia właściwość flagi na fałsz po skończeniu
+            }
         }
     }
 }
