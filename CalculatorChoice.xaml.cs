@@ -13,10 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
-using Abituria.wzory;
-using Abituria.zadania;
 using Abituria.dzialy;
-using Abituria.matury;
 namespace Abituria
 {
     public partial class CalculatorChoice : Page
@@ -24,48 +21,6 @@ namespace Abituria
         public CalculatorChoice()
         {
             InitializeComponent();
-        }
-        private void ButtonAbituria(object sender, RoutedEventArgs e)
-        {
-            var mainWin = new MainWindow();
-            mainWin.Show();
-        }
-        private void ButtonKalkulator(object sender, RoutedEventArgs e)
-        {
-            var calculatorChoice = new CalculatorChoice();
-            NavigationService.Navigate(calculatorChoice);
-        }
-        private void ButtonMatura(object sender, RoutedEventArgs e)
-        {
-            PageMaturaLata pageMaturaLata = new PageMaturaLata();
-            NavigationService.Navigate(pageMaturaLata);
-        }
-
-        private void ButtonDzialy(object sender, RoutedEventArgs e)
-        {
-            //przełączenie z jednej strony (matury) na inną
-            PageDzialyWybor pageDzialyWybor = new PageDzialyWybor();
-            NavigationService.Navigate(pageDzialyWybor);
-        }
-        private void ButtonZadania(object sender, RoutedEventArgs e)
-        {
-            PageZadania pageZadania = new PageZadania();
-            NavigationService.Navigate(pageZadania);
-        }
-        private void ButtonWzory(object sender, RoutedEventArgs e)
-        {
-            PageWzory pageWzory = new PageWzory();
-            NavigationService.Navigate(pageWzory);
-        }
-        private void ButtonCalcBasic(object sender, RoutedEventArgs e)
-        {
-            var calculator = new Calculator();
-            calculator.Show();
-        }
-        private void ButtonCalcQuad(object sender, RoutedEventArgs e)
-        {
-            var calcQuad = new CalcQuadraticFunc();
-            calcQuad.Show();
         }
     }
 }

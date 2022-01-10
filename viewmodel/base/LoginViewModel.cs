@@ -35,7 +35,7 @@ namespace Abituria
         public ICommand GoToZ3Page { get; set; }
         public ICommand GoToZ4Page { get; set; }
         public ICommand GoToZ5Page { get; set; }
-        public ICommand GoTOZ6Page { get; set; }
+        public ICommand GoToZ6Page { get; set; }
         public ICommand GoToZ7Page { get; set; }
         public ICommand GoToZ8Page { get; set; }
         public ICommand GoToZ9Page { get; set; }
@@ -64,6 +64,7 @@ namespace Abituria
         public ICommand GoToZ32Page { get; set; }
         public ICommand GoToZ33Page { get; set; }
         public ICommand GoToZ34Page { get; set; }
+        public ICommand GoToZ35Page { get; set; }
         public ICommand GoToW1Page { get; set; }///Komenda przechodzi do strony Wzory
         public ICommand GoToW2Page { get; set; }///Komenda przechodzi do strony Wzory
         public ICommand GoToW3Page { get; set; }///Komenda przechodzi do strony Wzory
@@ -93,64 +94,62 @@ namespace Abituria
             GoToDzialyPage = new RelayCommand(() => Dzialy());
             GoToZadaniaPage = new RelayCommand(() => Zadania());
             GoToWzoryPage = new RelayCommand(() => Wzory());
-            //GoToKwadratowaPage = new RelayCommand(() => Kwadratowa());
-            //GoToWektoryPage = new RelayCommand(() => Wektory());
-            //GoToWektoryPage = new RelayCommand(() => MP21());
-
-            //GoToZ1Page = new RelayCommand(() => Z1());
-            //GoToZ2Page = new RelayCommand(() => Z2());
-            //GoToZ3Page = new RelayCommand(() => Z3());
-            //GoToZ4Page = new RelayCommand(() => Z4());
-            //GoToZ5Page = new RelayCommand(() => Z5());
-            //GoToZ6Page = new RelayCommand(() => Z6());
-            //GoToZ6Page = new RelayCommand(() => Z7());
-            //GoToZ7Page = new RelayCommand(() => Z8());
-            //GoToZ8Page = new RelayCommand(() => Z9());
-            //GoToZ9Page = new RelayCommand(() => Z10());
-            //GoToZ10Page = new RelayCommand(() => Z11());
-            //GoToZ11Page = new RelayCommand(() => Z12());
-            //GoToZ12Page = new RelayCommand(() => Z13());
-            //GoToZ13Page = new RelayCommand(() => Z14());
-            //GoToZ14Page = new RelayCommand(() => Z15());
-            //GoToZ15Page = new RelayCommand(() => Z16());
-            //GoToZ16Page = new RelayCommand(() => Z17());
-            //GoToZ17Page = new RelayCommand(() => Z18());
-            //GoToZ18Page = new RelayCommand(() => Z19());
-            //GoToZ19Page = new RelayCommand(() => Z20());
-            //GoToz20Page = new RelayCommand(() => Z21());
-            //GoToZ21Page = new RelayCommand(() => Z22());
-            //GoToZ22Page = new RelayCommand(() => Z23());
-            //GoToZ23Page = new RelayCommand(() => Z24());
-            //GoToZ24Page = new RelayCommand(() => Z25());
-            //GoToZ25Page = new RelayCommand(() => Z26());
-            //GoToZ26Page = new RelayCommand(() => Z27());
-            //GoToZ27Page = new RelayCommand(() => Z28());
-            //GoToZ28Page = new RelayCommand(() => Z29());
-            //GoToZ29Page = new RelayCommand(() => Z30());
-            //GoToZ30Page = new RelayCommand(() => Z31());
-            //GoToZ31Page = new RelayCommand(() => Z32());
-            //GoToZ32Page = new RelayCommand(() => Z33());
-            //GoToZ33Page = new RelayCommand(() => Z34());
-            //GoToZ34Page = new RelayCommand(() => Z35());
-
-            //GoToW1Page = new RelayCommand(() => W1());
-            //GoToW2Page = new RelayCommand(() => W2());
-            //GoToW3Page = new RelayCommand(() => W3());
-            //GoToW4Page = new RelayCommand(() => W4());
-            //GoToW5Page = new RelayCommand(() => W5());
-            //GoToW6Page = new RelayCommand(() => W6());
-            //GoToW7Page = new RelayCommand(() => W7());
-            //GoToW8Page = new RelayCommand(() => W8());
-            //GoToW9Page = new RelayCommand(() => W9());
-            //GoToW10Page = new RelayCommand(() => W10());
-            //GoToW11Page = new RelayCommand(() => W11());
-            //GoToW12Page = new RelayCommand(() => W12());
-            //GoToW13Page = new RelayCommand(() => W13());
-            //GoToW14Page = new RelayCommand(() => W14());
-            //GoToW15Page = new RelayCommand(() => W15());
-            //GoToW16Page = new RelayCommand(() => W16());
-            //GoToW17Page = new RelayCommand(() => W17());
-            //GoToW18Page = new RelayCommand(() => W18());
+            GoToKwadratowaPage = new RelayCommand(() => Kwadratowa());
+            GoToWektoryPage = new RelayCommand(() => Wektory());
+            GoToWektoryPage = new RelayCommand(() => MP21());
+            GoToZ1Page = new RelayCommand(() => Z1());
+            GoToZ2Page = new RelayCommand(() => Z2());
+            GoToZ3Page = new RelayCommand(() => Z3());
+            GoToZ4Page = new RelayCommand(() => Z4());
+            GoToZ5Page = new RelayCommand(() => Z5());
+            GoToZ6Page = new RelayCommand(() => Z6());
+            GoToZ7Page = new RelayCommand(() => Z7());
+            GoToZ8Page = new RelayCommand(() => Z8());
+            GoToZ9Page = new RelayCommand(() => Z9());
+            GoToZ10Page = new RelayCommand(() => Z10());
+            GoToZ11Page = new RelayCommand(() => Z11());
+            GoToZ12Page = new RelayCommand(() => Z12());
+            GoToZ13Page = new RelayCommand(() => Z13());
+            GoToZ14Page = new RelayCommand(() => Z14());
+            GoToZ15Page = new RelayCommand(() => Z15());
+            GoToZ16Page = new RelayCommand(() => Z16());
+            GoToZ17Page = new RelayCommand(() => Z17());
+            GoToZ18Page = new RelayCommand(() => Z18());
+            GoToZ19Page = new RelayCommand(() => Z19());
+            GoToz20Page = new RelayCommand(() => Z20());
+            GoToZ21Page = new RelayCommand(() => Z21());
+            GoToZ22Page = new RelayCommand(() => Z22());
+            GoToZ23Page = new RelayCommand(() => Z23());
+            GoToZ24Page = new RelayCommand(() => Z24());
+            GoToZ25Page = new RelayCommand(() => Z25());
+            GoToZ26Page = new RelayCommand(() => Z26());
+            GoToZ27Page = new RelayCommand(() => Z27());
+            GoToZ28Page = new RelayCommand(() => Z28());
+            GoToZ29Page = new RelayCommand(() => Z29());
+            GoToZ30Page = new RelayCommand(() => Z30());
+            GoToZ31Page = new RelayCommand(() => Z31());
+            GoToZ32Page = new RelayCommand(() => Z32());
+            GoToZ33Page = new RelayCommand(() => Z33());
+            GoToZ34Page = new RelayCommand(() => Z34());
+            GoToZ35Page = new RelayCommand(() => Z35());
+            GoToW1Page = new RelayCommand(() => W1());
+            GoToW2Page = new RelayCommand(() => W2());
+            GoToW3Page = new RelayCommand(() => W3());
+            GoToW4Page = new RelayCommand(() => W4());
+            GoToW5Page = new RelayCommand(() => W5());
+            GoToW6Page = new RelayCommand(() => W6());
+            GoToW7Page = new RelayCommand(() => W7());
+            GoToW8Page = new RelayCommand(() => W8());
+            GoToW9Page = new RelayCommand(() => W9());
+            GoToW10Page = new RelayCommand(() => W10());
+            GoToW11Page = new RelayCommand(() => W11());
+            GoToW12Page = new RelayCommand(() => W12());
+            GoToW13Page = new RelayCommand(() => W13());
+            GoToW14Page = new RelayCommand(() => W14());
+            GoToW15Page = new RelayCommand(() => W15());
+            GoToW16Page = new RelayCommand(() => W16());
+            GoToW17Page = new RelayCommand(() => W17());
+            GoToW18Page = new RelayCommand(() => W18());
         }
         public async Task Login(object parameter)///Próba zalogowania użytkownika
         {

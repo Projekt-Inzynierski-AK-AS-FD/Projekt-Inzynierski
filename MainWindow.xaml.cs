@@ -14,9 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Abituria.dzialy;
-using Abituria.matury;
 using Abituria.Properties;
-using Abituria.wzory;
 using Abituria.viewmodel;
 using PropertyChanged;
 namespace Abituria

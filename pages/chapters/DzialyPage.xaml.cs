@@ -21,6 +21,7 @@ namespace Abituria.pages
         public DzialyPage()
         {
             InitializeComponent();
+            this.DataContext = new LoginViewModel();
         }    
     }
 }

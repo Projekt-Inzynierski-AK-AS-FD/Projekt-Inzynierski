@@ -55,15 +55,15 @@
                                     <TextBlock Text="Kalkulator" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,10,10,0"/>
+                                                       Margin="10,10,10,0"/>
                                     <TextBlock Text="Funkcji" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,10,10,0"/>
+                                                       Margin="10,10,10,0"/>
                                     <TextBlock Text="Kwadratowej" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,10,10,0"/>
+                                                       Margin="10,10,10,0"/>
 
                                 </StackPanel>
                                 <Button.Template>
@@ -128,20 +128,20 @@
                                     <TextBlock Text="Generator" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,10,10,0"/>
+                                                       Margin="10,10,10,0"/>
                                     <TextBlock Text="Wykresów" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,5,10,0"/>
+                                                       Margin="10,5,10,0"/>
                                     <TextBlock Text="Funkcji" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,5,10,0"/>
+                                                       Margin="10,5,10,0"/>
 
                                     <TextBlock Text="Niedostępne" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeLarge}"
-                                                       Margin="20,15,10,0"/>
+                                                       Margin="10,15,10,0"/>
                                 </StackPanel>
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">

@@ -89,7 +89,7 @@
                                     <TextBlock Text="Poprawkowa" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXLarge}"
-                                                       Margin="20,10,10,0"/>
+                                                       Margin="20,0,10,0"/>
 
                                     <TextBlock Text="2021" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
