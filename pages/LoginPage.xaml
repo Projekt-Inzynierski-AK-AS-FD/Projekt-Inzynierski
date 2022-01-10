@@ -21,7 +21,7 @@
                             <TextBlock Text="Zaloguj się"
                                        ToolTip="Wypełnij poniższy formularz"
                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                       FontFamily="{StaticResource MulishRegular}"
+                                       FontFamily="{StaticResource MulishBold}"
                                        Foreground="{StaticResource WordBlueBrush}"/><!--Nagłówek tworzenia konta-->
                             <TextBlock Text="Zostań abiturientem!"
                                        ToolTip="Z nami spokojnie zdasz maturę!"
@@ -47,10 +47,9 @@
                             FontSize="{StaticResource FontSizeLarge}"
                             FontWeight="DemiBold"
                             ToolTip="Załóż konto i zachowaj swoje postępy!"
-                            HorizontalAlignment="Center"
-                            Command="{Binding CurrentPage2}">
+                            HorizontalAlignment="Center">
                         <Button.InputBindings>
-                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMenuPage}"/>
+                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToRegisterPage}"/>
                         </Button.InputBindings>
                         <Button.Content>
                             Nie mam konta

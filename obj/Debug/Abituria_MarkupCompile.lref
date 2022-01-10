@@ -3,11 +3,16 @@
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\CalcQuadraticFunc.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\Calculator.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\CalculatorChoice.xaml;;
+FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\controls\LoginControl.xaml;;
+FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\controls\MenuControl.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\MainWindow.xaml;;
+FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\chapters\DzialyPage.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\chapters\PageDzial1.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\chapters\PageDzial2.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\chapters\PageDzial3.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\chapters\PageDzialyWybor.xaml;;
+FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\equations\WzoryPage.xaml;;
+FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\excercises\ZadaniaPage.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\finalexams\PageMatura2020.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\finalexams\PageMatura2021.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\finalexams\PageMaturaLata.xaml;;
@@ -47,6 +52,9 @@ FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\finalexams\mp21\PageMP
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\finalexams\mp21\PageMP21Z7.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\finalexams\mp21\PageMP21Z8.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\finalexams\mp21\PageMP21Z9.xaml;;
+FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\finalexams\MaturaPage.xaml;;
+FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\KalkulatorPage.xaml;;
+FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\RegisterPage.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\MainPage.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\LoginPage.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\styles\Scroll.xaml;;
@@ -74,6 +82,6 @@ FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\equations\PageW8.xaml;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\equations\PageW9.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\equations\PageWzory.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\pages\excercises\PageZadania.xaml;;
-FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\viewmodel\HomeView.xaml;;
+FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\controls\HomeView.xaml;;
 FC:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\Window1.xaml;;
 

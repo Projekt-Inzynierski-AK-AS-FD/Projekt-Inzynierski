@@ -16,11 +16,12 @@ using System.Windows.Shapes;
 using Abituria;
 namespace Abituria.pages
 {
-    public partial class MainPage : Page
+    public partial class MainPage
     {
         public MainPage()
         {
             InitializeComponent();
+            this.DataContext = new LoginViewModel();
         }    
     }
 }

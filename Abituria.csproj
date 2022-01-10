@@ -113,11 +113,26 @@
     <Compile Include="attachedproperties\ButtonAttachedProperty .cs" />
     <Compile Include="attachedproperties\BaseAttachedProperty.cs" />
     <Compile Include="attachedproperties\PasswordBoxProperties.cs" />
+    <Compile Include="controls\LoginControl.xaml.cs">
+      <DependentUpon>LoginControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\MenuControl.xaml.cs">
+      <DependentUpon>MenuControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="datamodels\ApplicationPage.cs" />
     <Compile Include="expressions\ExpressionHelpers.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="HintsClass.cs" />
     <Compile Include="pages\BasePage.cs" />
+    <Compile Include="pages\chapters\DzialyPage.xaml.cs">
+      <DependentUpon>DzialyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\equations\WzoryPage.xaml.cs">
+      <DependentUpon>WzoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\excercises\ZadaniaPage.xaml.cs">
+      <DependentUpon>ZadaniaPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\finalexams\PageMaturaPoprawkowa2021.xaml.cs">
       <DependentUpon>PageMaturaPoprawkowa2021.xaml</DependentUpon>
     </Compile>
@@ -130,6 +145,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CalculatorChoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\LoginControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\MenuControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,6 +177,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="pages\chapters\DzialyPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="pages\chapters\PageDzial1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -169,6 +196,14 @@
     <Page Include="pages\chapters\PageDzialyWybor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\equations\WzoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pages\excercises\ZadaniaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="pages\finalexams\PageMatura2019.xaml">
       <SubType>Designer</SubType>
@@ -330,7 +365,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="pages\MenuPage - Copy.xaml">
+    <Page Include="pages\finalexams\MaturaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pages\KalkulatorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pages\RegisterPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -442,7 +485,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="viewmodel\HomeView.xaml">
+    <Page Include="controls\HomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -581,8 +624,14 @@
     <Compile Include="pages\finalexams\mp21\PageMP21Z9.xaml.cs">
       <DependentUpon>PageMP21Z9.xaml</DependentUpon>
     </Compile>
-    <Compile Include="pages\MenuPage - Copy.xaml.cs">
-      <DependentUpon>MenuPage - Copy.xaml</DependentUpon>
+    <Compile Include="pages\finalexams\MaturaPage.xaml.cs">
+      <DependentUpon>MaturaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\KalkulatorPage.xaml.cs">
+      <DependentUpon>KalkulatorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\RegisterPage.xaml.cs">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -597,7 +646,7 @@
     <Compile Include="viewmodel\base\IHavePassword.cs" />
     <Compile Include="viewmodel\base\LoginViewModel.cs" />
     <Compile Include="viewmodel\base\RelayParametrizedCommand.cs" />
-    <Compile Include="viewmodel\HomeView.xaml.cs">
+    <Compile Include="controls\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Window1.xaml.cs">

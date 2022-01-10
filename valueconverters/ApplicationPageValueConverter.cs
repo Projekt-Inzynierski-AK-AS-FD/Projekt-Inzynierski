@@ -21,8 +21,18 @@ namespace Abituria
                     return new LoginPage();
                 case ApplicationPage.Main:
                     return new MainPage();
-                case ApplicationPage.Menu:
-                    return new HomeView();
+                case ApplicationPage.Register:
+                    return new RegisterPage();
+                case ApplicationPage.Matura:
+                    return new MaturaPage();
+                case ApplicationPage.Kalkulator:
+                    return new KalkulatorPage();
+                case ApplicationPage.Dzialy:
+                    return new DzialyPage();
+                case ApplicationPage.Zadania:
+                    return new ZadaniaPage();
+                case ApplicationPage.Wzory:
+                    return new WzoryPage();
                 default:
                     Debugger.Break();
                     return null;

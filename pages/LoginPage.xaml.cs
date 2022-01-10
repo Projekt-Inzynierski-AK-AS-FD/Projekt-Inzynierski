@@ -22,7 +22,6 @@ namespace Abituria.pages
         public LoginPage()
         {
             InitializeComponent();
-            //this.viewModel
         }
         public SecureString SecurePassword => PasswordText.SecurePassword;///Chronione hasło dla tej strony
     }
