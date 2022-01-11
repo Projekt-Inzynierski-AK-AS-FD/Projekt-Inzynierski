@@ -3,12 +3,205 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Abituria.expressions"
+      xmlns:local="clr-namespace:Abituria.expressions" xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath" xmlns:abituria="clr-namespace:Abituria" d:DataContext="{d:DesignInstance Type=abituria:LoginViewModel}"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="W8Page">
-
-    <Grid>
-        
-    </Grid>
+    <Border Background="{StaticResource MainPurpleBrush}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Margin="24,0,22,0" >
+                <Grid Grid.Row="0" Grid.Column="0" Height="auto" Width="116" >
+                    <TextBlock Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeSmaller}"><InlineUIContainer>
+                            <Button Margin="30 10 0 0" Padding="0" Height="10" Width="40" Content="Cofnij" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeSmaller}"  FontFamily="{StaticResource MulishBold}" HorizontalAlignment="Center">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToWzoryPage}"/>
+                                </Button.InputBindings>
+                            </Button>
+                        </InlineUIContainer></TextBlock>
+                </Grid>
+            </Viewbox>
+            <Viewbox Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Stretch="Uniform" StretchDirection="Both">
+                <Grid>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMaturaPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                        <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToKalkulatorPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                        <TextBlock TextWrapping="Wrap" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToDzialyPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                        <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZadaniaPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Viewbox>
+            <Viewbox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Stretch="Uniform" StretchDirection="Both">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True">
+                    <StackPanel Orientation="Vertical" Margin="0 0 0 100">
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Wartość Bezwzględna" ToolTip="Wartość Bezwzględna Liczby" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToWPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content=" Potęgi i pierwiastki" ToolTip=" Potęgi i pierwiastki" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW2Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Logarytmy" ToolTip="Logarytmy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW3Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Silnia" ToolTip="Silnia. Współczynnik dwumianowy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW4Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Dwumian Newtona" ToolTip="Wzór dwumianowy Newtona" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW5Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Wzory skróconego mnożenia" ToolTip="Wzory skróconego mnożenia" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW6Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Ciągi" ToolTip="Ciągi" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW7Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Funkcja kwadratowa" ToolTip="Funkcja kwadratowa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW8Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content=" Geometria" ToolTip="Geometria analityczna" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW9Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content=" Planimetria" ToolTip=" Planimetria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW10Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Stereometria" ToolTip="Stereometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW11Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Trygonometria" ToolTip="Trygonometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW12Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Kombinatoryka" ToolTip="Kombinatoryka" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW13Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Prawdopodobieństwo" ToolTip="Rachunek prawdopodobieństwa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW14Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Statystyka" ToolTip="Parametry danych statystycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW15Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Granice" ToolTip="Granica ciągu" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW16Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Pochodne" ToolTip="Pochodna funkcji" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW17Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Tablice Trygonometyczne" ToolTip="Tablica wartości funkcji trygonometrycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW18Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                    </StackPanel>
+                </ScrollViewer>
+            </Viewbox>
+            <Border Background="Transparent" BorderThickness="1" Grid.Column="2" Grid.Row="1">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True">
+                    <Grid>
+                        <TextBlock FontSize="15" Padding="10" Margin="10 0 0 100" TextWrapping="WrapWithOverflow" Foreground="{StaticResource BackgroundLightBrush}">
+                        <TextBlock FontSize="17" Margin="10"><Bold>FUNKCJA KWADRATOWA</Bold></TextBlock><LineBreak/>
+                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="{StaticResource BackgroundVeryLightBrush}"><Run Text="Postać ogólna funkcji kwadratowej: "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:f(x)=ax^2+bx+c\:" />
+                        </InlineUIContainer><Run Text=","/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:a\neq0\:" />
+                        </InlineUIContainer><Run Text=","/>
+                        <controls:FormulaControl Formula="x\in{R}" /><LineBreak/>Wzór każdej funkcji kwadratowej można doprowadzić do postaci kanonicznej: 
+                        <controls:FormulaControl Formula="\:f(x)=a(x-p)^2+q\:" />, gdzie
+                        <controls:FormulaControl Formula="\:p=-\frac{b}{2a}" />,
+                        <controls:FormulaControl Formula="1=-\frac{\Delta}{4a}" />,
+                        <controls:FormulaControl Formula="\Delta=b^2-4ac" /><LineBreak/>Wykresem funkcji kwadratowej jest parabola o wierzchołku w punkcie o współrzędnych
+                        <controls:FormulaControl Formula="\:(p,q)\:" />. Ramiona paraboli skierowane są do góry, gdy
+                        <controls:FormulaControl Formula="\:a\gt0\:" />; do dołu, gdy
+                        <controls:FormulaControl Formula="\:a\lt0\:" />.<LineBreak/>Liczba miejsc zerowych funkcji kwadratowej
+                        <controls:FormulaControl Formula="\:f(x)=ax^2+bx+c\:" /> (liczba pierwiastków trójmianu kwadratowego, liczba rzeczywistych rozwiązań równania
+                        <controls:FormulaControl Formula="\:ax^2+bx+c=0\:" />), zależy od wyróżnika
+                        <controls:FormulaControl Formula="\Delta=b^2-4ac" />:<LineBreak/>
+                        <controls:FormulaControl Formula="-" /> jeżeli
+                        <controls:FormulaControl Formula="\Delta\lt0" />, to funkcja kwadratowa nie ma miejsc zerowych (trójmian kwadratowy nie ma pierwiastków rzeczywistych, równanie kwadratowe nie ma rozwiązań rzeczywistych),<LineBreak/>
+                        <controls:FormulaControl Formula="-" /> jeżeli
+                        <controls:FormulaControl Formula="\Delta=0" />, to funkcja kwadratowa ma dokładnie jedno miejsce zerowe (trójmian kwadratowy ma jeden pierwiastek podwójny, równanie kwadratowe ma dokładnie jedno rozwiązanie rzeczywiste):
+                        <controls:FormulaControl Formula="x_1=x_2=" />
+                        <controls:FormulaControl Formula="-\frac{b}{2a}" /><LineBreak/>
+                        <controls:FormulaControl Formula="-" /> jeżeli
+                        <controls:FormulaControl Formula="\Delta\gt0" />, to funkcja kwadratowa ma dwa miejsca zerowe (trójmian kwadratowy ma dwa różnepierwiastki rzeczywiste, równanie kwadratowe ma dwa rozwiązania rzeczywiste):<LineBreak/>
+                        <controls:FormulaControl Formula="\:x_1=\frac{-b-\sqrt{\Delta}}{2a}" /><LineBreak/>
+                        <controls:FormulaControl Formula="\:x_2=\frac{-b+\sqrt{\Delta}}{2a}" /><LineBreak/> Jeśli
+                        <controls:FormulaControl Formula="\:\Delta\geq0" />, to wzór funkcji kwadratowej można doprowadzić do postaci iloczynowej:<LineBreak/>
+                        <controls:FormulaControl Formula="\:f(x)=a(x-x_1)(x-x_2)" /><LineBreak/>
+                        <controls:FormulaControl Formula="\:\cdot\:" /> Wzory Viéte’a<LineBreak/>Jeżeli
+                        <controls:FormulaControl Formula="\:\Delta\geq0" />, to<LineBreak/>
+                        <controls:FormulaControl Formula="\:x_1+x_1=\frac{-b}{a}" /><LineBreak/>
+                        <controls:FormulaControl Formula="\:x_1\cdot{x_1}=\frac{c}{a}" />
+                        </TextBlock>
+                        </TextBlock>
+                    </Grid>
+                </ScrollViewer>
+            </Border>
+            <ContentControl Grid.Row="1" Grid.Column="1" Margin="10" Content="{Binding CurrentView}" Grid.ColumnSpan="2"/>
+        </Grid>
+    </Border>
 </Page>

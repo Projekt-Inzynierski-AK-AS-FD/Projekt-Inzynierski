@@ -20,6 +20,7 @@ namespace Abituria.dzialy
         public WektoryPage()
         {
             InitializeComponent();
+            this.DataContext = new LoginViewModel();
         }
     }
 }

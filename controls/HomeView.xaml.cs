@@ -23,6 +23,7 @@ namespace Abituria
         public HomeView()
         {
             InitializeComponent();
+            this.DataContext = new LoginViewModel();
         }
     }
 }

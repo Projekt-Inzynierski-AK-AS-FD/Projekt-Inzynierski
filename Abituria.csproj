@@ -148,8 +148,8 @@
     <Compile Include="pages\equations\W10Page.xaml.cs">
       <DependentUpon>W10Page.xaml</DependentUpon>
     </Compile>
-    <Compile Include="pages\equations\W1Page.xaml.cs">
-      <DependentUpon>W1Page.xaml</DependentUpon>
+    <Compile Include="pages\equations\WPage.xaml.cs">
+      <DependentUpon>WPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\equations\W9Page.xaml.cs">
       <DependentUpon>W9Page.xaml</DependentUpon>
@@ -243,7 +243,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="pages\equations\W1Page.xaml">
+    <Page Include="pages\equations\WPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -508,10 +508,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="W1Page.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -647,6 +643,7 @@
     <Compile Include="pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="security\Logowanie.cs" />
     <Compile Include="security\SecureStringHelpers.cs" />
     <Compile Include="valueconverters\ApplicationPageValueConverter.cs" />
     <Compile Include="valueconverters\BaseValueConverter.cs" />
@@ -656,9 +653,6 @@
     <Compile Include="viewmodel\base\RelayParametrizedCommand.cs" />
     <Compile Include="controls\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="W1Page.xaml.cs">
-      <DependentUpon>W1Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
@@ -760,7 +754,16 @@
     <Resource Include="img\w9a.png" />
     <Resource Include="img\w9b.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="img\1.png" />
+    <Resource Include="img\2.png" />
+    <Resource Include="img\3.png" />
+    <Resource Include="img\4.png" />
+    <Resource Include="img\5.png" />
+    <Resource Include="img\6.png" />
+    <Resource Include="img\7.png" />
+    <Resource Include="img\8.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="img\w10a.png" />
     <Resource Include="img\w10b.png" />

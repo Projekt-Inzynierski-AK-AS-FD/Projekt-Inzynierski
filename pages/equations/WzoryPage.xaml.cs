@@ -21,6 +21,7 @@ namespace Abituria.pages
         public WzoryPage()
         {
             InitializeComponent();
+            this.DataContext = new LoginViewModel();
         }    
     }
 }

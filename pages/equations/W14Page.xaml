@@ -3,12 +3,206 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Abituria.expressions"
+      xmlns:local="clr-namespace:Abituria.expressions" xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath" xmlns:abituria="clr-namespace:Abituria" d:DataContext="{d:DesignInstance Type=abituria:LoginViewModel}"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="W14Page">
-
-    <Grid>
-        
-    </Grid>
+    <Border Background="{StaticResource MainPurpleBrush}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Margin="24,0,22,0" >
+                <Grid Grid.Row="0" Grid.Column="0" Height="auto" Width="116" >
+                    <TextBlock Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeSmaller}"><InlineUIContainer>
+                            <Button Margin="30 10 0 0" Padding="0" Height="10" Width="40" Content="Cofnij" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeSmaller}"  FontFamily="{StaticResource MulishBold}" HorizontalAlignment="Center">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToWzoryPage}"/>
+                                </Button.InputBindings>
+                            </Button>
+                        </InlineUIContainer></TextBlock>
+                </Grid>
+            </Viewbox>
+            <Viewbox Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Stretch="Uniform" StretchDirection="Both">
+                <Grid>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMaturaPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                        <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToKalkulatorPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                        <TextBlock TextWrapping="Wrap" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToDzialyPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                        <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZadaniaPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Viewbox>
+            <Viewbox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Stretch="Uniform" StretchDirection="Both">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True">
+                    <StackPanel Orientation="Vertical" Margin="0 0 0 100">
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Wartość Bezwzględna" ToolTip="Wartość Bezwzględna Liczby" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToWPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content=" Potęgi i pierwiastki" ToolTip=" Potęgi i pierwiastki" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW2Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Logarytmy" ToolTip="Logarytmy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW3Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Silnia" ToolTip="Silnia. Współczynnik dwumianowy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW4Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Dwumian Newtona" ToolTip="Wzór dwumianowy Newtona" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW5Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Wzory skróconego mnożenia" ToolTip="Wzory skróconego mnożenia" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW6Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Ciągi" ToolTip="Ciągi" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW7Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Funkcja kwadratowa" ToolTip="Funkcja kwadratowa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW8Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content=" Geometria" ToolTip="Geometria analityczna" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW9Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content=" Planimetria" ToolTip=" Planimetria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW10Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Stereometria" ToolTip="Stereometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW11Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Trygonometria" ToolTip="Trygonometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW12Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Kombinatoryka" ToolTip="Kombinatoryka" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW13Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Prawdopodobieństwo" ToolTip="Rachunek prawdopodobieństwa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW14Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Statystyka" ToolTip="Parametry danych statystycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW15Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Granice" ToolTip="Granica ciągu" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW16Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Pochodne" ToolTip="Pochodna funkcji" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW17Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Tablice Trygonometyczne" ToolTip="Tablica wartości funkcji trygonometrycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToW18Page}"/>
+                            </Button.InputBindings>
+                        </Button>
+                    </StackPanel>
+                </ScrollViewer>
+            </Viewbox>
+            <Border Background="Transparent" BorderThickness="1" Grid.Column="2" Grid.Row="1">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True">
+                    <Grid>
+                        <TextBlock FontSize="17" Padding="10" Margin="10 0 0 100" TextWrapping="WrapWithOverflow" Foreground="{StaticResource BackgroundLightBrush}">
+                            <TextBlock FontSize="18" ><Bold>RACHUNEK PRAWDOPODOBIEŃSTWA</Bold></TextBlock><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Własności prawdopodobieństwa</Underline><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,30,0" Formula="0 \leq P(A) \leq 1"/>
+                            <TextBlock FontSize="18" Margin="-7">dla każdego zdarzenia</TextBlock><controls:FormulaControl Margin="15,-20,0,0" Formula="A \subset \Omega"/><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,50,0" Formula="P( \Omega ) = 1"/><controls:FormulaControl Margin="15,-20,0,0" Formula="\Omega \: \:"/>
+                            <TextBlock FontSize="18" Margin="-7"> - zdarzenie pewne</TextBlock><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,50,0" Formula="P( \emptyset ) = 0"/><controls:FormulaControl Margin="20,-20,0,0" Formula="\emptyset \: \:"/>
+                            <TextBlock FontSize="18" Margin="-7"> - zdarzenie niemożliwe (pusty podzbiór <controls:FormulaControl Margin="0,0,0,-3" Formula="\Omega"/> )</TextBlock><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,30,0" Formula="P(A) \leq P(B), \: gdy \: A \subset B \subset \Omega"/><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,5,0" Formula="P(A') = 1 - P(A),"/>
+                            <TextBlock FontSize="18" Margin="-7">gdzie<controls:FormulaControl Margin="5,0,0,-1" Formula="A'"/> oznacza zdarzenie przeciwne do zdarzenia <controls:FormulaControl Margin="5,0,0,-3" Formula="A"/></TextBlock><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,5,0" Formula="P(A \cup B) = P(A) + P(B) - P(A \cap B),"/>
+                            <TextBlock FontSize="18" Margin="-7"> dla dowolnych zdarzeń <controls:FormulaControl Margin="5,0,0,-3" Formula="A, B \subset \Omega"/></TextBlock><LineBreak/>
+                            <controls:FormulaControl Margin="10,10,5,0" Formula="P(A \cup B) \leq P(A) + P(B),"/>
+                            <TextBlock FontSize="18" Margin="-7"> dla dowolnych zdarzeń <controls:FormulaControl Margin="5,0,0,-3" Formula="A, B \subset \Omega"/></TextBlock><LineBreak/>
+                            <LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Twierdzenie: Klasyczna definicja prawdopodobieństwa</Underline><LineBreak/>
+                            Niech <controls:FormulaControl Margin="-3" Formula="\: \Omega \:"/> będzie skończonym zbiorem wszystkich zdarzeń elementarnych. Jeżeli wszystkie zdarzenia jednoelementowe są jednakowo prawdopodobne, to prawdopodobieństwo zdarzenia <controls:FormulaControl Margin="-3" Formula="\: A \subset \Omega \:"/> jest równe<LineBreak/>
+                            <controls:FormulaControl Margin="50,15,0,15" Formula="P(A) = \frac{|A|}{| \Omega |}"/><LineBreak/>
+                            gdzie <controls:FormulaControl Margin="-7" Formula="\: |A| \:"/> oznacza liczbę elementów zbioru <controls:FormulaControl Margin="-3" Formula="\: A \:"/>, zaś <controls:FormulaControl Margin="-7" Formula="\: | \Omega | \:"/> – liczbę elementów zbioru <controls:FormulaControl Margin="-3" Formula="\: \Omega \:"/>.<LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Prawdopodobieństwo warunkowe</Underline><LineBreak/>
+                            Niech <controls:FormulaControl Margin="-7" Formula="\: \: A, B \: \:"/> będą zdarzeniami losowymi zawartymi w <controls:FormulaControl Margin="-3" Formula="\: \Omega \:"/> przy czym <controls:FormulaControl Margin="-8" Formula="\: \: P(B) > 0 \:"/>. 
+                            Prawdopodobieństwem warunkowym <controls:FormulaControl Margin="-6" Formula="\: P(A|B) \:"/> nazywamy liczbę<LineBreak/>
+                            <controls:FormulaControl Margin="50,15,0,15" Formula="P(A|B) = \frac{P(A \cap B)}{P(B)}"/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Twierdzenie o prawdopodobieństwie całkowitym</Underline><LineBreak/>
+                            Jeżeli zdarzenia losowe <controls:FormulaControl Margin="-6" Formula="\: \: B_1, B_2,..., B_n\: \:"/> zawarte w <controls:FormulaControl Margin="-4" Formula="\: \: \Omega \: \:"/> spełniają warunki:<LineBreak/>
+                            <controls:FormulaControl Margin="20,15,0,-6" Formula="1. \: \: \: \: \: B_1, B_2,..., B_n\: \:"/> są parami rozłączne, tzn. <controls:FormulaControl Margin="5,15,0,-8" Formula="B_i \cap B_j = \emptyset"/> dla <controls:FormulaControl Margin="5,15,0,-4" Formula="i \neq j, \: 1 \leq i \leq n, \: 1 \leq j \leq n,"/><LineBreak/>
+                            <controls:FormulaControl Margin="20,15,0,-6" Formula="2. \: \: \: \: \: B_1 \cup B_2 \cup ... \cup B_n = \Omega ,"/><LineBreak/>
+                            <controls:FormulaControl Margin="20,15,0,-6" Formula="3. \: \: \: \: \: P(B_i) > 0 \: dla \: 1 \leq i \leq n,"/><LineBreak/><LineBreak/>
+                            to dla każdego zdarzenia losowego <controls:FormulaControl Margin="-3" Formula="\: A \:"/> zawartego w <controls:FormulaControl Margin="-3" Formula="\: \Omega \:"/> zachodzi równość<LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="P(A) = P(A|B_1) \cdot P(B_1) + P(A|B_2) \cdot P(B_2) + ... + P(A|B_n) \cdot P(B_n)"/>
+                        </TextBlock>
+                    </Grid>
+                </ScrollViewer>
+            </Border>
+            <ContentControl Grid.Row="1" Grid.Column="1" Margin="10" Content="{Binding CurrentView}" Grid.ColumnSpan="2"/>
+        </Grid>
+    </Border>
 </Page>

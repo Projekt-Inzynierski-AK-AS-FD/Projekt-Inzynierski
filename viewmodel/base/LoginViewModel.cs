@@ -15,7 +15,13 @@ namespace Abituria
     [ImplementPropertyChanged]
     public class LoginViewModel : BaseViewModel///Model widoku dla niestandardowego okna
     {
-        public string UserName { get; set; }///Nazwa użytkownika
+        private static string uName;
+        public string UserName///Nazwa użytkownika
+        {
+            get { return uName; }
+            set { uName = value; }
+        }
+        public string Greeting { get; } = "Dzień dobry, " + uName;
         public bool LoginIsRunning { get; set; }///Flaga wskazująca, czy proces Login trwa
         public SecureString Password { get; set; }///Hasło użytkownika, set; nie działa
         public ICommand LoginCommand { get; set; }///Komenda do logowania
@@ -65,7 +71,7 @@ namespace Abituria
         public ICommand GoToZ33Page { get; set; }
         public ICommand GoToZ34Page { get; set; }
         public ICommand GoToZ35Page { get; set; }
-        public ICommand GoToW1Page { get; set; }///Komenda przechodzi do strony Wzory
+        public ICommand GoToWPage { get; set; }///Komenda przechodzi do strony Wzory
         public ICommand GoToW2Page { get; set; }///Komenda przechodzi do strony Wzory
         public ICommand GoToW3Page { get; set; }///Komenda przechodzi do strony Wzory
         public ICommand GoToW4Page { get; set; }///Komenda przechodzi do strony Wzorye
@@ -96,7 +102,7 @@ namespace Abituria
             GoToWzoryPage = new RelayCommand(() => Wzory());
             GoToKwadratowaPage = new RelayCommand(() => Kwadratowa());
             GoToWektoryPage = new RelayCommand(() => Wektory());
-            GoToWektoryPage = new RelayCommand(() => MP21());
+            GoToMP21Page = new RelayCommand(() => MP21());
             GoToZ1Page = new RelayCommand(() => Z1());
             GoToZ2Page = new RelayCommand(() => Z2());
             GoToZ3Page = new RelayCommand(() => Z3());
@@ -132,7 +138,7 @@ namespace Abituria
             GoToZ33Page = new RelayCommand(() => Z33());
             GoToZ34Page = new RelayCommand(() => Z34());
             GoToZ35Page = new RelayCommand(() => Z35());
-            GoToW1Page = new RelayCommand(() => W1());
+            GoToWPage = new RelayCommand(() => W());
             GoToW2Page = new RelayCommand(() => W2());
             GoToW3Page = new RelayCommand(() => W3());
             GoToW4Page = new RelayCommand(() => W4());
@@ -384,9 +390,9 @@ namespace Abituria
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z35;
         }
 
-        private void W1()
+        private void W()
         {
-            ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W1;
+            ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W;
         }
 
         private void W2()

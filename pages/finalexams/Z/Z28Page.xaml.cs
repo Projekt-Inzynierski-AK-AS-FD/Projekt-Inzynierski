@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Abituria.pages.finalexams.Z
+namespace Abituria.pages
 {
     /// <summary>
     /// Interaction logic for Z28Page.xaml
@@ -23,6 +23,45 @@ namespace Abituria.pages.finalexams.Z
         public Z28Page()
         {
             InitializeComponent();
+            this.DataContext = new LoginViewModel();
+        }
+        int clickCounter = 0;
+        readonly int correctAnsw = 4; //bo odp. D, czyli checkbox #4
+        private void ConfirmBtn(object sender, RoutedEventArgs e)
+        {
+            string answer = HintsClass.AnswerButtonChange(sender, CheckAnswer(correctAnsw: correctAnsw));
+            this.brdHint.Visibility = Visibility.Visible;
+            this.hintField.Text = answer;
+        }
+        private void HintBtn(object sender, RoutedEventArgs e)
+        {
+            clickCounter += 1;
+            //tutaj wstawić treść podpowiedzi i cyk do funkcji
+            string[] hintsArray = { @"9^{-10} \cdot 3^{19} = (3^2)^{-10} \cdot 3^{19}", @"(3^2)^{-10} \cdot 3^{19} = 3^{-20} \cdot 3^{19}", @"3^{-20} \cdot 3^{19} = 3^{-20+19}", @"= 3^{-1}" };
+            string hint = HintsClass.Hint(clickCounter, hintsArray);
+            this.brdHint.Visibility = Visibility.Visible;
+            this.hintField.Text = "";
+            this.hintFormula.Formula = hint;
+        }
+        private bool CheckAnswer(int correctAnsw)
+        {
+            bool isAnsCorrect;
+            if (checkBox4.IsChecked == true)
+            {
+                if (checkBox1.IsChecked == true || checkBox2.IsChecked == true || checkBox3.IsChecked == true)
+                {
+                    isAnsCorrect = false;
+                }
+                else
+                {
+                    isAnsCorrect = true;
+                }
+            }
+            else
+            {
+                isAnsCorrect = false;
+            }
+            return isAnsCorrect;
         }
     }
 }

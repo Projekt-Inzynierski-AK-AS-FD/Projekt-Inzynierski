@@ -8,6 +8,9 @@ using System.Diagnostics;
 using Abituria.pages;
 using System.IO;
 using Abituria.viewmodel;
+using Abituria.dzialy;
+using Abituria.pages.finalexams;
+using Abituria.expressions;
 
 namespace Abituria
 {
@@ -109,8 +112,8 @@ namespace Abituria
                     return new Z34Page();
                 case ApplicationPage.Z35:
                     return new Z35Page();
-                case ApplicationPage.W1:
-                    return new W1Page();
+                case ApplicationPage.W:
+                    return new WPage();
                 case ApplicationPage.W2:
                     return new W2Page();
                 case ApplicationPage.W3:

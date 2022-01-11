@@ -15,7 +15,9 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <TextBlock Text="Witaj w programie ABITURIA, twoim matematycznym korepetytorze."
+                        <TextBlock x:Name="Greeting"
+                                   Tag="Greeting"
+                                   Text="{Binding Greeting}"
                                    Foreground="{StaticResource BackgroundVeryLightBrush}"
                                    FontSize="{StaticResource FontSizeXXLarge}"
                                    HorizontalAlignment="Center"
@@ -92,8 +94,8 @@
                                 <Border Width="300" Height="300" CornerRadius="10" HorizontalAlignment="Right">
                                     <Border.Background>
                                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                                            <GradientStop Color="Yellow" Offset="0.0"/>
-                                            <GradientStop Color="OrangeRed" Offset="1"/>
+                                            <GradientStop Color="Goldenrod" Offset="0.0"/>
+                                            <GradientStop Color="Red" Offset="1"/>
                                         </LinearGradientBrush>
                                     </Border.Background>
                                     <Border.Clip>
@@ -160,7 +162,7 @@
                                 <RowDefinition Height="62.5"/>
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0" Grid.Column="1">
-                                <TextBlock Text="Wybierz coś dla siebie!" 
+                                <TextBlock Text="Witaj w programie ABITURIA, twoim matematycznym korepetytorze." 
                                            HorizontalAlignment="Center"
                                            VerticalAlignment="Center"
                                            Foreground="{StaticResource BackgroundVeryLightBrush}"
@@ -274,7 +276,7 @@
                                         <Border.Background>
                                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                                                 <GradientStop Color="Gold" Offset="0.0"/>
-                                                <GradientStop Color="MidnightBlue" Offset="1"/>
+                                                <GradientStop Color="Crimson" Offset="1"/>
                                             </LinearGradientBrush>
                                         </Border.Background>
                                         <Button Name="ButtonWzory" 
@@ -299,7 +301,7 @@
                                                 <TextBlock Text="matematyczne" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeLarge}"
-                                                       Margin="20,10,10,0"/>
+                                                       Margin="20,0,10,0"/>
                                             </StackPanel>
                                             <Button.Template>
                                                 <ControlTemplate TargetType="Button">

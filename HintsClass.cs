@@ -36,25 +36,13 @@ namespace Abituria
         }
         public static string Hint(int counter, string[] hintsArray)
         {
-            string hint;
-            // wzór: należy uzupełnić go faktyczną treścią
-            switch (counter)
+            string hint = hintsArray[0];
+            for (int i = 1; i < counter; i++)
             {
-                case 1:
-                    hint = hintsArray[0];
-                    break;
-                case 2:
-                    hint = hintsArray[0] + "\n" + hintsArray[1];
-                    break;
-                case 3:
-                    hint = hintsArray[0] + "\n" + hintsArray[1] + "\n" + hintsArray[2];
-                    break;
-                case 4:
-                    hint = hintsArray[0] + "\n" + hintsArray[1] + "\n" + hintsArray[2] + "\n" + hintsArray[3];
-                    break;// Itd. do momentu, aż nie wyczerpie się pula podpowiedzi, wtedy: 
-                default:
-                    hint = hintsArray[0] + "\n" + hintsArray[1] + "\n" + hintsArray[2] + "\n" + hintsArray[3];
-                    break;
+                if (i < hintsArray.Length)
+                {
+                    hint = hint + @" \\ " + hintsArray[i];
+                }
             }
             return hint;
         }
