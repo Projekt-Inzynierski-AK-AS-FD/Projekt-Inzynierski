@@ -26,7 +26,7 @@ namespace Abituria.pages
             this.DataContext = new LoginViewModel();
         }
         int clickCounter = 0;
-        readonly int correctAnsw = 4; //bo odp. D, czyli checkbox #4
+        readonly int correctAnsw = 2; //bo odp. D, czyli checkbox #4
         private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
             string answer = HintsClass.AnswerButtonChange(sender, CheckAnswer(correctAnsw: correctAnsw));

@@ -37,7 +37,11 @@ namespace Abituria.pages
         {
             clickCounter += 1;
             //tutaj wstawić treść podpowiedzi i cyk do funkcji
-            string[] hintsArray = { @"9^{-10} \cdot 3^{19} = (3^2)^{-10} \cdot 3^{19}", @"(3^2)^{-10} \cdot 3^{19} = 3^{-20} \cdot 3^{19}", @"3^{-20} \cdot 3^{19} = 3^{-20+19}", @"= 3^{-1}" };
+            // @"\text{} \; x=-2, \text{}"
+            string[] hintsArray = { @"\text{Skorzystaj ze wzoru na współczynnik } \; a: \\ a= \frac{y_B - y_A}{x_B - x_A}",
+                @"\text{Do wzoru podstaw dane z zadania, tj. współrzędne punktów } \; A(1,-2) \; \text{i} \; B(3,1):",
+                @"a = \frac{1- (-2)}{3-1} = \frac{1+2}{2} = \frac{3}{2}"
+            };
             string hint = HintsClass.Hint(clickCounter, hintsArray);
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = "";

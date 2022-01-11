@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Abituria.pages
 {
-    /// <summary>
-    /// Interaction logic for Z22Page.xaml
-    /// </summary>
     public partial class Z22Page : Page
     {
         public Z22Page()
@@ -26,7 +23,7 @@ namespace Abituria.pages
             this.DataContext = new LoginViewModel();
         }
         int clickCounter = 0;
-        readonly int correctAnsw = 4; //bo odp. D, czyli checkbox #4
+        readonly int correctAnsw = 1; //bo odp. D, czyli checkbox #4
         private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
             string answer = HintsClass.AnswerButtonChange(sender, CheckAnswer(correctAnsw: correctAnsw));
@@ -37,7 +34,13 @@ namespace Abituria.pages
         {
             clickCounter += 1;
             //tutaj wstawić treść podpowiedzi i cyk do funkcji
-            string[] hintsArray = { @"9^{-10} \cdot 3^{19} = (3^2)^{-10} \cdot 3^{19}", @"(3^2)^{-10} \cdot 3^{19} = 3^{-20} \cdot 3^{19}", @"3^{-20} \cdot 3^{19} = 3^{-20+19}", @"= 3^{-1}" };
+            // @"\text{} \; x=-2, \text{}"
+            string[] hintsArray = { @"\text{Proste są prostopadłe względem siebie, jeżeli ich współczynniki kierunkowe spełniają zależność:} \\ 
+a_1 \cdot a_2=-1",
+                @"- \frac{4}{7} \cdot a_k = -1",
+                @"- \frac{4}{7} \cdot \frac{7}{4} = -1",
+                @"\text{Współczynnik prostej k jest zatem równy } \; \frac{7}{4}."
+            };
             string hint = HintsClass.Hint(clickCounter, hintsArray);
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = "";
@@ -46,9 +49,9 @@ namespace Abituria.pages
         private bool CheckAnswer(int correctAnsw)
         {
             bool isAnsCorrect;
-            if (checkBox4.IsChecked == true)
+            if (checkBox1.IsChecked == true)
             {
-                if (checkBox1.IsChecked == true || checkBox2.IsChecked == true || checkBox3.IsChecked == true)
+                if (checkBox4.IsChecked == true || checkBox2.IsChecked == true || checkBox3.IsChecked == true)
                 {
                     isAnsCorrect = false;
                 }

@@ -33,6 +33,12 @@ namespace Abituria.pages
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = answer;
         }
+
+        private bool CheckAnswer(int correctAnsw)
+        {
+            throw new NotImplementedException();
+        }
+
         private void HintBtn(object sender, RoutedEventArgs e)
         {
             clickCounter += 1;
@@ -42,26 +48,6 @@ namespace Abituria.pages
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = "";
             this.hintFormula.Formula = hint;
-        }
-        private bool CheckAnswer(int correctAnsw)
-        {
-            bool isAnsCorrect;
-            if (checkBox4.IsChecked == true)
-            {
-                if (checkBox1.IsChecked == true || checkBox2.IsChecked == true || checkBox3.IsChecked == true)
-                {
-                    isAnsCorrect = false;
-                }
-                else
-                {
-                    isAnsCorrect = true;
-                }
-            }
-            else
-            {
-                isAnsCorrect = false;
-            }
-            return isAnsCorrect;
         }
     }
 }

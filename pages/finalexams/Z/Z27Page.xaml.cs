@@ -26,7 +26,7 @@ namespace Abituria.pages
             this.DataContext = new LoginViewModel();
         }
         int clickCounter = 0;
-        readonly int correctAnsw = 4; //bo odp. D, czyli checkbox #4
+        readonly int correctAnsw = 3; //bo odp. D, czyli checkbox #4
         private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
             string answer = HintsClass.AnswerButtonChange(sender, CheckAnswer(correctAnsw: correctAnsw));
@@ -37,7 +37,17 @@ namespace Abituria.pages
         {
             clickCounter += 1;
             //tutaj wstawić treść podpowiedzi i cyk do funkcji
-            string[] hintsArray = { @"9^{-10} \cdot 3^{19} = (3^2)^{-10} \cdot 3^{19}", @"(3^2)^{-10} \cdot 3^{19} = 3^{-20} \cdot 3^{19}", @"3^{-20} \cdot 3^{19} = 3^{-20+19}", @"= 3^{-1}" };
+            // @"\text{} \; x=-2, \text{}"
+            string[] hintsArray = { @"\text{Stosunek ku białych do czerwonych (3:4) można zapisać jako:}
+\\ 3x - \text{liczba kul białych} \\ 4x - \text{liczba kul czerwonych}
+\\ 3x + 4x = 7x -  \text{liczba kul łącznie}
+\\ A - \; \text{- wydarzenie wylosowania kuli białej}",
+                @"\text{Prawdopodobieństwo oblicza się ze wzoru:}
+\\ P(A) = \frac{|A|}{| \Omega |} \; \text{gdzie} \\
+|A| - \text{to liczba zdarzeń sprzyjających} \\
+| \Omega | - \text{to liczba wszystkich możliwych zdarzeń}",
+                @"P(A) = \frac{3x}{7x} = \frac{3}{7}"
+            };
             string hint = HintsClass.Hint(clickCounter, hintsArray);
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = "";
@@ -46,9 +56,9 @@ namespace Abituria.pages
         private bool CheckAnswer(int correctAnsw)
         {
             bool isAnsCorrect;
-            if (checkBox4.IsChecked == true)
+            if (checkBox3.IsChecked == true)
             {
-                if (checkBox1.IsChecked == true || checkBox2.IsChecked == true || checkBox3.IsChecked == true)
+                if (checkBox1.IsChecked == true || checkBox2.IsChecked == true || checkBox4.IsChecked == true)
                 {
                     isAnsCorrect = false;
                 }

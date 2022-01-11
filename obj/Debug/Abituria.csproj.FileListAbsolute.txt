@@ -1,9 +1,8 @@
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csprojAssemblyReference.cache
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\App.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\CalcQuadraticFunc.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Calculator.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\CalculatorChoice.g.cs
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\controls\LoginControl.g.cs
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\controls\MenuControl.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\equations\W12Page.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\equations\W17Page.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\equations\W18Page.g.cs
@@ -69,7 +68,6 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\KwadratowaPag
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\RegisterPage.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\MainPage.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\LoginPage.g.cs
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\controls\HomeView.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Window1.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\App.g.cs
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -85,8 +83,6 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\bin\Debug\WpfMath.dll
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\CalcQuadraticFunc.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Calculator.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\CalculatorChoice.baml
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\controls\LoginControl.baml
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\controls\MenuControl.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\equations\W12Page.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\equations\W17Page.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\pages\equations\W18Page.baml
@@ -157,7 +153,6 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Texts.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Buttons.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Colors.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\styles\Fonts.baml
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\controls\HomeView.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Window1.baml
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.g.resources
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.Properties.Resources.resources
@@ -168,4 +163,5 @@ C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.applicatio
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csproj.CopyComplete
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.exe
 C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.pdb
-C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\Abituria.csprojAssemblyReference.cache
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\controls\LoginControl.g.cs
+C:\Users\Adam\Documents\GitHub\Projekt-Inzynierski\obj\Debug\controls\LoginControl.baml

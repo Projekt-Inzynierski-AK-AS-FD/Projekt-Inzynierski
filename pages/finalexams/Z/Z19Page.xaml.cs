@@ -37,7 +37,13 @@ namespace Abituria.pages
         {
             clickCounter += 1;
             //tutaj wstawić treść podpowiedzi i cyk do funkcji
-            string[] hintsArray = { @"9^{-10} \cdot 3^{19} = (3^2)^{-10} \cdot 3^{19}", @"(3^2)^{-10} \cdot 3^{19} = 3^{-20} \cdot 3^{19}", @"3^{-20} \cdot 3^{19} = 3^{-20+19}", @"= 3^{-1}" };
+            // @"\text{} \; x=-2, \text{}"
+            string[] hintsArray = { @"\text{Przeanalizuj sytuację i oblicz miary kąta } \; CEB \; \text{który jest kątem przyległym do kąta } \; AEB.",
+            @"\text{Suma kątów przyległych wynosi zawsze } \; 180^ \circ , \; \text{z danymi daje to:}
+\\ |CEB|= 180^ \circ - 140 ^ \circ  = 40^ \circ",
+            @"\text{Teraz należy obliczyć brakującą miarę kąta EBC:} \\ |EBC| = 180^ \circ - 55^ \circ  - |CEB| = 85^ \circ ",
+            @"|DAC|=|EBC|=85^ \circ "
+            };
             string hint = HintsClass.Hint(clickCounter, hintsArray);
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = "";
