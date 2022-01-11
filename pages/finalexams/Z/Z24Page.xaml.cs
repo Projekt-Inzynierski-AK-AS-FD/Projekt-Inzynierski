@@ -26,7 +26,7 @@ namespace Abituria.pages
             this.DataContext = new LoginViewModel();
         }
         int clickCounter = 0;
-        readonly int correctAnsw = 4; //bo odp. D, czyli checkbox #4
+        readonly int correctAnsw = 3; //bo odp. D, czyli checkbox #4
         private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
             string answer = HintsClass.AnswerButtonChange(sender, CheckAnswer(correctAnsw: correctAnsw));
@@ -37,7 +37,14 @@ namespace Abituria.pages
         {
             clickCounter += 1;
             //tutaj wstawić treść podpowiedzi i cyk do funkcji
-            string[] hintsArray = { @"9^{-10} \cdot 3^{19} = (3^2)^{-10} \cdot 3^{19}", @"(3^2)^{-10} \cdot 3^{19} = 3^{-20} \cdot 3^{19}", @"3^{-20} \cdot 3^{19} = 3^{-20+19}", @"= 3^{-1}" };
+            // @"\text{} \; x=-2, \text{}"
+            string[] hintsArray = { @"\text{Oblicz pole powierzchni sześciokąta znajdującego się w dolnej i górnej podstawie bryły. } \\ \text{Jego pole jest równe polu sześciu mniejszych trójkątów równobocznych o boku długości 2:}
+\\ P_p = 6 \cdot \frac{a^2 \sqrt{3}}{4} = 6 \cdot \frac{2^2 \sqrt{3}}{4} = 6 \cdot \frac{4 \sqrt{3}}{4}
+\\ P_p = 6 \sqrt{3}",
+                @"\text{astępnie należy obliczyć pole powierzchni całkowitej, na którą składają się dwie podstawy o polu policzonym powyżej,}
+\\ \text{a także 6 kwadratowych ścian o boku równym 2:} \\ P_c = 2P_p + 6P_b = 2 \cdot 6 \sqrt{3} + 6 \cdot 2 \cdot 2
+P_c = 12 \sqrt{3} + 24"
+            };
             string hint = HintsClass.Hint(clickCounter, hintsArray);
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = "";
@@ -46,9 +53,9 @@ namespace Abituria.pages
         private bool CheckAnswer(int correctAnsw)
         {
             bool isAnsCorrect;
-            if (checkBox4.IsChecked == true)
+            if (checkBox3.IsChecked == true)
             {
-                if (checkBox1.IsChecked == true || checkBox2.IsChecked == true || checkBox3.IsChecked == true)
+                if (checkBox1.IsChecked == true || checkBox2.IsChecked == true || checkBox4.IsChecked == true)
                 {
                     isAnsCorrect = false;
                 }
@@ -62,6 +69,11 @@ namespace Abituria.pages
                 isAnsCorrect = false;
             }
             return isAnsCorrect;
+        }
+
+        private void FormulaControl_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

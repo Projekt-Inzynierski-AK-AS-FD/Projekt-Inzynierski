@@ -9,6 +9,7 @@ using Abituria.viewmodel;
 using System.Windows.Controls;
 using System.Security;
 using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
 namespace Abituria
 {
@@ -476,5 +477,28 @@ namespace Abituria
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W18;
         }
+
+        private ICommand makeAccountCommand;
+        public ICommand MakeAccountCommand => makeAccountCommand ??= new RelayCommand(MakeAccount);
+
+        private void MakeAccount()
+        {
+        }
+
+        private bool SetProperty<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
+        {
+            if (!Equals(field, newValue))
+            {
+                field = newValue;
+                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                return true;
+            }
+
+            return false;
+        }
+
+        private string registerUserName;
+
+        public string RegisterUserName { get => registerUserName; set => SetProperty(ref registerUserName, value); }
     }
 }

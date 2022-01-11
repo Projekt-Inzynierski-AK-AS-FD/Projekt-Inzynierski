@@ -26,7 +26,7 @@ namespace Abituria.pages
             this.DataContext = new LoginViewModel();
         }
         int clickCounter = 0;
-        readonly int correctAnsw = 4; //bo odp. D, czyli checkbox #4
+        readonly int correctAnsw = 1; //bo odp. D, czyli checkbox #4
         private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
             string answer = HintsClass.AnswerButtonChange(sender, CheckAnswer(correctAnsw: correctAnsw));
@@ -37,7 +37,17 @@ namespace Abituria.pages
         {
             clickCounter += 1;
             //tutaj wstawić treść podpowiedzi i cyk do funkcji
-            string[] hintsArray = { @"9^{-10} \cdot 3^{19} = (3^2)^{-10} \cdot 3^{19}", @"(3^2)^{-10} \cdot 3^{19} = 3^{-20} \cdot 3^{19}", @"3^{-20} \cdot 3^{19} = 3^{-20+19}", @"= 3^{-1}" };
+            // @"\text{} \; x=-2, \text{}"
+            string[] hintsArray = { @"\text{Oblicz długość krawędzi szcześcianu używając wzoru na przekątną sześcianu:}
+\\ d = a \sqrt{3}",
+                @"\text{Przekątna ma długość 6, a zatem po podstawieniu:} 
+\\ a \sqrt{3} = 6 \\ a = \frac{6}{\sqrt{3}} = \frac{6 \cdot \sqrt{3}}{\sqrt{3} \cdot \sqrt{3}} = \frac{6\sqrt{3}}{3}
+\\ a = 2\sqrt{3}",
+                @"\text{Oblicz objętość szcześcianu używając wzoru:} 
+\\ V = a^3",
+                @"V = (2 \sqrt{3})^3 = 8 \cdot 3 \sqrt{3}
+\\ V = 24\sqrt{3}"
+            };
             string hint = HintsClass.Hint(clickCounter, hintsArray);
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = "";
@@ -46,9 +56,9 @@ namespace Abituria.pages
         private bool CheckAnswer(int correctAnsw)
         {
             bool isAnsCorrect;
-            if (checkBox4.IsChecked == true)
+            if (checkBox1.IsChecked == true)
             {
-                if (checkBox1.IsChecked == true || checkBox2.IsChecked == true || checkBox3.IsChecked == true)
+                if (checkBox4.IsChecked == true || checkBox2.IsChecked == true || checkBox3.IsChecked == true)
                 {
                     isAnsCorrect = false;
                 }
@@ -62,6 +72,11 @@ namespace Abituria.pages
                 isAnsCorrect = false;
             }
             return isAnsCorrect;
+        }
+
+        private void FormulaControl_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
