@@ -77,9 +77,9 @@
                             <Run/>kierunek (kierunek prostej zawierającej wektor)
                             <LineBreak/><controls:FormulaControl Formula="\cdot" />
                             <Run/>zwrot (grot strzałki)<LineBreak/>
-                            <LineBreak/>Jeżeli znamy punkt w którym wektor ma początek, to taki wektor nazywamy wektorem zaczepionym.<LineBreak/><InlineUIContainer>
-                            </InlineUIContainer><Run Text="Wektor zaczepiony w punkcie "/>
-                                <controls:FormulaControl Formula="A\," /> i o końcu w punkcie
+                            <LineBreak/>Jeżeli znamy punkt w którym wektor ma początek, to taki wektor nazywamy wektorem zaczepionym.<LineBreak/>
+                            <Run Text="Wektor zaczepiony w punkcie "/>
+                            <controls:FormulaControl Formula="A\," /> i o końcu w punkcie
                             <controls:FormulaControl Formula="\,B\," /> zapiszemy tak: 
                             <controls:FormulaControl Formula="\:\vec{AB}" />.<LineBreak/>Jeżeli wektor może być opisany tylko przez długość, kierunek i zwrot. Wtedy taki wektor nazywamy wektorem swobodnym i oznaczamy najczęściej małymi literami, np. tak:
                             <controls:FormulaControl Formula="\:\vec{v},\vec{u},\vec{w}" />.<LineBreak/>

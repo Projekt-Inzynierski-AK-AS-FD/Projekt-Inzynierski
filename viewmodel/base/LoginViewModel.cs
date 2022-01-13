@@ -16,13 +16,13 @@ namespace Abituria
     [ImplementPropertyChanged]
     public class LoginViewModel : BaseViewModel///Model widoku dla niestandardowego okna
     {
-        private static string uName;
+        private static string uName;///Pole prywatne do kopii zapasowej wartości właściwości
         public string UserName///Nazwa użytkownika
         {
             get { return uName; }
             set { uName = value; }
         }
-        public string Greeting { get; } = "Dzień dobry, " + uName;
+        public string Greeting { get; } = "Dzień dobry, " + uName;///Powitanie zalogowanego użytkownika w menu głównym
         public bool LoginIsRunning { get; set; }///Flaga wskazująca, czy proces Login trwa
         public SecureString Password { get; set; }///Hasło użytkownika, set; nie działa
         public ICommand LoginCommand { get; set; }///Komenda do logowania
@@ -34,62 +34,62 @@ namespace Abituria
         public ICommand GoToDzialyPage { get; set; }///Komenda przechodzi do strony MenuPage
         public ICommand GoToZadaniaPage { get; set; }///Komenda przechodzi do strony MenuPage
         public ICommand GoToWzoryPage { get; set; }///Komenda przechodzi do strony MenuPage
-        public ICommand GoToKwadratowaPage { get; set; }
-        public ICommand GoToWektoryPage { get; set; }
-        public ICommand GoToMP21Page { get; set; }
-        public ICommand GoToZ1Page { get; set; }
-        public ICommand GoToZ2Page { get; set; }
-        public ICommand GoToZ3Page { get; set; }
-        public ICommand GoToZ4Page { get; set; }
-        public ICommand GoToZ5Page { get; set; }
-        public ICommand GoToZ6Page { get; set; }
-        public ICommand GoToZ7Page { get; set; }
-        public ICommand GoToZ8Page { get; set; }
-        public ICommand GoToZ9Page { get; set; }
-        public ICommand GoToZ10Page { get; set; }
-        public ICommand GoToZ11Page { get; set; }
-        public ICommand GoToZ12Page { get; set; }
-        public ICommand GoToZ13Page { get; set; }
-        public ICommand GoToZ14Page { get; set; }
-        public ICommand GoToZ15Page { get; set; }
-        public ICommand GoToZ16Page { get; set; }
-        public ICommand GoToZ17Page { get; set; }
-        public ICommand GoToZ18Page { get; set; }
-        public ICommand GoToZ19Page { get; set; }
-        public ICommand GoToz20Page { get; set; }
-        public ICommand GoToZ21Page { get; set; }
-        public ICommand GoToZ22Page { get; set; }
-        public ICommand GoToZ23Page { get; set; }
-        public ICommand GoToZ24Page { get; set; }
-        public ICommand GoToZ25Page { get; set; }
-        public ICommand GoToZ26Page { get; set; }
-        public ICommand GoToZ27Page { get; set; }
-        public ICommand GoToZ28Page { get; set; }
-        public ICommand GoToZ29Page { get; set; }
-        public ICommand GoToZ30Page { get; set; }
-        public ICommand GoToZ31Page { get; set; }
-        public ICommand GoToZ32Page { get; set; }
-        public ICommand GoToZ33Page { get; set; }
-        public ICommand GoToZ34Page { get; set; }
-        public ICommand GoToZ35Page { get; set; }
-        public ICommand GoToWPage { get; set; }///Komenda przechodzi do strony Wzory
-        public ICommand GoToW2Page { get; set; }///Komenda przechodzi do strony Wzory
-        public ICommand GoToW3Page { get; set; }///Komenda przechodzi do strony Wzory
-        public ICommand GoToW4Page { get; set; }///Komenda przechodzi do strony Wzorye
-        public ICommand GoToW5Page { get; set; }///Komenda przechodzi do strony 
-        public ICommand GoToW6Page { get; set; }
-        public ICommand GoToW7Page { get; set; }
-        public ICommand GoToW8Page { get; set; }
-        public ICommand GoToW9Page { get; set; }
-        public ICommand GoToW10Page { get; set; }
-        public ICommand GoToW11Page { get; set; }
-        public ICommand GoToW12Page { get; set; }
-        public ICommand GoToW13Page { get; set; }
-        public ICommand GoToW14Page { get; set; }
-        public ICommand GoToW15Page { get; set; }
-        public ICommand GoToW16Page { get; set; }
-        public ICommand GoToW17Page { get; set; }
-        public ICommand GoToW18Page { get; set; }
+        public ICommand GoToKwadratowaPage { get; set; }///Komenda przechodzi do kalkulatora funkcji kwadratowej
+        public ICommand GoToWektoryPage { get; set; }///Komenda przechodzi do działu z wektorami
+        public ICommand GoToMP21Page { get; set; }///Komenda przechodzi do zadań z matury poprawkowej z 2021
+        public ICommand GoToZ1Page { get; set; }///Komenda przechodzi do zadania 1 z matury poprawkowej z 2021
+        public ICommand GoToZ2Page { get; set; }///Komenda przechodzi do zadania 2 z matury poprawkowej z 2021
+        public ICommand GoToZ3Page { get; set; }///Komenda przechodzi do zadania 3 z matury poprawkowej z 2021
+        public ICommand GoToZ4Page { get; set; }///Komenda przechodzi do zadania 4 z matury poprawkowej z 2021
+        public ICommand GoToZ5Page { get; set; }///Komenda przechodzi do zadania 5 z matury poprawkowej z 2021
+        public ICommand GoToZ6Page { get; set; }///Komenda przechodzi do zadania 6 z matury poprawkowej z 2021
+        public ICommand GoToZ7Page { get; set; }///Komenda przechodzi do zadania 7 z matury poprawkowej z 2021
+        public ICommand GoToZ8Page { get; set; }///Komenda przechodzi do zadania 8 z matury poprawkowej z 2021
+        public ICommand GoToZ9Page { get; set; }///Komenda przechodzi do zadania 9 z matury poprawkowej z 2021
+        public ICommand GoToZ10Page { get; set; }///Komenda przechodzi do zadania 10 z matury poprawkowej z 2021
+        public ICommand GoToZ11Page { get; set; }///Komenda przechodzi do zadania 11 z matury poprawkowej z 2021
+        public ICommand GoToZ12Page { get; set; }///Komenda przechodzi do zadania 12 z matury poprawkowej z 2021
+        public ICommand GoToZ13Page { get; set; }///Komenda przechodzi do zadania 13 z matury poprawkowej z 2021
+        public ICommand GoToZ14Page { get; set; }///Komenda przechodzi do zadania 14 z matury poprawkowej z 2021
+        public ICommand GoToZ15Page { get; set; }///Komenda przechodzi do zadania 15 z matury poprawkowej z 2021
+        public ICommand GoToZ16Page { get; set; }///Komenda przechodzi do zadania 16 z matury poprawkowej z 2021
+        public ICommand GoToZ17Page { get; set; }///Komenda przechodzi do zadania 17 z matury poprawkowej z 2021
+        public ICommand GoToZ18Page { get; set; }///Komenda przechodzi do zadania 18 z matury poprawkowej z 2021
+        public ICommand GoToZ19Page { get; set; }///Komenda przechodzi do zadania 19 z matury poprawkowej z 2021
+        public ICommand GoToz20Page { get; set; }///Komenda przechodzi do zadania 20 z matury poprawkowej z 2021
+        public ICommand GoToZ21Page { get; set; }///Komenda przechodzi do zadania 21 z matury poprawkowej z 2021
+        public ICommand GoToZ22Page { get; set; }///Komenda przechodzi do zadania 22 z matury poprawkowej z 2021
+        public ICommand GoToZ23Page { get; set; }///Komenda przechodzi do zadania 23 z matury poprawkowej z 2021
+        public ICommand GoToZ24Page { get; set; }///Komenda przechodzi do zadania 24 z matury poprawkowej z 2021
+        public ICommand GoToZ25Page { get; set; }///Komenda przechodzi do zadania 25 z matury poprawkowej z 2021
+        public ICommand GoToZ26Page { get; set; }///Komenda przechodzi do zadania 26 z matury poprawkowej z 2021
+        public ICommand GoToZ27Page { get; set; }///Komenda przechodzi do zadania 27 z matury poprawkowej z 2021
+        public ICommand GoToZ28Page { get; set; }///Komenda przechodzi do zadania 28 z matury poprawkowej z 2021
+        public ICommand GoToZ29Page { get; set; }///Komenda przechodzi do zadania 29 z matury poprawkowej z 2021
+        public ICommand GoToZ30Page { get; set; }///Komenda przechodzi do zadania 30 z matury poprawkowej z 2021
+        public ICommand GoToZ31Page { get; set; }///Komenda przechodzi do zadania 31 z matury poprawkowej z 2021
+        public ICommand GoToZ32Page { get; set; }///Komenda przechodzi do zadania 32 z matury poprawkowej z 2021
+        public ICommand GoToZ33Page { get; set; }///Komenda przechodzi do zadania 33 z matury poprawkowej z 2021
+        public ICommand GoToZ34Page { get; set; }///Komenda przechodzi do zadania 34 z matury poprawkowej z 2021
+        public ICommand GoToZ35Page { get; set; }///Komenda przechodzi do zadania 35 z matury poprawkowej z 2021
+        public ICommand GoToWPage { get; set; }///Komenda przechodzi do strony ze wzorami Wartość bezwzględna liczby
+        public ICommand GoToW2Page { get; set; }///Komenda przechodzi do strony ze wzorami Potęgi i pierwiastki
+        public ICommand GoToW3Page { get; set; }///Komenda przechodzi do strony ze wzorami Logarytmy
+        public ICommand GoToW4Page { get; set; }///Komenda przechodzi do strony ze wzorami Silnia. Współczynnik dwumianowy
+        public ICommand GoToW5Page { get; set; }///Komenda przechodzi do strony ze wzorami Wzór dwumianowy Newtona
+        public ICommand GoToW6Page { get; set; }///Komenda przechodzi do strony ze wzorami Wzory skróconego mnożenia
+        public ICommand GoToW7Page { get; set; }///Komenda przechodzi do strony ze wzorami Ciągi 
+        public ICommand GoToW8Page { get; set; }///Komenda przechodzi do strony ze wzorami Funkcja kwadratowa
+        public ICommand GoToW9Page { get; set; }///Komenda przechodzi do strony ze wzorami Geometria analityczna 
+        public ICommand GoToW10Page { get; set; }///Komenda przechodzi do strony ze wzorami Planimetria
+        public ICommand GoToW11Page { get; set; }///Komenda przechodzi do strony ze wzorami Stereometria
+        public ICommand GoToW12Page { get; set; }///Komenda przechodzi do strony ze wzorami Trygonometria
+        public ICommand GoToW13Page { get; set; }///Komenda przechodzi do strony ze wzorami Kombinatoryka
+        public ICommand GoToW14Page { get; set; }///Komenda przechodzi do strony ze wzorami Rachunek prawdopodobieństwa
+        public ICommand GoToW15Page { get; set; }///Komenda przechodzi do strony ze wzorami Parametry danych statystycznych
+        public ICommand GoToW16Page { get; set; }///Komenda przechodzi do strony ze wzorami Granica ciągu
+        public ICommand GoToW17Page { get; set; }///Komenda przechodzi do strony ze wzorami Pochodna funkcji
+        public ICommand GoToW18Page { get; set; }///Komenda przechodzi do strony ze wzorami Tablica wartości funkcji trygonometrycznych 
         public LoginViewModel()///Standardowy konstruktor
         {
             LoginCommand = new RelayParametrizedCommand((parameter) => Login(parameter));///Tworzenie komend
@@ -204,263 +204,210 @@ namespace Abituria
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Kwadratowa;
         }
-
         private void Wektory()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Wektory;
         }
-
         private void MP21()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.MP21;
         }
-
         private void Z1()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z1;
         }
-
         private void Z2()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z2;
         }
-
         private void Z3()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z3;
         }
-
         private void Z4()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z4;
         }
-
-
         private void Z5()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z5;
         }
-
         private void Z6()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z6;
         }
-
         private void Z7()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z7;
         }
-
         private void Z8()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z8;
         }
-
         private void Z9()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z9;
         }
-
         private void Z10()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z10;
         }
-
         private void Z11()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z11;
         }
-
         private void Z12()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z12;
         }
-
         private void Z13()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z13;
         }
-
         private void Z14()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z14;
         }
-
         private void Z15()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z15;
         }
-
         private void Z16()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z16;
         }
-
         private void Z17()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z17;
         }
-
         private void Z18()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z18;
         }
-
         private void Z19()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z19;
         }
-
         private void Z20()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z20;
         }
-
         private void Z21()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z21;
         }
-
         private void Z22()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z22;
         }
-
         private void Z23()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z23;
         }
-
         private void Z24()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z24;
         }
-
         private void Z25()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z25;
         }
-
         private void Z26()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z26;
         }
-
         private void Z27()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z27;
         }
-
         private void Z28()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z28;
         }
-
         private void Z29()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z29;
         }
-
         private void Z30()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z30;
         }
-
         private void Z31()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z31;
         }
-
         private void Z32()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z32;
         }
-
         private void Z33()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z33;
         }
-
         private void Z34()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z34;
         }
-
         private void Z35()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Z35;
         }
-
         private void W()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W;
         }
-
         private void W2()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W2;
         }
-
         private void W3()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W3;
         }
-
         private void W4()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W4;
         }
-
         private void W5()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W5;
         }
-
         private void W6()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W6;
         }
-
         private void W7()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W7;
         }
-
         private void W8()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W8;
         }
-
         private void W9()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W9;
         }
-
         private void W10()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W10;
         }
-
         private void W11()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W11;
         }
-
         private void W12()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W12;
         }
-
         private void W13()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W13;
         }
-
         private void W14()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W14;
         }
-
         private void W15()
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W15;
@@ -477,28 +424,21 @@ namespace Abituria
         {
             ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.W18;
         }
-
         private ICommand makeAccountCommand;
         public ICommand MakeAccountCommand => makeAccountCommand ??= new RelayCommand(MakeAccount);
-
-        private void MakeAccount()
+        private void MakeAccount()///Tworzenie konta użytkownika
         {
         }
-
         private bool SetProperty<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
         {
             if (!Equals(field, newValue))
             {
-                field = newValue;
-                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                field = newValue;//PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
                 return true;
             }
-
             return false;
         }
-
         private string registerUserName;
-
         public string RegisterUserName { get => registerUserName; set => SetProperty(ref registerUserName, value); }
     }
 }

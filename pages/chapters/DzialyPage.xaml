@@ -24,17 +24,24 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="62.5"/>
                 </Grid.RowDefinitions>
-                <Button Content="⮌" Background="Transparent" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeXXLarge}" Margin="-100" Padding="-100" Height="60" Width="60">
+                <Button Content="⮌"
+                        Background="Transparent"
+                        Foreground="{StaticResource ForegroundLightBrush}"
+                        FontSize="{StaticResource FontSizeXXLarge}" 
+                        Margin="-100"
+                        Padding="-100"
+                        Height="60"
+                        Width="60">
                     <Button.InputBindings>
                         <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMenuPage}"/>
                     </Button.InputBindings>
                 </Button>
                 <Grid Grid.Row="0" Grid.Column="1">
                     <TextBlock Text="Dzialy matematyki" 
-                                           HorizontalAlignment="Center"
-                                           VerticalAlignment="Center"
-                                           Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                           FontSize="{StaticResource FontSizeLarge}"/>
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Foreground="{StaticResource BackgroundVeryLightBrush}"
+                               FontSize="{StaticResource FontSizeLarge}"/>
                 </Grid>
                 <Grid Grid.Column="1" Grid.Row="1">
                     <Grid Grid.Column="1" Grid.Row="1">
@@ -46,25 +53,25 @@
                                         <GradientStop Color="MidnightBlue" Offset="1"/>
                                     </LinearGradientBrush>
                                 </Border.Background>
-                                <Button Name="ButtonWektory" 
-                                                Background="Transparent" 
-                                                Foreground="White" 
-                                                Width="auto"
-                                                BorderBrush="Transparent"
-                                                BorderThickness="0"
-                                                ToolTip="Podstawowa wiedza o wektorach">
+                                <Button Name="ButtonWektory"
+                                        Background="Transparent"
+                                        Foreground="White"
+                                        Width="auto"
+                                        BorderBrush="Transparent"
+                                        BorderThickness="0"
+                                        ToolTip="Podstawowa wiedza o wektorach">
                                     <Button.InputBindings>
                                         <MouseBinding MouseAction="LeftClick" Command="{Binding GoToWektoryPage}"/>
                                     </Button.InputBindings>
                                     <StackPanel>
-                                        <TextBlock Text="Wektory" 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,10,10,0"/>
-                                        <TextBlock Text="Iloczyn skalarny" 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeLarge}"
-                                                       Margin="20,10,10,0"/>
+                                        <TextBlock Text="Wektory"
+                                                   Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                   FontSize="{StaticResource FontSizeXXLarge}"
+                                                   Margin="20,10,10,0"/>
+                                        <TextBlock Text="Iloczyn skalarny"
+                                                   Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                   FontSize="{StaticResource FontSizeLarge}"
+                                                   Margin="20,10,10,0"/>
                                     </StackPanel>
                                     <Button.Template>
                                         <ControlTemplate TargetType="Button">
@@ -80,30 +87,29 @@
                                         <GradientStop Color="{StaticResource ForegroundVeryDark}" Offset="1"/>
                                     </LinearGradientBrush>
                                 </Border.Background>
-                                <Button Background="Transparent" 
-                                                Foreground="White" 
-                                                Width="auto"
-                                                BorderBrush="Transparent"
-                                                BorderThickness="0"
-                                                ToolTip="Zawartosc dostepna wktótce!">
+                                <Button Background="Transparent"
+                                        Foreground="White"
+                                        Width="auto"
+                                        BorderBrush="Transparent"
+                                        BorderThickness="0"
+                                        ToolTip="Zawartosc dostepna wktótce!">
                                     <StackPanel>
-                                        <TextBlock Text="Rachunek" 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="10,10,10,0"/>
-                                        <TextBlock Text="zbiorów i " 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="10,0,10,0"/>
-                                        <TextBlock Text="logika" 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="10,0,10,0"/>
-
-                                        <TextBlock Text="Niedostepne" 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeLarge}"
-                                                       Margin="20,35,10,0"/>
+                                        <TextBlock Text="Rachunek"
+                                                   Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                   FontSize="{StaticResource FontSizeXXLarge}"
+                                                   Margin="10,10,10,0"/>
+                                        <TextBlock Text="zbiorów i "
+                                                   Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                   FontSize="{StaticResource FontSizeXXLarge}"
+                                                   Margin="10,0,10,0"/>
+                                        <TextBlock Text="logika"
+                                                   Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                   FontSize="{StaticResource FontSizeXXLarge}"
+                                                   Margin="10,0,10,0"/>
+                                        <TextBlock Text="Niedostepne"
+                                                   Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                   FontSize="{StaticResource FontSizeLarge}"
+                                                   Margin="20,35,10,0"/>
                                     </StackPanel>
                                     <Button.Template>
                                         <ControlTemplate TargetType="Button">
@@ -124,29 +130,29 @@
                                     <GradientStop Color="{StaticResource ForegroundVeryDark}" Offset="1"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <Button Background="Transparent" 
-                                                Foreground="White" 
-                                                Width="auto"
-                                                BorderBrush="Transparent"
-                                                BorderThickness="0"
-                                                ToolTip="Zawartosc dostepna wktótce!">
+                            <Button Background="Transparent"
+                                    Foreground="White"
+                                    Width="auto"
+                                    BorderBrush="Transparent"
+                                    BorderThickness="0"
+                                    ToolTip="Zawartosc dostepna wktótce!">
                                 <StackPanel>
-                                    <TextBlock Text="Równania" 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,10,10,0"/>
-                                    <TextBlock Text="i" 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,0,10,0"/>
-                                    <TextBlock Text="nierównosci" 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,0,10,0"/>
-                                    <TextBlock Text="Niedostepne" 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeLarge}"
-                                                       Margin="20,30,10,0"/>
+                                    <TextBlock Text="Równania"
+                                               Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                               FontSize="{StaticResource FontSizeXXLarge}"
+                                               Margin="20,10,10,0"/>
+                                    <TextBlock Text="i"
+                                               Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                               FontSize="{StaticResource FontSizeXXLarge}"
+                                               Margin="20,0,10,0"/>
+                                    <TextBlock Text="nierównosci"
+                                               Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                               FontSize="{StaticResource FontSizeXXLarge}"
+                                               Margin="20,0,10,0"/>
+                                    <TextBlock Text="Niedostepne"
+                                               Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                               FontSize="{StaticResource FontSizeLarge}"
+                                               Margin="20,30,10,0"/>
                                 </StackPanel>
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
@@ -162,26 +168,24 @@
                                     <GradientStop Color="{StaticResource ForegroundVeryDark}" Offset="1"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <Button Background="Transparent" 
-                                                Foreground="White" 
-                                                Width="auto"
-                                                BorderBrush="Transparent"
-                                                BorderThickness="0"
-                                                ToolTip="Zawartosc dostepna wktótce!">
+                            <Button Background="Transparent"
+                                    Foreground="White"
+                                    Width="auto"
+                                    BorderBrush="Transparent"
+                                    BorderThickness="0"
+                                    ToolTip="Zawartosc dostepna wktótce!">
                                 <StackPanel>
-                                    <TextBlock Text="Ciagi" 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="10,10,10,0"/>
-                                    <TextBlock Text="liczbowe" 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="10,5,10,0"/>
-
-                                    <TextBlock Text="Niedostepne" 
-                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
-                                                       FontSize="{StaticResource FontSizeLarge}"
-                                                       Margin="20,60,10,0"/>
+                                    <TextBlock Text="Ciagi"
+                                               Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                               FontSize="{StaticResource FontSizeXXLarge}"
+                                               Margin="10,10,10,0"/>
+                                    <TextBlock Text="liczbowe"
+                                               Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                               FontSize="{StaticResource FontSizeXXLarge}"
+                                               Margin="10,5,10,0"/>
+                                    <TextBlock Text="Niedostepne" Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                               FontSize="{StaticResource FontSizeLarge}"
+                                               Margin="20,60,10,0"/>
                                 </StackPanel>
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
@@ -196,5 +200,3 @@
         </Viewbox>
     </Border>
 </Page>
-
-    

@@ -10,7 +10,7 @@
         Dzialy = 5,///Wybór działu
         Zadania = 6,///Wybór zadania
         Wzory = 7,///Wybór wzoru
-        Kwadratowa = 8,
+        Kwadratowa = 8,///Kalkulator funkcji kwadratowej
         Wektory = 9,
         MP21 = 10,
         Z1 = 11,
