@@ -23,7 +23,7 @@ namespace Abituria
             set { uName = value; }
         }
         public string Greeting { get; } = "Dzień dobry, " + uName;///Powitanie zalogowanego użytkownika w menu głównym
-        public bool LoginIsRunning { get; set; }///Flaga wskazująca, czy proces Login trwa
+        public bool LoginIsRunning { get; set; }///Flaga wskazująca, czy proces logowania trwa
         public SecureString Password { get; set; }///Hasło użytkownika, set; nie działa
         public ICommand LoginCommand { get; set; }///Komenda do logowania
         public ICommand GoToLoginPage { get; set; }///Komenda przechodzi do strony logowania

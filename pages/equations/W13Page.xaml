@@ -21,44 +21,53 @@
             <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Margin="24,0,22,0" >
                 <Grid Grid.Row="0" Grid.Column="0" Height="auto" Width="116" >
                     <TextBlock Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeSmaller}"><InlineUIContainer>
-                            <Button Margin="30 10 0 0" Padding="0" Height="10" Width="40" Content="Cofnij" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeSmaller}"  FontFamily="{StaticResource MulishBold}" HorizontalAlignment="Center">
+                            <Button Margin="30 10 0 0" 
+                                    Padding="0" 
+                                    Height="10" 
+                                    Width="40" 
+                                    Content="Cofnij" 
+                                    Foreground="{StaticResource ForegroundLightBrush}" 
+                                    FontSize="{StaticResource FontSizeSmaller}"  
+                                    FontFamily="{StaticResource MulishBold}" 
+                                    HorizontalAlignment="Center">
                                 <Button.InputBindings>
                                     <MouseBinding MouseAction="LeftClick" Command="{Binding GoToWzoryPage}"/>
                                 </Button.InputBindings>
                             </Button>
-                        </InlineUIContainer></TextBlock>
+                        </InlineUIContainer>
+                    </TextBlock>
                 </Grid>
             </Viewbox>
             <Viewbox Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Stretch="Uniform" StretchDirection="Both">
                 <Grid>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
-                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
-                            <Button.InputBindings>
-                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMaturaPage}"/>
-                            </Button.InputBindings>
-                        </Button>
+                            <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMaturaPage}"/>
+                                </Button.InputBindings>
+                            </Button>
                         </TextBlock>
                         <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
-                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
-                            <Button.InputBindings>
-                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToKalkulatorPage}"/>
-                            </Button.InputBindings>
-                        </Button>
+                            <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToKalkulatorPage}"/>
+                                </Button.InputBindings>
+                            </Button>
                         </TextBlock>
                         <TextBlock TextWrapping="Wrap" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
-                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
-                            <Button.InputBindings>
-                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToDzialyPage}"/>
-                            </Button.InputBindings>
-                        </Button>
+                            <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToDzialyPage}"/>
+                                </Button.InputBindings>
+                            </Button>
                         </TextBlock>
                         <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
-                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
-                            <Button.InputBindings>
-                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZadaniaPage}"/>
-                            </Button.InputBindings>
-                        </Button>
+                            <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZadaniaPage}"/>
+                                </Button.InputBindings>
+                            </Button>
                         </TextBlock>
                     </StackPanel>
                 </Grid>
@@ -165,18 +174,24 @@
                         <TextBlock FontSize="17" Padding="10" Margin="10 0 0 100" TextWrapping="WrapWithOverflow" Foreground="{StaticResource BackgroundLightBrush}">
                             <TextBlock FontSize="18" ><Bold>KOMBINATORYKA</Bold></TextBlock><LineBreak/><LineBreak/>
                             <controls:FormulaControl Formula="\cdot"/>
-                            <Underline>Wariacje z powtórzeniami</Underline><LineBreak/>
-                            Liczba sposobów, na które z <controls:FormulaControl Margin="-3" Formula="\: n \:"/> różnych elementów można utworzyć ciąg, składający się z <controls:FormulaControl Margin="-3" Formula="\: k \:"/> niekoniecznie różnych wyrazów, jest równa <controls:FormulaControl Margin="-3" Formula="\: n^k \:"/>.<LineBreak/><LineBreak/><LineBreak/>
+                            <Underline>Wariacje z powtórzeniami</Underline><LineBreak/>Liczba sposobów, na które z 
+                            <controls:FormulaControl Margin="-3" Formula="\: n \:"/> różnych elementów można utworzyć ciąg, składający się z 
+                            <controls:FormulaControl Margin="-3" Formula="\: k \:"/> niekoniecznie różnych wyrazów, jest równa 
+                            <controls:FormulaControl Margin="-3" Formula="\: n^k \:"/>.<LineBreak/><LineBreak/><LineBreak/>
                             <controls:FormulaControl Formula="\cdot"/>
-                            <Underline>Wariacje bez powtórzeń</Underline><LineBreak/>
-                            Liczba sposobów, na które z <controls:FormulaControl Margin="-3" Formula="\: n \:"/> różnych elementów można utworzyć ciąg, składający się z <controls:FormulaControl Margin="-6" Formula="\: k (1 \leq k \leq n) \:"/> różnych wyrazów, jest równa <LineBreak/>
+                            <Underline>Wariacje bez powtórzeń</Underline><LineBreak/>Liczba sposobów, na które z 
+                            <controls:FormulaControl Margin="-3" Formula="\: n \:"/> różnych elementów można utworzyć ciąg, składający się z 
+                            <controls:FormulaControl Margin="-6" Formula="\: k (1 \leq k \leq n) \:"/> różnych wyrazów, jest równa <LineBreak/>
                             <controls:FormulaControl Margin="5" Formula="n \cdot (n-1) \cdot ... \cdot (n-k+1) = \frac{n!}{(n-k)!}"/><LineBreak/><LineBreak/><LineBreak/>
                             <controls:FormulaControl Formula="\cdot"/>
-                            <Underline>Permutacje</Underline><LineBreak/>
-                            Liczba sposobów, na które <controls:FormulaControl Margin="-6" Formula="\: n(n \geq 1) \:"/> różnych elementów można ustawić w ciąg, jest równa <controls:FormulaControl Margin="-3" Formula="\: n! \:"/>.<LineBreak/><LineBreak/><LineBreak/>
+                            <Underline>Permutacje</Underline><LineBreak/>Liczba sposobów, na które 
+                            <controls:FormulaControl Margin="-6" Formula="\: n(n \geq 1) \:"/> różnych elementów można ustawić w ciąg, jest równa 
+                            <controls:FormulaControl Margin="-3" Formula="\: n! \:"/>.<LineBreak/><LineBreak/><LineBreak/>
                             <controls:FormulaControl Formula="\cdot"/>
-                            <Underline>Kombinacje</Underline><LineBreak/>
-                            Liczba sposobów, na które spośród <controls:FormulaControl Margin="-3" Formula="\: n \:"/> różnych elementów można wybrać <controls:FormulaControl Margin="-6" Formula="\: k (0 \leq k \leq n) \:"/> elementów, jest równa <controls:FormulaControl Margin="-13" Formula="\: \: \binom{n}{k} \: \: \:"/>.<LineBreak/><LineBreak/><LineBreak/>
+                            <Underline>Kombinacje</Underline><LineBreak/>Liczba sposobów, na które spośród 
+                            <controls:FormulaControl Margin="-3" Formula="\: n \:"/> różnych elementów można wybrać 
+                            <controls:FormulaControl Margin="-6" Formula="\: k (0 \leq k \leq n) \:"/> elementów, jest równa 
+                            <controls:FormulaControl Margin="-13" Formula="\: \: \binom{n}{k} \: \: \:"/>.<LineBreak/><LineBreak/><LineBreak/>
                         </TextBlock>
                     </Grid>
                 </ScrollViewer>

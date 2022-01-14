@@ -34,7 +34,7 @@
                 <TextBlock Text="Funkcja kwadratowa" Grid.ColumnSpan="5" HorizontalAlignment="Center"  VerticalAlignment="Top"  FontSize="30" FontWeight="Bold" Padding="10"/>
                 <Border BorderBrush="LightGray" BorderThickness="1" >
                     <TextBlock>
-            Kalkulator funkcji kwadratowej jest narzędziem, które nie tylko pomoże ci sprawdzić poprawność swoich rozwiązań, ale przede wszystkim w praktyczny sposób przeprowadzi cię przez proces analizy oraz zrozumienia funkcji, nad którą pracujesz. Zatrzymałeś się w zadaniu, o czymś zapomniałeś, albo po prostu chcesz poćwiczyć? Kalkulator przeliczy dla ciebie wszystkie istotne informacje na konkretnym przykładzie funkcji, której parametry podasz, pomoże też znaleźć jej postać ogólną, iloczynową oraz kanoniczną.
+                        Kalkulator funkcji kwadratowej jest narzędziem, które nie tylko pomoże ci sprawdzić poprawność swoich rozwiązań, ale przede wszystkim w praktyczny sposób przeprowadzi cię przez proces analizy oraz zrozumienia funkcji, nad którą pracujesz. Zatrzymałeś się w zadaniu, o czymś zapomniałeś, albo po prostu chcesz poćwiczyć? Kalkulator przeliczy dla ciebie wszystkie istotne informacje na konkretnym przykładzie funkcji, której parametry podasz, pomoże też znaleźć jej postać ogólną, iloczynową oraz kanoniczną.
                     </TextBlock>
                 </Border>
             </StackPanel>

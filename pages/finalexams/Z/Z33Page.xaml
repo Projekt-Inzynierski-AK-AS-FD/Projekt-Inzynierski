@@ -262,7 +262,7 @@
                     </Grid.RowDefinitions>
                     <Viewbox Stretch="Uniform" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 0, 0">
                         <StackPanel Width="641">
-                            <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Dany jest trapez "/><InlineUIContainer>
+                            <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="{StaticResource ForegroundLightBrush}"><Run Text="Dany jest trapez "/><InlineUIContainer>
                             <controls:FormulaControl Formula="ABCD " /></InlineUIContainer> o podstawach <controls:FormulaControl Formula="\:AB" /> i
                         <controls:FormulaControl Formula="\:CD" />. Przekątne <controls:FormulaControl Formula="AC" /> i
                         <controls:FormulaControl Formula="\:BD" /> tego trapezu przecinają się w punkcie <controls:FormulaControl Formula="S" /> (zobacz rysunek) tak, że

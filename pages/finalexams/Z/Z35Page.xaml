@@ -262,7 +262,7 @@
                     </Grid.RowDefinitions>
                     <Viewbox Stretch="Uniform" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 0, 0">
                         <StackPanel Width="402">
-                            <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Dany jest ciąg "/><InlineUIContainer>
+                            <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="{StaticResource ForegroundLightBrush}"><Run Text="Dany jest ciąg "/><InlineUIContainer>
                             <controls:FormulaControl Formula="(a_n)\:" /></InlineUIContainer>określony wzorem 
                         <controls:FormulaControl Formula="a_n=\frac{5-3n}{7}\:" />dla każdej liczby naturalnej
                         <controls:FormulaControl Formula="n\geq1\:" />. Trójwyrazowy ciąg

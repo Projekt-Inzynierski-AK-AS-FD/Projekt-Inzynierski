@@ -11,7 +11,7 @@
         Zadania = 6,///Wybór zadania
         Wzory = 7,///Wybór wzoru
         Kwadratowa = 8,///Kalkulator funkcji kwadratowej
-        Wektory = 9,
+        Wektory = 9,///Strona o wektorach
         MP21 = 10,
         Z1 = 11,
         Z2 = 12,

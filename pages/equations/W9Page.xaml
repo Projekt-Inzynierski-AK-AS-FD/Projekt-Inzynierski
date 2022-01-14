@@ -275,7 +275,8 @@
                             <controls:FormulaControl Formula="\:r^2=a^2+b^2-c\gt0" />
                         </TextBlock>
 
-                    </Grid>                </ScrollViewer>
+                    </Grid>
+                </ScrollViewer>
             </Border>
             <ContentControl Grid.Row="1" Grid.Column="1" Margin="10" Content="{Binding CurrentView}" Grid.ColumnSpan="2"/>
         </Grid>

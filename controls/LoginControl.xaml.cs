@@ -3,9 +3,6 @@ namespace Abituria
 {
     public partial class LoginControl : UserControl
     {
-        public LoginControl()
-        {
-            InitializeComponent();
-        }
+        public LoginControl() => InitializeComponent();
     }
 }

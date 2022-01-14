@@ -9,7 +9,6 @@
         Title="Window1" Width="640" Height="520"
         Closed="Window_Closed">
     <Window.Resources>
-
         <Style TargetType="Button">
             <Setter Property="Padding" Value="2" />
         </Style>

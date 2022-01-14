@@ -23,9 +23,6 @@ namespace Abituria
     }
     public class HasTextProperty : BaseAttachedProperty<HasTextProperty, bool>///Ustawia właściwość dołączoną jeżeli wywołujący PasswordBox ma jakikolwiek tekst
     {
-        public static void SetValue(DependencyObject sender)
-        {
-            SetValue(sender, ((PasswordBox)sender).SecurePassword.Length > 0);
-        }
+        public static void SetValue(DependencyObject sender) => SetValue(sender, ((PasswordBox)sender).SecurePassword.Length > 0);
     }
 }

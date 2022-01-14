@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
-
 namespace Abituria.viewmodel
 {
     [ImplementPropertyChanged]
@@ -23,7 +22,7 @@ namespace Abituria.viewmodel
             updatingFlag.SetPropertyValue(true);
             try
             {
-                await action();///Odpala akcje
+                action();///Odpala akcje
             }
             finally
             {

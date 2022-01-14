@@ -11,36 +11,44 @@
                 Title="LoginPage">
     <Border Background="{StaticResource WordBlueBrush}">
         <Grid>
-            <Grid.Background><!--Obrazek i niebieskie tło-->
+            <Grid.Background>
+                <!--Obrazek i niebieskie tło-->
                 <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="/img/bg.png"/>
             </Grid.Background>
-            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"><!--Scroll z główną zawartością-->
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <!--Scroll z główną zawartością-->
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.TextAlignment="Center">
-                    <Border Background="{StaticResource ForegroundLightBrush}" CornerRadius="10" Padding="15 50 15 15" Width="400" Margin="50 50 50 0"><!--Główne pudełko od logowania-->
+                    <Border Background="{StaticResource ForegroundLightBrush}" CornerRadius="10" Padding="15 50 15 15" Width="400" Margin="50 50 50 0">
+                        <!--Główne pudełko od logowania-->
                         <StackPanel>
                             <TextBlock Text="Zaloguj się"
                                        ToolTip="Wypełnij poniższy formularz"
                                        FontSize="{StaticResource FontSizeXXLarge}"
                                        FontFamily="{StaticResource MulishBold}"
-                                       Foreground="{StaticResource WordBlueBrush}"/><!--Nagłówek tworzenia konta-->
+                                       Foreground="{StaticResource WordBlueBrush}"/>
+                            <!--Nagłówek tworzenia konta-->
                             <TextBlock Text="Zostań abiturientem!"
                                        ToolTip="Z nami spokojnie zdasz maturę!"
                                        FontSize="{StaticResource FontSizeRegular}"
-                                       Foreground="{StaticResource ForegroundDarkBrush}"/><!--Podpis tworzenia konta-->
+                                       Foreground="{StaticResource ForegroundDarkBrush}"/>
+                            <!--Podpis tworzenia konta-->
                             <TextBox Tag="Nazwa użytkownika"
                                      Text="{Binding UserName}"
-                                     ToolTip="Wprowadź swoją nazwę"/><!--Nazwa użytkownika-->
+                                     ToolTip="Wprowadź swoją nazwę"/>
+                            <!--Nazwa użytkownika-->
                             <PasswordBox Tag="Hasło"
                                          x:Name="PasswordText"
                                          Margin="0 0 0 30"
-                                         ToolTip="Wprowadź swoje hasło"/><!--Hasło użytkownika-->
+                                         ToolTip="Wprowadź swoje hasło"/>
+                            <!--Hasło użytkownika-->
                             <Button Command="{Binding LoginCommand}"
                                     local:IsBusyProperty.Value="{Binding LoginIsRunning}"
                                     CommandParameter="{Binding ElementName=Page}"
                                     IsEnabled="True" 
                                     ToolTip="Przejdź dalej"
                                     Content="Dalej"
-                                    HorizontalAlignment="Center"/><!--Guzik od przechodzenia dalej-->
+                                    HorizontalAlignment="Center"/>
+                            <!--Guzik od przechodzenia dalej-->
                         </StackPanel>
                     </Border>
                     <Button Style="{StaticResource TextButton}"

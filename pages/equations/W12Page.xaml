@@ -21,44 +21,53 @@
             <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Margin="24,0,22,0" >
                 <Grid Grid.Row="0" Grid.Column="0" Height="auto" Width="116" >
                     <TextBlock Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeSmaller}"><InlineUIContainer>
-                            <Button Margin="30 10 0 0" Padding="0" Height="10" Width="40" Content="Cofnij" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeSmaller}"  FontFamily="{StaticResource MulishBold}" HorizontalAlignment="Center">
+                            <Button Margin="30 10 0 0" 
+                                    Padding="0" 
+                                    Height="10" 
+                                    Width="40" 
+                                    Content="Cofnij" 
+                                    Foreground="{StaticResource ForegroundLightBrush}" 
+                                    FontSize="{StaticResource FontSizeSmaller}"  
+                                    FontFamily="{StaticResource MulishBold}" 
+                                    HorizontalAlignment="Center">
                                 <Button.InputBindings>
                                     <MouseBinding MouseAction="LeftClick" Command="{Binding GoToWzoryPage}"/>
                                 </Button.InputBindings>
                             </Button>
-                        </InlineUIContainer></TextBlock>
+                        </InlineUIContainer>
+                    </TextBlock>
                 </Grid>
             </Viewbox>
             <Viewbox Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Stretch="Uniform" StretchDirection="Both">
                 <Grid>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
-                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
-                            <Button.InputBindings>
-                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMaturaPage}"/>
-                            </Button.InputBindings>
-                        </Button>
+                            <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMaturaPage}"/>
+                                </Button.InputBindings>
+                            </Button>
                         </TextBlock>
                         <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
-                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
-                            <Button.InputBindings>
-                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToKalkulatorPage}"/>
-                            </Button.InputBindings>
-                        </Button>
+                            <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToKalkulatorPage}"/>
+                                </Button.InputBindings>
+                            </Button>
                         </TextBlock>
                         <TextBlock TextWrapping="Wrap" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
-                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
-                            <Button.InputBindings>
-                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToDzialyPage}"/>
-                            </Button.InputBindings>
-                        </Button>
+                            <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToDzialyPage}"/>
+                                </Button.InputBindings>
+                            </Button>
                         </TextBlock>
                         <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
-                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
-                            <Button.InputBindings>
-                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZadaniaPage}"/>
-                            </Button.InputBindings>
-                        </Button>
+                            <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZadaniaPage}"/>
+                                </Button.InputBindings>
+                            </Button>
                         </TextBlock>
                     </StackPanel>
                 </Grid>
@@ -179,12 +188,12 @@
                             <Underline>Definicje funkcji trygonometrycznych</Underline><LineBreak/><LineBreak/>
                             <StackPanel Orientation="Horizontal">
                                 <Image Width="420" Height="300" Margin="0,0,0,50" Source="/img/w12b.png"/>
-                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
-                                    <LineBreak/><LineBreak/>
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow"><LineBreak/><LineBreak/>
                                     <controls:FormulaControl Formula="\sin \alpha = \frac{y}{r}"/><LineBreak/><LineBreak/>
                                     <controls:FormulaControl Formula="\cos \alpha = \frac{x}{r}"/><LineBreak/><LineBreak/>
-                                    <controls:FormulaControl Formula="\tg \alpha = \frac{y}{x}, \: gdy \: x \neq 0"/><LineBreak/><LineBreak/>
-                                    gdzie <controls:FormulaControl Margin="-4" Formula="\: r = \sqrt{x^2 + y^2} > 0\: "/> jest promieniem wodzącym punktu <controls:FormulaControl Margin="-4" Formula="\: M"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="\tg \alpha = \frac{y}{x}, \: gdy \: x \neq 0"/><LineBreak/><LineBreak/> gdzie 
+                                    <controls:FormulaControl Margin="-4" Formula="\: r = \sqrt{x^2 + y^2} > 0\: "/> jest promieniem wodzącym punktu 
+                                    <controls:FormulaControl Margin="-4" Formula="\: M"/><LineBreak/><LineBreak/>
                                 </TextBlock>
                             </StackPanel><LineBreak/><LineBreak/>
                             <controls:FormulaControl Formula="\cdot"/>
@@ -206,12 +215,12 @@
                             <controls:FormulaControl Formula="\cdot"/>
                             <Underline>Związki między funkcjami tego samego kąta</Underline><LineBreak/>
                             <StackPanel>
-                                    <controls:FormulaControl Margin="10" Formula="\sin ^2 \alpha + \cos ^2 \alpha = 1"/>
+                                <controls:FormulaControl Margin="10" Formula="\sin ^2 \alpha + \cos ^2 \alpha = 1"/>
                                 <StackPanel Orientation="Horizontal">
                                     <controls:FormulaControl Margin="10" Formula="\tg \alpha = \frac{\sin \alpha}{\cos \alpha}"/>
-                                    <TextBlock Margin="18" TextWrapping="WrapWithOverflow"> dla </TextBlock>
+                                    <TextBlock Margin="18" TextWrapping="WrapWithOverflow"> dla</TextBlock>
                                     <controls:FormulaControl Margin="10" Formula="\: \alpha \neq \frac{\pi}{2} + k \pi ,  \: k "/>
-                                    <TextBlock Margin="0,18,0,0" TextWrapping="WrapWithOverflow"> - całkowite </TextBlock>
+                                    <TextBlock Margin="0,18,0,0" TextWrapping="WrapWithOverflow"> - całkowite</TextBlock>
                                 </StackPanel>      
                             </StackPanel><LineBreak/><LineBreak/><LineBreak/><LineBreak/>
                             <controls:FormulaControl Formula="\cdot"/>
@@ -232,8 +241,8 @@
                             </StackPanel><LineBreak/><LineBreak/>
                             <TextBlock TextWrapping="WrapWithOverflow" FontSize="17" Margin="7"><LineBreak/>Ponadto mamy równości:</TextBlock><LineBreak/>
                             <StackPanel Orientation="Horizontal">
-                                    <controls:FormulaControl Margin="90,0,100,0" Formula="\tg (\alpha + \beta ) = \frac{\tg \alpha + \tg \beta}{1 - \tg \alpha \cdot \tg \beta}"/>
-                                    <controls:FormulaControl Margin="0,0,0,0" Formula="\tg (\alpha - \beta ) = \frac{\tg \alpha - \tg \beta}{1 + \tg \alpha \cdot \tg \beta}"/>
+                                <controls:FormulaControl Margin="90,0,100,0" Formula="\tg (\alpha + \beta ) = \frac{\tg \alpha + \tg \beta}{1 - \tg \alpha \cdot \tg \beta}"/>
+                                <controls:FormulaControl Margin="0,0,0,0" Formula="\tg (\alpha - \beta ) = \frac{\tg \alpha - \tg \beta}{1 + \tg \alpha \cdot \tg \beta}"/>
                             </StackPanel><LineBreak/>
                             <TextBlock TextWrapping="WrapWithOverflow" FontSize="17" Margin="7">które zachodzą zawsze, gdy są określone i mianownik prawej strony nie jest zerem.</TextBlock><LineBreak/><LineBreak/><LineBreak/>                            
                             <controls:FormulaControl Formula="\cdot"/>

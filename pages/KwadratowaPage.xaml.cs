@@ -137,7 +137,6 @@ namespace Abituria.pages
                     ogolna = ogolna + " - " + $"{(b * -1)}𝑥";
                 }
             }
-
             if (c > 0)
             {
                 ogolna = ogolna + " + " + $"{c}";

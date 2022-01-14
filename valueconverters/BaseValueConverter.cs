@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Markup;
 using System.Diagnostics;
-using System.IO;
 namespace Abituria
 {
     public abstract class BaseValueConverter<T> : MarkupExtension, IValueConverter where T : class, new()///Bazowy konwerter wartości pozwala na bezpośrednie użycie XAML

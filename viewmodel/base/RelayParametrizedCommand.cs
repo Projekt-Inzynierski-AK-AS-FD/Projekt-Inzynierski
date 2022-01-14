@@ -16,9 +16,6 @@ namespace Abituria.viewmodel
         {
             return true;
         }
-        public void Execute(object parameter)/// Wykonuje komende Akcja
-        {
-            mAction(parameter);
-        }
+        public void Execute(object parameter) => mAction(parameter);/// Wykonuje komende Akcja
     }
 }

@@ -188,14 +188,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Calculator.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CalculatorChoice.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="controls\LoginControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -282,12 +274,6 @@
     </Compile>
     <Compile Include="CalcQuadraticFunc.xaml.cs">
       <DependentUpon>CalcQuadraticFunc.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Calculator.xaml.cs">
-      <DependentUpon>Calculator.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CalculatorChoice.xaml.cs">
-      <DependentUpon>CalculatorChoice.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -637,6 +623,7 @@
     <Compile Include="valueconverters\BaseValueConverter.cs" />
     <Compile Include="valueconverters\BooleanToVisibilityConverter.cs" />
     <Compile Include="viewmodel\base\IHavePassword.cs" />
+    <Compile Include="viewmodel\base\RegisterViewModel.cs" />
     <Compile Include="viewmodel\base\LoginViewModel.cs" />
     <Compile Include="viewmodel\base\RelayParametrizedCommand.cs" />
     <Compile Include="Window1.xaml.cs">
