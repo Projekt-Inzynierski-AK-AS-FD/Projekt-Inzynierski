@@ -23,7 +23,7 @@ namespace Abituria.expressions
         public W2Page()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
+            DataContext = new LoginViewModel();
         }
     }
 }

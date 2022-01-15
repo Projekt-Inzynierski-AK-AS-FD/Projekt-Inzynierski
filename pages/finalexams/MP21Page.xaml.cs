@@ -22,7 +22,7 @@ namespace Abituria.pages.finalexams
         public MP21Page()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
+            DataContext = new LoginViewModel();
         }
         int clickCounter = 0;
         readonly int correctAnsw = 4; //bo odp. D, czyli checkbox #4

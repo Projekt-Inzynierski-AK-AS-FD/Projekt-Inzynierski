@@ -18,7 +18,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1"  StretchDirection="Both">
+            <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" StretchDirection="Both">
                 <Grid Grid.Row="0" Grid.Column="0">
                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeLarge}">
                         <Button Content="Cofnij" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeXXLarge}"  FontFamily="{StaticResource MulishBold}">

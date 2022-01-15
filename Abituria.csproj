@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <LangVersion>preview</LangVersion>
@@ -80,6 +81,12 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Windows.Shell, Version=3.5.41019.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\dotnetCampus.Windows7.Shell.2.0.0\lib\net40\Microsoft.Windows.Shell.dll</HintPath>
     </Reference>
@@ -88,6 +95,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -113,10 +121,15 @@
     <Compile Include="attachedproperties\ButtonAttachedProperty .cs" />
     <Compile Include="attachedproperties\BaseAttachedProperty.cs" />
     <Compile Include="attachedproperties\PasswordBoxProperties.cs" />
+    <Compile Include="controls\ICompleteExercise.cs" />
+    <Compile Include="controls\IDataService.cs" />
     <Compile Include="controls\LoginControl.xaml.cs">
       <DependentUpon>LoginControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="datamodels\ApplicationPage.cs" />
+    <Compile Include="datamodels\CompletedExercise.cs" />
+    <Compile Include="datamodels\Account.cs" />
+    <Compile Include="datamodels\User.cs" />
     <Compile Include="expressions\ExpressionHelpers.cs" />
     <Compile Include="pages\equations\W12Page.xaml.cs">
       <DependentUpon>W12Page.xaml</DependentUpon>
@@ -184,10 +197,6 @@
     <Compile Include="pages\excercises\ZadaniaPage.xaml.cs">
       <DependentUpon>ZadaniaPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="CalcQuadraticFunc.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="controls\LoginControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -271,9 +280,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CalcQuadraticFunc.xaml.cs">
-      <DependentUpon>CalcQuadraticFunc.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -626,6 +632,7 @@
     <Compile Include="viewmodel\base\RegisterViewModel.cs" />
     <Compile Include="viewmodel\base\LoginViewModel.cs" />
     <Compile Include="viewmodel\base\RelayParametrizedCommand.cs" />
+    <Compile Include="viewmodel\SimpleDbContext.cs" />
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -835,5 +842,8 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\Fody.1.29.2\build\dotnet\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Fody.1.29.2\build\dotnet\Fody.targets'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

@@ -23,7 +23,7 @@ namespace Abituria.pages
         public Z24Page()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
+            DataContext = new LoginViewModel();
         }
         int clickCounter = 0;
         readonly int correctAnsw = 3; //bo odp. D, czyli checkbox #4

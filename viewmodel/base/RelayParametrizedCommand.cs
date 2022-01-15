@@ -12,10 +12,7 @@ namespace Abituria.viewmodel
         {
             mAction = action;
         }
-        public bool CanExecute(object parameter)/// Polecenie przekaźnika zawsze może zostać wykonane
-        {
-            return true;
-        }
+        public bool CanExecute(object parameter) => true;/// Polecenie przekaźnika zawsze może zostać wykonane
         public void Execute(object parameter) => mAction(parameter);/// Wykonuje komende Akcja
     }
 }

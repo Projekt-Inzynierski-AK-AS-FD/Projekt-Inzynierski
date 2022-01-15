@@ -23,7 +23,6 @@ namespace Abituria
     public partial class Window1 : Window
     {
         private readonly TexFormulaParser _formulaParser = new TexFormulaParser();
-
         private static ComboBoxItem DemoFormula(string name, string text) =>
             new ComboBoxItem { Content = name, DataContext = text };
 

@@ -15,7 +15,7 @@ namespace Abituria
             {  
                 return string.Empty;
             }
-            var unmanagedString = IntPtr.Zero;///Weź wskaźnik zdeszyfrowanego hasła z pamięci
+            IntPtr unmanagedString = IntPtr.Zero;///Weź wskaźnik zdeszyfrowanego hasła z pamięci
             try
             {
                 unmanagedString = Marshal.SecureStringToGlobalAllocUnicode(secureString);///Deszyfruje hasło

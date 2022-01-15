@@ -7,7 +7,6 @@ using PropertyChanged;
 using Abituria.pages;
 using Abituria.viewmodel;
 using System.Windows.Controls;
-
 namespace Abituria
 {
     public class MyPasswordBox

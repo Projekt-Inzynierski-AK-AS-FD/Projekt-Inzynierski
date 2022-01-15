@@ -20,7 +20,7 @@ namespace Abituria.pages
         public KwadratowaPage()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
+            DataContext = new LoginViewModel();
         }
         private void ShowResult(object sender, RoutedEventArgs e)
         {

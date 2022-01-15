@@ -18,7 +18,7 @@ namespace Abituria.viewmodel
     }
     public class WindowResizer///Naprawia błędy z zakrywaniem paska zadań
     {
-        private Window mWindow;///Okno do zmieniania rozmiaru
+        private readonly Window mWindow;///Okno do zmieniania rozmiaru
         private Rect mScreenSize = new Rect();///Ostatni obliczony rozmiar ekranu
         private int mEdgeTolerance = 2;///Jak blisko krawędzi ma być wykryte okno, tak jak na krawędzi ekranu
         private Matrix mTransformToDevice;///Macierz transformacji używana do konwersji rozmiarów WPF na piksele

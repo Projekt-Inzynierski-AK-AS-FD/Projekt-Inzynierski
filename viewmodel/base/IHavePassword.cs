@@ -4,7 +4,6 @@ using System.Linq;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Abituria
 {
     public interface IHavePassword///Interfejs dla klasy, która zapewnia chronione hasło

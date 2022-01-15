@@ -29,7 +29,7 @@ namespace Abituria
                 if (mViewModel == value)///Jeśli nic sie nie zmieniło, zwróc
                     return;
                 mViewModel = value;///Zaktualizuj wartość
-                this.DataContext = mViewModel;///Ustaw kontekst danych dla tej strony
+                DataContext = mViewModel;///Ustaw kontekst danych dla tej strony
             }
         }
         public BasePage() ///Standardowy konstruktor

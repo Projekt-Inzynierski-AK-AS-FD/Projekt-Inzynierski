@@ -10,7 +10,7 @@
         Closed="Window_Closed">
     <Window.Resources>
         <Style TargetType="Button">
-            <Setter Property="Padding" Value="2" />
+            <Setter Property="Padding" Value="2"/>
         </Style>
     </Window.Resources>
     <Grid>

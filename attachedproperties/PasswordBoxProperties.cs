@@ -6,7 +6,7 @@ namespace Abituria
     {
         public override void OnValueChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
-            var passwordBox = (sender as PasswordBox);///Ustaw wywołującego
+            PasswordBox passwordBox = (sender as PasswordBox);///Ustaw wywołującego
             if (passwordBox == null)///Upewnij sie, że to password box
                 return;
             passwordBox.PasswordChanged -= PasswordBox_PasswordChanged;///Usuń jakiekolwiek poprzednie wydarzenia

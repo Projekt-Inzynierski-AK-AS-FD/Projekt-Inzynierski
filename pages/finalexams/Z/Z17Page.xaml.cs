@@ -20,7 +20,7 @@ namespace Abituria.pages
         public Z17Page()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
+            DataContext = new LoginViewModel();
         }
         int clickCounter = 0;
         readonly int correctAnsw = 4;

@@ -6,7 +6,7 @@ namespace Abituria.expressions
         public W11Page()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
+            DataContext = new LoginViewModel();
         }
     }
 }

@@ -10,7 +10,6 @@ using System.Windows.Controls;
 using System.Security;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
-
 namespace Abituria
 {
     [ImplementPropertyChanged]

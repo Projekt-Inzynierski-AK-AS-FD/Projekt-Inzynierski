@@ -38,7 +38,7 @@
                                         <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=42}"/><!--Obwódka okna-->
                                         <RowDefinition Height="*"/><!--Początek zawartości strony-->
                                     </Grid.RowDefinitions>
-                                    <Grid Grid.Column="0" Panel.ZIndex="1"> <!--Grid od belki-->
+                                    <Grid Grid.Column="0" Panel.ZIndex="1"><!--Grid od belki-->
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto"/> <!--Kolumna na guziki-->
                                             <ColumnDefinition Width="*"/> <!--Kolumna na tytuł--> 

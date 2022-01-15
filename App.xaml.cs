@@ -24,7 +24,6 @@ namespace Abituria
         {
             Trace.AutoFlush = true;
         }
-
         private void Application_Exit(object sender, ExitEventArgs e)
         {
         }

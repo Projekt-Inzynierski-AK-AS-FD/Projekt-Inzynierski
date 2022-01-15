@@ -21,7 +21,7 @@ namespace Abituria.pages
         public KalkulatorPage()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
+            DataContext = new LoginViewModel();
         }    
     }
 }
