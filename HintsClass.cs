@@ -40,7 +40,7 @@ namespace Abituria
             {
                 if (i < hintsArray.Length)
                 {
-                    hint = hint + @" \\ " + hintsArray[i];
+                    hint = $@"{hint} \\ {hintsArray[i]}";
                 }
             }
             return hint;

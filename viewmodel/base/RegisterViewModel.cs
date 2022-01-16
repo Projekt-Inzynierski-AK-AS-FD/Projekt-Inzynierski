@@ -10,23 +10,26 @@ using System.Windows.Controls;
 using System.Security;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
+using Abituria.controls;
+using Abituria.datamodels;
+using System.Linq;
+
 namespace Abituria
 {
-    public class RegisterViewModel : BaseViewModel///Model widoku dla strony rejestracji
+    public class RegisterViewModel : viewmodel.WindowViewModel///Model widoku dla strony rejestracji
     {
-        private static string uName;///Pole prywatne do kopii zapasowej wartości właściwości
-        public string UserName///Nazwa użytkownika
-        {
-            get { return uName; }
-            set => uName = value;
-        }
+        private string registerUserName;///Pole prywatne do kopii zapasowej wartości właściwości
+        public string RegisterUserName { get => registerUserName; set => SetProperty(ref registerUserName, value); }///Nazwa użytkownika
+        private string registerPassword;///Pole prywatne do kopii zapasowej wartości właściwości
+        public string RegisterPassword { get => registerPassword; set => SetProperty(ref registerPassword, value); }///Nazwa użytkownika
         public bool RegisterIsRunning { get; set; }///Flaga wskazująca, czy proces rejestracji trwa
         public SecureString Password { get; set; }///Hasło użytkownika, set; nie działa
-        public ICommand RegisterCommand { get; set; }///Komenda do rejestrowania
+        public ICommand registerCommand { get; set; }///Komenda do rejestrowania
+        public ICommand RegisterCommand => registerCommand ??= new RelayCommand(MakeAccount);
         public ICommand GoToLoginPage { get; set; }///Komenda przechodzi do strony logowania
         public RegisterViewModel()///Standardowy konstruktor
         {
-            RegisterCommand = new RelayParametrizedCommand((parameter) => Register(parameter));///Tworzenie komend
+            registerCommand = new RelayParametrizedCommand((parameter) => Register(parameter));///Tworzenie komend
             GoToLoginPage = new RelayCommand(() => LoginP());
         }
         public async Task Register(object parameter)///Próba zarejestrowania nowego użytkownika
@@ -34,20 +37,19 @@ namespace Abituria
             await RunCommand(() => this.RegisterIsRunning, async () =>
             {
                 await Task.Delay(500);///Przekazuje SecureString
-                var userName = this.UserName;
-                var pass = (parameter as IHavePassword).SecurePassword.Unsecure();///ZMIENIĆ! Nigdy nie powinno się przewchowywać hasła w zmiennej!
-                LoginP();
+                //var userName = this.UserName;
+                //var password = this.Password;//= (parameter as IHavePassword).SecurePassword.Unsecure();///ZMIENIĆ! Nigdy nie powinno się przewchowywać hasła w zmiennej!    
+                MakeAccount();
+                new RelayCommand(() => LoginP());
             });
         }
-        private void LoginP()
-        {
-            ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Login;
-        }
-        private ICommand makeAccountCommand;
-        public ICommand MakeAccountCommand => makeAccountCommand ??= new RelayCommand(MakeAccount);
         private void MakeAccount()///Tworzenie konta użytkownika
         {
-            throw new NotSupportedException();
+            IDataService<User> userService = new GenericDataService<User>(new SimpleDbContextFactory());
+            userService.Create(new User { Username = registerUserName, Password = registerPassword });//.Wait();
+            //Console.WriteLine(userService.GetAll().Result.Count());
+            string v = userService.GetAll().Result.Count().ToString();
+            //MessageBox.Show(v, v, MessageBoxButton.OK, MessageBoxImage.Error);
         }
         private bool SetProperty<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
         {
@@ -58,7 +60,6 @@ namespace Abituria
             }
             return false;
         }
-        private string registerUserName;
-        public string RegisterUserName { get => registerUserName; set => SetProperty(ref registerUserName, value); }
+        private void LoginP() => ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Login;
     }
 }

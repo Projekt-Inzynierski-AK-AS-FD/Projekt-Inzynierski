@@ -12,7 +12,7 @@ namespace Abituria
         public static string Unsecure(this SecureString secureString)///Deszyfruje SecureString
         {
             if (secureString == null)///Upewnij się, że hasło istnieje
-            {  
+            {
                 return string.Empty;
             }
             IntPtr unmanagedString = IntPtr.Zero;///Weź wskaźnik zdeszyfrowanego hasła z pamięci

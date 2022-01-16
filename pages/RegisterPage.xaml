@@ -34,13 +34,15 @@
                             <TextBox Tag="Nazwa użytkownika"
                                      Text="{Binding RegisterUserName}"
                                      ToolTip="Wprowadź swoją nazwę"/><!--Nazwa użytkownika-->
-                            <PasswordBox Tag="Hasło"
+                            <TextBox Tag="Hasło"
+                                         Text="{Binding RegisterPassword}"
                                          x:Name="PasswordText"
                                          Margin="0 0 0 30"
-                                         ToolTip="Wprowadź swoje hasło"/><!--Hasło użytkownika-->
+                                         ToolTip="Wprowadź swoje hasło" MaxLength="8"/>
+                            <!--Hasło użytkownika-->
                             <Button Command="{Binding RegisterCommand}"
                                     IsEnabled="True" 
-                                    ToolTip="Przejdź dalej"
+                                    ToolTip="Zarejestruj"
                                     Content="Dalej"
                                     HorizontalAlignment="Center"/><!--Guzik od przechodzenia dalej-->
                             <Button Style="{StaticResource TextButton}"

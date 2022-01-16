@@ -22,6 +22,6 @@ namespace Abituria.pages
         {
             InitializeComponent();
             DataContext = new LoginViewModel();
-        }    
+        }
     }
 }

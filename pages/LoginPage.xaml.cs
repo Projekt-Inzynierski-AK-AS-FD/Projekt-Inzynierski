@@ -24,6 +24,7 @@ namespace Abituria.pages
             InitializeComponent();
             DataContext = new LoginViewModel();
         }
-        public SecureString SecurePassword => PasswordText.SecurePassword;///Chronione hasło dla tej strony
+
+        public SecureString GetSecurePassword() => PasswordText.SecurePassword;///Chronione hasło dla tej strony
     }
 }

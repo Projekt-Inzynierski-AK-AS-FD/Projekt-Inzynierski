@@ -51,7 +51,7 @@ namespace Abituria.viewmodel
         }
         private void GetTransform()
         {
-            var source = PresentationSource.FromVisual(mWindow);///Weź źródło
+            PresentationSource source = PresentationSource.FromVisual(mWindow);///Weź źródło
             mTransformToDevice = default(Matrix);///Resetuje transformacje do domyślnej
             if (source == null)///Jeśli nie można dostać źródła ignoruje
                 return;

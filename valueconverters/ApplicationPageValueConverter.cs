@@ -11,7 +11,6 @@ using Abituria.viewmodel;
 using Abituria.dzialy;
 using Abituria.pages.finalexams;
 using Abituria.expressions;
-
 namespace Abituria
 {
     public class ApplicationPageValueConverter : BaseValueConverter<ApplicationPageValueConverter>///Zamienia strone aplikacji na aktualną strone

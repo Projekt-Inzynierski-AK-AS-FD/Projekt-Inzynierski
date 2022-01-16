@@ -8,6 +8,6 @@ namespace Abituria
 {
     public interface IHavePassword///Interfejs dla klasy, która zapewnia chronione hasło
     {
-        SecureString SecurePassword { get; }///Chronione hasło
+        SecureString GetSecurePassword();///Chronione hasło
     }
 }

@@ -7,13 +7,13 @@ using System.Windows.Controls;
 using System;
 namespace Abituria
 {
-    public partial class RegisterPage : BasePage<RegisterViewModel>, IHavePassword
+    public partial class RegisterPage : BasePage<RegisterViewModel>//, IHavePassword
     {
         public RegisterPage()
         {
             InitializeComponent();
             DataContext = new RegisterViewModel();
         }
-        public SecureString SecurePassword => PasswordText.SecurePassword;///Chronione hasło dla tej strony
+        //public SecureString SecurePassword => PasswordText.SecurePassword;///Chronione hasło dla tej strony
     }
 }

@@ -10,9 +10,13 @@ using System.Windows.Controls;
 using System.Security;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
+using Abituria.controls;
+using Abituria.datamodels;
+using System.Linq;
+
 namespace Abituria
 {
-    public class LoginViewModel : BaseViewModel///Model widoku dla niestandardowego okna
+    public class LoginViewModel : viewmodel.WindowViewModel///Model widoku dla niestandardowego okna
     {
         private static string uName;///Pole prywatne do kopii zapasowej wartości właściwości
         public string UserName///Nazwa użytkownika
@@ -20,7 +24,12 @@ namespace Abituria
             get { return uName; }
             set { uName = value; }
         }
-        public string Greeting { get; } = "Dzień dobry, " + uName;///Powitanie zalogowanego użytkownika w menu głównym
+        //IDataService<User> userService = new GenericDataService<User>(new SimpleDbContextFactory());
+        //userService.Create(new User { Username = registerUserName, Password = registerPassword });
+        //static string v = userService.GetAll().Result.Count().ToString();
+        //MessageBoxResult result;
+        //result = MessageBox.Show(v);
+        public string Greeting { get; } = "Dzień dobry, " + uName; //+ v;///Powitanie zalogowanego użytkownika w menu głównym
         public bool LoginIsRunning { get; set; }///Flaga wskazująca, czy proces logowania trwa
         public SecureString Password { get; set; }///Hasło użytkownika, set; nie działa
         public ICommand LoginCommand { get; set; }///Komenda do logowania
@@ -162,7 +171,7 @@ namespace Abituria
             {
                 await Task.Delay(500);///Przekazuje SecureString
                 var userName = this.UserName;
-                var pass = (parameter as IHavePassword).SecurePassword.Unsecure();///ZMIENIĆ! Nigdy nie powinno się przewchowywać hasła w zmiennej!
+                var pass = (parameter as IHavePassword).GetSecurePassword().Unsecure();///ZMIENIĆ! Nigdy nie powinno się przewchowywać hasła w zmiennej!
                 MainMenu();
             });
         }

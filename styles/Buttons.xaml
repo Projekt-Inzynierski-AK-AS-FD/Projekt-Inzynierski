@@ -158,7 +158,7 @@
         <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="FontSize" Value="{StaticResource FontSizeXXLarge}" />
-        <Setter Property="FontFamily" Value="{StaticResource FontAwesome}" />
+        <Setter Property="FontFamily" Value="{StaticResource MulishItalic}" />
         <Setter Property="Padding" Value="30" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="Width" Value="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" />
@@ -211,7 +211,7 @@
         <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="FontSize" Value="{StaticResource FontSizeXXLarge}" />
-        <Setter Property="FontFamily" Value="{StaticResource FontAwesome}" />
+        <Setter Property="FontFamily" Value="{StaticResource MulishItalic}" />
         <Setter Property="Padding" Value="30" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="Width" Value="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" />

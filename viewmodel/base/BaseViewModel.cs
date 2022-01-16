@@ -5,14 +5,11 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 namespace Abituria.viewmodel
 {
-    public class BaseViewModel : INotifyPropertyChanged///Bazowy model widoku odpala Property Changed kiedy trzeba
+    public class WindowViewModel : INotifyPropertyChanged///Bazowy model widoku odpala Property Changed kiedy trzeba
     {
         protected object mPropertyValueCheckLock = new object();///Globalna blokada wyrażeń instancji
         public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };///Wydarzenie odpala się, kiedy właściwość potomka się zmienia
-        protected void OnPropertyChanged(string name)///Wywołuje wydarzenie PropertyChanged
-        {
-            PropertyChanged(this, new PropertyChangedEventArgs(name));
-        }
+        protected void OnPropertyChanged(string name) => PropertyChanged(this, new PropertyChangedEventArgs(name));///Wywołuje wydarzenie PropertyChanged
         protected async Task RunCommand(Expression<Func<bool>> updatingFlag, Func<Task> action)///Odpala komende jeżeli flaga aktualizowania nie jest ustawiona
         {
             if (updatingFlag.GetPropertyValue())//.Compile().Invoke())

@@ -3,10 +3,9 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-
 namespace Abituria
 {
-    public class BasePage<VM> : Page where VM : BaseViewModel, new()///Bazowa strona z podstawowymi funkcjonalnościami
+    public class BasePage<VM> : Page where VM : viewmodel.WindowViewModel, new()///Bazowa strona z podstawowymi funkcjonalnościami
     {
         private VM mViewModel;/// The View Model associated with this page
         public object ViewModelObject /// The View Model associated with this page

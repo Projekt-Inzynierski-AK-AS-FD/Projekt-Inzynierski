@@ -5,19 +5,6 @@
     <FontFamily x:Key="MulishExtraLight">pack://application;,,,/Fonts/#Mulish Regular</FontFamily>
     <FontFamily x:Key="MulishBold">pack://application;,,,/Fonts/#Mulish Black</FontFamily>
     <FontFamily x:Key="MulishItalic">pack://application;,,,/Fonts/#Mulish Italic</FontFamily>
-    <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
-        <Setter Property="FontFamily" Value="{StaticResource MulishExtraLight}"/>
-        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"/>
-    </Style>
-    <Style TargetType="{x:Type TextBlock}" x:Key="BaseTextBlockStyle">
-        <Setter Property="FontFamily" Value="{StaticResource MulishExtraLight}"/>
-        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"/>
-    </Style>
-    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}"/>
-    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource BaseStyle}"/>
-    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}"/>
-    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}"/>
-    <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource BaseStyle}"/>
     <system:Double x:Key="FontSizeSmaller">10</system:Double>
     <system:Double x:Key="FontSizeSmall">12</system:Double>
     <system:Double x:Key="FontSizeRegular">14</system:Double>
@@ -36,4 +23,17 @@
     <system:String x:Key="MulishItalicArrowLeftIcon">&#xf060;</system:String>
     <system:String x:Key="MulishItalicTickIcon">&#xf00c;</system:String>
     <system:String x:Key="MulishItalicCloseIcon">&#xf00d;</system:String>
+    <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
+        <Setter Property="FontFamily" Value="{StaticResource MulishExtraLight}"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"/>
+    </Style>
+    <Style TargetType="{x:Type TextBlock}" x:Key="BaseTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource MulishExtraLight}"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"/>
+    </Style>
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}"/>
+    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource BaseStyle}"/>
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}"/>
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}"/>
+    <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource BaseStyle}"/>
 </ResourceDictionary>

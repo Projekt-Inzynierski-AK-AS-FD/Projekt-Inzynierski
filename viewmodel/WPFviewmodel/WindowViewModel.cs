@@ -12,7 +12,7 @@ namespace Abituria
     public class MyPasswordBox
     {
     }
-    public class WindowViewModel : BaseViewModel///Model widoku dla niestandardowego okna
+    public class WindowViewModel : viewmodel.WindowViewModel///Model widoku dla niestandardowego okna
     {
         private readonly Window mWindow;///Okno, które kontroluje Model widoku
         private readonly WindowResizer mWindowResizer;///Utrzymuje odpowiedni rozmiar okna

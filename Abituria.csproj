@@ -106,12 +106,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="dotnetCampus.Windows7.Shell" Version="2.0.0" />
     <PackageReference Include="Fody" Version="6.6.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
     <PackageReference Include="WpfMath" Version="0.11.0" />
   </ItemGroup>
@@ -136,7 +141,6 @@
     <Resource Include="fonts\Mulish-SemiBold.ttf" />
     <Resource Include="fonts\Mulish-SemiBoldItalic.ttf" />
     <Resource Include="fonts\Mulish-VariableFont_wght.ttf" />
-    <Resource Include="icon.ico" />
     <Resource Include="img\1.png" />
     <Resource Include="img\2.png" />
     <Resource Include="img\3.png" />
@@ -209,7 +213,7 @@
     <Resource Include="img\wzory.png" />
     <Resource Include="img\zadania.png" />
     <Resource Include="img\zmien.png" />
-    <Resource Include="security.txt" />
+    <Resource Include="docs\security.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -647,6 +651,11 @@
 
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Abituria.sln" />
+    <None Include="FodyWeavers.xsd" />
   </ItemGroup>
 
 </Project>

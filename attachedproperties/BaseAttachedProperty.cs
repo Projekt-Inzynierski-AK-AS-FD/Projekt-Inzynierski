@@ -13,10 +13,7 @@ namespace Abituria
             Instance.ValueChanged(d, e);///Wywołaj nasłuchujących wwydarzenie
         }
         public static Property GetValue(DependencyObject d) => (Property)d.GetValue(ValueProperty);///Bierze właściwość dołączoną
-        public static void SetValue(DependencyObject d, Property value)///Ustawia właściwość dołączoną
-        {
-            d.SetValue(ValueProperty, value);
-        }
+        public static void SetValue(DependencyObject d, Property value) => d.SetValue(ValueProperty, value);///Ustawia właściwość dołączoną
         public virtual void OnValueChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e) { }///Metoda wywoływana, gdy jakakolwiek właściwość dołączona tego typu jest zmieniona
     }
 }

@@ -16,10 +16,8 @@ namespace Abituria
                 passwordBox.PasswordChanged += PasswordBox_PasswordChanged;///Jeśli wywołujący ustawi MonitorPassword jako prawda, to nasłuchuj
             }
         }
-        private static void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)///Odpalone, gdy wartość hasła w password boksie się zmienia
-        {
-            HasTextProperty.SetValue((PasswordBox)sender);///Ustawia właściwość dołączoną
-        }
+        private static void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e) => HasTextProperty.SetValue((PasswordBox)sender);///Ustawia wartość dołączoną, gdy wartość hasła w password boksie się zmienia
+
     }
     public class HasTextProperty : BaseAttachedProperty<HasTextProperty, bool>///Ustawia właściwość dołączoną jeżeli wywołujący PasswordBox ma jakikolwiek tekst
     {

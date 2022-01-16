@@ -28,7 +28,7 @@ namespace Abituria.pages
         readonly int correctAnsw = 4; //bo odp. D, czyli checkbox #4
         private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
-            this.brdHint.Visibility = Visibility.Visible;
+            brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = "Przepraszamy, sprawdzanie zadań otwartych nie jest jeszcze dostępne.";
         }
         private void HintBtn(object sender, RoutedEventArgs e)
