@@ -1,0 +1,652 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <StartupObject>Abituria.App</StartupObject>
+    <ApplicationIcon>img\icon.ico</ApplicationIcon>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FodyWeavers.xml" />
+    <None Remove="fonts\Mulish-Black.ttf" />
+    <None Remove="fonts\Mulish-BlackItalic.ttf" />
+    <None Remove="fonts\Mulish-Bold.ttf" />
+    <None Remove="fonts\Mulish-BoldItalic.ttf" />
+    <None Remove="fonts\Mulish-ExtraBold.ttf" />
+    <None Remove="fonts\Mulish-ExtraBoldItalic.ttf" />
+    <None Remove="fonts\Mulish-ExtraLight.ttf" />
+    <None Remove="fonts\Mulish-ExtraLightItalic.ttf" />
+    <None Remove="fonts\Mulish-Italic-VariableFont_wght.ttf" />
+    <None Remove="fonts\Mulish-Italic.ttf" />
+    <None Remove="fonts\Mulish-Light.ttf" />
+    <None Remove="fonts\Mulish-LightItalic.ttf" />
+    <None Remove="fonts\Mulish-Medium.ttf" />
+    <None Remove="fonts\Mulish-MediumItalic.ttf" />
+    <None Remove="fonts\Mulish-Regular.ttf" />
+    <None Remove="fonts\Mulish-SemiBold.ttf" />
+    <None Remove="fonts\Mulish-SemiBoldItalic.ttf" />
+    <None Remove="fonts\Mulish-VariableFont_wght.ttf" />
+    <None Remove="icon.ico" />
+    <None Remove="img\1.png" />
+    <None Remove="img\2.png" />
+    <None Remove="img\3.png" />
+    <None Remove="img\4.png" />
+    <None Remove="img\5.png" />
+    <None Remove="img\6.png" />
+    <None Remove="img\7.png" />
+    <None Remove="img\8.png" />
+    <None Remove="img\abituria.png" />
+    <None Remove="img\bg.png" />
+    <None Remove="img\close.png" />
+    <None Remove="img\dzialy.png" />
+    <None Remove="img\icon.ico" />
+    <None Remove="img\icon.png" />
+    <None Remove="img\kalkulator.png" />
+    <None Remove="img\matura.png" />
+    <None Remove="img\max.png" />
+    <None Remove="img\min.png" />
+    <None Remove="img\mp21z12.png" />
+    <None Remove="img\mp21z17.png" />
+    <None Remove="img\mp21z18.png" />
+    <None Remove="img\mp21z19.png" />
+    <None Remove="img\mp21z20.png" />
+    <None Remove="img\mp21z24.png" />
+    <None Remove="img\mp21z32.png" />
+    <None Remove="img\mp21z33.png" />
+    <None Remove="img\mp21z9.png" />
+    <None Remove="img\w10.png" />
+    <None Remove="img\w10a.png" />
+    <None Remove="img\w10b.png" />
+    <None Remove="img\w10c.png" />
+    <None Remove="img\w10d.png" />
+    <None Remove="img\w10e.png" />
+    <None Remove="img\w10f.png" />
+    <None Remove="img\w10g.png" />
+    <None Remove="img\w10h.png" />
+    <None Remove="img\w10i.png" />
+    <None Remove="img\w10j.png" />
+    <None Remove="img\w10k.png" />
+    <None Remove="img\w10l.png" />
+    <None Remove="img\w10m.png" />
+    <None Remove="img\w10n.png" />
+    <None Remove="img\w10o.png" />
+    <None Remove="img\w10p.png" />
+    <None Remove="img\w10r.png" />
+    <None Remove="img\w10s.png" />
+    <None Remove="img\w10t.png" />
+    <None Remove="img\w10u.png" />
+    <None Remove="img\w10w.png" />
+    <None Remove="img\w11a.png" />
+    <None Remove="img\w11b.png" />
+    <None Remove="img\w11c.png" />
+    <None Remove="img\w11d.png" />
+    <None Remove="img\w11e.png" />
+    <None Remove="img\w11f.png" />
+    <None Remove="img\w11g.png" />
+    <None Remove="img\w12a.png" />
+    <None Remove="img\w12b.png" />
+    <None Remove="img\w12c.png" />
+    <None Remove="img\w12d.png" />
+    <None Remove="img\w12e.png" />
+    <None Remove="img\w12f.png" />
+    <None Remove="img\w17a.png" />
+    <None Remove="img\w18a.png" />
+    <None Remove="img\w18b.png" />
+    <None Remove="img\w18c.png" />
+    <None Remove="img\w18d.png" />
+    <None Remove="img\w9a.png" />
+    <None Remove="img\w9b.png" />
+    <None Remove="img\wzory.png" />
+    <None Remove="img\zadania.png" />
+    <None Remove="img\zmien.png" />
+    <None Remove="security.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fody" Version="6.6.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.13" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
+    <PackageReference Include="WpfMath" Version="0.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="FodyWeavers.xml" />
+    <Resource Include="fonts\Mulish-Black.ttf" />
+    <Resource Include="fonts\Mulish-BlackItalic.ttf" />
+    <Resource Include="fonts\Mulish-Bold.ttf" />
+    <Resource Include="fonts\Mulish-BoldItalic.ttf" />
+    <Resource Include="fonts\Mulish-ExtraBold.ttf" />
+    <Resource Include="fonts\Mulish-ExtraBoldItalic.ttf" />
+    <Resource Include="fonts\Mulish-ExtraLight.ttf" />
+    <Resource Include="fonts\Mulish-ExtraLightItalic.ttf" />
+    <Resource Include="fonts\Mulish-Italic-VariableFont_wght.ttf" />
+    <Resource Include="fonts\Mulish-Italic.ttf" />
+    <Resource Include="fonts\Mulish-Light.ttf" />
+    <Resource Include="fonts\Mulish-LightItalic.ttf" />
+    <Resource Include="fonts\Mulish-Medium.ttf" />
+    <Resource Include="fonts\Mulish-MediumItalic.ttf" />
+    <Resource Include="fonts\Mulish-Regular.ttf" />
+    <Resource Include="fonts\Mulish-SemiBold.ttf" />
+    <Resource Include="fonts\Mulish-SemiBoldItalic.ttf" />
+    <Resource Include="fonts\Mulish-VariableFont_wght.ttf" />
+    <Resource Include="icon.ico" />
+    <Resource Include="img\1.png" />
+    <Resource Include="img\2.png" />
+    <Resource Include="img\3.png" />
+    <Resource Include="img\4.png" />
+    <Resource Include="img\5.png" />
+    <Resource Include="img\6.png" />
+    <Resource Include="img\7.png" />
+    <Resource Include="img\8.png" />
+    <Resource Include="img\abituria.png" />
+    <Resource Include="img\bg.png" />
+    <Resource Include="img\close.png" />
+    <Resource Include="img\dzialy.png" />
+    <Resource Include="img\icon.ico" />
+    <Resource Include="img\icon.png" />
+    <Resource Include="img\kalkulator.png" />
+    <Resource Include="img\matura.png" />
+    <Resource Include="img\max.png" />
+    <Resource Include="img\min.png" />
+    <Resource Include="img\mp21z12.png" />
+    <Resource Include="img\mp21z17.png" />
+    <Resource Include="img\mp21z18.png" />
+    <Resource Include="img\mp21z19.png" />
+    <Resource Include="img\mp21z20.png" />
+    <Resource Include="img\mp21z24.png" />
+    <Resource Include="img\mp21z32.png" />
+    <Resource Include="img\mp21z33.png" />
+    <Resource Include="img\mp21z9.png" />
+    <Resource Include="img\w10.png" />
+    <Resource Include="img\w10a.png" />
+    <Resource Include="img\w10b.png" />
+    <Resource Include="img\w10c.png" />
+    <Resource Include="img\w10d.png" />
+    <Resource Include="img\w10e.png" />
+    <Resource Include="img\w10f.png" />
+    <Resource Include="img\w10g.png" />
+    <Resource Include="img\w10h.png" />
+    <Resource Include="img\w10i.png" />
+    <Resource Include="img\w10j.png" />
+    <Resource Include="img\w10k.png" />
+    <Resource Include="img\w10l.png" />
+    <Resource Include="img\w10m.png" />
+    <Resource Include="img\w10n.png" />
+    <Resource Include="img\w10o.png" />
+    <Resource Include="img\w10p.png" />
+    <Resource Include="img\w10r.png" />
+    <Resource Include="img\w10s.png" />
+    <Resource Include="img\w10t.png" />
+    <Resource Include="img\w10u.png" />
+    <Resource Include="img\w10w.png" />
+    <Resource Include="img\w11a.png" />
+    <Resource Include="img\w11b.png" />
+    <Resource Include="img\w11c.png" />
+    <Resource Include="img\w11d.png" />
+    <Resource Include="img\w11e.png" />
+    <Resource Include="img\w11f.png" />
+    <Resource Include="img\w11g.png" />
+    <Resource Include="img\w12a.png" />
+    <Resource Include="img\w12b.png" />
+    <Resource Include="img\w12c.png" />
+    <Resource Include="img\w12d.png" />
+    <Resource Include="img\w12e.png" />
+    <Resource Include="img\w12f.png" />
+    <Resource Include="img\w17a.png" />
+    <Resource Include="img\w18a.png" />
+    <Resource Include="img\w18b.png" />
+    <Resource Include="img\w18c.png" />
+    <Resource Include="img\w18d.png" />
+    <Resource Include="img\w9a.png" />
+    <Resource Include="img\w9b.png" />
+    <Resource Include="img\wzory.png" />
+    <Resource Include="img\zadania.png" />
+    <Resource Include="img\zmien.png" />
+    <Resource Include="security.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="App.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="controls\LoginControl.xaml.cs">
+      <DependentUpon>LoginControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\chapters\DzialyPage.xaml.cs">
+      <DependentUpon>DzialyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\chapters\WektoryPage.xaml.cs">
+      <DependentUpon>WektoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W10Page.xaml.cs">
+      <DependentUpon>W10Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W11Page.xaml.cs">
+      <DependentUpon>W11Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W12Page.xaml.cs">
+      <DependentUpon>W12Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W13Page.xaml.cs">
+      <DependentUpon>W13Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W14Page.xaml.cs">
+      <DependentUpon>W14Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W15Page.xaml.cs">
+      <DependentUpon>W15Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W16Page.xaml.cs">
+      <DependentUpon>W16Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W17Page.xaml.cs">
+      <DependentUpon>W17Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W18Page.xaml.cs">
+      <DependentUpon>W18Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W2Page.xaml.cs">
+      <DependentUpon>W2Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W3Page.xaml.cs">
+      <DependentUpon>W3Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W4Page.xaml.cs">
+      <DependentUpon>W4Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W5Page.xaml.cs">
+      <DependentUpon>W5Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W6Page.xaml.cs">
+      <DependentUpon>W6Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W7Page.xaml.cs">
+      <DependentUpon>W7Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W8Page.xaml.cs">
+      <DependentUpon>W8Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\W9Page.xaml.cs">
+      <DependentUpon>W9Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\WPage.xaml.cs">
+      <DependentUpon>WPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\equations\WzoryPage.xaml.cs">
+      <DependentUpon>WzoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\excercises\ZadaniaPage.xaml.cs">
+      <DependentUpon>ZadaniaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\MaturaPage.xaml.cs">
+      <DependentUpon>MaturaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\MP21Page.xaml.cs">
+      <DependentUpon>MP21Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z10Page.xaml.cs">
+      <DependentUpon>Z10Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z11Page.xaml.cs">
+      <DependentUpon>Z11Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z12Page.xaml.cs">
+      <DependentUpon>Z12Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z13Page.xaml.cs">
+      <DependentUpon>Z13Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z14Page.xaml.cs">
+      <DependentUpon>Z14Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z15Page.xaml.cs">
+      <DependentUpon>Z15Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z16Page.xaml.cs">
+      <DependentUpon>Z16Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z17Page.xaml.cs">
+      <DependentUpon>Z17Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z18Page.xaml.cs">
+      <DependentUpon>Z18Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z19Page.xaml.cs">
+      <DependentUpon>Z19Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z1Page.xaml.cs">
+      <DependentUpon>Z1Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z20Page.xaml.cs">
+      <DependentUpon>Z20Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z21Page.xaml.cs">
+      <DependentUpon>Z21Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z22Page.xaml.cs">
+      <DependentUpon>Z22Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z23Page.xaml.cs">
+      <DependentUpon>Z23Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z24Page.xaml.cs">
+      <DependentUpon>Z24Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z25Page.xaml.cs">
+      <DependentUpon>Z25Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z26Page.xaml.cs">
+      <DependentUpon>Z26Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z27Page.xaml.cs">
+      <DependentUpon>Z27Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z28Page.xaml.cs">
+      <DependentUpon>Z28Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z29Page.xaml.cs">
+      <DependentUpon>Z29Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z2Page.xaml.cs">
+      <DependentUpon>Z2Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z30Page.xaml.cs">
+      <DependentUpon>Z30Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z31Page.xaml.cs">
+      <DependentUpon>Z31Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z32Page.xaml.cs">
+      <DependentUpon>Z32Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z33Page.xaml.cs">
+      <DependentUpon>Z33Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z34Page.xaml.cs">
+      <DependentUpon>Z34Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z35Page.xaml.cs">
+      <DependentUpon>Z35Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z3Page.xaml.cs">
+      <DependentUpon>Z3Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z4Page.xaml.cs">
+      <DependentUpon>Z4Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z5Page.xaml.cs">
+      <DependentUpon>Z5Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z6Page.xaml.cs">
+      <DependentUpon>Z6Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z7Page.xaml.cs">
+      <DependentUpon>Z7Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z8Page.xaml.cs">
+      <DependentUpon>Z8Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\finalexams\Z\Z9Page.xaml.cs">
+      <DependentUpon>Z9Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\KalkulatorPage.xaml.cs">
+      <DependentUpon>KalkulatorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\KwadratowaPage.xaml.cs">
+      <DependentUpon>KwadratowaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="pages\RegisterPage.xaml.cs">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="controls\LoginControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="pages\chapters\DzialyPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\chapters\WektoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W10Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W11Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W12Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W13Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W14Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W15Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W16Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W17Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W18Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W2Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W3Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W4Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W5Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W6Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W7Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W8Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\W9Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\WPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\equations\WzoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\excercises\ZadaniaPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\MaturaPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\MP21Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z10Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z11Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z12Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z13Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z14Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z15Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z16Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z17Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z18Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z19Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z1Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z20Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z21Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z22Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z23Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z24Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z25Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z26Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z27Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z28Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z29Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z2Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z30Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z31Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z32Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z33Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z34Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z35Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z3Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z4Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z5Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z6Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z7Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z8Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\finalexams\Z\Z9Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\KalkulatorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\KwadratowaPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\RegisterPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="styles\Buttons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="styles\Colors.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="styles\Fonts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="styles\Scroll.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="styles\Texts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+</Project>

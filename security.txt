@@ -1,0 +1,72 @@
+﻿ # Our security address
+  Contact: mailto:haribo84111@gmail.com
+  
+  # Our PGP key
+  Encryption: https://example.com/pgp-key.txt
+  
+  # Our security policy
+  Policy: https://example.com/SECURITY.md
+  
+  # Our security acknowledgments page
+  Acknowledgments: https://example.com/hall-of-fame.html
+  
+  # Verify this security.txt file
+  Signature: https://example.com/.well-known/security.txt.sig
+
+### **Contact**
+
+```
+Contact: mailto:haribo84111@gmail.com
+Contact: https://twitter.com/MichaKulka1
+```
+
+### **Encryption**
+
+> Encryption: 899735d17e1e0ed43cd97c43493a824f944949eebd76c05c4fa0482b._openpgpkey.gmail.com. IN OPENPGPKEY
+> Encryption: openpgp4fpr:24C1614B437C8B336C7F02527AA424F3902CA43B
+> Encryption: openpgp4fpr:893C59C28D095ED27F95B941CCA2314130936E6F
+> Encryption: openpgp4fpr:5E8D52D581D2634A37B83350484EE8497D95FB83
+
+### **Policy**
+
+https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/blob/mainSECURITY.md
+
+
+## CREDIT
+- Development of the companion `security.txt ` draft takes place on Github at: https://github.com/securitytxt/security-txt
+
+# Contributing
+Please read [CONTRIBUTING.md](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/blob/CONTRIBUTING.md) 
+for details on our code of conduct, and the process for submitting pull requests to us. 
+
+## Versioning
+We use [SemVer](http://semver.org/) for versioning.
+
+**version 1.0.0**
+
+- *Major version* incremented when...
+  1. Contact information changes in the `SECURITY.md` file or in the `security.txt` file that refers to this file. 
+  2. A required field in the `security.txt` has changed in a non backwards compatible manner. 
+  3. Updating or changing the Encryption key or protocol.
+- *Minor update* is a backward compatible change has been made to the aforementioned files. Usually a field was added or changed to recommended.
+- *Patch update* is when a minor typo is fixed but no significant change has been made.
+
+## Authors
+
+[@Projekt-Inzynierski-AK-AS-FD/ich-troje on github]()
+
+## License
+**CC BY-SA 4.0**
+Creative Commons Attribution-ShareAlike 4.0 International
+- tl;dr ( https://creativecommons.org/licenses/by-sa/4.0/ )
+- legal code ( https://creativecommons.org/licenses/by-sa/4.0/legalcode )
+
+## Acknowledgments
+- I tip my hat to [EdOverflow](https://github.com/EdOverflow) & [trewaters](https://github.com/trewaters)!
+- Special thank you to our promoter! Without his engagement and support this would gone nowhere.
+- Gratitude is the attitude!
+
+#### NOTES
+- Source material for this `security.txt` **proposed standard** can be found at: https://tools.ietf.org/html/draft-foudil-securitytxt-04
+- Development of the `security.txt ` draft takes place on Github at: https://github.com/securitytxt/security-txt
+- A mailing list for `security.txt` is available for discussion at: https://www.freelists.org/list/securitytxt
