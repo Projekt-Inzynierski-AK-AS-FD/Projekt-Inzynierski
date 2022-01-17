@@ -26,21 +26,26 @@ namespace Abituria.pages
         }
         int clickCounter = 0;
         readonly int correctAnsw = 4; //bo odp. D, czyli checkbox #4
-        private void ConfirmBtn(object sender, RoutedEventArgs e)
+        private void ShowAnsBtn(object sender, RoutedEventArgs e)
         {
-            brdHint.Visibility = Visibility.Visible;
-            this.hintField.Text = "Przepraszamy, sprawdzanie zadań otwartych nie jest jeszcze dostępne.";
+            this.brdHint.Visibility = Visibility.Visible;
+            this.hintField.Formula = @"|BD| = 12";
         }
         private void HintBtn(object sender, RoutedEventArgs e)
         {
             clickCounter += 1;
             //tutaj wstawić treść podpowiedzi i cyk do funkcji
             // @"\text{} \; x=-2, \text{}"
-            string[] hintsArray = { @"\text{Funkcja niedostępna, przepraszamy!}",
+            string[] hintsArray = { @"\text{Sporządź rysunek. Trójkąt DBC jest równoramienny, a |CD| = |BD|. Skorzystaj z własności trójkątów o kątach} \\ \; 30^ \cdot, \; 60^ \cdot \; 90^ \cdot \; \text{by obliczyć długość odcinka CD.}",
+@"\text{Trójkąt ADC ma kąty }",
+@"\text{} \; 30^ \cdot, \; 60^ \cdot \; 90^ \cdot \; \text{Według własności trójkątów, przyprostokątna leżąca przy kącie } \; 60^ \cdot \\
+\text{jest dwa razy krótsza od przeciwprostokątnej, a zatem:} \\
+|CD| = 2 \cdot 6 \\ |CD| = 12",
+@"\text{Boki CD oraz BD mają jednakową miarę, więc} \\ |BD| = 12"
                  };
             string hint = HintsClass.Hint(clickCounter, hintsArray);
             this.brdHint.Visibility = Visibility.Visible;
-            this.hintField.Text = "";
+            this.hintField.Formula = "";
             this.hintFormula.Formula = hint;
         }
     }

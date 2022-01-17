@@ -25,27 +25,32 @@ namespace Abituria.pages
             DataContext = new LoginViewModel();
         }
         int clickCounter = 0;
-        readonly int correctAnsw = 4; //bo odp. D, czyli checkbox #4
         private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
-            string answer = HintsClass.AnswerButtonChange(sender, CheckAnswer(correctAnsw: correctAnsw));
             this.brdHint.Visibility = Visibility.Visible;
-            this.hintField.Text = answer;
+            this.hintField.Formula = @"\text{Odpowiedź:} \; x=-\frac{1}{2} \; \bigvee \; x=8 ";
         }
-
-        private bool CheckAnswer(int correctAnsw)
-        {
-            throw new NotImplementedException();
-        }
-
         private void HintBtn(object sender, RoutedEventArgs e)
         {
             clickCounter += 1;
             //tutaj wstawić treść podpowiedzi i cyk do funkcji
-            string[] hintsArray = { @"9^{-10} \cdot 3^{19} = (3^2)^{-10} \cdot 3^{19}", @"(3^2)^{-10} \cdot 3^{19} = 3^{-20} \cdot 3^{19}", @"3^{-20} \cdot 3^{19} = 3^{-20+19}", @"= 3^{-1}" };
+            // @"\text{} \; x=-2, \text{}"\frac{}{}
+            string[] hintsArray = { @"\text{Upewnij się, że nie wystąpi dzielenie przez 0 (mianownik), zapisując założenie:}
+\\ x-7 \neq 0 \\ x \neq 7",
+                @"\text{Przemnóż obie strony równiania przez wyrażenie} \; x-7
+\\ \frac{x+8}{x-7} = 2x \; \; / \cdot (x-7)
+\\ x+8=2x^2 - 14 x
+\\ -2x^2 + 15x+8 = 0",
+                @"\text{Korzystając z metody delty rozwiąż równanie kwadratowe:}
+\\ \Delta = b^2 -4ac = 15^2 - 4 /cdot (-2) /cdot 8=225-(-64)=225+64=289 \\ \sqrt{\Delta} = \sqrt{289} = 17",
+                @"x_1 = \frac{-b - \sqrt{\Delta}}{2a} = \frac{-15-17}{2 \cdot (-2)} = \frac{-32}{-4} = 8 \\
+x_2 = \frac{-b + \sqrt{\Delta}}{2a} = \frac{-15+17}{2 \cdot (-2)} = \frac{2}{-4} = -\frac{1}{2}",
+                @"\text{Założenia nie wykluczają żadnego z rozwiązań, więc oba są poprawne:} \\
+x=-\frac{1}{2} \; \; \bigvee \; \; x=8"
+                 };
             string hint = HintsClass.Hint(clickCounter, hintsArray);
             this.brdHint.Visibility = Visibility.Visible;
-            this.hintField.Text = "";
+            this.hintField.Formula = "";
             this.hintFormula.Formula = hint;
         }
     }

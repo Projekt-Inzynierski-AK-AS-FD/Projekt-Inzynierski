@@ -25,7 +25,7 @@
                     <TextBlock Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeSmaller}"><InlineUIContainer>
                             <Button Margin="30 10 0 0" Padding="0" Height="10" Width="40" Content="Cofnij" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeSmaller}"  FontFamily="{StaticResource MulishBold}" HorizontalAlignment="Center">
                                 <Button.InputBindings>
-                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToWzoryPage}"/>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMainPage}"/>
                                 </Button.InputBindings>
                             </Button>
                         </InlineUIContainer></TextBlock>

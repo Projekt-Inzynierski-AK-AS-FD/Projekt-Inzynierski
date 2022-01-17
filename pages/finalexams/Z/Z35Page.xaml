@@ -1,7 +1,7 @@
 ﻿<Page x:Class="Abituria.pages.Z35Page"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:abituria="clr-namespace:Abituria" xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath" d:DataContext="{d:DesignInstance Type=abituria:LoginViewModel}"
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
@@ -263,29 +263,31 @@
                     <Viewbox Stretch="Uniform" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 0, 0">
                         <StackPanel Width="402">
                             <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="{StaticResource ForegroundLightBrush}"><Run Text="Dany jest ciąg "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="(a_n)\:" /></InlineUIContainer>określony wzorem 
-                        <controls:FormulaControl Formula="a_n=\frac{5-3n}{7}\:" />dla każdej liczby naturalnej
-                        <controls:FormulaControl Formula="n\geq1\:" />. Trójwyrazowy ciąg
-                        <controls:FormulaControl Formula="(a_4,x^2+2,a_{11})\:" />, gdzie
-                        <controls:FormulaControl Formula="x" />jest liczbą rzeczywistą, jest geometryczny. Oblicz
-                        <controls:FormulaControl Formula="x" />oraz iloraz tego ciągu geometrycznego.<LineBreak/>
+                            <controls:FormulaControl Formula="(a_n)\:" Margin="0 0 0 -7"/></InlineUIContainer>określony wzorem 
+                        <controls:FormulaControl Formula="a_n=\frac{5-3n}{7}\:"  Margin="4 0 0 -15"/>dla każdej liczby naturalnej
+                        <controls:FormulaControl Formula="n\geq1.\:"  Margin="0 15 0 -6"/> Trójwyrazowy ciąg
+                        <controls:FormulaControl Formula="(a_4,x^2+2,a_{11}),\:"  Margin="0 5 0 -7"/> gdzie
+                        <controls:FormulaControl Formula="x"  Margin="3 0 5 -3"/>jest liczbą rzeczywistą, jest geometryczny. Oblicz
+                        <controls:FormulaControl Formula="x" Margin="3 10 5 -3"/>oraz iloraz tego ciągu geometrycznego.<LineBreak/>
                             </TextBlock>
                         </StackPanel>
                     </Viewbox>
                     <TextBox Grid.Column="3" Grid.Row="0" Margin="20, 40, 20, 10" Grid.RowSpan="1" Grid.ColumnSpan="1" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Hidden" FontSize="20"/>
                     <Viewbox Stretch="Uniform" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 0, 0, 0">
                         <StackPanel Orientation="Horizontal">
-                            <Button Click="ConfirmBtn" Content="Potwierdź" FontSize="15" Height="auto" Width="auto" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 0, 20, 0"/>
+                            <Button Click="ConfirmBtn" Content="Wyświetl odpowiedź" FontSize="15" Height="auto" Width="auto" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 0, 20, 0"/>
                             <Button Click="HintBtn" Content="Podpowiedź" FontSize="15"  Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 0, 0, 0"/>
                         </StackPanel>
                     </Viewbox>
-                    <Border x:Name="brdHint" Visibility="Collapsed" BorderBrush="Gray" BorderThickness="1" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Margin="20">
+                    <Border x:Name="brdHint" Visibility="Collapsed" BorderBrush="Gray" BorderThickness="1" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Margin="20, 20, 20, 50">
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden">
                         <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Stretch="Uniform" StretchDirection="Both">
                             <StackPanel Margin="20">
-                                <TextBlock x:Name="hintField" FontSize="20" Margin="20"  Foreground="{StaticResource ForegroundLightBrush}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                <controls:FormulaControl Foreground="{StaticResource ForegroundLightBrush}" x:Name="hintFormula" Margin="0,0,0,0" Formula="" HorizontalAlignment="Center"/>
+                                    <controls:FormulaControl Foreground="{StaticResource ForegroundLightBrush}" x:Name="hintField" Margin="0,0,0,0" Formula="" HorizontalAlignment="Center"/>
+                                    <controls:FormulaControl Foreground="{StaticResource ForegroundLightBrush}" x:Name="hintFormula" Margin="0,0,0,0" Formula="" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </Viewbox>
+                        </ScrollViewer>
                     </Border>
                 </Grid>
             </Border>

@@ -29,14 +29,17 @@ namespace Abituria.pages
         private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
             string answer = HintsClass.AnswerButtonChange(sender, CheckAnswer(correctAnsw: correctAnsw));
-            brdHint.Visibility = Visibility.Visible;
+            this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = answer;
         }
         private void HintBtn(object sender, RoutedEventArgs e)
         {
             clickCounter += 1;
             //tutaj wstawić treść podpowiedzi i cyk do funkcji
-            string[] hintsArray = { @"9^{-10} \cdot 3^{19} = (3^2)^{-10} \cdot 3^{19}", @"(3^2)^{-10} \cdot 3^{19} = 3^{-20} \cdot 3^{19}", @"3^{-20} \cdot 3^{19} = 3^{-20+19}", @"= 3^{-1}" };
+            string[] hintsArray = { @"9^{-10} \cdot 3^{19} = (3^2)^{-10} \cdot 3^{19}", 
+                @"(3^2)^{-10} \cdot 3^{19} = 3^{-20} \cdot 3^{19}", 
+                @"3^{-20} \cdot 3^{19} = 3^{-20+19}", 
+                @"= 3^{-1}" };
             string hint = HintsClass.Hint(clickCounter, hintsArray);
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = "";

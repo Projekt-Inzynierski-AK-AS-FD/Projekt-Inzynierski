@@ -20,6 +20,7 @@ namespace Abituria.pages
         public ZadaniaPage()
         {
             InitializeComponent();
+            DataContext = new LoginViewModel();
         }    
     }
 }

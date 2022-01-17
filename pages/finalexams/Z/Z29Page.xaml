@@ -1,7 +1,7 @@
 ﻿<Page x:Class="Abituria.pages.Z29Page"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:abituria="clr-namespace:Abituria" xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath" d:DataContext="{d:DesignInstance Type=abituria:LoginViewModel}"
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
@@ -264,7 +264,7 @@
                         <StackPanel>
                             <TextBlock FontSize="27" Margin="10, 10, 10, 10" TextWrapping="WrapWithOverflow" Foreground="{StaticResource ForegroundLightBrush}"><Run Text="Rozwiąż nierówność "/>
                                 <InlineUIContainer>
-                                    <controls:FormulaControl Scale="27" Margin="-5, 0, 10, -5" Formula="x^2-5\geq4x"/>
+                                    <controls:FormulaControl Scale="27" Margin="-5, 0, 10, -5" Formula="x^2-5\geq4x:"/>
                                 </InlineUIContainer><LineBreak/><LineBreak/>
                             </TextBlock>
                         </StackPanel>
@@ -272,17 +272,19 @@
                     <TextBox Grid.Column="3" Grid.Row="0" Margin="20, 40, 20, 10" Grid.RowSpan="1" Grid.ColumnSpan="1" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Hidden" FontSize="20"/>
                     <Viewbox Stretch="Uniform" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 0, 0, 0">
                         <StackPanel Orientation="Horizontal">
-                            <Button Click="ConfirmBtn" Content="Potwierdź" FontSize="15" Height="auto" Width="auto" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 0, 20, 0"/>
+                            <Button Click="ConfirmBtn" Content="Wyświetl odpowiedź" FontSize="15" Height="auto" Width="auto" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 0, 20, 0"/>
                             <Button Click="HintBtn" Content="Podpowiedź" FontSize="15"  Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 0, 0, 0"/>
                         </StackPanel>
                     </Viewbox>
-                    <Border x:Name="brdHint" Visibility="Collapsed" BorderBrush="Gray" BorderThickness="1" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Margin="20">
-                        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Stretch="Uniform" StretchDirection="Both">
-                            <StackPanel Margin="20">
-                                <TextBlock x:Name="hintField" FontSize="20" Margin="20"  Foreground="{StaticResource ForegroundLightBrush}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                <controls:FormulaControl Foreground="{StaticResource ForegroundLightBrush}" x:Name="hintFormula" Margin="0,0,0,0" Formula="" HorizontalAlignment="Center"/>
-                            </StackPanel>
-                        </Viewbox>
+                    <Border x:Name="brdHint" Visibility="Collapsed" BorderBrush="Gray" BorderThickness="1" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Margin="20, 20, 20, 50">
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                            <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Stretch="Uniform" StretchDirection="Both">
+                                <StackPanel Margin="20">
+                                    <controls:FormulaControl Foreground="{StaticResource ForegroundLightBrush}" x:Name="hintField" Margin="0,0,0,0" Formula="" HorizontalAlignment="Center"/>
+                                    <controls:FormulaControl Foreground="{StaticResource ForegroundLightBrush}" x:Name="hintFormula" Margin="0,0,0,0" Formula="" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                            </Viewbox>
+                        </ScrollViewer>
                     </Border>
                 </Grid>
             </Border>
